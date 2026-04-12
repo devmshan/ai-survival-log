@@ -1,3 +1,16 @@
+---
+title: "Superpowers"
+created: "2026-04-04"
+updated: "2026-04-12"
+type: entity
+sources: []
+tags: [claude-code, plugin, workflow]
+status: active
+published: false
+slug: ""
+description: ""
+---
+
 # Superpowers 완전 가이드
 
 > Claude Code를 위한 핵심 소프트웨어 개발 워크플로우 스킬 라이브러리
@@ -897,3 +910,9 @@ rm -rf ~/.config/superpowers/skills/
 ---
 
 *최종 업데이트: 2026-04-09 | Superpowers v5.0.7 기준*
+
+## 관련 페이지
+
+- [[entities/claude-code]] — Superpowers가 확장하는 기반 도구
+- [[entities/ecc]] — 또 다른 Claude Code 플러그인
+- [[concepts/ax-ai-transformation]] — AI 도구 활용 전략

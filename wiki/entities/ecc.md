@@ -1,3 +1,16 @@
+---
+title: "Everything Claude Code (ECC)"
+created: "2026-04-04"
+updated: "2026-04-12"
+type: entity
+sources: []
+tags: [claude-code, plugin, ai-agent]
+status: active
+published: false
+slug: ""
+description: ""
+---
+
 # Everything Claude Code (ECC) 완전 가이드
 
 > AI 에이전트 하네스를 위한 성능 최적화 시스템 — Anthropic 해커톤 수상작
@@ -1028,3 +1041,9 @@ bun add -g ccg-workflow
 ---
 
 *최종 업데이트: 2026-04-09 | ECC v1.10.0 기준*
+
+## 관련 페이지
+
+- [[entities/claude-code]] — ECC가 확장하는 기반 도구
+- [[entities/superpowers]] — 또 다른 Claude Code 플러그인
+- [[concepts/ax-ai-transformation]] — AI 도구 활용 전략
