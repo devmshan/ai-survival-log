@@ -5,7 +5,7 @@ updated: "2026-04-13"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-13 | 총 29개 페이지
+> 마지막 업데이트: 2026-04-13 | 총 36개 페이지
 
 ## Entities
 
@@ -14,6 +14,8 @@ updated: "2026-04-13"
 | [[entities/claude-code]] |  | claude-code, ai-tool, anthropic | active |
 | [[entities/devsurvivallog]] |  | blog, devsurvivallog, ai, personal | active |
 | [[entities/ecc]] |  | claude-code, plugin, ai-agent | active |
+| [[entities/gunseung]] |  | 건승, cat, character, cheese-tabby, mascot | active |
+| [[entities/minsung]] |  | minsung, character, persona, devsurvivallog, instagram | active |
 | [[entities/obsidian]] |  | obsidian, note-taking, knowledge-management, tool | active |
 | [[entities/superpowers]] |  | claude-code, plugin, workflow | active |
 
@@ -43,6 +45,7 @@ updated: "2026-04-13"
 | [[sources/2026-04-10-why-ai-survival-log]] |  | ai, ax, devsurvivallog, blog-origin | active |
 | [[sources/2026-04-11-devsurvivallog-philosophy]] |  | devsurvivallog, philosophy, growth | active |
 | [[sources/2026-04-12-ai-unbundle-myself]] |  | rlvr, ai-unbundling, ralph-loop, red-queen-effect, philosophy | active |
+| [[sources/2026-04-13-ai-webtoon-workflow]] |  | ai-webtoon, character-design, midjourney, chatgpt, devsurvivallog, instagram, workflow | active |
 | [[sources/2026-04-13-arxiv-2406-11160-context-graph]] |  | context-graph, knowledge-graph, cgr3, llm, paper, ai, rag | active |
 | [[sources/2026-04-13-context-graph-vs-knowledge-graph]] |  | context-graph, knowledge-graph, ai, data-governance, rag | active |
 | [[sources/2026-04-13-medium-modelmind-context-graphs]] |  | context-graph, knowledge-graph, ai, explainer | active |
@@ -53,6 +56,7 @@ updated: "2026-04-13"
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
+| [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | wiki, llm, markdown, knowledge-management, context-graph, design-decision | active |
 
 ## Projects
@@ -60,3 +64,6 @@ updated: "2026-04-13"
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
 | [[projects/blog-ai-study-site]] |  | blog, nextjs, project | active |
+| [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |
+| [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
+| [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |

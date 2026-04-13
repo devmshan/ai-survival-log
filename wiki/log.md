@@ -6,6 +6,34 @@ title: "Wiki Log"
 
 ## 2026-04-13
 
+### 21:00 — ingest: AI 웹툰 제작 워크플로우 탐색 세션
+- **source:** `sources/2026-04-13-ai-webtoon-workflow.md` (세션 기록)
+- **created:**
+  - [[sources/2026-04-13-ai-webtoon-workflow]] — AI 웹툰 도구 탐색 및 프롬프트 작성 세션
+  - [[topics/ai-webtoon-creation]] — AI 인스타툰 제작 워크플로우 토픽
+- **updated:**
+  - [[wiki/index.md]] — 총 34개 페이지
+- **summary:** fal.ai 대안 탐색으로 시작. marigold.in.bloom·darongtoon·_intotheblu 3개 계정 분석. AI 웹툰 핵심 과제(캐릭터 일관성) 정리. 민성+건승 캐릭터 시트 2종 확보. ChatGPT·Midjourney Niji 6용 프롬프트 완성.
+
+### 17:10 — file-answer: 캐릭터 프로필 초안 저장
+- **source:** 대화에서 생성된 캐릭터 소개 텍스트 (이미지 첨부)
+- **created:**
+  - [[projects/character-intro-draft]] — devsurvivallog 콘텐츠용 캐릭터 소개 초안
+- **updated:**
+  - [[wiki/index.md]] — 총 32개 페이지
+- **summary:** 민성·건승 캐릭터 프로필 초안을 별도 프로젝트 파일로 저장. 향후 인스타그램/블로그 포스팅 초안으로 활용 예정.
+
+### 17:00 — file-answer: 민성 & 건승 캐릭터 프로필
+- **source:** 인스타그램 @_intotheblu 포스트 분석 (대화)
+- **created:**
+  - [[entities/minsung]] — devsurvivallog 운영자 캐릭터 프로필
+  - [[entities/gunseung]] — 민성의 치즈 태비 고양이 캐릭터 프로필
+- **updated:**
+  - [[wiki/index.md]] — 총 31개 페이지
+- **summary:** @_intotheblu 인스타그램 포스트 분석 후 민성(Minsung) 캐릭터와 고양이 건승(치즈 태비) 프로필 저장. 외형·성격·목소리 스타일·세계관 포함.
+
+## 2026-04-13
+
 ### 16:00 — file-answer: Wiki 정형화/자동화 vs 마크다운
 - **source:** 대화 답변 (wiki:query 결과)
 - **created:**
