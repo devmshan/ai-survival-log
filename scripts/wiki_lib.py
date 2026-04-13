@@ -31,7 +31,8 @@ def scan_pages(wiki_dir: Path = WIKI_DIR) -> list[Page]:
 
 
 def extract_wikilinks(content: str) -> list[str]:
-    pass
+    """[[link]] 와 [[link|alias]] 에서 링크 경로만 추출."""
+    return re.findall(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]', content)
 
 
 def cmd_sync(wiki_dir: Path = WIKI_DIR) -> None:

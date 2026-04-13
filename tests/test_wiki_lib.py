@@ -19,3 +19,23 @@ def make_page(wiki_dir: Path, rel: str, **meta) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(fm.dumps(post), encoding="utf-8")
     return path
+
+
+# ── extract_wikilinks 테스트 ─────────────────────────────────────────────────
+
+class TestExtractWikilinks:
+    def test_simple_link(self):
+        result = wiki_lib.extract_wikilinks("본문 [[concepts/ai]] 내용")
+        assert result == ["concepts/ai"]
+
+    def test_alias_link(self):
+        result = wiki_lib.extract_wikilinks("[[concepts/ai|AI 개념]]")
+        assert result == ["concepts/ai"]
+
+    def test_multiple_links(self):
+        result = wiki_lib.extract_wikilinks("[[a/b]] 과 [[c/d|D]]")
+        assert result == ["a/b", "c/d"]
+
+    def test_no_links(self):
+        result = wiki_lib.extract_wikilinks("링크 없는 본문")
+        assert result == []
