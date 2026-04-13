@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Read(//Users/ms/workspace/claude/ai-survival-log-site/**)",
+      "Bash(npx shadcn@latest add badge card command input separator --yes)"
     ]
   },
   "hooks": {

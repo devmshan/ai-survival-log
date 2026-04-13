@@ -58,4 +58,7 @@ Andrej Karpathy가 제시한 지식 관리 패턴. RAG의 "쿼리 타임" 재발
 ## 관련 페이지
 
 - [[entities/claude-code]] — 이 위키를 운영하는 도구
+- [[entities/obsidian]] — 위키 Vault 시각화 도구
 - [[topics/ai-era-survival]] — 위키를 활용한 지식 축적 전략
+- [[concepts/context-graph]] — 이 위키는 일종의 Context Graph (지식 + 맥락 + 출처)
+- [[topics/wiki-markdown-vs-graph-db]] — 정형화/자동화 vs 마크다운 설계 판단

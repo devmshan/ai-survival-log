@@ -100,6 +100,7 @@ AI 바람이 부는 방향을 읽고 빠르게 adapt. [[entities/devsurvivallog|
 
 ## 관련 페이지
 
+- [[concepts/tacit-knowledge]] — AI 시대에 가치가 높아지는 암묵지
 - [[concepts/ax-ai-transformation]] — AI Transformation 전략
 - [[concepts/ai-capability-overhang]] — AI 도구 vs 사용자 역량 격차
 - [[concepts/rlvr]] — AI가 도메인을 정복하는 방식
