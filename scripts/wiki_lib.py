@@ -27,7 +27,28 @@ class Page:
 
 
 def scan_pages(wiki_dir: Path = WIKI_DIR) -> list[Page]:
-    pass
+    """wiki_dir 하위 마크다운 파일을 스캔하여 Page 목록 반환."""
+    pages = []
+    for md_file in sorted(wiki_dir.rglob("*.md")):
+        rel = md_file.relative_to(wiki_dir)
+        if rel.name in EXCLUDE_FILES:
+            continue
+        if any(part in EXCLUDE_DIRS for part in rel.parts):
+            continue
+        try:
+            post = frontmatter.load(md_file)
+        except Exception:
+            continue
+        pages.append(Page(
+            path=rel,
+            title=post.get("title", rel.stem),
+            type=post.get("type", ""),
+            status=post.get("status", "draft"),
+            tags=list(post.get("tags", [])),
+            description=post.get("description", ""),
+            content=post.content,
+        ))
+    return pages
 
 
 def extract_wikilinks(content: str) -> list[str]:
