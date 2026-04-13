@@ -4,5 +4,29 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)"
     ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/ms/workspace/claude/ai-survival-log && ./scripts/wiki sync"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/ms/workspace/claude/ai-survival-log && ./scripts/wiki lint --summary || true"
+          }
+        ]
+      }
+    ]
   }
 }
