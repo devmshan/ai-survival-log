@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from wiki_lib import cmd_sync, cmd_tags, cmd_lint
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Wiki 관리 CLI")
+    sub = parser.add_subparsers(dest="cmd")
+
+    sub.add_parser("sync", help="index.md + tags/ 재생성")
+
+    lint_p = sub.add_parser("lint", help="무결성 검사")
+    lint_p.add_argument("--summary", action="store_true")
+
+    sub.add_parser("tags", help="tags/ 재생성")
+
+    args = parser.parse_args()
+
+    if args.cmd == "sync":
+        cmd_sync()
+    elif args.cmd == "lint":
+        sys.exit(cmd_lint(summary=args.summary))
+    elif args.cmd == "tags":
+        cmd_tags()
+    else:
+        parser.print_help()
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
