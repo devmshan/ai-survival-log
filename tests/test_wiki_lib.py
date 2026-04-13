@@ -126,3 +126,46 @@ class TestCmdSync:
         wiki_lib.cmd_sync(wiki)
         content = (wiki / "index.md").read_text(encoding="utf-8")
         assert "총 2개 페이지" in content
+
+
+class TestCmdTags:
+    def test_creates_tag_file(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai", "ml"], description="AI 개념")
+        wiki_lib.cmd_sync(wiki)
+        assert (wiki / "tags" / "ai.md").exists()
+        assert (wiki / "tags" / "ml.md").exists()
+
+    def test_tag_file_contains_page_link(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="AI 개념")
+        wiki_lib.cmd_sync(wiki)
+        content = (wiki / "tags" / "ai.md").read_text(encoding="utf-8")
+        assert "# Tag: ai" in content
+        assert "[[concepts/ai]]" in content
+        assert "AI 개념" in content
+
+    def test_old_tag_files_removed_on_sync(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        # 첫 번째 sync — "old-tag" 생성
+        make_page(wiki, "concepts/a.md", title="A", type="concept",
+                  status="active", tags=["old-tag"], description="")
+        wiki_lib.cmd_sync(wiki)
+        assert (wiki / "tags" / "old-tag.md").exists()
+        # 태그 변경 후 두 번째 sync
+        p = wiki / "concepts" / "a.md"
+        post = fm.load(p)
+        post["tags"] = ["new-tag"]
+        p.write_text(fm.dumps(post), encoding="utf-8")
+        wiki_lib.cmd_sync(wiki)
+        assert not (wiki / "tags" / "old-tag.md").exists()
+        assert (wiki / "tags" / "new-tag.md").exists()
+
+    def test_cmd_tags_standalone(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="")
+        wiki_lib.cmd_tags(wiki)
+        assert (wiki / "tags" / "ai.md").exists()

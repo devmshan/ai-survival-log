@@ -107,7 +107,29 @@ def _write_index(pages: list[Page], wiki_dir: Path) -> None:
 
 
 def _write_tags(pages: list[Page], wiki_dir: Path) -> None:
-    pass  # implemented in Task 5
+    tags_dir = wiki_dir / "tags"
+    tags_dir.mkdir(exist_ok=True)
+    # 기존 태그 파일 제거
+    for f in tags_dir.glob("*.md"):
+        f.unlink()
+    # 태그별 페이지 그룹
+    tag_map: dict[str, list[Page]] = {}
+    for page in pages:
+        for tag in page.tags:
+            tag_map.setdefault(tag, []).append(page)
+    for tag, tagged in sorted(tag_map.items()):
+        lines = [
+            f'# Tag: {tag}',
+            '',
+            '| 페이지 | 설명 | 타입 | 상태 |',
+            '|--------|------|------|------|',
+        ]
+        for page in sorted(tagged, key=lambda p: str(p.path)):
+            stem = str(page.path.with_suffix(''))
+            lines.append(
+                f'| [[{stem}]] | {page.description} | {page.type} | {page.status} |'
+            )
+        (tags_dir / f"{tag}.md").write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
 def cmd_sync(wiki_dir: Path = WIKI_DIR) -> None:
@@ -118,7 +140,9 @@ def cmd_sync(wiki_dir: Path = WIKI_DIR) -> None:
 
 
 def cmd_tags(wiki_dir: Path = WIKI_DIR) -> None:
-    pass
+    pages = scan_pages(wiki_dir)
+    _write_tags(pages, wiki_dir)
+    print("✓ tags/ 갱신 완료")
 
 
 def cmd_lint(wiki_dir: Path = WIKI_DIR, summary: bool = False) -> int:
