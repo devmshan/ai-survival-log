@@ -169,3 +169,61 @@ class TestCmdTags:
                   status="active", tags=["ai"], description="")
         wiki_lib.cmd_tags(wiki)
         assert (wiki / "tags" / "ai.md").exists()
+
+
+class TestCmdLint:
+    def test_passes_clean_wiki(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        # 두 페이지가 서로 링크 → 고아 없음, 깨진 링크 없음
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="AI 개념",
+                  content="본문 [[topics/ai-era]] 링크")
+        make_page(wiki, "topics/ai-era.md", title="AI 시대", type="topic",
+                  status="active", tags=["ai"], description="AI 시대 개요",
+                  content="본문 [[concepts/ai]] 역링크")
+        # index.md 생성
+        wiki_lib.cmd_sync(wiki)
+        result = wiki_lib.cmd_lint(wiki)
+        assert result == 0
+
+    def test_detects_broken_wikilink(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="AI",
+                  content="[[concepts/없는페이지]] 깨진링크")
+        wiki_lib.cmd_sync(wiki)
+        result = wiki_lib.cmd_lint(wiki)
+        assert result == 1
+
+    def test_detects_orphan_page(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        # ai.md는 connected.md를 링크하지만 orphan.md는 아무도 링크 안 함
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="AI",
+                  content="[[concepts/connected]]")
+        make_page(wiki, "concepts/connected.md", title="Connected", type="concept",
+                  status="active", tags=["ai"], description="연결된 페이지",
+                  content="[[concepts/ai]]")
+        make_page(wiki, "concepts/orphan.md", title="고아", type="concept",
+                  status="active", tags=[], description="아무도 링크 안 함")
+        wiki_lib.cmd_sync(wiki)
+        result = wiki_lib.cmd_lint(wiki)
+        assert result == 1  # orphan.md 고아 감지
+
+    def test_detects_missing_frontmatter_field(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        # type 필드 없음
+        make_page(wiki, "concepts/ai.md", title="AI",
+                  status="active", tags=["ai"], description="AI")
+        wiki_lib.cmd_sync(wiki)
+        result = wiki_lib.cmd_lint(wiki)
+        assert result == 1
+
+    def test_summary_always_returns_0(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI", type="concept",
+                  status="active", tags=["ai"], description="AI",
+                  content="[[concepts/없는페이지]]")
+        wiki_lib.cmd_sync(wiki)
+        result = wiki_lib.cmd_lint(wiki, summary=True)
+        assert result == 0  # --summary는 항상 0

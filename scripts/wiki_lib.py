@@ -146,4 +146,57 @@ def cmd_tags(wiki_dir: Path = WIKI_DIR) -> None:
 
 
 def cmd_lint(wiki_dir: Path = WIKI_DIR, summary: bool = False) -> int:
-    pass
+    """위키 무결성 검사: 깨진 링크, 고아 페이지, 누락된 frontmatter 검사."""
+    pages = scan_pages(wiki_dir)
+    errors: list[str] = []
+
+    # 유효한 페이지 경로 집합 (확장자 없는 stem 형태)
+    valid_stems = {str(p.path.with_suffix('')) for p in pages}
+    valid_stems.update({"index", "log"})  # 제외 파일도 유효한 링크 대상
+
+    # index.md에 등록된 링크 집합
+    index_path = wiki_dir / "index.md"
+    index_links: set[str] = set()
+    if index_path.exists():
+        index_links = set(extract_wikilinks(index_path.read_text(encoding="utf-8")))
+
+    # 고아 페이지 탐지: content 페이지 링크만 집계 (index.md 제외)
+    all_linked_from_content: set[str] = set()
+    for page in pages:
+        all_linked_from_content.update(extract_wikilinks(page.content))
+
+    for page in pages:
+        stem = str(page.path.with_suffix(''))
+
+        # 검사 1: 깨진 wikilink
+        for link in extract_wikilinks(page.content):
+            if link not in valid_stems:
+                errors.append(f"깨진 링크: [[{link}]] in {page.path}")
+
+        # 검사 2: 고아 페이지 (content 페이지 어디서도 링크 안 됨)
+        if stem not in all_linked_from_content:
+            errors.append(f"고아 페이지: {page.path}")
+
+        # 검사 3: index.md 누락
+        if stem not in index_links:
+            errors.append(f"index.md 누락: {page.path}")
+
+        # 검사 4: 필수 frontmatter 필드
+        for field_name in ("title", "type", "status"):
+            if not getattr(page, field_name, ""):
+                errors.append(f"frontmatter 누락 '{field_name}': {page.path}")
+
+    if summary:
+        if errors:
+            print(f"⚠ lint: {len(errors)}개 오류 발견")
+        else:
+            print("✓ lint: 오류 없음")
+        return 0
+
+    for err in errors:
+        print(f"❌ {err}", file=sys.stderr)
+    if errors:
+        print(f"\n총 {len(errors)}개 오류", file=sys.stderr)
+        return 1
+    print("✓ lint 통과")
+    return 0
