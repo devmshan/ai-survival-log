@@ -80,3 +80,49 @@ class TestScanPages:
         assert pages[0].title == "bare"
         assert pages[0].type == ""
         assert pages[0].tags == []
+
+
+class TestCmdSync:
+    def test_creates_index_md(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/ai.md", title="AI 개념", type="concept",
+                  status="active", tags=["ai"], description="AI 기초")
+        wiki_lib.cmd_sync(wiki)
+        index = wiki / "index.md"
+        assert index.exists()
+        content = index.read_text(encoding="utf-8")
+        assert "## Concepts" in content
+        assert "[[concepts/ai]]" in content
+        assert "AI 기초" in content
+
+    def test_groups_by_type(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/c1.md", title="C1", type="concept",
+                  status="active", tags=[], description="개념1")
+        make_page(wiki, "entities/e1.md", title="E1", type="entity",
+                  status="active", tags=[], description="엔티티1")
+        wiki_lib.cmd_sync(wiki)
+        content = (wiki / "index.md").read_text(encoding="utf-8")
+        assert "## Entities" in content
+        assert "## Concepts" in content
+        # Entities 섹션이 Concepts보다 먼저 나옴
+        assert content.index("## Entities") < content.index("## Concepts")
+
+    def test_source_type_uses_origin_column(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "sources/2026-04-01-test.md", title="테스트 소스",
+                  type="source", status="active", tags=["ai"], description="원본 설명")
+        wiki_lib.cmd_sync(wiki)
+        content = (wiki / "index.md").read_text(encoding="utf-8")
+        assert "## Sources" in content
+        assert "| 원본 |" in content
+
+    def test_total_count_in_header(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "concepts/a.md", title="A", type="concept",
+                  status="active", tags=[], description="")
+        make_page(wiki, "concepts/b.md", title="B", type="concept",
+                  status="active", tags=[], description="")
+        wiki_lib.cmd_sync(wiki)
+        content = (wiki / "index.md").read_text(encoding="utf-8")
+        assert "총 2개 페이지" in content

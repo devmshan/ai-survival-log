@@ -56,8 +56,65 @@ def extract_wikilinks(content: str) -> list[str]:
     return re.findall(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]', content)
 
 
+_TYPE_ORDER = ["entity", "concept", "source", "topic", "project"]
+_TYPE_LABELS = {
+    "entity": "Entities",
+    "concept": "Concepts",
+    "source": "Sources",
+    "topic": "Topics",
+    "project": "Projects",
+}
+
+
+def _write_index(pages: list[Page], wiki_dir: Path) -> None:
+    today = date.today().isoformat()
+    groups: dict[str, list[Page]] = {t: [] for t in _TYPE_ORDER}
+    for page in pages:
+        if page.type in groups:
+            groups[page.type].append(page)
+
+    lines = [
+        '---',
+        'title: "Wiki Index"',
+        f'updated: "{today}"',
+        '---',
+        '',
+        '# Wiki Index',
+        '',
+        f'> 마지막 업데이트: {today} | 총 {len(pages)}개 페이지',
+        '',
+    ]
+
+    for t in _TYPE_ORDER:
+        group = sorted(groups[t], key=lambda p: str(p.path))
+        if not group:
+            continue
+        lines.append(f'## {_TYPE_LABELS[t]}')
+        lines.append('')
+        if t == "source":
+            lines.append('| 페이지 | 원본 | 태그 | 상태 |')
+            lines.append('|--------|------|------|------|')
+        else:
+            lines.append('| 페이지 | 설명 | 태그 | 상태 |')
+            lines.append('|--------|------|------|------|')
+        for page in group:
+            stem = str(page.path.with_suffix(''))
+            tags_str = ', '.join(page.tags)
+            lines.append(f'| [[{stem}]] | {page.description} | {tags_str} | {page.status} |')
+        lines.append('')
+
+    (wiki_dir / "index.md").write_text('\n'.join(lines), encoding='utf-8')
+
+
+def _write_tags(pages: list[Page], wiki_dir: Path) -> None:
+    pass  # implemented in Task 5
+
+
 def cmd_sync(wiki_dir: Path = WIKI_DIR) -> None:
-    pass
+    pages = scan_pages(wiki_dir)
+    _write_index(pages, wiki_dir)
+    _write_tags(pages, wiki_dir)
+    print(f"✓ sync 완료 — {len(pages)}개 페이지, index.md + tags/ 갱신")
 
 
 def cmd_tags(wiki_dir: Path = WIKI_DIR) -> None:
