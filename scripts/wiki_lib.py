@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
 """Wiki 자동화 라이브러리. pip install python-frontmatter 필요."""
 
 import re
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 
@@ -16,6 +15,8 @@ EXCLUDE_DIRS = {"tags", ".obsidian"}
 
 @dataclass
 class Page:
+    """Wiki 페이지 메타데이터와 본문을 담는 데이터 클래스."""
+
     path: Path          # wiki/ 기준 상대 경로 (예: Path("concepts/ai.md"))
     title: str
     type: str           # entity | concept | source | topic | project
