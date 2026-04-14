@@ -4,6 +4,32 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-14
+
+### 스터디중 — publish: LLM 작동 방식 블로그 포스트
+- **source:** `sources/2026-04-14-how-claude-thinks.md`
+- **created:**
+  - [[topics/how-llm-works]] — LLM 파라미터/임베딩/RAG/KG 개념 토픽 (published: true)
+  - `content/posts/how-llm-works.mdx` — 블로그 포스트 출력
+- **summary:** 시스템 설계 스터디 1장 대화에서 나온 LLM 내부 구조 이해 내용을 블로그 포스트로 발행. "도서관과 교수님의 뇌" 비유로 파라미터/임베딩/RAG/KG 정리.
+
+### 스터디중 — ingest: RAG·임베딩 개념 (시스템 설계 스터디 1장)
+- **source:** 대화 (시스템 설계 면접 스터디 1장 관련 질문)
+- **created:**
+  - [[concepts/embedding]] — 임베딩 3가지 맥락 (추론/학습/VectorDB)
+  - [[concepts/rag]] — RAG 개념, 할루시네이션 감소 + 최신성 확보
+- **updated:**
+  - [[wiki/index.md]] — 총 39개 페이지
+- **summary:** 1장 JSON 구조 설명 중 자연스럽게 LLM 내부 구조(파라미터/임베딩/RAG)로 확장. 대학교 도서관 비유로 RAG 개념 체화.
+
+### 00:00 — ingest: 시스템 설계 면접 스터디 플랜 수립
+- **source:** `sources/2026-04-14-system-design-interview-v1.md`
+- **created:**
+  - [[projects/study-system-design-interview]] — 시스템 설계 면접 스터디 플랜 (4 Phase, 15챕터)
+- **updated:**
+  - [[wiki/index.md]] — 총 37개 페이지
+- **summary:** "가상 면접 사례로 배우는 대규모 시스템 설계 기초" 스터디 시작. 질문→설명→위키 저장 방식으로 진행. 4개 Phase로 챕터 구성, 핵심 키워드 사전 정리.
+
 ## 2026-04-13
 
 ### 21:00 — ingest: AI 웹툰 제작 워크플로우 탐색 세션
