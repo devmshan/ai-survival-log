@@ -6,6 +6,47 @@ title: "Wiki Log"
 
 ## 2026-04-14
 
+### 18:30 — publish: 대규모 시스템 설계 스터디 01 블로그 포스트
+- **source:** `wiki/topics/system-design-interview-01.md`
+- **created:**
+  - [[topics/system-design-interview-01]] — 1장 핵심 정리 토픽 (published: true)
+  - `ai-survival-log-site/content/posts/2026-04-14-system-design-interview-01.mdx`
+- **summary:** 1장 스터디 내용을 블로그 시리즈 01로 발행. 서버 1대 → 수백만 사용자 아키텍처 진화 과정 전체 정리.
+
+### 18:00 — ingest: 스터디 1장 보충 (ack/nack, binlog, ProxySQL, Read-Your-Writes)
+- **source:** 대화 (스터디 1장 심화 보충)
+- **updated:**
+  - [[concepts/message-queue]] — ack/nack 상세, DLQ, TCP ack vs 메시지큐 ack 비교
+  - [[concepts/db-replication]] — binlog 상세 흐름, Semi-Sync, ProxySQL 상세, Read-Your-Writes
+- **summary:** ack/nack DLQ, TCP와 메시지큐 ack 비교, binlog 동기화 흐름, ProxySQL 커넥션 풀링/장애감지, Read-Your-Writes 패턴 보충.
+
+### 17:30 — ingest: 시스템 설계 스터디 1장 심화 대화
+- **source:** `sources/2026-04-14-system-design-study-ch1-deep-dive.md`
+- **created:**
+  - [[concepts/saml]] — SAML 프로토콜, IdP/SP 세션, SLO, 전자결재 오류 사례
+- **updated:**
+  - [[concepts/cache-strategies]] — 캐시 계층 위치(브라우저/CDN/인메모리), Write-Through, Write-Back, 캐시 일관성 전략, Memcached API
+  - [[concepts/database-sharding]] — 수평/수직 샤딩 비교, 버티컬 샤딩 상세, 샤딩 방법(범위/해시/위치), 샤드 장애 복구
+  - [[concepts/message-queue]] — 소비자 개념, 경쟁 소비자 패턴, Java/RabbitMQ 예시, ack/nack 메커니즘
+  - [[concepts/db-replication]] — 동기/비동기 동기화, binlog 메커니즘, 쿼리 라우팅, ProxySQL
+- **summary:** 1장 심화 스터디 대화 인제스트. Memcached API, SAML 세션 관리, 캐시 전략 심화, 샤딩 종류, 메시지 큐 소비자 패턴 등 대화에서 나온 개념 위키에 추가.
+
+### 16:30 — ingest: 시스템 설계 1장 전체 (스크린샷 16장)
+- **source:** `book/` 폴더 스크린샷 16장 (가상 면접 사례로 배우는 대규모 시스템 설계 기초 1장)
+- **created:**
+  - [[concepts/vertical-vs-horizontal-scaling]] — Scale Up vs Scale Out 트레이드오프
+  - [[concepts/load-balancer]] — 로드밸런서 동작 원리, 장애 대처
+  - [[concepts/db-replication]] — 주/부 DB 복제, 장애 시나리오
+  - [[concepts/cache-strategies]] — 캐시 계층, LRU/LFU/FIFO 방출 정책
+  - [[concepts/cdn]] — CDN 동작 원리, 캐시 무효화 전략
+  - [[concepts/stateless-architecture]] — 무상태 웹 계층, 세션 공유 저장소
+  - [[concepts/message-queue]] — 생산자/소비자 모델, 느슨한 결합
+  - [[concepts/database-sharding]] — 샤딩 키, 재샤딩/핫스팟/조인 문제
+- **updated:**
+  - [[projects/study-system-design-interview]] — 1장 ✅ 완료, 상세 단계 업데이트
+  - [[wiki/index.md]] — 총 49개 페이지
+- **summary:** 책 1장 스크린샷 전체 인제스트. 단일 서버 → 백만 사용자 아키텍처 진화 과정에서 등장하는 핵심 컴포넌트 8개 개념 페이지 생성.
+
 ### 스터디중 — publish: LLM 작동 방식 블로그 포스트
 - **source:** `sources/2026-04-14-how-claude-thinks.md`
 - **created:**

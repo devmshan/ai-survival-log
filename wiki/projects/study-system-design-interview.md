@@ -39,7 +39,7 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 챕터 | 상태 | 생성된 위키 페이지 |
 |------|------|-------------------|
-| 1장 | 🔄 진행중 (2026-04-14) | - |
+| 1장 | ✅ 완료 (2026-04-14) | vertical-vs-horizontal-scaling, load-balancer, db-replication, cache-strategies, cdn, stateless-architecture, message-queue, database-sharding |
 | 2장 | ⬜ 미시작 | - |
 | 3장 | ⬜ 미시작 | - |
 | 4장 | ⬜ 미시작 | - |
@@ -77,16 +77,16 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 1-1 | 단일 서버 → DB 분리 (웹/데이터 계층 분리 이유) | - | 🔄 (JSON API, null vs empty, 방어 코딩 논의) |
-| 1-2 | 수직 확장(Scale Up) vs 수평 확장(Scale Out) 트레이드오프 | `concepts/vertical-vs-horizontal-scaling` | ⬜ |
-| 1-3 | 로드 밸런서 — 역할, 동작 방식, 이중화 | `concepts/load-balancer` | ⬜ |
-| 1-4 | DB 다중화 — 주(Master)/부(Replica) 구조, 장애 처리 | `concepts/db-replication` | ⬜ |
-| 1-5 | 캐시 — 캐시 계층, Read-Through/Write-Through 전략 | `concepts/cache-strategies` | ⬜ |
-| 1-6 | CDN — 정적 콘텐츠 캐싱, 동작 원리 | `concepts/cdn` | ⬜ |
-| 1-7 | 무상태(Stateless) 계층 — 세션 공유 문제, Stateless 설계 | `concepts/stateless-architecture` | ⬜ |
-| 1-8 | 데이터센터 — 지리적 라우팅, 장애 복구 | - | ⬜ |
-| 1-9 | 메시지 큐 — 비동기 처리, 생산자/소비자 모델 | `concepts/message-queue` | ⬜ |
-| 1-10 | 로그·지표·자동화 — 운영 관점 모니터링 기초 | - | ⬜ |
+| 1-1 | 단일 서버 → DB 분리 (웹/데이터 계층 분리 이유) | - | ✅ (JSON API, null vs empty, 방어 코딩 논의) |
+| 1-2 | 수직 확장(Scale Up) vs 수평 확장(Scale Out) 트레이드오프 | [[concepts/vertical-vs-horizontal-scaling]] | ✅ |
+| 1-3 | 로드 밸런서 — 역할, 동작 방식, 이중화 | [[concepts/load-balancer]] | ✅ |
+| 1-4 | DB 다중화 — 주(Master)/부(Replica) 구조, 장애 처리 | [[concepts/db-replication]] | ✅ |
+| 1-5 | 캐시 — 캐시 계층, Read-Through/Write-Through 전략 | [[concepts/cache-strategies]] | ✅ |
+| 1-6 | CDN — 정적 콘텐츠 캐싱, 동작 원리 | [[concepts/cdn]] | ✅ |
+| 1-7 | 무상태(Stateless) 계층 — 세션 공유 문제, Stateless 설계 | [[concepts/stateless-architecture]] | ✅ |
+| 1-8 | 데이터센터 — 지리적 라우팅, 장애 복구 | - | ✅ (database-sharding에 통합) |
+| 1-9 | 메시지 큐 — 비동기 처리, 생산자/소비자 모델 | [[concepts/message-queue]] | ✅ |
+| 1-10 | 로그·지표·자동화 — 운영 관점 모니터링 기초 | - | ✅ (cache-strategies에 부분 통합) |
 
 ---
 
@@ -311,3 +311,4 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 - [[sources/2026-04-14-system-design-interview-v1]]
 - [[topics/ai-era-survival]]
+- [[topics/system-design-interview-01]] — 1장 블로그 포스트

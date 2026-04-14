@@ -5,7 +5,7 @@ updated: "2026-04-14"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-14 | 총 41개 페이지
+> 마지막 업데이트: 2026-04-14 | 총 51개 페이지
 
 ## Entities
 
@@ -26,18 +26,27 @@ updated: "2026-04-14"
 | [[concepts/ai-capability-overhang]] |  | ai, capability, developer | active |
 | [[concepts/ai-unbundling]] |  | ai, unbundling, industry, strategy | active |
 | [[concepts/ax-ai-transformation]] |  | ai, strategy, business | active |
+| [[concepts/cache-strategies]] |  | system-design, cache, performance, redis, distributed-systems | active |
+| [[concepts/cdn]] |  | system-design, cdn, performance, static-content, distributed-systems | active |
 | [[concepts/cgr3]] |  | cgr3, context-graph, llm, knowledge-graph, reasoning, rag | active |
 | [[concepts/context-graph-extraction]] |  | context-graph, extraction, sentence-bert, knowledge-graph, construction | active |
 | [[concepts/context-graph]] |  | context-graph, knowledge-graph, ai, data-governance, rag, llm, cgr3 | active |
+| [[concepts/database-sharding]] |  | system-design, database, sharding, scalability, distributed-systems | active |
+| [[concepts/db-replication]] |  | system-design, database, replication, high-availability, distributed-systems | active |
 | [[concepts/embedding]] |  | embedding, vector, llm, rag, machine-learning | active |
 | [[concepts/knowledge-graph-completion]] |  | knowledge-graph, kgc, link-prediction, embedding, ai | active |
 | [[concepts/knowledge-graph]] |  | knowledge-graph, graph-database, semantic-web, ai, ontology | active |
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
+| [[concepts/load-balancer]] |  | system-design, load-balancer, scalability, high-availability, distributed-systems | active |
+| [[concepts/message-queue]] |  | system-design, message-queue, async, decoupling, distributed-systems | active |
 | [[concepts/rag]] |  | rag, llm, vector-db, embedding, ai-architecture | active |
 | [[concepts/ralph-loop]] |  | ai, self-improvement, loop, methodology | active |
 | [[concepts/red-queen-effect]] |  | ai, competition, survival, evolution | active |
 | [[concepts/rlvr]] |  | ai, rlvr, machine-learning, ai-capability | active |
+| [[concepts/saml]] |  | system-design, auth, sso, session, security | active |
+| [[concepts/stateless-architecture]] |  | system-design, stateless, scalability, web-tier, distributed-systems | active |
 | [[concepts/tacit-knowledge]] |  | ai, knowledge, tacit-knowledge, human-skills | active |
+| [[concepts/vertical-vs-horizontal-scaling]] |  | system-design, scalability, scale-up, scale-out, distributed-systems | active |
 
 ## Sources
 
@@ -61,6 +70,7 @@ updated: "2026-04-14"
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/how-llm-works]] | 파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다. | llm, embedding, rag, vector-db, ai-architecture, knowledge-graph | active |
+| [[topics/system-design-interview-01]] | 서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리 | system-design, scalability, distributed-systems, study, backend | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | wiki, llm, markdown, knowledge-management, context-graph, design-decision | active |
 
 ## Projects
