@@ -44,6 +44,7 @@ This repository focuses on:
 The upstream contract lives in [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md:1).
 The practical operating scenarios and daily workflow live in [docs/operating-playbook.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating-playbook.md:1).
 The documentation record for this operating-model change lives in [docs/2026-04-15-upstream-operating-model-update.md](/Users/ms/workspace/claude/ai-survival-log/docs/2026-04-15-upstream-operating-model-update.md:1).
+The final cross-repository consistency review lives in [docs/2026-04-15-final-consistency-review.md](/Users/ms/workspace/claude/ai-survival-log/docs/2026-04-15-final-consistency-review.md:1).
 
 At minimum, upstream publishable pages must preserve:
 - stable `slug`
