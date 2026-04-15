@@ -4,7 +4,7 @@ description: "위키 페이지를 블로그 포스트(MDX)로 변환합니다"
 
 # /wiki:publish — 위키 → 블로그 포스트 변환
 
-위키 페이지를 블로그에 게시할 수 있는 MDX 파일로 변환합니다.
+위키 페이지를 `ai-survival-log-site`에서 소비할 수 있는 MDX 파일로 변환합니다.
 
 ## 입력
 
@@ -64,7 +64,7 @@ draft: false
 
 ### 4단계: 파일 출력
 
-- `content/posts/{slug}.mdx`로 저장
+- `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 저장
 - 기존 파일이 있으면 덮어쓰기 (위키가 source of truth)
 
 ### 5단계: 로그 기록
@@ -76,7 +76,7 @@ draft: false
 ```
 퍼블리시 완료:
 - 원본: wiki/topics/ai-era-survival.md
-- 출력: content/posts/ai-era-survival.mdx
+- 출력: ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx
 - 변환된 링크: N개
 ```
 

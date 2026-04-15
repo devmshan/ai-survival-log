@@ -1,0 +1,8 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+persistent_instructions = "Treat this repository as the upstream wiki authoring source for ai-survival-log-site. Plan before structural changes, preserve the publishing contract, and verify before completion."
+
+[features]
+multi_agent = false

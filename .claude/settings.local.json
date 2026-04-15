@@ -8,29 +8,5 @@
       "Read(//Users/ms/workspace/claude/ai-survival-log-site/**)",
       "Bash(npx shadcn@latest add badge card command input separator --yes)"
     ]
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cd /Users/ms/workspace/claude/ai-survival-log && ./scripts/wiki sync"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cd /Users/ms/workspace/claude/ai-survival-log && ./scripts/wiki lint --summary || true"
-          }
-        ]
-      }
-    ]
   }
 }

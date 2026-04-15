@@ -1,5 +1,27 @@
 # AI Survival Log — Wiki Schema
 
+@AGENTS.md
+
+## Operating Model
+
+- 이 저장소는 `ai-survival-log-site`의 상위 authoring/source-of-truth 저장소다.
+- 기본 흐름은 `sources -> wiki -> publish -> ai-survival-log-site/content/posts` 이다.
+- 발산 lane는 일반 블로그, 책 스터디 시리즈, 인스타그램 캐러셀까지 포함한다.
+- 구조 변경, publish 계약 변경, 로컬 agent surface 변경 전에는 짧은 계획을 먼저 작성한다.
+- 작업 완료 전에는 변경 범위에 맞는 검증을 명시적으로 수행한다.
+- ECC와 superpowers는 운영 원칙만 선택적으로 반영하며, 전체 harness surface를 그대로 복제하지 않는다.
+- `README.md`, `AGENTS.md`, `.claude/*`, `.codex/*`, publish 관련 문서는 같은 저장소 역할을 설명해야 한다.
+
+### Local Command Surface
+
+- `/wiki:ingest` — source를 위키에 흡수
+- `/wiki:query` — 위키 검색과 인용 답변
+- `/wiki:file-answer` — 답변을 위키 페이지로 저장
+- `/wiki:lint` — 위키 무결성 검사
+- `/wiki:publish` — downstream site용 MDX 출력 준비
+- `/content:book-study-blog` — 책 스터디 대화에서 시리즈형 블로그 lane 연결
+- `/content:blog-to-instagram` — 블로그 포스트에서 인스타그램 lane 연결
+
 > 이 프로젝트는 Karpathy의 LLM Wiki 패턴을 따르는 개인 지식 위키입니다.
 > "Ingest time" 컴파일 방식으로 지식을 축적합니다.
 
@@ -34,7 +56,7 @@ Raw Sources → 불변 원본 (articles, PDFs, notes)
 - 모든 페이지는 서로 `[[wikilink]]`로 연결됨
 - 하위 폴더: `entities/`, `concepts/`, `sources/`, `topics/`, `projects/`
 
-### Layer 3: `CLAUDE.md` (이 파일) — 스키마
+### Layer 3: `CLAUDE.md` (이 파일) — 스키마 + 운영 규칙
 
 - 위키 구조, 규칙, 워크플로우 정의
 - Claude가 위키를 어떻게 관리해야 하는지 지시
@@ -239,7 +261,7 @@ Obsidian 호환 `[[wikilink]]` 사용:
 2. frontmatter를 블로그 포맷으로 변환
 3. `[[wikilink]]`를 블로그 링크 또는 일반 텍스트로 변환
 4. `## 관련 페이지` 섹션 제거
-5. `content/posts/{slug}.mdx`로 출력
+5. `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 출력
 6. `wiki/log.md`에 publish 기록
 
 **변환 규칙:**
@@ -255,14 +277,14 @@ Obsidian 호환 `[[wikilink]]` 사용:
 ```
 wiki/topics/ai-era-survival.md (published: true, slug: "ai-era-survival")
     ↓ /wiki:publish
-content/posts/ai-era-survival.mdx (블로그 frontmatter)
+ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx (블로그 frontmatter)
     ↓ Next.js 빌드 (미래)
 /posts/ai-era-survival (웹 페이지)
 ```
 
 ### 규칙
 
-- **위키가 source of truth.** `content/posts/`는 생성된 출력물
+- **위키가 source of truth.** `ai-survival-log-site/content/posts/`는 생성된 출력물
 - 위키 갱신 시 `/wiki:publish` 재실행
 - `published: true` 페이지는 블로그 독자를 위해 standalone으로 읽힐 수 있어야 함
 - 주로 `topics/` 페이지가 블로그 후보 (서사적 흐름이 있는 글)

@@ -19,7 +19,7 @@ description: ""
 
 - **상태:** 설계 완료 / 구현 대기
 - **레퍼런스:** 우아한기술블로그 스타일
-- **콘텐츠 소스:** 이 위키의 `published: true` 페이지 → `/wiki:publish` → `content/posts/`
+- **콘텐츠 소스:** 이 위키의 `published: true` 페이지 → `/wiki:publish` → `ai-survival-log-site/content/posts/`
 
 ## 기술 스택
 
@@ -39,7 +39,7 @@ description: ""
 ```
 wiki/ (published: true 페이지)
     ↓ /wiki:publish
-content/posts/*.mdx
+ai-survival-log-site/content/posts/*.mdx
     ↓ next-mdx-remote 파싱
 Next.js 15 App Router (SSG)
     ↓ Vercel 배포
@@ -49,17 +49,20 @@ Next.js 15 App Router (SSG)
 ```
 
 **핵심 원칙:**
-- 위키가 source of truth — `content/posts/`는 생성된 출력물
+- 위키가 source of truth — `ai-survival-log-site/content/posts/`는 생성된 출력물
 - 파일 기반 콘텐츠 — MDX 추가하면 자동 포스트 생성
 - 빌드 타임 정적 생성(SSG) → 빠른 로딩, SEO 유리
 
 ## 디렉토리 구조
 
 ```
-ai-survival-log/
-├── wiki/             # 위키 (source of truth)
+ai-survival-log/              # upstream authoring repo
+├── wiki/                     # 위키 (source of truth)
+└── /wiki:publish
+    ↓
+ai-survival-log-site/         # downstream presentation repo
 ├── content/
-│   └── posts/        # /wiki:publish 출력물 (*.mdx)
+│   └── posts/                # publish 출력물 (*.mdx)
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx              # 메인 (글 목록 + 태그 필터)
