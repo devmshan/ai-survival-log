@@ -123,6 +123,7 @@ AI 바람이 부는 방향을 읽고 빠르게 adapt. [[entities/devsurvivallog|
 - [[entities/claude-code]] — 핵심 AI 도구
 - [[entities/devsurvivallog]] — 생존 기록 블로그
 - [[projects/blog-ai-study-site]] — 지식 공유를 위한 블로그 프로젝트
+- [[topics/claude-code-to-codex]] — Claude Code 중심 운영에서 Codex 공존 구조로 넘어간 리팩터링 기록
 - [[topics/how-llm-works]] — LLM 내부 구조 (파라미터, 임베딩, RAG, KG/CG)
 - [[concepts/agentic-workflow]] — Agentic Workflow 실전 방법론
 - [[concepts/bio-token]] — 바이오 토큰 개념
