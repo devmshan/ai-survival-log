@@ -1,7 +1,7 @@
 ---
 title: "AX (AI Transformation)"
 created: "2026-04-10"
-updated: "2026-04-12"
+updated: "2026-04-15"
 type: concept
 sources: []
 tags: [ai, strategy, business]
@@ -43,7 +43,21 @@ AI 시대 비즈니스는 요트 경주와 같다:
 
 > 출처: 노정석 대표 팟캐스트 (https://youtu.be/FPYOVt2B5EM)
 
+## 비개발 직군의 AI 적응 사례 (Lablup)
+
+[[entities/shin-junggyu|신정규 Lablup 대표]]에 따르면, AX는 개발자만의 영역이 아니다. Lablup 내부 사례:
+
+- **CFO:** 코딩 불가 → Claude Code 30분 학습 → 본인 harness 구축 → 2시간 걸리던 작업을 3분으로 단축
+- **콘텐츠 담당자:** Claude Code 일주일 만에 자체 harness 완성, GitHub 커맨드 직접 운용
+
+핵심은 **"남이 만든 skill을 다운로드하는 게 아니라, 내 일을 줄이는 내 걸 만드는 것"**. 이 과정을 30분만 거치면 가속 곡선에 진입할 수 있다.
+
+AI의 파도는 IT 종사자에서 시작해 전 직군으로 확산 중이며, 비개발 직군이 적응하기 시작하는 순간이 다음 가속 구간이 된다.
+
 ## 관련 페이지
 
 - [[concepts/ai-capability-overhang]] — AI 도구 성능 vs 사용자 역량 격차
 - [[topics/ai-era-survival]] — AI 시대 생존 전략 종합
+- [[concepts/agentic-workflow]] — 비개발 직군도 활용 가능한 workflow
+- [[entities/shin-junggyu]] — Lablup 내부 AX 사례 출처
+- [[sources/2026-04-15-ai-frontier-ep86]] — AI Frontier EP86

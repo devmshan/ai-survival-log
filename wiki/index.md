@@ -1,39 +1,47 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-14"
+updated: "2026-04-15"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-14 | 총 51개 페이지
+> 마지막 업데이트: 2026-04-15 | 총 61개 페이지
 
 ## Entities
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[entities/ai-frontier]] |  | youtube, podcast, ai, korea | active |
+| [[entities/backend-ai]] |  | mlops, ai-infrastructure, lablup, open-source | active |
 | [[entities/claude-code]] |  | claude-code, ai-tool, anthropic | active |
 | [[entities/devsurvivallog]] |  | blog, devsurvivallog, ai, personal | active |
 | [[entities/ecc]] |  | claude-code, plugin, ai-agent | active |
 | [[entities/gunseung]] |  | 건승, cat, character, cheese-tabby, mascot | active |
+| [[entities/lablup]] |  | mlops, ai-infrastructure, startup, korea | active |
 | [[entities/minsung]] |  | minsung, character, persona, devsurvivallog, instagram | active |
 | [[entities/obsidian]] |  | obsidian, note-taking, knowledge-management, tool | active |
+| [[entities/shin-junggyu]] |  | lablup, entrepreneur, agentic-workflow, korea | active |
 | [[entities/superpowers]] |  | claude-code, plugin, workflow | active |
 
 ## Concepts
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[concepts/agentic-workflow]] |  | agentic-workflow, claude-code, automation, harness | active |
 | [[concepts/ai-capability-overhang]] |  | ai, capability, developer | active |
 | [[concepts/ai-unbundling]] |  | ai, unbundling, industry, strategy | active |
 | [[concepts/ax-ai-transformation]] |  | ai, strategy, business | active |
+| [[concepts/bio-token]] |  | bio-token, cognitive-load, human, ai-era | active |
 | [[concepts/cache-strategies]] |  | system-design, cache, performance, redis, distributed-systems | active |
 | [[concepts/cdn]] |  | system-design, cdn, performance, static-content, distributed-systems | active |
 | [[concepts/cgr3]] |  | cgr3, context-graph, llm, knowledge-graph, reasoning, rag | active |
+| [[concepts/code-value-convergence]] |  | software, ai, future, code-value | active |
 | [[concepts/context-graph-extraction]] |  | context-graph, extraction, sentence-bert, knowledge-graph, construction | active |
 | [[concepts/context-graph]] |  | context-graph, knowledge-graph, ai, data-governance, rag, llm, cgr3 | active |
 | [[concepts/database-sharding]] |  | system-design, database, sharding, scalability, distributed-systems | active |
 | [[concepts/db-replication]] |  | system-design, database, replication, high-availability, distributed-systems | active |
 | [[concepts/embedding]] |  | embedding, vector, llm, rag, machine-learning | active |
+| [[concepts/instant-app]] |  | software, ai, future, instant-app, startup | active |
 | [[concepts/knowledge-graph-completion]] |  | knowledge-graph, kgc, link-prediction, embedding, ai | active |
 | [[concepts/knowledge-graph]] |  | knowledge-graph, graph-database, semantic-web, ai, ontology | active |
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
@@ -44,6 +52,7 @@ updated: "2026-04-14"
 | [[concepts/red-queen-effect]] |  | ai, competition, survival, evolution | active |
 | [[concepts/rlvr]] |  | ai, rlvr, machine-learning, ai-capability | active |
 | [[concepts/saml]] |  | system-design, auth, sso, session, security | active |
+| [[concepts/startup-watermill]] |  | startup, strategy, watermill, ai-era | active |
 | [[concepts/stateless-architecture]] |  | system-design, stateless, scalability, web-tier, distributed-systems | active |
 | [[concepts/tacit-knowledge]] |  | ai, knowledge, tacit-knowledge, human-skills | active |
 | [[concepts/vertical-vs-horizontal-scaling]] |  | system-design, scalability, scale-up, scale-out, distributed-systems | active |
@@ -62,6 +71,7 @@ updated: "2026-04-14"
 | [[sources/2026-04-13-medium-modelmind-context-graphs]] |  | context-graph, knowledge-graph, ai, explainer | active |
 | [[sources/2026-04-13-velog-context-graph-review]] |  | context-graph, knowledge-graph, paper-review, cgr3, korean | active |
 | [[sources/2026-04-14-system-design-interview-v1]] |  | system-design, backend, distributed-systems, interview, book | active |
+| [[sources/2026-04-15-ai-frontier-ep86]] |  | agentic-workflow, claude-code, lablup, backend-ai, vibe-coding, harness, startup, ai-era, automation, cognitive-load | active |
 
 ## Topics
 

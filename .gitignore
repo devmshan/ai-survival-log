@@ -5,3 +5,4 @@
 __pycache__/
 *.pyc
 wiki/.obsidian/
+.playwright-mcp/

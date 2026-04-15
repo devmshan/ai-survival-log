@@ -1,7 +1,5 @@
-# Tag: strategy
+# Tag: watermill
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
-| [[concepts/ai-unbundling]] |  | concept | active |
-| [[concepts/ax-ai-transformation]] |  | concept | active |
 | [[concepts/startup-watermill]] |  | concept | active |

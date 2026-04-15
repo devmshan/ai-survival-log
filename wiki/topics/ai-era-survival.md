@@ -1,7 +1,7 @@
 ---
 title: "AI 시대 생존 전략"
 created: "2026-04-10"
-updated: "2026-04-12"
+updated: "2026-04-15"
 sources: ["[[sources/2026-04-10-why-ai-survival-log]]", "[[sources/2026-04-12-ai-unbundle-myself]]"]
 type: topic
 sources: []
@@ -98,6 +98,18 @@ Data Connector + Prompt + Frontier Model + Harness
 
 AI 바람이 부는 방향을 읽고 빠르게 adapt. [[entities/devsurvivallog|devsurvivallog]]가 그 항해일지.
 
+## 신정규 Lablup 대표의 인사이트 (AI Frontier EP86)
+
+[[entities/shin-junggyu|신정규 대표]]가 40일 만에 100만 줄 코드를 작성하며 얻은 실전 교훈:
+
+- **[[concepts/agentic-workflow|Agentic Workflow]]:** 결과물이 아니라 결과물 생성 장치를 만드는 것이 핵심
+- **[[concepts/bio-token|바이오 토큰]]:** AI에 맡겨도 인지 부하는 줄지 않는다. 바이오 토큰 관리가 필수
+- **[[concepts/code-value-convergence|코드 가치 0 수렴론]]:** 소프트웨어의 중심이 코드 → 모델로 이동 중
+- **[[concepts/startup-watermill|물레방아론]]:** IT + 도메인 교차점에 물레방아를 설치하라
+- **진짜 파도는 이제부터:** IT 직군이 아닌 전 직군으로 AI 가속이 확산되는 순간이 다음 임계점
+
+> "내 일이 줄어드는 게 핵심이 돼야 된다." — 신정규
+
 ## 관련 페이지
 
 - [[concepts/tacit-knowledge]] — AI 시대에 가치가 높아지는 암묵지
@@ -112,3 +124,9 @@ AI 바람이 부는 방향을 읽고 빠르게 adapt. [[entities/devsurvivallog|
 - [[entities/devsurvivallog]] — 생존 기록 블로그
 - [[projects/blog-ai-study-site]] — 지식 공유를 위한 블로그 프로젝트
 - [[topics/how-llm-works]] — LLM 내부 구조 (파라미터, 임베딩, RAG, KG/CG)
+- [[concepts/agentic-workflow]] — Agentic Workflow 실전 방법론
+- [[concepts/bio-token]] — 바이오 토큰 개념
+- [[concepts/code-value-convergence]] — 코드 가치 0 수렴론
+- [[concepts/startup-watermill]] — 스타트업 물레방아론
+- [[entities/shin-junggyu]] — Lablup 대표, Agentic Workflow 실천가
+- [[sources/2026-04-15-ai-frontier-ep86]] — AI Frontier EP86 원본

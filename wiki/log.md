@@ -4,6 +4,30 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-15
+
+### 14:30 — ingest: AI Frontier EP86 원본 전사 분석 → 위키 심화 업데이트
+- **source:** `sources/2026-04-15-ai-frontier-ep86-part1.md`, `sources/2026-04-15-ai-frontier-ep86-part2.md`
+- **created:**
+  - [[concepts/instant-app]] — 쓰고 버리는 소프트웨어 패러다임, 인스턴트 앱 개념
+- **updated:**
+  - [[sources/2026-04-15-ai-frontier-ep86]] — 소스 요약 페이지 대폭 확장 (원본 발언 흐름, 데모 상세, 사이버 포뮬러 줄거리 전체, CS=영문과 비유, 자동화 파이프라인 구조, 비개발직군 사례 등)
+  - [[concepts/agentic-workflow]] — 방어적 AI 프레이밍 기법, sub-agent 제약 이유, self-critique 루프, context building 선문답 방식 추가
+  - [[entities/backend-ai]] — Backend.AI:GO 상세 기능, 탄생 스토리, 분산 라우팅, 자동화 파이프라인 상세 추가
+  - [[entities/lablup]] — AI-for-AI 인터페이스 전환 전략, 2개월 룰, CTO 돈오 에피소드, 비개발직군 적응 사례, 사업계획서 자동화 추가
+  - [[concepts/code-value-convergence]] — 인스턴트 앱 생태계, 살아남는 앱의 두 가지 조건 추가
+- **summary:** EP86 원본 전사 파트1/2를 세밀히 분석해 기존 위키 페이지들을 맥락 손실 없이 심화 업데이트. 특히 sources 페이지를 단순 요약에서 발언 흐름과 예시를 보존하는 풍부한 참조 문서로 확장. 인스턴트 앱 개념 신규 생성.
+
+### 12:00 — ingest: AI Frontier EP86 에피소드 (Agentic Workflow, Backend.AI:GO)
+- **source:** AI Frontier EP86 유튜브 (2026-02-18 게시)
+- **created:**
+  - [[sources/2026-04-15-ai-frontier-ep86]] — 에피소드 전체 요약, 핵심 인사이트 9개 섹션
+  - [[entities/ai-frontier]] — AI Frontier 유튜브 채널 (노정석, 최승준 진행)
+  - [[entities/lablup]] — AI infrastructure 플랫폼, Backend.AI 개발사
+  - [[entities/backend-ai]] — Lablup의 GPU 클러스터 운영 체제 + Backend.AI:GO
+  - [[entities/shin-junggyu]] — Lablup 대표, Agentic Workflow 실천가
+- **summary:** 신정규 Lablup 대표의 40일/130억 토큰/100만 줄 코드 Backend.AI:GO 개발 경험을 소스로 인제스트. AI Frontier 채널, Lablup, Backend.AI, 신정규 엔티티 페이지 신규 생성. concepts/agentic-workflow, bio-token, code-value-convergence, startup-watermill 등 파생 개념 페이지도 동시 생성됨.
+
 ## 2026-04-14
 
 ### 18:30 — publish: 대규모 시스템 설계 스터디 01 블로그 포스트
