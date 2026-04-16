@@ -119,3 +119,4 @@ draft: false
 - [[topics/ai-era-survival]] — 블로그의 핵심 주제
 - [[entities/claude-code]] — 개발에 사용하는 도구
 - [[concepts/llm-wiki-pattern]] — 위키 → 블로그 파이프라인의 기반
+- [[projects/cross-repo-ai-automation-lab]] — upstream/downstream 협업 자동화 실습

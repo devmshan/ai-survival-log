@@ -1,11 +1,11 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-15"
+updated: "2026-04-16"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-15 | 총 61개 페이지
+> 마지막 업데이트: 2026-04-16 | 총 62개 페이지
 
 ## Entities
 
@@ -90,6 +90,7 @@ updated: "2026-04-15"
 |--------|------|------|------|
 | [[projects/blog-ai-study-site]] |  | blog, nextjs, project | active |
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |
+| [[projects/cross-repo-ai-automation-lab]] | 두 저장소를 묶어 AI 자동화 실습을 진행하는 프로젝트 | automation, workflow, project, developer, wiki | active |
 | [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
 | [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |
 | [[projects/study-system-design-interview]] |  | system-design, study, backend, distributed-systems, interview | active |

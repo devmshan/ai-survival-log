@@ -4,6 +4,23 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-16
+
+### 12:00 — file-answer: PR summary 실습 결과 학습 문서화 + wiki 등록
+- **source:** `docs/2026-04-16-pr-summary-practice-review.md`
+- **created:**
+  - [[projects/cross-repo-ai-automation-lab]] — cross-repo AI 자동화 실습 프로젝트 페이지
+- **updated:**
+  - [[projects/blog-ai-study-site]] — cross-repo 자동화 실습 프로젝트 링크 추가
+  - [[wiki/index.md]] — 프로젝트 1개 추가, 총 62개 페이지
+- **summary:** PR summary 실습 결과를 공부용 문서로 재정리하고, 두 저장소 역할 차이와 축소 적용 개념을 포함한 학습 경로를 wiki project 페이지로 등록. 다음 단계인 Jira issue plan draft는 진행 예정 상태로 유지.
+
+### 10:45 — edit: AI-Native 개발자 메모를 내부 참고자료로 재분류
+- **updated:**
+  - `docs/2026-04-16-ai-native-developer-study-reference.md` — 공부 계획 전 참고자료로 재정리
+  - [[wiki/index.md]] — 잘못 추가한 위키 항목 제거
+- **summary:** 해당 메모는 블로그/위키 발행 후보가 아니라 공부 계획 수립 전 참고자료 성격이므로 `docs/` 문서로 이동하고, 위키 토픽/소스 반영분은 제거.
+
 ## 2026-04-15
 
 ### 14:30 — ingest: AI Frontier EP86 원본 전사 분석 → 위키 심화 업데이트
