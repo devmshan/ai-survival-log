@@ -4,3 +4,4 @@
 |--------|------|------|------|
 | [[projects/blog-ai-study-site]] |  | project | active |
 | [[projects/cross-repo-ai-automation-lab]] |  | project | active |
+| [[projects/site-seo-foundation-and-content-rewrite]] |  | project | active |

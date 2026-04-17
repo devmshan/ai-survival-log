@@ -4,6 +4,24 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-18
+
+### 10:20 — file-answer: canonical URL 개념 설명 위키 저장
+- **created:**
+  - [[concepts/canonical-url]] — 대표 URL 지정, 중복 URL 완화, 블로그 SEO 맥락 정리
+- **updated:**
+  - [[projects/site-seo-foundation-and-content-rewrite]] — canonical 개념 링크 추가
+  - [[wiki/index.md]] — concepts 1개 추가, 총 70개 페이지
+- **summary:** SEO 대화 중 나온 canonical 개념을 별도 concept 페이지로 저장. 대표 URL 의미, 중복 URL 완화 역할, 이 프로젝트의 site SEO 정비와의 연결을 함께 정리.
+
+### 01:30 — file-answer: site SEO foundation + 전체 포스트 리라이트 작업 위키 저장
+- **created:**
+  - [[projects/site-seo-foundation-and-content-rewrite]] — 기술 SEO, 콘텐츠 SEO 가이드, Search Console 제출, 전체 포스트 리라이트를 한 번에 정리한 프로젝트 페이지
+- **updated:**
+  - [[projects/blog-ai-study-site]] — site 현재 구현/운영 상태, 기술 SEO/리라이트 반영
+  - [[wiki/index.md]] — 프로젝트 1개 추가, 총 69개 페이지
+- **summary:** `ai-survival-log-site`에서 진행한 SEO 기반 정비, `content/posts` 전체 1차 리라이트, content SEO writing guide 도입, Search Console 도메인 인증 및 sitemap 제출, 초기 색인 요청까지의 흐름을 upstream wiki에 durable context로 정리.
+
 ## 2026-04-17
 
 ### 18:10 — file-answer: 개발자 자동화 실습 01 PR summary 블로그 글 작성

@@ -2,6 +2,8 @@
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
+| [[concepts/canonical-url]] |  | concept | active |
 | [[entities/devsurvivallog]] |  | entity | active |
 | [[projects/blog-ai-study-site]] |  | project | active |
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | project | draft |
+| [[projects/site-seo-foundation-and-content-rewrite]] |  | project | active |
