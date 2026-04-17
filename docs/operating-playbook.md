@@ -42,7 +42,7 @@ Start in `ai-survival-log`.
 
 Flow:
 1. Refine the target page in `wiki/topics/*.md` or another publishable wiki page
-2. Confirm `published: true`, `slug`, `description`, and standalone readability
+2. Confirm `published: true`, `slug`, `description`, standalone readability, and alignment with `docs/content-seo-guide.md`
 3. If the page embeds screenshots or images:
    keep the source asset in `docs/images/`
    copy the site-facing asset to `ai-survival-log-site/public/images/{slug-or-series}/`
@@ -134,11 +134,13 @@ The purpose of this block is to ensure new understanding becomes upstream knowle
 Stay in `ai-survival-log`.
 
 Review which topic is ready to move outward:
+- before publish, apply `docs/content-seo-guide.md` so title, description, introduction, and related-page structure are already search-aware
 - general blog post
 - book-study series post
 - not ready yet and still needs wiki refinement
 
 For a normal post:
+- apply `docs/content-seo-guide.md` before publish so the upstream page already uses clearer titles, summaries, and introductions
 - refine the topic page
 - confirm `published: true`, `slug`, `description`, and readable structure
 - if images exist, keep `docs/images/` as the upstream source copy and `ai-survival-log-site/public/images/{slug-or-series}/` as the downstream-served copy
