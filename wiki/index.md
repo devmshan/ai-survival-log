@@ -1,11 +1,11 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-16"
+updated: "2026-04-17"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-16 | 총 62개 페이지
+> 마지막 업데이트: 2026-04-17 | 총 67개 페이지
 
 ## Entities
 
@@ -41,17 +41,21 @@ updated: "2026-04-16"
 | [[concepts/database-sharding]] |  | system-design, database, sharding, scalability, distributed-systems | active |
 | [[concepts/db-replication]] |  | system-design, database, replication, high-availability, distributed-systems | active |
 | [[concepts/embedding]] |  | embedding, vector, llm, rag, machine-learning | active |
+| [[concepts/es-module-mjs]] |  | javascript, es-module, commonjs, nodejs, module-system | active |
 | [[concepts/instant-app]] |  | software, ai, future, instant-app, startup | active |
 | [[concepts/knowledge-graph-completion]] |  | knowledge-graph, kgc, link-prediction, embedding, ai | active |
 | [[concepts/knowledge-graph]] |  | knowledge-graph, graph-database, semantic-web, ai, ontology | active |
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
 | [[concepts/load-balancer]] |  | system-design, load-balancer, scalability, high-availability, distributed-systems | active |
 | [[concepts/message-queue]] |  | system-design, message-queue, async, decoupling, distributed-systems | active |
+| [[concepts/pull-request]] |  | git, pull-request, code-review, workflow, collaboration, github | active |
+| [[concepts/pr-summary]] |  | pull-request, automation, code-review, workflow, github | active |
 | [[concepts/rag]] |  | rag, llm, vector-db, embedding, ai-architecture | active |
 | [[concepts/ralph-loop]] |  | ai, self-improvement, loop, methodology | active |
 | [[concepts/red-queen-effect]] |  | ai, competition, survival, evolution | active |
 | [[concepts/rlvr]] |  | ai, rlvr, machine-learning, ai-capability | active |
 | [[concepts/saml]] |  | system-design, auth, sso, session, security | active |
+| [[concepts/shebang]] |  | shell, script, unix, interpreter, cli | active |
 | [[concepts/startup-watermill]] |  | startup, strategy, watermill, ai-era | active |
 | [[concepts/stateless-architecture]] |  | system-design, stateless, scalability, web-tier, distributed-systems | active |
 | [[concepts/tacit-knowledge]] |  | ai, knowledge, tacit-knowledge, human-skills | active |
@@ -90,7 +94,7 @@ updated: "2026-04-16"
 |--------|------|------|------|
 | [[projects/blog-ai-study-site]] |  | blog, nextjs, project | active |
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |
-| [[projects/cross-repo-ai-automation-lab]] | 두 저장소를 묶어 AI 자동화 실습을 진행하는 프로젝트 | automation, workflow, project, developer, wiki | active |
 | [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
+| [[projects/cross-repo-ai-automation-lab]] |  | automation, workflow, project, developer, wiki | active |
 | [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |
 | [[projects/study-system-design-interview]] |  | system-design, study, backend, distributed-systems, interview | active |
