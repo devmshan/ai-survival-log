@@ -43,9 +43,14 @@ Start in `ai-survival-log`.
 Flow:
 1. Refine the target page in `wiki/topics/*.md` or another publishable wiki page
 2. Confirm `published: true`, `slug`, `description`, and standalone readability
-3. Run `/wiki:publish`
-4. Emit or update the downstream post at `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
-5. Move to `ai-survival-log-site` only for presentation-layer refinement if needed
+3. If the page embeds screenshots or images:
+   keep the source asset in `docs/images/`
+   copy the site-facing asset to `ai-survival-log-site/public/images/{slug-or-series}/`
+   use markdown image paths like `/images/{slug-or-series}/{file}.png`
+   prefer ASCII kebab-case filenames
+4. Run `/wiki:publish`
+5. Emit or update the downstream post at `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
+6. Move to `ai-survival-log-site` only for presentation-layer refinement if needed
 
 Use this as the default wiki-to-blog path.
 
@@ -136,6 +141,7 @@ Review which topic is ready to move outward:
 For a normal post:
 - refine the topic page
 - confirm `published: true`, `slug`, `description`, and readable structure
+- if images exist, keep `docs/images/` as the upstream source copy and `ai-survival-log-site/public/images/{slug-or-series}/` as the downstream-served copy
 - run `/wiki:publish`
 
 For a study-series post:
@@ -153,6 +159,7 @@ Check:
 - newly added or updated MDX files in `content/posts/`
 - frontmatter compatibility
 - series metadata when applicable
+- image asset paths and existence under `public/images/` when the post embeds screenshots
 - draft filtering behavior
 - any affected rendering or navigation
 

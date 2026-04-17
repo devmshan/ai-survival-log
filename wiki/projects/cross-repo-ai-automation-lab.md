@@ -88,4 +88,5 @@ description: ""
 - [[projects/blog-ai-study-site]]
 - [[concepts/agentic-workflow]]
 - [[concepts/pull-request]]
+- [[topics/developer-automation-lab-01-pr-summary]]
 - [[topics/claude-code-to-codex]]

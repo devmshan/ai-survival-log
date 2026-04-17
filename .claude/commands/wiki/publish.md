@@ -20,6 +20,13 @@ description: "위키 페이지를 블로그 포스트(MDX)로 변환합니다"
 - `description` 존재 확인 (없으면 요청)
 - `status: active` 확인 (draft이면 경고)
 
+대상 페이지가 스크린샷/이미지를 포함하면 추가로 확인합니다:
+
+- upstream source copy가 `docs/images/`에 있는지
+- downstream served copy가 `ai-survival-log-site/public/images/{slug-or-series}/`에 있는지
+- 본문 이미지 경로가 `/images/{slug-or-series}/{file}.png` 형태인지
+- publish-facing 파일명이 ASCII kebab-case인지
+
 ## 워크플로우
 
 ### 1단계: 위키 페이지 읽기
@@ -60,7 +67,8 @@ draft: false
 - `[[concepts/some-concept]]` → published 페이지면 내부 링크, 아니면 일반 텍스트
 - `## 관련 페이지` 섹션 전체 제거
 - Mermaid 코드블록 보존
-- 이미지 경로 보존
+- 이미지 경로는 downstream site 기준 `/images/{slug-or-series}/{file}.png` 형태 유지
+- 스크린샷 원본은 `docs/images/`에 남기고, site가 읽는 복사본은 `ai-survival-log-site/public/images/{slug-or-series}/`에 둠
 
 ### 4단계: 파일 출력
 

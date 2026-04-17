@@ -5,7 +5,7 @@ updated: "2026-04-17"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-17 | 총 67개 페이지
+> 마지막 업데이트: 2026-04-17 | 총 68개 페이지
 
 ## Entities
 
@@ -48,8 +48,8 @@ updated: "2026-04-17"
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
 | [[concepts/load-balancer]] |  | system-design, load-balancer, scalability, high-availability, distributed-systems | active |
 | [[concepts/message-queue]] |  | system-design, message-queue, async, decoupling, distributed-systems | active |
-| [[concepts/pull-request]] |  | git, pull-request, code-review, workflow, collaboration, github | active |
 | [[concepts/pr-summary]] |  | pull-request, automation, code-review, workflow, github | active |
+| [[concepts/pull-request]] |  | git, pull-request, code-review, workflow, collaboration, github | active |
 | [[concepts/rag]] |  | rag, llm, vector-db, embedding, ai-architecture | active |
 | [[concepts/ralph-loop]] |  | ai, self-improvement, loop, methodology | active |
 | [[concepts/red-queen-effect]] |  | ai, competition, survival, evolution | active |
@@ -84,6 +84,7 @@ updated: "2026-04-17"
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/claude-code-to-codex]] | Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정. | claude-code, codex, agentic-workflow, harness, workflow, llm-ops | active |
+| [[topics/developer-automation-lab-01-pr-summary]] | PR summary가 무엇인지 이해하는 데서 시작해, 규칙 기반 자동화를 직접 실습하고 실제 GitHub PR 댓글까지 확인한 기록. | automation, pull-request, workflow, github, code-review, developer, study | active |
 | [[topics/how-llm-works]] | 파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다. | llm, embedding, rag, vector-db, ai-architecture, knowledge-graph | active |
 | [[topics/system-design-interview-01]] | 서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리 | system-design, scalability, distributed-systems, study, backend | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | wiki, llm, markdown, knowledge-management, context-graph, design-decision | active |

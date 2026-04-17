@@ -64,3 +64,4 @@ node scripts/pr-summary.mjs --files "wiki/topics/ai-era-survival.md,docs/publish
 
 - [[concepts/pull-request]]
 - [[projects/cross-repo-ai-automation-lab]]
+- [[topics/developer-automation-lab-01-pr-summary]]
