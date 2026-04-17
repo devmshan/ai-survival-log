@@ -117,6 +117,10 @@ description: ""
 - `description`: `published: true`일 때 필수 — 블로그 카드 요약
 - `tags`: 소문자, 하이픈 구분 (예: `claude-code`, `ai-transformation`)
 - `sources`: 해당 페이지가 참조하는 소스 위키 페이지 `[[wikilink]]` 배열
+- 스크린샷/이미지를 포함한 publishable 페이지는 원본 자산을 `docs/images/`에 보존
+- downstream에서 실제 서빙할 자산은 `ai-survival-log-site/public/images/{slug-or-series}/`에 둠
+- publishable 페이지 본문에서는 `/images/{slug-or-series}/{file}.png` 형태의 site 경로 사용
+- publish-facing 이미지 파일명은 ASCII kebab-case 권장
 
 ## 크로스 레퍼런싱 규칙
 
@@ -261,14 +265,17 @@ Obsidian 호환 `[[wikilink]]` 사용:
 2. frontmatter를 블로그 포맷으로 변환
 3. `[[wikilink]]`를 블로그 링크 또는 일반 텍스트로 변환
 4. `## 관련 페이지` 섹션 제거
-5. `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 출력
-6. `wiki/log.md`에 publish 기록
+5. 인라인 이미지가 있으면 downstream site 경로(`/images/{slug-or-series}/{file}.png`) 호환성 확인
+6. `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 출력
+7. `wiki/log.md`에 publish 기록
 
 **변환 규칙:**
 
 - `[[wikilink]]`에 대응하는 published 페이지가 있으면 → 블로그 내부 링크 (`/posts/slug`)
 - 없으면 → 일반 텍스트 (링크 제거)
 - Mermaid 코드블록은 보존
+- 이미지는 upstream 원본(`docs/images/`)과 downstream served copy(`ai-survival-log-site/public/images/{slug-or-series}/`)를 함께 유지
+- 이미지 링크는 site가 읽는 `/images/{slug-or-series}/...` 경로를 사용
 
 ## 블로그 연동
 
@@ -288,6 +295,7 @@ ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx (블로그 fro
 - 위키 갱신 시 `/wiki:publish` 재실행
 - `published: true` 페이지는 블로그 독자를 위해 standalone으로 읽힐 수 있어야 함
 - 주로 `topics/` 페이지가 블로그 후보 (서사적 흐름이 있는 글)
+- 스크린샷/이미지가 있으면 source copy와 site-served copy를 모두 관리
 
 ## 컨벤션
 

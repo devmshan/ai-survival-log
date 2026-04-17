@@ -6,6 +6,15 @@ title: "Wiki Log"
 
 ## 2026-04-17
 
+### 18:10 — file-answer: 개발자 자동화 실습 01 PR summary 블로그 글 작성
+- **created:**
+  - [[topics/developer-automation-lab-01-pr-summary]] — PR summary 학습과 실제 PR 실습 기록
+- **updated:**
+  - [[concepts/pr-summary]] — 시리즈 글 역링크 추가
+  - [[projects/cross-repo-ai-automation-lab]] — 관련 토픽 링크 추가
+  - [[wiki/index.md]] — topic 1개 추가 예정
+- **summary:** 오늘의 PR summary 학습 흐름과 실제 GitHub PR 코멘트 실습, LLM 확장 보류 판단까지 한 편의 발행용 글로 정리. `개발자 자동화 실습` 시리즈의 1편으로 작성.
+
 ### 16:30 — file-answer: PR summary 개념 설명 위키 저장
 - **created:**
   - [[concepts/pr-summary]] — PR summary의 목적, 동작 방식, 역할별 활용 정리

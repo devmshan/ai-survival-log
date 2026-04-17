@@ -26,6 +26,12 @@ When changing publishable wiki pages or publishing rules, preserve:
 - downstream compatibility with `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
 - book-study and social-expansion lanes when the page participates in them
 
+When a publishable page embeds screenshots or other images, preserve:
+- an upstream source copy in `docs/images/`
+- a downstream-served copy in `ai-survival-log-site/public/images/{slug-or-series}/`
+- site-facing markdown image paths like `/images/{slug-or-series}/{file}.png`
+- ASCII kebab-case filenames for publish-facing assets
+
 ## Selective Adoption
 
 Adopt only the useful operating principles from ECC and superpowers:

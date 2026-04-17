@@ -23,6 +23,12 @@ They should also preserve:
 - stable tags suitable for site filtering
 - valid related-page structure while in the wiki
 
+If a publishable page contains screenshots or other inline images, it should also preserve:
+- an upstream source copy under `docs/images/`
+- a downstream-served copy under `ai-survival-log-site/public/images/{slug-or-series}/`
+- publish-facing markdown paths in the form `/images/{slug-or-series}/{file}.png`
+- ASCII kebab-case asset filenames
+
 ## Output Rule
 
 Default downstream output path:
@@ -33,6 +39,7 @@ The publish step is responsible for:
 - converting wiki frontmatter to site frontmatter
 - removing wiki-only sections such as `## 관련 페이지`
 - translating `[[wikilink]]` references for site consumption
+- keeping inline image references compatible with downstream site paths
 
 ## Book Study Lane
 
@@ -53,3 +60,4 @@ When changing publishing rules, verify:
 - `README.md`, `AGENTS.md`, `CLAUDE.md`, `.claude/*`, and `.codex/*` describe the same source-of-truth boundary
 - publishable wiki page requirements are still documented correctly
 - downstream site path conventions are still reflected accurately
+- embedded screenshots or image assets have both upstream source copies and downstream-served copies

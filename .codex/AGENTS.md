@@ -26,6 +26,12 @@ Direct edits should preserve:
 - compatibility with the downstream site contract
 - book-study and downstream content expansion rules when applicable
 
+When a publishable page embeds screenshots or other images, preserve:
+- an upstream source copy in `docs/images/`
+- a downstream-served copy in `ai-survival-log-site/public/images/{slug-or-series}/`
+- site-facing markdown image paths like `/images/{slug-or-series}/{file}.png`
+- ASCII kebab-case filenames for publish-facing assets
+
 ## Selective Adoption
 
 Adopt only the useful parts of ECC and superpowers:

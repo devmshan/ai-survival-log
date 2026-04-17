@@ -53,6 +53,12 @@ At minimum, upstream publishable pages must preserve:
 - correct `updated` date
 - tags suitable for the downstream site
 
+For publishable pages with embedded screenshots or images:
+- keep the upstream source asset in `docs/images/`
+- expose the downstream-served asset from `ai-survival-log-site/public/images/{slug-or-series}/`
+- reference the image in the wiki page with a site path like `/images/{slug-or-series}/{file}.png`
+- prefer ASCII kebab-case filenames for publish-facing assets
+
 ## Working Principles
 
 - plan before structural or contract changes
