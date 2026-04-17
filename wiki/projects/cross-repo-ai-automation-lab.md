@@ -87,4 +87,5 @@ description: ""
 
 - [[projects/blog-ai-study-site]]
 - [[concepts/agentic-workflow]]
+- [[concepts/pull-request]]
 - [[topics/claude-code-to-codex]]

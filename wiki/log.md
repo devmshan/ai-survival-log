@@ -4,6 +4,32 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-17
+
+### 16:30 — file-answer: PR summary 개념 설명 위키 저장
+- **created:**
+  - [[concepts/pr-summary]] — PR summary의 목적, 동작 방식, 역할별 활용 정리
+- **updated:**
+  - [[concepts/pull-request]] — PR summary 관련 페이지 링크 추가
+  - [[wiki/index.md]] — concepts 1개 추가, 총 67개 페이지
+- **summary:** 대화에서 정리한 PR summary 설명을 concepts/pr-summary.md로 저장. PR 자동 코멘트의 목적, PR 작성 전 로컬 사전 점검, 작성자/리뷰어/maintainer 관점을 함께 정리.
+
+### 14:00 — file-answer: .mjs 파일과 Shebang 개념 위키 저장
+- **created:**
+  - [[concepts/es-module-mjs]] — ES Module, .mjs 파일 형식, CommonJS vs ESM 비교
+  - [[concepts/shebang]] — #! 문자열, 인터프리터 지시, /usr/bin/env 패턴
+- **updated:**
+  - [[wiki/index.md]] — concepts 2개 추가, 총 66개 페이지
+- **summary:** 대화에서 생성된 .mjs 파일과 shebang 설명을 각각 wiki/concepts/에 저장. 두 페이지 간 상호 크로스 레퍼런스 추가.
+
+### 10:00 — file-answer: Pull Request 개념 설명 위키 저장
+- **created:**
+  - [[concepts/pull-request]] — PR 개념, 흐름, 리뷰 방식, CI 연동, PR summary 자동화 연결
+- **updated:**
+  - [[projects/cross-repo-ai-automation-lab]] — pull-request 역링크 추가
+  - [[wiki/index.md]] — concepts 1개 추가, 총 64개 페이지
+- **summary:** 대화에서 생성된 PR 설명 답변을 wiki/concepts/pull-request.md로 저장. PR 기본 흐름, 리뷰 유형, CI/CD 연동, PR summary 자동화와의 연결까지 포함.
+
 ## 2026-04-16
 
 ### 12:00 — file-answer: PR summary 실습 결과 학습 문서화 + wiki 등록
