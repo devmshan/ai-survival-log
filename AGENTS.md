@@ -18,6 +18,8 @@ Use this default loop for non-trivial changes:
 
 ## Publishing Compatibility
 
+When authoring or rewriting publishable pages, follow `docs/content-seo-guide.md` so blog-writing and series-writing decisions already reflect search priorities before publish.
+
 `wiki/` is the source of truth.
 
 When changing publishable wiki pages or publishing rules, preserve:
