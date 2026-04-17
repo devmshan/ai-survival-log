@@ -227,3 +227,119 @@ class TestCmdLint:
         wiki_lib.cmd_sync(wiki)
         result = wiki_lib.cmd_lint(wiki, summary=True)
         assert result == 0  # --summary는 항상 0
+
+
+class TestCmdPublish:
+    def test_lists_published_pages_when_no_target(self, tmp_path, capsys):
+        wiki = tmp_path / "wiki"
+        make_page(
+            wiki,
+            "topics/example.md",
+            title="예제 글",
+            type="topic",
+            status="active",
+            tags=["ai"],
+            description="예제 설명",
+            published=True,
+            slug="example-post",
+        )
+        result = wiki_lib.cmd_publish(wiki_dir=wiki, site_root=tmp_path / "site")
+        captured = capsys.readouterr()
+        assert result == 0
+        assert "topics/example" in captured.out
+        assert "/posts/example-post" in captured.out
+
+    def test_publishes_page_with_seo_and_series_fields(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        site = tmp_path / "site"
+        (site / "public" / "images" / "lab").mkdir(parents=True)
+        (site / "public" / "images" / "lab" / "shot.png").write_text("png", encoding="utf-8")
+        make_page(
+            wiki,
+            "topics/example.md",
+            title="예제 글",
+            type="topic",
+            status="active",
+            tags=["ai", "study"],
+            description="예제 설명",
+            published=True,
+            slug="example-post",
+            updated="2026-04-18",
+            seoTitle="검색용 제목",
+            seoDescription="검색용 설명",
+            series="실습 시리즈",
+            seriesSlug="lab",
+            seriesOrder=1,
+            content="# 예제 글\n\n본문 [[topics/other|다른 글]]\n\n![샷](/images/lab/shot.png)\n\n## 관련 페이지\n\n- [[topics/other]]",
+        )
+        make_page(
+            wiki,
+            "topics/other.md",
+            title="다른 글",
+            type="topic",
+            status="active",
+            tags=["ai"],
+            description="다른 설명",
+            published=True,
+            slug="other-post",
+            updated="2026-04-17",
+            content="# 다른 글\n\n본문",
+        )
+
+        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+
+        assert result == 0
+        output = site / "content" / "posts" / "2026-04-18-example-post.mdx"
+        assert output.exists()
+        content = output.read_text(encoding="utf-8")
+        assert 'seoTitle: "검색용 제목"' in content
+        assert 'seoDescription: "검색용 설명"' in content
+        assert 'seriesSlug: "lab"' in content
+        assert "seriesOrder: 1" in content
+        assert "[다른 글](/posts/other-post)" in content
+        assert "## 관련 페이지" not in content
+        assert content.startswith("---\n")
+        assert "# 예제 글" not in content
+
+    def test_publish_fails_when_series_slug_missing(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        site = tmp_path / "site"
+        make_page(
+            wiki,
+            "topics/example.md",
+            title="예제 글",
+            type="topic",
+            status="active",
+            tags=["ai"],
+            description="예제 설명",
+            published=True,
+            slug="example-post",
+            updated="2026-04-18",
+            series="실습 시리즈",
+            content="# 예제 글\n\n본문",
+        )
+
+        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+
+        assert result == 1
+
+    def test_publish_fails_when_image_missing_in_site_public(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        site = tmp_path / "site"
+        make_page(
+            wiki,
+            "topics/example.md",
+            title="예제 글",
+            type="topic",
+            status="active",
+            tags=["ai"],
+            description="예제 설명",
+            published=True,
+            slug="example-post",
+            updated="2026-04-18",
+            content="# 예제 글\n\n![샷](/images/lab/missing.png)",
+        )
+
+        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+
+        assert result == 1

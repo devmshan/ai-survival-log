@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from wiki_lib import cmd_sync, cmd_tags, cmd_lint
+from wiki_lib import cmd_sync, cmd_tags, cmd_lint, cmd_publish
 
 
 def main():
@@ -18,6 +18,10 @@ def main():
 
     sub.add_parser("tags", help="tags/ 재생성")
 
+    publish_p = sub.add_parser("publish", help="wiki -> downstream post 발행")
+    publish_p.add_argument("path", nargs="?", help="발행할 wiki 경로")
+    publish_p.add_argument("--all", action="store_true", help="published: true 전체 발행")
+
     args = parser.parse_args()
 
     if args.cmd == "sync":
@@ -26,6 +30,8 @@ def main():
         sys.exit(cmd_lint(summary=args.summary))
     elif args.cmd == "tags":
         cmd_tags()
+    elif args.cmd == "publish":
+        sys.exit(cmd_publish(target=args.path, publish_all=args.all))
     else:
         parser.print_help()
         sys.exit(1)
