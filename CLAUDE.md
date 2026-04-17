@@ -8,6 +8,7 @@
 - 기본 흐름은 `sources -> wiki -> publish -> ai-survival-log-site/content/posts` 이다.
 - 발산 lane는 일반 블로그, 책 스터디 시리즈, 인스타그램 캐러셀까지 포함한다.
 - 구조 변경, publish 계약 변경, 로컬 agent surface 변경 전에는 짧은 계획을 먼저 작성한다.
+- publishable wiki 페이지를 쓰거나 고칠 때는 `docs/content-seo-guide.md`를 따라 제목, 설명, 도입부, 시리즈 구조가 검색 우선순위도 반영하도록 한다.
 - 작업 완료 전에는 변경 범위에 맞는 검증을 명시적으로 수행한다.
 - ECC와 superpowers는 운영 원칙만 선택적으로 반영하며, 전체 harness surface를 그대로 복제하지 않는다.
 - `README.md`, `AGENTS.md`, `.claude/*`, `.codex/*`, publish 관련 문서는 같은 저장소 역할을 설명해야 한다.

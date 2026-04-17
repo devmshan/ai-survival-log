@@ -19,6 +19,9 @@ Publishable wiki pages must include:
 - `updated`
 
 They should also preserve:
+- titles and descriptions that remain strong enough for downstream SEO presentation
+- introductions that surface the page topic early for downstream readers
+- link structure that supports downstream topic-cluster navigation
 - standalone readability for downstream readers
 - stable tags suitable for site filtering
 - valid related-page structure while in the wiki
