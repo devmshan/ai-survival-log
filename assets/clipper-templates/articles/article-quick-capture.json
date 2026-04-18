@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Article Quick Capture",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** article\\n- **Ingest Target:** raw/articles\\n\\n## Quick Reason\\n\\n- Why did I save this?\\n\\n## Later Questions\\n\\n- What should the next ingest focus on?\\n\\n## Raw Clip\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "article",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/articles",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "web-clipping, article, quick-capture",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/articles"
+}

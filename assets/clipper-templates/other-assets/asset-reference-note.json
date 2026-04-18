@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Asset Reference Note",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source URL:** {{url}}\\n- **Author / Owner:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** asset-note\\n- **Storage Target:** assets/intake/reference-notes\\n- **Recommended Harness:** classify first, then move to a channel asset lane if needed\\n\\n## Asset Summary\\n\\n- What is this asset?\\n- Why keep it?\\n- Is the output channel still undecided?\\n\\n## Possible Channel Fit\\n\\n- Blog:\\n- YouTube:\\n- Instagram:\\n- Webtoon:\\n- Keep in intake:\\n\\n## Rights / Caution\\n\\n- License or ownership:\\n- What must not be reused blindly:\\n\\n## Raw Reference\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "owner",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "asset-note",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "assets/intake/reference-notes",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "classify first, then move to a channel asset lane if needed",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "asset-note, reference, attachment, image-source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "assets/intake/reference-notes"
+}

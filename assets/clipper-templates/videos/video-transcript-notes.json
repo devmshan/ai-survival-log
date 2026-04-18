@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Video Transcript Notes",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Creator:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** video\\n- **Ingest Target:** raw/videos\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Episode Context\\n\\n- Interview, lecture, product demo, or tutorial?\\n- Why does this matter to the wiki?\\n\\n## Timestamp Notes\\n\\n- 00:00\\n- 00:00\\n- 00:00\\n\\n## Extraction Priorities\\n\\n- Speakers or entities:\\n- Reusable concepts:\\n- Quotes worth preserving:\\n- Follow-up topics:\\n\\n## Transcript Or Clip\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "creator",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "video",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/videos",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "web-clipping, video, transcript, source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/videos"
+}

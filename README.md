@@ -17,6 +17,17 @@ This repository focuses on:
 - turning selected wiki pages into publish-ready outputs in `output/`
 - supporting downstream expansion into blog posts, study-series posts, and Instagram assets
 
+## Obsidian Web Clipper
+
+Obsidian Web Clipper templates for this repo live in [assets/clipper-templates/README.md](/Users/ms/workspace/claude/ai-survival-log/assets/clipper-templates/README.md:1).
+
+Recommended capture flow:
+- text sources go to `raw/articles`, `raw/videos`, `raw/podcasts`, `raw/books`, or `raw/journals`
+- image or attachment references go to `assets/intake/reference-notes`
+- undecided visual or attachment assets should stay in `assets/intake/` until a channel is chosen
+- after capture, run `/wiki:ingest`
+- for study-oriented book material, continue with `/content:book-study-blog` when needed
+
 ## Relationship To ai-survival-log-site
 
 - `ai-survival-log` is the source-of-truth authoring system

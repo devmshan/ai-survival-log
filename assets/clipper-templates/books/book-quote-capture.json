@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Book Quote Capture",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Type:** book\\n- **Ingest Target:** raw/books\\n\\n## Quote Context\\n\\n- Book title:\\n- Chapter:\\n- Why this quote matters:\\n\\n## Reusable Insight\\n\\n- What should become a wiki concept or topic?\\n\\n## Raw Quote Or Excerpt\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "book",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/books",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "book-note, quote, excerpt, raw-source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/books"
+}

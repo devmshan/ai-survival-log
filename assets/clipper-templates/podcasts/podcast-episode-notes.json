@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Podcast Episode Notes",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Hosts / Guests:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** podcast\\n- **Ingest Target:** raw/podcasts\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Listening Context\\n\\n- Why did I keep this episode?\\n- Which idea or person matters most?\\n\\n## Key Beats\\n\\n- Opening premise:\\n- Important claim:\\n- Useful analogy:\\n- Follow-up question:\\n\\n## Raw Notes Or Transcript\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "hosts_or_guests",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "podcast",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/podcasts",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "web-clipping, podcast, episode-notes, source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/podcasts"
+}
