@@ -102,6 +102,54 @@ Avoid titles that:
 - ask a vague question without signaling the answer scope
 - are too broad for the actual content
 
+### `seoTitle`
+
+**Required** when `title` prioritizes brand tone, narrative hook, or personal voice over search clarity.
+
+This field is the HTML `<title>` override used by the downstream site for search engine visibility. It does not change the visible heading in the post.
+
+#### Format rule
+
+```
+[primary concept or action] + [specific modifier or context] + [outcome or qualifier if needed]
+```
+
+- put the main searchable concept in the first 15 characters
+- Korean target length: 30–50 characters
+- English target length: 50–60 characters
+- do not start with a brand name the reader would not search for
+- do not start with a narrative hook or rhetorical phrase
+
+#### When to write seoTitle
+
+| `title` type | seoTitle needed? |
+|---|---|
+| Narrative hook ("Claude가 짜고 Codex가 깼다") | **Yes** |
+| Emotional / reflective ("그래도 안 쓴 이유") | **Yes** |
+| Personal record tone ("~해봤다") | Depends — add if the concept is buried |
+| Already concept-first and specific | No |
+
+#### Series posts vs standalone posts
+
+- **Series post:** focus seoTitle on the episode-specific concept; the series name provides shared context
+- **Standalone post:** front-load the broader category keyword before the specific tool or topic name
+
+#### Examples
+
+| title | seoTitle |
+|---|---|
+| "Claude가 짜고 Codex가 깼다 — 저장소 구조 리팩토링" | "Claude로 계획하고 Codex로 검증하는 저장소 구조 리팩토링" |
+| "Graphify는 마크다운도 된다 — 그래도 안 쓴 이유" | "마크다운 위키를 지식 그래프로 변환하는 Graphify — 직접 평가해봤다" |
+| "Claude Code만 쓰던 프로젝트에 Codex를 넣어봤다" | "Claude Code만 쓰던 프로젝트에 Codex를 넣어본 이유와 운영 모델 변화" |
+
+#### Anti-patterns
+
+| Anti-pattern | Fix |
+|---|---|
+| `seoTitle: "Claude가 짜고 Codex가 깼다"` | 서사 훅을 그대로 복사함 — 검색어 없음 |
+| `seoTitle: "저장소 구조를 바꿔봤다"` | 주체(도구/방법)가 없음 |
+| `seoTitle: "Graphify 평가"` | 너무 단편적 — 맥락과 가치가 없음 |
+
 ---
 
 ## Description Rules

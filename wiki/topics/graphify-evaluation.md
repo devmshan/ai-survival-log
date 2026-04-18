@@ -1,5 +1,6 @@
 ---
 title: "Graphify는 마크다운도 된다 — 그래도 안 쓴 이유"
+seoTitle: "마크다운 위키를 지식 그래프로 변환하는 Graphify — 직접 평가해봤다"
 created: "2026-04-18"
 updated: "2026-04-18"
 type: topic
