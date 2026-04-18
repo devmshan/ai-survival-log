@@ -15,7 +15,7 @@ Use this skill when changes touch the wiki surface, publishing rules, or source-
    - orphan pages
    - frontmatter completeness
    - `published: true` requirements
-   - folder/type consistency including `synthesis`
+   - folder/type consistency (entity/concept/source/topic/project)
 3. Treat `wiki/tags/` and `.obsidian/` as generated or local surface, not primary wiki content.
 
 ## Boundary Checks

@@ -7,6 +7,7 @@
 | [[concepts/embedding]] |  | concept | active |
 | [[concepts/llm-wiki-pattern]] |  | concept | active |
 | [[concepts/rag]] |  | concept | active |
+| [[entities/graphify]] |  | entity | active |
 | [[sources/2026-04-13-arxiv-2406-11160-context-graph]] |  | source | active |
 | [[topics/how-llm-works]] | 파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다. | topic | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | topic | active |

@@ -42,8 +42,7 @@ wiki/
 ├── concepts/
 ├── sources/
 ├── topics/
-├── projects/
-└── syntheses/                ← 질의 결과, 비교 분석, 통합 페이지
+└── projects/
 
 assets/                       ← 채널별 제작 자산 원본
 ├── CLAUDE.md
@@ -69,7 +68,6 @@ wiki/
 ├── entities/                 ← 사람, 회사, 도구, 제품
 ├── concepts/                 ← 추상 개념, 패턴, 정의
 ├── topics/                   ← 설명/허브/클러스터 페이지
-├── syntheses/                ← 비교, 통합, 질의 결과, 판단 문서
 ├── sources/                  ← 원본 자료 요약과 분석
 ├── projects/                 ← 설계 문서와 실행 계획
 └── tags/                     ← 현재 자동 생성 뷰
@@ -82,7 +80,7 @@ wiki/
 - Graphify는 이 구조를 시각화하는 소비 도구이며 구조를 지배하지 않는다.
 - 미래의 RAG/vector DB는 위키 파일을 인덱싱하는 파생 계층으로 두고, 현재 구조 변경에서 선반영하지 않는다.
 - `tags/`는 현재 생성 뷰로 유지하되, 장기적으로 `_generated/` 분리 여부는 RAG 확장 프로젝트에서 재검토한다.
-- `syntheses/`는 source를 묶어 판단과 통합을 만드는 고가치 노드로 추가한다.
+- 비교/판단 성격의 지식은 관련 `topics/` 페이지에 통합한다.
 
 ## 변경 결정 요약
 
@@ -92,7 +90,7 @@ wiki/
 | 책 스터디 원본 | `book/` | `raw/books/` |
 | 블로그 업스트림 이미지 | `docs/images/` | `assets/blog/` |
 | 웹툰 제작 자산 | `docs/webtoon/` | `assets/webtoon/` |
-| wiki 카테고리 | 없음 | `wiki/syntheses/` 추가 |
+| wiki 카테고리 | entities/concepts/sources/topics/projects | 동일 (syntheses 미도입) |
 | 블로그 publish artifact | 직접 downstream 출력 중심 | `output/blog/` 추가 |
 | 콘텐츠 결과물 | 미구조화 | `output/{channel}/` |
 | vestigial 폴더 | `content/posts/` | 제거 대상 검토 |
@@ -111,7 +109,6 @@ wiki/
 이번 구조 변경에 포함:
 
 - `sources/`, `book/`, `docs/images/`, `docs/webtoon/`를 새 상위 계층으로 재배치
-- `wiki/syntheses/` 추가
 - `output/blog/`를 포함한 채널별 산출물 계층 정의
 - Claude/Codex/문서 계약 정합성 갱신
 - `ai-survival-log-site`와의 publish 계약을 새 구조에 맞게 정리
@@ -143,17 +140,15 @@ wiki/
 - upstream 이미지 원본 경로는 `assets/blog/`, downstream served 경로는 `ai-survival-log-site/public/images/{slug-or-series}/`로 정의
 
 ### Phase 3: 런타임 스크립트 수정
-- `scripts/wiki_lib.py` — `synthesis` 타입을 `_TYPE_ORDER`, `_TYPE_LABELS`에 추가
-- image upstream 검사 경로를 `assets/blog/` 기준으로 갱신
+- `scripts/wiki_lib.py` — image upstream 검사 경로를 `assets/blog/` 기준으로 갱신
 - publish artifact 출력 경로를 `output/blog/`로 반영
 - `scripts/pr-summary.mjs` — `sources/` → `raw/`, `assets/`, `output/` 카테고리 반영
 - 관련 테스트를 새 경계 기준으로 보강
 
 ### Phase 4: 슬래시 커맨드 수정
 - `/wiki:ingest` — `raw/{type}/` 경로 안내
-- `/wiki:file-answer` — `syntheses/` 카테고리 옵션 추가
 - `/wiki:publish` — `assets/blog/`와 `output/blog/` 기준으로 갱신
-- `/wiki:lint` — `synthesis` 타입 인식
+- `/wiki:lint` — 5개 타입 기준
 - `/content:book-study-blog` — `raw/books/` 경로
 - `/content:blog-to-instagram` — `output/instagram/` 경로
 - 채널 자산 참조 문구를 `assets/{channel}/` 기준으로 통일
@@ -187,16 +182,14 @@ wiki/
 ## 세부 실행 계획
 
 1. 구조 합의
-   `raw/wiki/assets/output` 4계층과 `wiki/syntheses/` 추가를 기준 구조로 확정한다.
+   `raw/wiki/assets/output` 4계층을 기준 구조로 확정한다.
 2. 위키 원칙 고정
    위키는 human-first markdown 저장소로 유지하고, RAG 최적화는 이번 범위에서 제외한다고 명시한다.
 3. upstream 자산 경계 확정
    블로그 이미지는 `assets/blog/`, 웹툰 제작 자산은 `assets/webtoon/`, 공용 자산은 `assets/shared/`로 나눈다.
 4. 블로그 artifact 경계 확정
    `output/blog/`를 재생성 가능한 publish artifact 계층으로 두고 직접 편집 금지를 문서화한다.
-5. wiki 구조 확장
-   `syntheses/`를 도입하고 관련 타입, lint, index, tag 생성 로직의 수용 범위를 정리한다.
-6. 문서 계약 정리
+5. 문서 계약 정리
    README, AGENTS, CLAUDE, `.codex`, `.claude`, publishing contract, operating playbook를 같은 경계로 맞춘다.
 7. site 호환 계획 동시 수립
    `ai-survival-log-site`에서 유지해야 할 입력 경로, 이미지 경로, frontmatter 계약을 함께 명시한다.
@@ -224,7 +217,6 @@ wiki/
 - [ ] `sources/`, `book/`, `docs/images/`, `docs/webtoon/` stale 참조 grep 클린
 - [ ] `assets/blog/` image upstream 규칙 문서와 코드가 일치
 - [ ] publishable 페이지 1개로 `wiki -> output/blog -> ai-survival-log-site/content/posts` 테스트
-- [ ] `wiki/syntheses/` 페이지가 index/tags/lint에서 정상 동작
 - [ ] `ai-survival-log-site`에서 `content/posts/` 로딩과 `public/images/` 참조가 유지됨
 - [ ] Claude/Codex/README/contract 문서가 동일한 경계를 설명함
 
@@ -232,4 +224,5 @@ wiki/
 
 - [[projects/blog-ai-study-site]]
 - [[projects/wiki-rag-expansion-roadmap]]
+- [[projects/wiki-category-design-decision]]
 - [[concepts/llm-wiki-pattern]]

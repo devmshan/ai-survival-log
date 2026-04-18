@@ -127,14 +127,6 @@ class TestCmdSync:
         content = (wiki / "index.md").read_text(encoding="utf-8")
         assert "총 2개 페이지" in content
 
-    def test_includes_syntheses_section(self, tmp_path):
-        wiki = tmp_path / "wiki"
-        make_page(wiki, "syntheses/answer.md", title="통합 답변", type="synthesis",
-                  status="active", tags=["ai"], description="비교와 판단")
-        wiki_lib.cmd_sync(wiki)
-        content = (wiki / "index.md").read_text(encoding="utf-8")
-        assert "## Syntheses" in content
-        assert "[[syntheses/answer]]" in content
 
 
 class TestCmdTags:

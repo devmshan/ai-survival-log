@@ -32,10 +32,11 @@ description: ""
 
 ## Graphify 판단
 
-- `graphify`는 관계 탐색용 보조 도구로는 흥미롭지만, 현재 프로젝트의 기본 운영 도구로 채택하지 않는다.
-- 현재 저장소의 핵심 루프는 `raw -> wiki -> output/blog`이며, `wiki/`는 human-first markdown source of truth로 유지한다.
-- `graphify`에 맞추기 위해 파일 구조, frontmatter, 링크 규칙을 선제적으로 바꾸지 않는다.
-- 장기적으로 필요한 것은 `graphify` 종속 구조가 아니라, `wiki/`에서 파생 가능한 retrieval abstraction이다.
+- Graphify는 `graphify .` 명령으로 마크다운 파일(.md, .mdx)을 Claude LLM 기반으로 처리하여 지식 그래프를 생성할 수 있다 — multi-modal 도구다.
+- `graphify ./wiki`를 실행하면 `wiki/` 구조를 변경하지 않고 파생 그래프(`graphify-out/`)를 생성할 수 있으며, 이는 "wiki를 소비하는 파생 계층" 원칙과 부합한다.
+- 그러나 현재 84페이지 규모에서는 `wiki lint` + `index.md` + Claude 직접 읽기로 충분하다. 그래프 도구가 해결해야 할 병목이 아직 없다.
+- `wiki/` 구조를 Graphify 친화적으로 선제적으로 바꾸지 않는다.
+- 재검토 조건: 위키 200+ 페이지, 또는 MCP 쿼리 인터페이스가 실질적으로 필요해지는 시점.
 - 우선순위는 `wiki/` 기반 ingest와 publish 규칙 안정화이며, graph DB는 필요가 생긴 뒤 파생 실험으로 검토한다.
 
 ## 추후 검토 범위
