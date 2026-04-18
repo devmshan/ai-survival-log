@@ -5,7 +5,7 @@ updated: "2026-04-18"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-18 | 총 72개 페이지
+> 마지막 업데이트: 2026-04-18 | 총 81개 페이지
 
 ## Entities
 
@@ -19,6 +19,7 @@ updated: "2026-04-18"
 | [[entities/gunseung]] |  | 건승, cat, character, cheese-tabby, mascot | active |
 | [[entities/lablup]] |  | mlops, ai-infrastructure, startup, korea | active |
 | [[entities/minsung]] |  | minsung, character, persona, devsurvivallog, instagram | active |
+| [[entities/obsidian-web-clipper]] |  | obsidian, web-clipper, knowledge-capture, raw-layer, templates | active |
 | [[entities/obsidian]] |  | obsidian, note-taking, knowledge-management, tool | active |
 | [[entities/shin-junggyu]] |  | lablup, entrepreneur, agentic-workflow, korea | active |
 | [[entities/superpowers]] |  | claude-code, plugin, workflow | active |
@@ -30,12 +31,14 @@ updated: "2026-04-18"
 | [[concepts/agentic-workflow]] |  | agentic-workflow, claude-code, automation, harness | active |
 | [[concepts/ai-capability-overhang]] |  | ai, capability, developer | active |
 | [[concepts/ai-unbundling]] |  | ai, unbundling, industry, strategy | active |
+| [[concepts/assets-intake-pattern]] |  | assets, intake, raw-layer, knowledge-capture, workflow, wiki | active |
 | [[concepts/ax-ai-transformation]] |  | ai, strategy, business | active |
 | [[concepts/bio-token]] |  | bio-token, cognitive-load, human, ai-era | active |
 | [[concepts/cache-strategies]] |  | system-design, cache, performance, redis, distributed-systems | active |
 | [[concepts/canonical-url]] |  | seo, publishing, blog, nextjs | active |
 | [[concepts/cdn]] |  | system-design, cdn, performance, static-content, distributed-systems | active |
 | [[concepts/cgr3]] |  | cgr3, context-graph, llm, knowledge-graph, reasoning, rag | active |
+| [[concepts/claude-codex-collaboration]] |  | claude, codex, collaboration, planning, validation, ai-agent | active |
 | [[concepts/code-value-convergence]] |  | software, ai, future, code-value | active |
 | [[concepts/context-graph-extraction]] |  | context-graph, extraction, sentence-bert, knowledge-graph, construction | active |
 | [[concepts/context-graph]] |  | context-graph, knowledge-graph, ai, data-governance, rag, llm, cgr3 | active |
@@ -77,6 +80,12 @@ updated: "2026-04-18"
 | [[sources/2026-04-13-velog-context-graph-review]] |  | context-graph, knowledge-graph, paper-review, cgr3, korean | active |
 | [[sources/2026-04-14-system-design-interview-v1]] |  | system-design, backend, distributed-systems, interview, book | active |
 | [[sources/2026-04-15-ai-frontier-ep86]] |  | agentic-workflow, claude-code, lablup, backend-ai, vibe-coding, harness, startup, ai-era, automation, cognitive-load | active |
+| [[sources/2026-04-18-claude-plan-codex-validation]] |  | repo-structure, claude-codex, validation, raw-layer, assets, wiki | active |
+| [[sources/2026-04-18-clipper-template-intake]] |  | obsidian-web-clipper, clipper-templates, assets-intake, wiki-ingest, raw-layer | active |
+| [[sources/2026-04-18-codex-folder-structure-execution]] |  | repo-structure, codex, refactor, migration, wiki, synthesis | active |
+| [[sources/2026-04-18-raw-immutability-codex-skills]] |  | raw-layer, immutability, codex, wiki-skill, claude-command | active |
+| [[sources/2026-04-18-web-clipper-setup]] |  | obsidian-web-clipper, clipper-templates, setup, first-clip, trigger | active |
+| [[sources/2026-04-18-wiki-surface-alignment]] |  | wiki, commands, operating-docs, syntheses, output-blog, assets-intake | active |
 
 ## Topics
 
