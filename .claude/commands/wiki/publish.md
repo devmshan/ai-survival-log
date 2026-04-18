@@ -78,6 +78,8 @@ draft: false
 
 최종 downstream 계약은 계속 `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`다.
 
+`assets/intake/`는 채널 미정 자산 inbox다. publish 직전 실제로 쓰기로 결정된 블로그 이미지 원본만 `assets/blog/`에 있어야 한다.
+
 ### 5단계: 로그 기록
 
 - `wiki/log.md`에 publish 작업 기록
