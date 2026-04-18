@@ -210,6 +210,35 @@ Authoring rule:
 - do not rely only on tags
 - the page body and related-page structure should help readers continue the topic path
 
+### Internal Link Slug Format
+
+All internal post links must include the full date-prefixed slug:
+
+```
+✓ /posts/2026-04-15-claude-code-to-codex
+✗ /posts/claude-code-to-codex
+```
+
+Slugs without the date prefix produce 404s because the downstream routing is keyed on the full filename.
+
+### "함께 읽으면 좋은 글" Section
+
+Every published post must end with a `## 함께 읽으면 좋은 글` section containing at least 2–3 manually curated links.
+
+This is separate from the automatic "관련 글" card section (see below). The automatic section may produce zero results when a post's tags do not overlap with other posts. In that case the manual section is the only reader navigation available.
+
+### Related Posts Automatic Logic
+
+The site auto-generates a "관련 글" card section using this scoring model:
+
+| Signal | Score |
+|---|---|
+| Same series (`seriesSlug` match) | +100 |
+| Each shared tag | +10 |
+| Score = 0 | section hidden |
+
+Implication for authoring: posts with unique or isolated tags will produce no automatic related posts. Tag design directly affects whether the "관련 글" section appears. When writing a post whose tags do not overlap with existing posts, add the manual "함께 읽으면 좋은 글" section to compensate.
+
 ---
 
 ## Topic Cluster Rules
@@ -264,6 +293,8 @@ Section headers (`##`) are not navigation labels. They are the single most visib
 ### Rule
 
 Each `##` header should communicate the **insight, discovery, or pivot** of that section — not just name what happens.
+
+**Never use numeric prefixes** (`## 1.`, `## 2.`, `## 3.`). This applies to all page types including reference guides. Numbers add no meaning and force readers to mentally strip them before reading. Use the section title alone.
 
 ### Bad headers (labels)
 
@@ -353,6 +384,9 @@ Before publishing or preparing a page for `/wiki:publish`, confirm:
 - [ ] the narrative arc is complete — no missing context
 - [ ] the post scope reads as coherent for a single blog post
 - [ ] the page links to related pages that help topic continuation
+- [ ] all internal links use the full date-prefixed slug (`/posts/YYYY-MM-DD-slug`)
+- [ ] a `## 함께 읽으면 좋은 글` section with at least 2 links is present
+- [ ] no `##` headers use numeric prefixes (`## 1.`, `## 2.`, etc.)
 - [ ] series suitability has been considered when applicable
 - [ ] image handling follows the publish asset rules when screenshots are used
 
