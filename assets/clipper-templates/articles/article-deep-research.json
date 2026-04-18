@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Article Deep Research",
+  "name": "01 Article Deep Research",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** article\\n- **Ingest Target:** raw/articles\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Why This Matters\\n\\n- Add why this source is worth ingesting.\\n- Note the problem, claim, or concept you want the wiki to retain.\\n\\n## Summary Seed\\n\\n- Write 3 to 5 bullets before or after clipping if useful.\\n\\n## Extraction Priorities\\n\\n- Key entities:\\n- Key concepts:\\n- Claims worth verifying:\\n- Related wiki topics:\\n\\n## Raw Clip\\n\\n{{content}}",
   "properties": [
@@ -55,7 +55,19 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://medium.com/",
+    "https://substack.com/",
+    "https://velog.io/",
+    "https://brunch.co.kr/",
+    "https://tistory.com/",
+    "https://d2.naver.com/",
+    "https://wikidocs.net/",
+    "https://docs.anthropic.com/",
+    "https://platform.openai.com/docs/",
+    "https://openai.com/",
+    "https://www.anthropic.com/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/articles"
 }

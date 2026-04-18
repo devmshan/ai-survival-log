@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Video Transcript Notes",
+  "name": "02 Video Transcript Notes",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Creator:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** video\\n- **Ingest Target:** raw/videos\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Episode Context\\n\\n- Interview, lecture, product demo, or tutorial?\\n- Why does this matter to the wiki?\\n\\n## Timestamp Notes\\n\\n- 00:00\\n- 00:00\\n- 00:00\\n\\n## Extraction Priorities\\n\\n- Speakers or entities:\\n- Reusable concepts:\\n- Quotes worth preserving:\\n- Follow-up topics:\\n\\n## Transcript Or Clip\\n\\n{{content}}",
   "properties": [
@@ -55,7 +55,16 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://www.youtube.com/watch",
+    "https://youtube.com/watch",
+    "https://youtu.be/",
+    "https://vimeo.com/",
+    "https://www.vimeo.com/",
+    "https://www.udemy.com/",
+    "https://coursera.org/learn/",
+    "https://www.coursera.org/learn/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/videos"
 }
