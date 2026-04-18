@@ -2,7 +2,7 @@
 
 ## 목적
 
-이 저장소의 PR summary는 앱 런타임보다 `sources -> wiki -> publish` 계약을 먼저 본다.
+이 저장소의 PR summary는 앱 런타임보다 `raw -> wiki -> output/blog -> publish` 계약을 먼저 본다.
 
 즉, 이 자동화는 다음을 빠르게 드러내기 위한 것이다.
 
@@ -46,7 +46,9 @@ node scripts/pr-summary.mjs --files "README.md,AGENTS.md,CLAUDE.md" --output /tm
 
 ## 해석 규칙
 
-- `sources/` 변경은 `source`
+- `raw/` 변경은 `source`
+- `assets/` 변경은 `asset`
+- `output/` 변경은 `output`
 - `wiki/` 변경은 `wiki`
 - publish 경로나 계약 문서는 `publish-contract`
 - `scripts/`와 wiki command 경로는 `script`

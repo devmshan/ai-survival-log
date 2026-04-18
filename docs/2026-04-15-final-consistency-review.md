@@ -27,7 +27,7 @@ Confirmed:
 - `ai-survival-log` is documented as the upstream source-of-truth authoring repository
 - `ai-survival-log-site` is documented as the downstream site consumer
 - both repositories describe the same publish flow:
-  `sources -> wiki -> publish -> ai-survival-log-site/content/posts`
+  `raw -> wiki -> output/blog -> ai-survival-log-site/content/posts`
 
 ### 2. Plan / Implement / Verify Working Model
 

@@ -5,13 +5,16 @@
 ## Operating Model
 
 - 이 저장소는 `ai-survival-log-site`의 상위 authoring/source-of-truth 저장소다.
-- 기본 흐름은 `sources -> wiki -> publish -> ai-survival-log-site/content/posts` 이다.
+- 기본 흐름은 `raw -> wiki -> output/blog -> ai-survival-log-site/content/posts` 이다.
 - 발산 lane는 일반 블로그, 책 스터디 시리즈, 인스타그램 캐러셀까지 포함한다.
 - 구조 변경, publish 계약 변경, 로컬 agent surface 변경 전에는 짧은 계획을 먼저 작성한다.
 - publishable wiki 페이지를 쓰거나 고칠 때는 `docs/content-seo-guide.md`를 따라 제목, 설명, 도입부, 시리즈 구조가 검색 우선순위도 반영하도록 한다.
 - 작업 완료 전에는 변경 범위에 맞는 검증을 명시적으로 수행한다.
 - ECC와 superpowers는 운영 원칙만 선택적으로 반영하며, 전체 harness surface를 그대로 복제하지 않는다.
 - `README.md`, `AGENTS.md`, `.claude/*`, `.codex/*`, publish 관련 문서는 같은 저장소 역할을 설명해야 한다.
+- 위키 본체는 human-first, markdown-first, Obsidian-friendly 구조를 유지한다.
+- 미래의 RAG/vector DB는 위키를 소비하는 파생 계층으로 다루며, 현재 구조를 선제적으로 RAG 중심으로 바꾸지 않는다.
+- 현재 구조 변경 계획은 `wiki/projects/repo-structure-refactor.md`, 미래 RAG 확장은 `wiki/projects/wiki-rag-expansion-roadmap.md`에서 관리한다.
 
 ### Local Command Surface
 
@@ -32,32 +35,41 @@
 - **언어:** 한국어 (기술 용어는 영문 유지)
 - **목적:** 모든 분야의 지식 축적 아카이브 + 블로그 퍼블리싱
 
-## 아키텍처 (3 Layers)
+## 아키텍처 (4 Layers)
 
 ```
 Human → 소스 큐레이션, 탐험 방향 설정, 질문
   ↓
 LLM Agent → 읽기, 요약, 크로스레퍼런싱, 파일 관리
   ↓
+Raw Layer → 불변 원본 (articles, books, journals, videos, podcasts)
+  ↓
 Wiki Layer → 마크다운 + index + log (persistent, compiled, interlinked)
   ↓
-Raw Sources → 불변 원본 (articles, PDFs, notes)
+Assets / Output Layer → 채널 자산 원본 + publish artifact
 ```
 
-### Layer 1: `sources/` — 원본 자료
+### Layer 1: `raw/` — 원본 자료
 
 - 외부 아티클, PDF, 원본 노트, 영상 메모 등
 - **불변(immutable):** 한 번 추가하면 수정하지 않음
 - 파일명: `YYYY-MM-DD-간단한-설명.{md,pdf,txt}`
+- 대표 하위 폴더: `articles/`, `books/`, `journals/`, `videos/`, `podcasts/`
 - 이 폴더의 파일은 직접 편집하지 않음
 
 ### Layer 2: `wiki/` — 위키 페이지
 
 - Claude가 관리하는 마크다운 지식 베이스
 - 모든 페이지는 서로 `[[wikilink]]`로 연결됨
-- 하위 폴더: `entities/`, `concepts/`, `sources/`, `topics/`, `projects/`
+- 하위 폴더: `entities/`, `concepts/`, `sources/`, `topics/`, `projects/`, `syntheses/`
 
-### Layer 3: `CLAUDE.md` (이 파일) — 스키마 + 운영 규칙
+### Layer 3: `assets/` / `output/` — 자산 + 산출물
+
+- `assets/`는 채널별 제작 자산 원본
+- `output/blog/`는 재생성 가능한 publish artifact
+- 최종 downstream 계약은 `ai-survival-log-site/content/posts/`
+
+### Layer 4: `CLAUDE.md` (이 파일) — 스키마 + 운영 규칙
 
 - 위키 구조, 규칙, 워크플로우 정의
 - Claude가 위키를 어떻게 관리해야 하는지 지시
@@ -76,7 +88,7 @@ Raw Sources → 불변 원본 (articles, PDFs, notes)
 
 ### sources/ — 소스 요약
 
-대상: `sources/` 폴더의 각 원본 자료에 대한 요약 + 분석
+대상: `raw/` 폴더의 각 원본 자료에 대한 요약 + 분석
 파일명: 원본과 대응되는 이름 `.md`
 
 ### topics/ — 토픽
@@ -89,6 +101,11 @@ Raw Sources → 불변 원본 (articles, PDFs, notes)
 대상: 진행 중인 프로젝트의 설계 문서와 구현 계획
 파일명: `kebab-case-프로젝트명.md`
 
+### syntheses/ — 통합/판단
+
+대상: 비교 분석, 질의 결과, 통합 판단 문서
+파일명: `kebab-case-주제명.md`
+
 ## Frontmatter 스펙
 
 모든 위키 페이지에 필수:
@@ -98,7 +115,7 @@ Raw Sources → 불변 원본 (articles, PDFs, notes)
 title: "페이지 제목"
 created: "YYYY-MM-DD"
 updated: "YYYY-MM-DD"
-type: entity | concept | source | topic | project
+type: entity | concept | source | topic | project | synthesis
 sources: []
 tags: []
 status: draft | active | archived
@@ -118,7 +135,7 @@ description: ""
 - `description`: `published: true`일 때 필수 — 블로그 카드 요약
 - `tags`: 소문자, 하이픈 구분 (예: `claude-code`, `ai-transformation`)
 - `sources`: 해당 페이지가 참조하는 소스 위키 페이지 `[[wikilink]]` 배열
-- 스크린샷/이미지를 포함한 publishable 페이지는 원본 자산을 `docs/images/`에 보존
+- 스크린샷/이미지를 포함한 publishable 페이지는 원본 자산을 `assets/blog/`에 보존
 - downstream에서 실제 서빙할 자산은 `ai-survival-log-site/public/images/{slug-or-series}/`에 둠
 - publishable 페이지 본문에서는 `/images/{slug-or-series}/{file}.png` 형태의 site 경로 사용
 - publish-facing 이미지 파일명은 ASCII kebab-case 권장
@@ -217,7 +234,7 @@ Obsidian 호환 `[[wikilink]]` 사용:
 ### /wiki:ingest — 소스 자료 인제스트
 
 1. 소스 자료 읽기 (파일 경로, URL, 또는 텍스트)
-2. 외부 소스인 경우 `sources/`에 원본 보존
+2. 외부 소스인 경우 `raw/{type}/`에 원본 보존
 3. `wiki/sources/`에 소스 요약 페이지 생성
 4. 언급된 엔티티 → `wiki/entities/`에 페이지 생성 또는 갱신
 5. 추출된 개념 → `wiki/concepts/`에 페이지 생성 또는 갱신
@@ -275,7 +292,7 @@ Obsidian 호환 `[[wikilink]]` 사용:
 - `[[wikilink]]`에 대응하는 published 페이지가 있으면 → 블로그 내부 링크 (`/posts/slug`)
 - 없으면 → 일반 텍스트 (링크 제거)
 - Mermaid 코드블록은 보존
-- 이미지는 upstream 원본(`docs/images/`)과 downstream served copy(`ai-survival-log-site/public/images/{slug-or-series}/`)를 함께 유지
+- 이미지는 upstream 원본(`assets/blog/`)과 downstream served copy(`ai-survival-log-site/public/images/{slug-or-series}/`)를 함께 유지
 - 이미지 링크는 site가 읽는 `/images/{slug-or-series}/...` 경로를 사용
 
 ## 블로그 연동

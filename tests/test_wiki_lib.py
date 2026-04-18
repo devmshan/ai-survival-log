@@ -127,6 +127,15 @@ class TestCmdSync:
         content = (wiki / "index.md").read_text(encoding="utf-8")
         assert "총 2개 페이지" in content
 
+    def test_includes_syntheses_section(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        make_page(wiki, "syntheses/answer.md", title="통합 답변", type="synthesis",
+                  status="active", tags=["ai"], description="비교와 판단")
+        wiki_lib.cmd_sync(wiki)
+        content = (wiki / "index.md").read_text(encoding="utf-8")
+        assert "## Syntheses" in content
+        assert "[[syntheses/answer]]" in content
+
 
 class TestCmdTags:
     def test_creates_tag_file(self, tmp_path):
@@ -252,8 +261,11 @@ class TestCmdPublish:
     def test_publishes_page_with_seo_and_series_fields(self, tmp_path):
         wiki = tmp_path / "wiki"
         site = tmp_path / "site"
+        output_blog = tmp_path / "output" / "blog"
         (site / "public" / "images" / "lab").mkdir(parents=True)
         (site / "public" / "images" / "lab" / "shot.png").write_text("png", encoding="utf-8")
+        (tmp_path / "assets" / "blog").mkdir(parents=True)
+        (tmp_path / "assets" / "blog" / "shot.png").write_text("png", encoding="utf-8")
         make_page(
             wiki,
             "topics/example.md",
@@ -285,11 +297,15 @@ class TestCmdPublish:
             updated="2026-04-17",
             content="# 다른 글\n\n본문",
         )
-
-        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+        result = wiki_lib.cmd_publish(
+            "wiki/topics/example.md",
+            wiki_dir=wiki,
+            site_root=site,
+            output_blog_dir=output_blog,
+        )
 
         assert result == 0
-        output = site / "content" / "posts" / "2026-04-18-example-post.mdx"
+        output = output_blog / "2026-04-18-example-post.mdx"
         assert output.exists()
         content = output.read_text(encoding="utf-8")
         assert 'seoTitle: "검색용 제목"' in content
@@ -304,6 +320,7 @@ class TestCmdPublish:
     def test_publish_fails_when_series_slug_missing(self, tmp_path):
         wiki = tmp_path / "wiki"
         site = tmp_path / "site"
+        output_blog = tmp_path / "output" / "blog"
         make_page(
             wiki,
             "topics/example.md",
@@ -318,14 +335,21 @@ class TestCmdPublish:
             series="실습 시리즈",
             content="# 예제 글\n\n본문",
         )
-
-        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+        result = wiki_lib.cmd_publish(
+            "wiki/topics/example.md",
+            wiki_dir=wiki,
+            site_root=site,
+            output_blog_dir=output_blog,
+        )
 
         assert result == 1
 
     def test_publish_fails_when_image_missing_in_site_public(self, tmp_path):
         wiki = tmp_path / "wiki"
         site = tmp_path / "site"
+        output_blog = tmp_path / "output" / "blog"
+        (tmp_path / "assets" / "blog").mkdir(parents=True)
+        (tmp_path / "assets" / "blog" / "missing.png").write_text("png", encoding="utf-8")
         make_page(
             wiki,
             "topics/example.md",
@@ -339,7 +363,40 @@ class TestCmdPublish:
             updated="2026-04-18",
             content="# 예제 글\n\n![샷](/images/lab/missing.png)",
         )
+        result = wiki_lib.cmd_publish(
+            "wiki/topics/example.md",
+            wiki_dir=wiki,
+            site_root=site,
+            output_blog_dir=output_blog,
+        )
 
-        result = wiki_lib.cmd_publish("wiki/topics/example.md", wiki_dir=wiki, site_root=site)
+        assert result == 1
+
+    def test_publish_fails_when_image_missing_in_assets_blog(self, tmp_path):
+        wiki = tmp_path / "wiki"
+        site = tmp_path / "site"
+        output_blog = tmp_path / "output" / "blog"
+        (site / "public" / "images" / "lab").mkdir(parents=True)
+        (site / "public" / "images" / "lab" / "shot.png").write_text("png", encoding="utf-8")
+        make_page(
+            wiki,
+            "topics/example.md",
+            title="예제 글",
+            type="topic",
+            status="active",
+            tags=["ai"],
+            description="예제 설명",
+            published=True,
+            slug="example-post",
+            updated="2026-04-18",
+            content="# 예제 글\n\n![샷](/images/lab/shot.png)",
+        )
+
+        result = wiki_lib.cmd_publish(
+            "wiki/topics/example.md",
+            wiki_dir=wiki,
+            site_root=site,
+            output_blog_dir=output_blog,
+        )
 
         assert result == 1

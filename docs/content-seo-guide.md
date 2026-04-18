@@ -200,10 +200,12 @@ Series pages should answer both:
 
 If a publishable page uses screenshots or diagrams:
 
-- keep the upstream source copy in `docs/images/`
+- keep the upstream source copy in `assets/blog/`
 - preserve a downstream-served copy in `ai-survival-log-site/public/images/{slug-or-series}/`
 - use stable, publish-facing markdown image paths
 - prefer images that clarify the topic, not decorative images only
+
+Downstream-served paths and publish-facing markdown paths should remain stable even as upstream asset organization evolves.
 
 ---
 

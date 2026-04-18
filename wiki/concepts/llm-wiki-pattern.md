@@ -31,7 +31,7 @@ Andrej Karpathy가 제시한 지식 관리 패턴. RAG의 "쿼리 타임" 재발
 
 ## 3 Layer 아키텍처
 
-1. **Raw Sources** (`sources/`) — 불변 원본 (PDF, 아티클, 노트)
+1. **Raw Sources** (`raw/`) — 불변 원본 (PDF, 아티클, 노트)
 2. **The Wiki** (`wiki/`) — LLM이 생성/유지하는 마크다운 페이지
 3. **The Schema** (`CLAUDE.md`) — 위키 구조와 규칙 정의
 

@@ -3,14 +3,18 @@
 `ai-survival-log` is the upstream wiki authoring system for the broader AI Survival Log publishing workflow.
 
 Core flow:
-`sources -> wiki -> publish -> ai-survival-log-site/content/posts`
+`raw -> wiki -> output/blog -> ai-survival-log-site/content/posts`
+
+Current structure-migration planning lives in [wiki/projects/repo-structure-refactor.md](/Users/ms/workspace/claude/ai-survival-log/wiki/projects/repo-structure-refactor.md:1).
+Future RAG/vector DB work is intentionally deferred and tracked in [wiki/projects/wiki-rag-expansion-roadmap.md](/Users/ms/workspace/claude/ai-survival-log/wiki/projects/wiki-rag-expansion-roadmap.md:1).
 
 ## Role
 
 This repository focuses on:
-- curating immutable source material in `sources/`
+- curating immutable source material in `raw/`
 - maintaining the wiki knowledge base in `wiki/`
-- turning selected wiki pages into publish-ready outputs
+- maintaining channel assets in `assets/`
+- turning selected wiki pages into publish-ready outputs in `output/`
 - supporting downstream expansion into blog posts, study-series posts, and Instagram assets
 
 ## Relationship To ai-survival-log-site
@@ -24,8 +28,9 @@ This repository focuses on:
 
 ### General Wiki To Blog
 
-- input: `sources/` or direct wiki updates
+- input: `raw/` or direct wiki updates
 - authoring: `wiki/topics/*.md` with `published: true`
+- artifact: `output/blog/YYYY-MM-DD-{slug}.mdx`
 - output: `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
 
 ### Book Study To Blog
@@ -54,7 +59,7 @@ At minimum, upstream publishable pages must preserve:
 - tags suitable for the downstream site
 
 For publishable pages with embedded screenshots or images:
-- keep the upstream source asset in `docs/images/`
+- keep the upstream source asset in `assets/blog/`
 - expose the downstream-served asset from `ai-survival-log-site/public/images/{slug-or-series}/`
 - reference the image in the wiki page with a site path like `/images/{slug-or-series}/{file}.png`
 - prefer ASCII kebab-case filenames for publish-facing assets
@@ -66,6 +71,7 @@ For publishable pages with embedded screenshots or images:
 - verify before completion
 - selectively adopt ECC and superpowers principles instead of copying their full runtime surface
 - keep documentation consistent across `README.md`, `AGENTS.md`, `CLAUDE.md`, `.claude/*`, and `.codex/*`
+- keep the wiki human-first and Obsidian-friendly; future RAG is a derived layer, not the source-of-truth structure
 
 ## Local Surfaces
 
