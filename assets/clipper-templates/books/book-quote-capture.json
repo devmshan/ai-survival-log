@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Book Quote Capture",
+  "name": "05 Book Quote Capture",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Type:** book\\n- **Ingest Target:** raw/books\\n\\n## Quote Context\\n\\n- Book title:\\n- Chapter:\\n- Why this quote matters:\\n\\n## Reusable Insight\\n\\n- What should become a wiki concept or topic?\\n\\n## Raw Quote Or Excerpt\\n\\n{{content}}",
   "properties": [
@@ -45,7 +45,13 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://readwise.io/",
+    "https://www.readwise.io/",
+    "https://www.goodreads.com/quotes",
+    "https://www.goodreads.com/work/quotes/",
+    "https://quotepark.com/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/books"
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Journal Insight Capture",
+  "name": "08 Journal Insight Capture",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Type:** journal\\n- **Ingest Target:** raw/journals\\n- **Recommended Harness:** /wiki:ingest or /wiki:file-answer\\n\\n## Situation\\n\\n- What triggered this insight?\\n\\n## Insight\\n\\n-\\n-\\n-\\n\\n## Questions\\n\\n-\\n-\\n-\\n\\n## Raw Material\\n\\n{{content}}",
   "properties": [

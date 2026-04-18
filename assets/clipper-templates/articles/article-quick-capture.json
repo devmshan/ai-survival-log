@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Article Quick Capture",
+  "name": "09 Article Quick Capture",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** article\\n- **Ingest Target:** raw/articles\\n\\n## Quick Reason\\n\\n- Why did I save this?\\n\\n## Later Questions\\n\\n- What should the next ingest focus on?\\n\\n## Raw Clip\\n\\n{{content}}",
   "properties": [

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Book Chapter Notes",
+  "name": "04 Book Chapter Notes",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** book\\n- **Ingest Target:** raw/books\\n- **Recommended Harness:** /wiki:ingest -> /content:book-study-blog\\n\\n## Reading Context\\n\\n- Book title:\\n- Chapter or section:\\n- Why this matters:\\n\\n## Study Questions\\n\\n-\\n-\\n-\\n\\n## Key Points\\n\\n-\\n-\\n-\\n\\n## Raw Notes\\n\\n{{content}}",
   "properties": [
@@ -55,7 +55,15 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://readwise.io/bookreview/",
+    "https://www.readwise.io/bookreview/",
+    "https://www.goodreads.com/book/",
+    "https://books.google.com/books",
+    "https://leanpub.com/",
+    "https://www.oreilly.com/library/view/",
+    "https://www.amazon.com/Kindle"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/books"
 }

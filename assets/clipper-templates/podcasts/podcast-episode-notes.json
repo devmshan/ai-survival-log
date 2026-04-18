@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Podcast Episode Notes",
+  "name": "03 Podcast Episode Notes",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Hosts / Guests:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** podcast\\n- **Ingest Target:** raw/podcasts\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Listening Context\\n\\n- Why did I keep this episode?\\n- Which idea or person matters most?\\n\\n## Key Beats\\n\\n- Opening premise:\\n- Important claim:\\n- Useful analogy:\\n- Follow-up question:\\n\\n## Raw Notes Or Transcript\\n\\n{{content}}",
   "properties": [
@@ -55,7 +55,13 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://open.spotify.com/episode/",
+    "https://podcasts.apple.com/",
+    "https://music.amazon.com/podcasts/",
+    "https://www.listennotes.com/podcasts/",
+    "https://feeds.transistor.fm/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/podcasts"
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Conversation Backup",
+  "name": "06 Conversation Backup",
   "behavior": "create",
   "noteContentFormat": "# 대화 백업: {{title}}\\n\\n- **날짜:** {{date}}\\n- **성격:** 전체 대화 백업\\n- **원본 URL:** {{url}}\\n- **참여자:** {{author}}\\n- **타입:** journal\\n- **Ingest Target:** raw/journals\\n\\n---\\n\\n## 대화 원문 백업\\n\\n{{content}}\\n\\n---\\n\\n## 후속 처리 메모\\n\\n- wiki로 정리할 개념:\\n- 프로젝트 문서로 옮길 판단:\\n- 블로그 글 소재 여부:\\n",
   "properties": [
@@ -45,7 +45,16 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://chatgpt.com/",
+    "https://chat.openai.com/",
+    "https://claude.ai/",
+    "https://gemini.google.com/",
+    "https://notebooklm.google.com/",
+    "https://poe.com/",
+    "https://www.perplexity.ai/",
+    "https://perplexity.ai/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "raw/journals"
 }

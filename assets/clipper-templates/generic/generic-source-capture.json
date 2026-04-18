@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Generic Source Capture",
+  "name": "10 Generic Source Capture",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Suggested Target:** decide later\\n\\n## Classification Decision\\n\\n- Should this go to `raw/articles`, `raw/videos`, `raw/podcasts`, `raw/books`, or `raw/journals`?\\n\\n## Why Keep It\\n\\n-\\n\\n## Ingest Hint\\n\\n- What should `/wiki:ingest` focus on if this becomes a source?\\n\\n## Raw Clip\\n\\n{{content}}",
   "properties": [

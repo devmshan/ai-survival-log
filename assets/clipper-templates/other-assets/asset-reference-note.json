@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1.0",
-  "name": "Asset Reference Note",
+  "name": "07 Asset Reference Note",
   "behavior": "create",
   "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source URL:** {{url}}\\n- **Author / Owner:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** asset-note\\n- **Storage Target:** assets/intake/reference-notes\\n- **Recommended Harness:** classify first, then move to a channel asset lane if needed\\n\\n## Asset Summary\\n\\n- What is this asset?\\n- Why keep it?\\n- Is the output channel still undecided?\\n\\n## Possible Channel Fit\\n\\n- Blog:\\n- YouTube:\\n- Instagram:\\n- Webtoon:\\n- Keep in intake:\\n\\n## Rights / Caution\\n\\n- License or ownership:\\n- What must not be reused blindly:\\n\\n## Raw Reference\\n\\n{{content}}",
   "properties": [
@@ -55,7 +55,19 @@
       "type": "multitext"
     }
   ],
-  "triggers": [],
+  "triggers": [
+    "https://www.figma.com/",
+    "https://figma.com/",
+    "https://www.pinterest.com/",
+    "https://pinterest.com/",
+    "https://dribbble.com/",
+    "https://www.behance.net/",
+    "https://behance.net/",
+    "https://www.instagram.com/",
+    "https://instagram.com/",
+    "https://images.unsplash.com/",
+    "https://unsplash.com/"
+  ],
   "noteNameFormat": "{{date}}-{{title}}",
   "path": "assets/intake/reference-notes"
 }
