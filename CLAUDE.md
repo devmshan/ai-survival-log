@@ -253,16 +253,19 @@ Obsidian 호환 `[[wikilink]]` 사용:
 
 1. `wiki/index.md` 읽기
 2. 관련 페이지 식별 및 읽기
-3. `[[citation]]` 포함하여 답변
-4. 답변을 위키 페이지로 저장할지 제안
+3. 필요하면 `wiki/sources/`에 대응하는 `raw/{type}/` 원본까지 확인
+4. 비교/판단 질문이면 `wiki/syntheses/`도 우선 검토
+5. `[[citation]]` 포함하여 답변
+6. 답변을 위키 페이지로 저장할지 제안
 
 ### /wiki:file-answer — 답변을 위키 페이지로 저장
 
 1. 답변을 적절한 카테고리의 위키 페이지로 변환
-2. frontmatter 추가
-3. 크로스 레퍼런스 설정
-4. `wiki/index.md` 업데이트
-5. `wiki/log.md` 기록
+2. 비교/판단 결과는 `syntheses/`, 실행 계획은 `projects/` 우선 검토
+3. frontmatter 추가
+4. 크로스 레퍼런스 설정
+5. `wiki/index.md` 업데이트
+6. `wiki/log.md` 기록
 
 ### /wiki:lint — 위키 무결성 검사
 
@@ -272,10 +275,11 @@ Obsidian 호환 `[[wikilink]]` 사용:
 2. 고아 페이지 (어디서도 링크되지 않음)
 3. `index.md`에 누락된 페이지
 4. `index.md`에 있지만 실제로 없는 페이지
-5. frontmatter 누락 또는 불완전
+5. frontmatter 누락 또는 불완전 (`synthesis` 포함)
 6. `updated` 날짜가 실제 수정일과 불일치
 7. `## 관련 페이지` 섹션 누락
 8. `published: true`인데 `slug`/`description` 없는 페이지
+9. generated/local surface(`wiki/tags/`, `.obsidian/`)가 lint 기준과 섞이지 않는지 확인
 
 ### /wiki:publish — 위키 → 블로그 포스트 변환
 
@@ -284,8 +288,9 @@ Obsidian 호환 `[[wikilink]]` 사용:
 3. `[[wikilink]]`를 블로그 링크 또는 일반 텍스트로 변환
 4. `## 관련 페이지` 섹션 제거
 5. 인라인 이미지가 있으면 downstream site 경로(`/images/{slug-or-series}/{file}.png`) 호환성 확인
-6. `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 출력
-7. `wiki/log.md`에 publish 기록
+6. `output/blog/YYYY-MM-DD-{slug}.mdx`로 출력
+7. 필요 시 downstream `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 동기화
+8. `wiki/log.md`에 publish 기록
 
 **변환 규칙:**
 
@@ -302,6 +307,8 @@ Obsidian 호환 `[[wikilink]]` 사용:
 ```
 wiki/topics/ai-era-survival.md (published: true, slug: "ai-era-survival")
     ↓ /wiki:publish
+output/blog/YYYY-MM-DD-ai-era-survival.mdx (upstream artifact)
+    ↓ downstream sync
 ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx (블로그 frontmatter)
     ↓ Next.js 빌드 (미래)
 /posts/ai-era-survival (웹 페이지)
@@ -309,11 +316,12 @@ ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx (블로그 fro
 
 ### 규칙
 
-- **위키가 source of truth.** `ai-survival-log-site/content/posts/`는 생성된 출력물
+- **위키가 source of truth.** `output/blog/`와 `ai-survival-log-site/content/posts/`는 생성된 출력물
 - 위키 갱신 시 `/wiki:publish` 재실행
 - `published: true` 페이지는 블로그 독자를 위해 standalone으로 읽힐 수 있어야 함
 - 주로 `topics/` 페이지가 블로그 후보 (서사적 흐름이 있는 글)
 - 스크린샷/이미지가 있으면 source copy와 site-served copy를 모두 관리
+- 채널이 미정인 자산은 `assets/intake/`에 두고, publish 직전 실제 사용 블로그 원본만 `assets/blog/`에 둠
 
 ## 컨벤션
 
