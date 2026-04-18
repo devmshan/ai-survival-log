@@ -18,6 +18,7 @@
 
 ### Local Command Surface
 
+- `/journals:backup` — 현재 대화를 `raw/journals/`에 백업 파일로 저장
 - `/wiki:ingest` — source를 위키에 흡수
 - `/wiki:query` — 위키 검색과 인용 답변
 - `/wiki:file-answer` — 답변을 위키 페이지로 저장

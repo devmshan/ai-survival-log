@@ -12,6 +12,18 @@ Do not treat this repository as the final presentation layer or the primary site
 Current structural refactor planning is tracked in `wiki/projects/repo-structure-refactor.md`.
 Future RAG/vector DB expansion is deferred and tracked separately in `wiki/projects/wiki-rag-expansion-roadmap.md`.
 
+## Local Skill Surface
+
+These skills are available in `.codex/skills/`:
+
+- `conversation-backup` — 현재 대화를 `raw/journals/`에 백업 파일로 저장
+- `wiki-ingest` — `raw/{type}/` 소스를 위키로 흡수
+- `wiki-query-answer` — 위키 검색과 인용 답변
+- `wiki-file-answer` — 답변을 위키 페이지로 저장
+- `wiki-lint` — 위키 무결성 검사
+- `wiki-publish` — `output/blog/` artifact 생성
+- `recommend-clipper-template` — URL 기반 Web Clipper 템플릿 추천
+
 ## Working Loop
 
 Use this default loop for non-trivial changes:
