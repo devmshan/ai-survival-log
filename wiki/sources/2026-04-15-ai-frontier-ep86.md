@@ -19,7 +19,7 @@ description: ""
 - **게시일:** 2026-02-18
 - **출연:** 노정석, 최승준 (진행), [[entities/shin-junggyu|신정규]] ([[entities/lablup|Lablup]] 대표)
 - **주제:** Agentic Workflow 실전 방법론, [[entities/backend-ai|Backend.AI]]:GO 개발 이야기, Claude Code harness, 소프트웨어 가치 변화, AI 시대 스타트업 전략
-- **원본:** `sources/2026-04-15-ai-frontier-ep86-part1.md`, `sources/2026-04-15-ai-frontier-ep86-part2.md`
+- **원본:** `raw/articles/2026-04-15-ai-frontier-ep86-part1.md`, `raw/articles/2026-04-15-ai-frontier-ep86-part2.md`
 
 ---
 

@@ -9,7 +9,10 @@ System boundary:
 - `ai-survival-log-site` is the downstream presentation and publishing-consumer repository
 
 Core flow:
-`sources -> wiki -> publish -> ai-survival-log-site/content/posts`
+`raw -> wiki -> output/blog -> ai-survival-log-site/content/posts`
+
+Current structure-migration planning is tracked in `wiki/projects/repo-structure-refactor.md`.
+Future RAG/vector DB work is deferred and tracked in `wiki/projects/wiki-rag-expansion-roadmap.md`.
 
 ## Operating Model
 
@@ -17,6 +20,7 @@ Core flow:
 - Consume and present publish-ready outputs in `ai-survival-log-site`
 - Treat `wiki/` as the default source of truth
 - Allow downstream refinements, but keep them compatible with the upstream publishing contract
+- Keep the wiki human-first and Obsidian-friendly; do not optimize file structure for future RAG ahead of need
 - Use the default loop for non-trivial work:
   1. Plan
   2. Implement
@@ -29,7 +33,7 @@ Core flow:
 Start in `ai-survival-log`.
 
 Flow:
-1. Save the material in `sources/`
+1. Save the material in `raw/{type}/`
 2. Run `/wiki:ingest` to update `wiki/sources`, `wiki/entities`, `wiki/concepts`, and `wiki/topics`
 3. Use `/wiki:query` when you want a wiki-grounded answer from accumulated knowledge
 4. If the answer adds durable value, use `/wiki:file-answer` to store it back into the wiki
@@ -44,13 +48,14 @@ Flow:
 1. Refine the target page in `wiki/topics/*.md` or another publishable wiki page
 2. Confirm `published: true`, `slug`, `description`, standalone readability, and alignment with `docs/content-seo-guide.md`
 3. If the page embeds screenshots or images:
-   keep the source asset in `docs/images/`
+   keep the source asset in `assets/blog/`
    copy the site-facing asset to `ai-survival-log-site/public/images/{slug-or-series}/`
    use markdown image paths like `/images/{slug-or-series}/{file}.png`
    prefer ASCII kebab-case filenames
 4. Run `/wiki:publish`
-5. Emit or update the downstream post at `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
-6. Move to `ai-survival-log-site` only for presentation-layer refinement if needed
+5. Emit or update the upstream artifact at `output/blog/YYYY-MM-DD-{slug}.mdx`
+6. Sync or copy the downstream post to `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`
+7. Move to `ai-survival-log-site` only for presentation-layer refinement if needed
 
 Use this as the default wiki-to-blog path.
 
@@ -59,7 +64,7 @@ Use this as the default wiki-to-blog path.
 Start in `ai-survival-log`.
 
 Flow:
-1. Preserve the study conversation, notes, or chapter Q&A in `sources/`
+1. Preserve the study conversation, notes, or chapter Q&A in `raw/books/` or `raw/articles/`
 2. Update related concept and topic pages in the wiki
 3. Use `/content:book-study-blog` to structure the learning path, questions, explanations, and reverse questions
 4. Run `/wiki:publish` to connect the upstream topic to a downstream post
@@ -114,7 +119,7 @@ Start in `ai-survival-log-site` for:
 Start in `ai-survival-log`.
 
 Check:
-- `sources/`
+- `raw/`
 - `wiki/log.md`
 - recent `wiki/topics/`
 
@@ -123,7 +128,7 @@ Then decide:
 - what existing wiki page needs expansion
 - what publishing candidate is becoming ready
 
-If new material exists, preserve it in `sources/` and run `/wiki:ingest`.
+If new material exists, preserve it in `raw/{type}/` and run `/wiki:ingest`.
 If you want to think through existing accumulated knowledge, use `/wiki:query`.
 If the resulting answer is worth keeping, use `/wiki:file-answer`.
 
@@ -143,7 +148,7 @@ For a normal post:
 - apply `docs/content-seo-guide.md` before publish so the upstream page already uses clearer titles, summaries, and introductions
 - refine the topic page
 - confirm `published: true`, `slug`, `description`, and readable structure
-- if images exist, keep `docs/images/` as the upstream source copy and `ai-survival-log-site/public/images/{slug-or-series}/` as the downstream-served copy
+- if images exist, keep `assets/blog/` as the upstream source copy and `ai-survival-log-site/public/images/{slug-or-series}/` as the downstream-served copy
 - run `/wiki:publish`
 
 For a study-series post:
@@ -158,6 +163,7 @@ The purpose of this block is to convert selected upstream knowledge into downstr
 Move to `ai-survival-log-site`.
 
 Check:
+- newly added or updated MDX artifacts in `output/blog/`
 - newly added or updated MDX files in `content/posts/`
 - frontmatter compatibility
 - series metadata when applicable

@@ -5,7 +5,7 @@ updated: "2026-04-18"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-18 | 총 70개 페이지
+> 마지막 업데이트: 2026-04-18 | 총 72개 페이지
 
 ## Entities
 
@@ -99,5 +99,7 @@ updated: "2026-04-18"
 | [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
 | [[projects/cross-repo-ai-automation-lab]] |  | automation, workflow, project, developer, wiki | active |
 | [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |
+| [[projects/repo-structure-refactor]] |  | project, repository, structure, refactor, wiki, raw, output | active |
 | [[projects/site-seo-foundation-and-content-rewrite]] |  | seo, blog, project, nextjs, publishing, search-console, content | active |
 | [[projects/study-system-design-interview]] |  | system-design, study, backend, distributed-systems, interview | active |
+| [[projects/wiki-rag-expansion-roadmap]] |  | project, wiki, rag, vector-db, roadmap | draft |

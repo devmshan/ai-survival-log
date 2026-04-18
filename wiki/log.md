@@ -6,6 +6,24 @@ title: "Wiki Log"
 
 ## 2026-04-18
 
+### 16:20 — edit: 구조 변경 계획과 RAG 보류 원칙 문서화
+- **created:**
+  - [[projects/wiki-rag-expansion-roadmap]] — human-first wiki를 유지한 채 추후 RAG/vector DB 확장을 다루는 예정 프로젝트
+- **updated:**
+  - [[projects/repo-structure-refactor]] — `raw/wiki/assets/output` 경계, `wiki/syntheses/`, human-first wiki 원칙, downstream site 고려사항을 반영한 최종 세부 계획으로 확장
+  - `AGENTS.md`, `.codex/AGENTS.md`, `README.md`, `CLAUDE.md` — 구조 변경 계획과 future-RAG-separate-project 원칙을 참조하도록 갱신
+  - `docs/publishing-contract.md`, `docs/operating-playbook.md`, `docs/content-seo-guide.md` — 구조 변경 중에도 downstream 계약이 유지된다는 점을 명시
+  - `.claude/commands/wiki/file-answer.md`, `.claude/commands/wiki/publish.md` — `syntheses`와 publish artifact 계획 반영
+  - [[wiki/index]] — 프로젝트 1개 추가, 총 72개 페이지
+- **summary:** 현재 구조 변경은 human-first markdown wiki를 강화하는 범위로 확정하고, 미래 RAG/vector DB 확장은 별도 예정 프로젝트로 분리해 문서화. `ai-survival-log-site` downstream 계약 유지 원칙도 함께 정리.
+
+### 14:00 — edit: 레포 폴더 구조 리팩토링 계획 문서화
+- **created:**
+  - [[projects/repo-structure-refactor]] — raw/ 타입별 분류, wiki/syntheses/ 추가, output/ 멀티채널 구조화 계획
+- **updated:**
+  - [[wiki/index.md]] — projects 1개 추가, 총 71개 페이지
+- **summary:** sources/→raw/, wiki/syntheses/ 신규, output/ 멀티채널 구조화를 위한 리팩토링 계획을 프로젝트 페이지로 문서화. 구현 전 계획 단계.
+
 ### 10:20 — file-answer: canonical URL 개념 설명 위키 저장
 - **created:**
   - [[concepts/canonical-url]] — 대표 URL 지정, 중복 URL 완화, 블로그 SEO 맥락 정리

@@ -7,6 +7,7 @@
 
 The publishing interface is:
 - publishable wiki pages in `wiki/`
+- publish artifacts in `output/blog/`
 - emitted site posts in `ai-survival-log-site/content/posts/`
 
 ## Upstream Publishable Page Requirements
@@ -27,12 +28,16 @@ They should also preserve:
 - valid related-page structure while in the wiki
 
 If a publishable page contains screenshots or other inline images, it should also preserve:
-- an upstream source copy under `docs/images/`
+- an upstream source copy under `assets/blog/`
 - a downstream-served copy under `ai-survival-log-site/public/images/{slug-or-series}/`
 - publish-facing markdown paths in the form `/images/{slug-or-series}/{file}.png`
 - ASCII kebab-case asset filenames
 
 ## Output Rule
+
+Default upstream artifact path:
+
+`output/blog/YYYY-MM-DD-{slug}.mdx`
 
 Default downstream output path:
 
@@ -43,6 +48,7 @@ The publish step is responsible for:
 - removing wiki-only sections such as `## 관련 페이지`
 - translating `[[wikilink]]` references for site consumption
 - keeping inline image references compatible with downstream site paths
+- keeping the upstream artifact layer reproducible rather than hand-edited
 
 ## Book Study Lane
 
@@ -56,6 +62,8 @@ Recommended downstream fields:
 ## Compatibility Rule
 
 Manual downstream edits may happen in the site repository, but upstream publishing rules should remain compatible with the downstream site contract and should not silently break content loading, series navigation, or publish workflows.
+
+`output/blog/` is now the upstream publish artifact layer, but the final downstream contract remains `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`.
 
 ## Verification
 

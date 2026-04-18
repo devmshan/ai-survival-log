@@ -10,7 +10,9 @@ const __dirname = path.dirname(__filename)
 const PROJECT_ROOT = path.resolve(__dirname, '..')
 
 const CATEGORY_RULES = [
-  { name: 'source', match: file => file.startsWith('sources/') },
+  { name: 'source', match: file => file.startsWith('raw/') },
+  { name: 'asset', match: file => file.startsWith('assets/') },
+  { name: 'output', match: file => file.startsWith('output/') },
   { name: 'wiki', match: file => file.startsWith('wiki/') },
   { name: 'publish-contract', match: file => file === 'docs/publishing-contract.md' || file.includes('publish') },
   { name: 'script', match: file => file.startsWith('scripts/') || file.startsWith('.claude/commands/wiki/') },
@@ -99,7 +101,7 @@ function inferRisk(categories) {
   if (categories.includes('wiki') && categories.includes('script')) return 'high'
   if (categories.includes('agent-surface') && categories.includes('docs')) return 'medium'
   if (categories.includes('wiki') || categories.includes('script')) return 'medium'
-  if (categories.every(category => ['source', 'docs', 'test'].includes(category))) return 'low'
+  if (categories.every(category => ['source', 'asset', 'output', 'docs', 'test'].includes(category))) return 'low'
   return 'medium'
 }
 
@@ -109,7 +111,10 @@ function summarize(files, categories) {
     return 'wiki 내용과 publish contract 경로를 함께 수정'
   }
   if (categories.includes('source') && categories.includes('wiki')) {
-    return '원본 자료와 wiki 지식층을 함께 수정'
+    return '원본 자료 계층과 wiki 지식층을 함께 수정'
+  }
+  if (categories.includes('asset') || categories.includes('output')) {
+    return '제작 자산 또는 산출물 경로를 수정'
   }
   if (categories.includes('agent-surface')) {
     return '에이전트 운영 표면과 문서를 수정'
@@ -152,7 +157,13 @@ function buildReviewPoints(files, categories) {
   const points = []
 
   if (categories.includes('source')) {
-    points.push('sources/는 불변 원본 보존 원칙을 깨지 않았는지 확인')
+    points.push('raw/가 불변 원본 보존 원칙을 깨지 않았는지 확인')
+  }
+  if (categories.includes('asset')) {
+    points.push('assets/가 문서 계층과 섞이지 않고 채널별 경계를 유지하는지 확인')
+  }
+  if (categories.includes('output')) {
+    points.push('output/blog 산출물이 최종 downstream content/posts 계약과 혼동되지 않는지 확인')
   }
   if (categories.includes('wiki')) {
     points.push('wiki/index.md, wiki/log.md, 관련 역링크 반영이 필요한지 확인')

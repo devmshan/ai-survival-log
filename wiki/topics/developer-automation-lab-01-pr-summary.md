@@ -54,7 +54,7 @@ seriesOrder: 1
 
 핵심은 저장소 역할이었다.
 
-`ai-survival-log-site`는 runtime, API, build를 먼저 보는 저장소고, `ai-survival-log`는 `sources -> wiki -> publish` 계약을 먼저 보는 저장소다.
+`ai-survival-log-site`는 runtime, API, build를 먼저 보는 저장소고, `ai-survival-log`는 `raw -> wiki -> output/blog -> publish` 계약을 먼저 보는 저장소다.
 
 그래서 이 저장소의 PR summary는 보통 아래를 먼저 묻는다.
 

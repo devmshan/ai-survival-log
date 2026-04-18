@@ -22,7 +22,7 @@ description: "위키 페이지를 블로그 포스트(MDX)로 변환합니다"
 
 대상 페이지가 스크린샷/이미지를 포함하면 추가로 확인합니다:
 
-- upstream source copy가 `docs/images/`에 있는지
+- upstream source copy가 `assets/blog/`에 있는지
 - downstream served copy가 `ai-survival-log-site/public/images/{slug-or-series}/`에 있는지
 - 본문 이미지 경로가 `/images/{slug-or-series}/{file}.png` 형태인지
 - publish-facing 파일명이 ASCII kebab-case인지
@@ -68,12 +68,15 @@ draft: false
 - `## 관련 페이지` 섹션 전체 제거
 - Mermaid 코드블록 보존
 - 이미지 경로는 downstream site 기준 `/images/{slug-or-series}/{file}.png` 형태 유지
-- 스크린샷 원본은 `docs/images/`에 남기고, site가 읽는 복사본은 `ai-survival-log-site/public/images/{slug-or-series}/`에 둠
+- 스크린샷 원본은 `assets/blog/`에 남기고, site가 읽는 복사본은 `ai-survival-log-site/public/images/{slug-or-series}/`에 둠
 
 ### 4단계: 파일 출력
 
-- `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 저장
+- `output/blog/YYYY-MM-DD-{slug}.mdx`로 저장
+- 필요 시 downstream `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`로 동기화
 - 기존 파일이 있으면 덮어쓰기 (위키가 source of truth)
+
+최종 downstream 계약은 계속 `ai-survival-log-site/content/posts/YYYY-MM-DD-{slug}.mdx`다.
 
 ### 5단계: 로그 기록
 
@@ -84,7 +87,7 @@ draft: false
 ```
 퍼블리시 완료:
 - 원본: wiki/topics/ai-era-survival.md
-- 출력: ai-survival-log-site/content/posts/YYYY-MM-DD-ai-era-survival.mdx
+- 산출물: output/blog/YYYY-MM-DD-ai-era-survival.mdx
 - 변환된 링크: N개
 ```
 

@@ -13,6 +13,7 @@ WIKI_DIR = Path("wiki")
 EXCLUDE_FILES = {"index.md", "log.md"}
 EXCLUDE_DIRS = {"tags", ".obsidian"}
 SITE_ROOT = Path("../ai-survival-log-site")
+OUTPUT_BLOG_DIR = Path("output/blog")
 
 
 @dataclass
@@ -21,7 +22,7 @@ class Page:
 
     path: Path          # wiki/ 기준 상대 경로 (예: Path("concepts/ai.md"))
     title: str
-    type: str           # entity | concept | source | topic | project
+    type: str           # entity | concept | source | topic | project | synthesis
     status: str         # draft | active | archived
     tags: list[str]
     description: str
@@ -72,13 +73,14 @@ def extract_image_paths(content: str) -> list[str]:
     return re.findall(r'!\[[^\]]*\]\(([^)]+)\)', content)
 
 
-_TYPE_ORDER = ["entity", "concept", "source", "topic", "project"]
+_TYPE_ORDER = ["entity", "concept", "source", "topic", "project", "synthesis"]
 _TYPE_LABELS = {
     "entity": "Entities",
     "concept": "Concepts",
     "source": "Sources",
     "topic": "Topics",
     "project": "Projects",
+    "synthesis": "Syntheses",
 }
 
 
@@ -213,7 +215,12 @@ def _convert_wikilinks(content: str, published_pages: dict[str, PublishedPage]) 
     return re.sub(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]", replace, content)
 
 
-def _validate_publishable(post: frontmatter.Post, rel_path: Path, site_root: Path) -> list[str]:
+def _validate_publishable(
+    post: frontmatter.Post,
+    rel_path: Path,
+    site_root: Path,
+    assets_blog_dir: Path,
+) -> list[str]:
     errors: list[str] = []
 
     if not post.get("published"):
@@ -241,6 +248,9 @@ def _validate_publishable(post: frontmatter.Post, rel_path: Path, site_root: Pat
             continue
         if any(ord(ch) > 127 for ch in Path(image_path).name):
             errors.append(f"이미지 파일명은 ASCII kebab-case 권장: {rel_path} -> {image_path}")
+        upstream_image = assets_blog_dir / Path(image_path).name
+        if not upstream_image.exists():
+            errors.append(f"upstream 이미지 누락: {rel_path} -> {upstream_image}")
         served_image = site_root / "public" / image_path.lstrip("/")
         if not served_image.exists():
             errors.append(f"downstream 이미지 누락: {rel_path} -> {image_path}")
@@ -277,8 +287,8 @@ def _build_mdx_frontmatter(post: frontmatter.Post) -> str:
     return "\n".join(lines) + "\n\n"
 
 
-def _target_post_path(post: frontmatter.Post, site_root: Path) -> Path:
-    output_dir = site_root / "content" / "posts"
+def _target_post_path(post: frontmatter.Post, output_blog_dir: Path) -> Path:
+    output_dir = output_blog_dir
     output_dir.mkdir(parents=True, exist_ok=True)
     date_prefix = post.get("updated") or post.get("created")
     return output_dir / f"{date_prefix}-{post['slug']}.mdx"
@@ -296,9 +306,11 @@ def cmd_publish(
     target: str | None = None,
     wiki_dir: Path = WIKI_DIR,
     site_root: Path = SITE_ROOT,
+    output_blog_dir: Path = OUTPUT_BLOG_DIR,
     publish_all: bool = False,
 ) -> int:
     published_pages = _scan_published_pages(wiki_dir)
+    assets_blog_dir = wiki_dir.parent / "assets" / "blog"
     if not published_pages:
         print("발행 가능한 페이지가 없습니다.")
         return 0
@@ -325,10 +337,10 @@ def cmd_publish(
     for md_path in targets:
         rel_path = md_path.relative_to(wiki_dir)
         post = frontmatter.load(md_path)
-        errors.extend(_validate_publishable(post, rel_path, site_root))
+        errors.extend(_validate_publishable(post, rel_path, site_root, assets_blog_dir))
         if errors:
             continue
-        output_path = _target_post_path(post, site_root)
+        output_path = _target_post_path(post, output_blog_dir)
         output_path.write_text(_render_mdx(post, published_pages), encoding="utf-8")
         written.append((rel_path, output_path))
 
