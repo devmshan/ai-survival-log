@@ -5,7 +5,7 @@ updated: "2026-04-18"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-18 | 총 81개 페이지
+> 마지막 업데이트: 2026-04-18 | 총 87개 페이지
 
 ## Entities
 
@@ -16,6 +16,7 @@ updated: "2026-04-18"
 | [[entities/claude-code]] |  | claude-code, ai-tool, anthropic | active |
 | [[entities/devsurvivallog]] |  | blog, devsurvivallog, ai, personal | active |
 | [[entities/ecc]] |  | claude-code, plugin, ai-agent | active |
+| [[entities/graphify]] |  | graphify, knowledge-graph, tool, llm, markdown, multi-modal | active |
 | [[entities/gunseung]] |  | 건승, cat, character, cheese-tabby, mascot | active |
 | [[entities/lablup]] |  | mlops, ai-infrastructure, startup, korea | active |
 | [[entities/minsung]] |  | minsung, character, persona, devsurvivallog, instagram | active |
@@ -63,6 +64,7 @@ updated: "2026-04-18"
 | [[concepts/startup-watermill]] |  | startup, strategy, watermill, ai-era | active |
 | [[concepts/stateless-architecture]] |  | system-design, stateless, scalability, web-tier, distributed-systems | active |
 | [[concepts/tacit-knowledge]] |  | ai, knowledge, tacit-knowledge, human-skills | active |
+| [[concepts/tool-evaluation-methodology]] |  | tool-evaluation, methodology, decision-making, knowledge-management | active |
 | [[concepts/vertical-vs-horizontal-scaling]] |  | system-design, scalability, scale-up, scale-out, distributed-systems | active |
 
 ## Sources
@@ -83,6 +85,7 @@ updated: "2026-04-18"
 | [[sources/2026-04-18-claude-plan-codex-validation]] |  | repo-structure, claude-codex, validation, raw-layer, assets, wiki | active |
 | [[sources/2026-04-18-clipper-template-intake]] |  | obsidian-web-clipper, clipper-templates, assets-intake, wiki-ingest, raw-layer | active |
 | [[sources/2026-04-18-codex-folder-structure-execution]] |  | repo-structure, codex, refactor, migration, wiki, synthesis | active |
+| [[sources/2026-04-18-graphify-evaluation]] |  | graphify, wiki, knowledge-management, rag, graph-database, tool-evaluation | active |
 | [[sources/2026-04-18-raw-immutability-codex-skills]] |  | raw-layer, immutability, codex, wiki-skill, claude-command | active |
 | [[sources/2026-04-18-web-clipper-setup]] |  | obsidian-web-clipper, clipper-templates, setup, first-clip, trigger | active |
 | [[sources/2026-04-18-wiki-surface-alignment]] |  | wiki, commands, operating-docs, syntheses, output-blog, assets-intake | active |
@@ -94,7 +97,9 @@ updated: "2026-04-18"
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/claude-code-to-codex]] | Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정. | claude-code, codex, agentic-workflow, harness, workflow, llm-ops | active |
+| [[topics/claude-plan-codex-validate]] | Claude로 저장소 구조 변경 계획서를 썼다. Codex가 실제 저장소를 뒤져서 문제를 두 개 찾아냈다. 계획을 다시 짜고, 실행했다. 그 과정에서 나온 패턴. | claude-code, codex, collaboration, repo-structure, validation, planning | active |
 | [[topics/developer-automation-lab-01-pr-summary]] | PR summary가 무엇인지 이해하는 데서 시작해, 규칙 기반 자동화를 직접 실습하고 실제 GitHub PR 댓글까지 확인한 기록. | automation, pull-request, workflow, github, code-review, developer, study | active |
+| [[topics/graphify-evaluation]] | Graphify를 잘못된 명령으로 테스트해서 틀린 결론을 냈다. 다시 확인했더니 마크다운도 처리된다. 그래도 지금 이 위키에는 안 쓴다 — 이유는 '못 해서'가 아니라 '지금은 필요 없어서'. | graphify, wiki, knowledge-management, markdown, tool-evaluation, obsidian-web-clipper | active |
 | [[topics/how-llm-works]] | 파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다. | llm, embedding, rag, vector-db, ai-architecture, knowledge-graph | active |
 | [[topics/system-design-interview-01]] | 서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리 | system-design, scalability, distributed-systems, study, backend | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | wiki, llm, markdown, knowledge-management, context-graph, design-decision | active |
@@ -111,4 +116,5 @@ updated: "2026-04-18"
 | [[projects/repo-structure-refactor]] |  | project, repository, structure, refactor, wiki, raw, output | active |
 | [[projects/site-seo-foundation-and-content-rewrite]] |  | seo, blog, project, nextjs, publishing, search-console, content | active |
 | [[projects/study-system-design-interview]] |  | system-design, study, backend, distributed-systems, interview | active |
+| [[projects/wiki-category-design-decision]] |  | wiki, project, structure, category-design, syntheses, decision | active |
 | [[projects/wiki-rag-expansion-roadmap]] |  | project, wiki, rag, vector-db, roadmap | draft |

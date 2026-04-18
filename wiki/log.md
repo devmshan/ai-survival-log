@@ -6,6 +6,64 @@ title: "Wiki Log"
 
 ## 2026-04-18
 
+### file-answer: Wiki 카테고리 설계 결정 페이지 저장
+- **created:**
+  - [[projects/wiki-category-design-decision]] — syntheses 폐기 근거, 확정 카테고리 구조, 새 카테고리 도입 판단 기준
+- **updated:**
+  - [[projects/repo-structure-refactor]] — wiki-category-design-decision 역링크 추가
+- **summary:** syntheses 폐기 결정의 배경과 Wiki 카테고리 설계 원칙을 projects/ 페이지로 보존. 향후 카테고리 추가 논의 시 참조 기준.
+
+### edit: wiki/syntheses/ 카테고리 폐기 및 전체 surface 정리
+- **updated:**
+  - `CLAUDE.md` — syntheses 폴더 목록, 페이지 타입 섹션, type enum, /wiki:query, /wiki:file-answer, /wiki:lint 6곳 수정
+  - `.claude/commands/wiki/query.md` — syntheses 참조 제거
+  - `.claude/commands/wiki/file-answer.md` — 카테고리 목록에서 syntheses 제거, 라우팅 규칙 수정
+  - `.claude/commands/wiki/lint.md` — type 유효값에서 synthesis 제거
+  - `.codex/skills/wiki-file-answer/SKILL.md` — description, category list, routing rule 3곳 수정
+  - `.codex/skills/wiki-query-answer/SKILL.md` — syntheses 참조 제거
+  - `.codex/skills/wiki-lint/SKILL.md` — type 일관성 기준 업데이트
+  - `.codex/skills/wiki-ingest/SKILL.md` — syntheses 라우팅 규칙을 topics/ 통합 방식으로 변경
+  - `scripts/wiki_lib.py` — _TYPE_ORDER, _TYPE_LABELS에서 synthesis 제거, type 코멘트 수정
+  - `tests/test_wiki_lib.py` — test_includes_syntheses_section 테스트 메서드 제거
+  - `wiki/projects/repo-structure-refactor.md` — syntheses 도입 계획 전체 철회, 미도입 결정으로 반영
+  - `wiki/topics/claude-plan-codex-validate.md` — 폴더 트리 2곳에서 syntheses/ 제거
+  - `output/blog/2026-04-18-claude-plan-codex-validate.mdx` — 동일 수정
+- **deleted:** `wiki/syntheses/` 빈 디렉토리 제거
+- **summary:** syntheses/ 카테고리는 도입 후 한 번도 사용되지 않았음. publish 구조(topics만 published: true)와 맞지 않고, 비교/판단 지식은 topics/에 통합하는 것이 더 자연스럽다는 판단으로 전체 surface에서 제거.
+
+## 2026-04-18
+
+### file-answer: Graphify 재평가에서 파생된 위키 페이지 2개 저장
+- **created:**
+  - [[entities/graphify]] — Graphify 실제 기능 엔티티 페이지 (multi-modal 처리, 올바른 CLI, 출력 형식, 재검토 조건)
+  - [[concepts/tool-evaluation-methodology]] — 도구 평가 방법론 개념 (공식 문서 확인 → 올바른 명령 테스트 → 필요성 판단 순서, 흔한 실수 패턴, 결론 품질 기준)
+- **updated:**
+  - [[topics/graphify-evaluation]] — entities/graphify, concepts/tool-evaluation-methodology 역링크 추가
+- **summary:** 이번 Graphify 재평가 과정에서 도출된 두 가지 재사용 가능한 지식을 위키에 보존. Graphify 엔티티는 올바른 기능 스펙 참조용, 도구 평가 방법론은 향후 도구 평가 시 재활용 가능한 개념.
+
+### edit: Post 2 대대적 수정 — Graphify 재평가 기반 리라이트
+- **updated:**
+  - [[topics/graphify-evaluation]] — 제목·결론·서사 전면 재작성. 기존 기술적 오류 수정 (마크다운 미지원 → multi-modal 처리 가능), 새 서사: 잘못된 명령 테스트 → 재평가 → "못 해서가 아니라 지금 필요 없어서" 비채택
+  - [[sources/2026-04-18-graphify-evaluation]] — CLI 테스트 결과 테이블, Graphify 실제 기능, 재평가 장단점 수정
+  - [[topics/wiki-markdown-vs-graph-db]] — Graphify 파생 레이어 가능성 보충 주석 추가
+  - [[projects/wiki-rag-expansion-roadmap]] — Graphify 판단 섹션 수정 (기각 이유: 마크다운 미지원 → 현재 규모 불필요)
+  - `output/blog/2026-04-18-graphify-evaluation.mdx` — MDX 재생성
+- **summary:** Graphify가 `graphify .` 명령으로 마크다운도 처리 가능하다는 사실 확인 후 Post 2 전면 재작성. 결론 방향은 동일(비채택)이나 이유가 정확해짐 — "도구가 할 수 있는 것과 프로젝트가 지금 필요한 것은 다른 질문"이 새로운 핵심 메시지.
+
+### 23:30 — publish: 블로그 포스트 2편 퍼블리시
+- **created:**
+  - `output/blog/2026-04-18-claude-plan-codex-validate.mdx`
+  - `output/blog/2026-04-18-graphify-evaluation.mdx`
+  - [[sources/2026-04-18-graphify-evaluation]] — Graphify 평가 세션 소스 페이지
+  - [[topics/claude-plan-codex-validate]] — Plan→Validate→Execute 패턴 블로그 포스트
+  - [[topics/graphify-evaluation]] — Graphify 비채택기 블로그 포스트
+- **updated:**
+  - [[topics/claude-code-to-codex]] — Post 1 역링크 추가
+  - [[topics/wiki-markdown-vs-graph-db]] — Post 2 역링크 추가
+- **summary:** 0418 저널 자료에서 블로그 포스트 2편 작성. Post 1은 Claude-Codex Plan→Validate→Execute 패턴 실전기, Post 2는 Web Clipper 세팅 → Graphify 첫 클리핑 → 비채택 결정 서사.
+
+
+
 ### 22:00 — ingest: raw 불변 규칙 강화와 Codex wiki skill 5종 추가
 - **source:** [[sources/2026-04-18-raw-immutability-codex-skills]]
 - **created:**

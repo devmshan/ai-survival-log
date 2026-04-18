@@ -6,4 +6,5 @@
 | [[projects/cross-repo-ai-automation-lab]] |  | project | active |
 | [[projects/repo-structure-refactor]] |  | project | active |
 | [[projects/site-seo-foundation-and-content-rewrite]] |  | project | active |
+| [[projects/wiki-category-design-decision]] |  | project | active |
 | [[projects/wiki-rag-expansion-roadmap]] |  | project | draft |

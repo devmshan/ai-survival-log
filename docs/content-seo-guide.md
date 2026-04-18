@@ -209,6 +209,87 @@ Downstream-served paths and publish-facing markdown paths should remain stable e
 
 ---
 
+## Section Header Rules
+
+Section headers (`##`) are not navigation labels. They are the single most visible signal of what a reader gains from each section.
+
+### Rule
+
+Each `##` header should communicate the **insight, discovery, or pivot** of that section — not just name what happens.
+
+### Bad headers (labels)
+
+These describe activity without meaning:
+
+- "설치하고 돌려봤다" — describes an action, gives no insight
+- "부수 효과들" — categorizes without revealing the discovery
+- "시작은 Web Clipper였다" — states context with no signal of value
+
+### Good headers (insight)
+
+These carry the key finding or turning point:
+
+- "`pip install` 한 줄, 그리고 바로 막혔다" — shows the gap between expectation and reality
+- "마크다운이 이미 그 문제를 풀고 있었다" — reveals the core insight
+- "문서만 읽으면 충돌이 보이지 않는다" — names the lesson earned
+
+### Test
+
+Read only the headers of the post. Can you follow the argument? If the headers could apply to any generic blog post, they are labels and need revision.
+
+---
+
+## Narrative Quality Rules
+
+These rules address issues that SEO metadata rules alone do not catch.
+
+### Opening paragraph: establish WHY before WHAT
+
+The first 2-3 paragraphs should answer: **why does this topic matter now?**
+
+Structure:
+1. Name the broader trend, pressure, or problem
+2. Introduce the specific situation or tool
+3. Signal what the reader will learn
+
+Avoid opening directly with personal action ("오늘 X를 해봤다") without first establishing why the reader should care.
+
+**Before:** "개인 위키를 만들기 시작하면, Graphify 추천을 꽤 자주 만난다."
+
+**After:** "개인 위키를 구축하는 사람이 늘면서, 방법론도 다양해지고 있다. … Graphify는 이 수요를 겨냥해서 나온 도구다. … 나도 궁금해서 직접 써봤다."
+
+### Section motivation: WHY before WHAT
+
+Each section should make clear **why the action or discovery happened** — not just report what happened.
+
+If a section starts a new action, the previous section or a transition sentence should explain the motivation.
+
+**Missing motivation:** "파이프라인이 준비되자 첫 자료를 수집했다." (why this particular source?)
+
+**With motivation:** "마침 Graphify에 관심이 생긴 시점이었다 … 위키가 계속 커지고 있었고, 관계 구조를 더 잘 볼 수 있는 방법이 없을까 찾아보던 중이었다."
+
+### Technical depth: explain WHY not just WHAT
+
+For tool evaluations, CLI results, or technical findings, do not stop at "it failed." Explain the mechanism.
+
+**Shallow:** "`graphify update wiki`가 실패했다."
+
+**With depth:** "`update` 명령은 소스 코드 파일(.py, .js, .ts)을 스캔하는 용도다. `.md` 파일은 처음부터 처리 대상이 아니다. '코드 파일 없음' 에러는 그 의미 그대로였다."
+
+### Noise filter: remove details that don't serve the reader
+
+Remove:
+- LLM agent internal process details (sandbox constraints, tool workarounds)
+- One-time environment details the reader cannot reproduce
+- Intermediate steps that do not contribute to the conclusion
+
+Keep:
+- CLI commands and outputs the reader can run themselves
+- Technical reasoning that explains WHY the conclusion was reached
+- Discoveries that directly informed the decision
+
+---
+
 ## Authoring Checklist
 
 Before publishing or preparing a page for `/wiki:publish`, confirm:
@@ -216,10 +297,18 @@ Before publishing or preparing a page for `/wiki:publish`, confirm:
 - [ ] the page type is clear
 - [ ] the title communicates the topic well enough
 - [ ] the description summarizes the practical subject clearly
-- [ ] the first 1 to 3 paragraphs surface the main topic early
+- [ ] the first 1 to 3 paragraphs surface the main topic early **and explain WHY the topic matters**
+- [ ] each `##` header communicates an insight or finding, not just a label
+- [ ] each section shows the motivation behind the action or discovery
+- [ ] technical evaluations explain the underlying mechanism, not just the outcome
+- [ ] no implementation details that are irrelevant to the reader
+- [ ] the narrative arc is complete — no missing context
+- [ ] the post scope reads as coherent for a single blog post
 - [ ] the page links to related pages that help topic continuation
 - [ ] series suitability has been considered when applicable
 - [ ] image handling follows the publish asset rules when screenshots are used
+
+Run `/content:review-blog-draft` to verify these items before publishing.
 
 ---
 

@@ -26,6 +26,7 @@
 - `/wiki:publish` — downstream site용 MDX 출력 준비
 - `/content:book-study-blog` — 책 스터디 대화에서 시리즈형 블로그 lane 연결
 - `/content:blog-to-instagram` — 블로그 포스트에서 인스타그램 lane 연결
+- `/content:review-blog-draft` — `/wiki:publish` 전 블로그 초안 글쓰기 품질 리뷰 (7개 항목)
 
 > 이 프로젝트는 Karpathy의 LLM Wiki 패턴을 따르는 개인 지식 위키입니다.
 > "Ingest time" 컴파일 방식으로 지식을 축적합니다.
@@ -62,7 +63,7 @@ Assets / Output Layer → 채널 자산 원본 + publish artifact
 
 - Claude가 관리하는 마크다운 지식 베이스
 - 모든 페이지는 서로 `[[wikilink]]`로 연결됨
-- 하위 폴더: `entities/`, `concepts/`, `sources/`, `topics/`, `projects/`, `syntheses/`
+- 하위 폴더: `entities/`, `concepts/`, `sources/`, `topics/`, `projects/`
 
 ### Layer 3: `assets/` / `output/` — 자산 + 산출물
 
@@ -102,11 +103,6 @@ Assets / Output Layer → 채널 자산 원본 + publish artifact
 대상: 진행 중인 프로젝트의 설계 문서와 구현 계획
 파일명: `kebab-case-프로젝트명.md`
 
-### syntheses/ — 통합/판단
-
-대상: 비교 분석, 질의 결과, 통합 판단 문서
-파일명: `kebab-case-주제명.md`
-
 ## Frontmatter 스펙
 
 모든 위키 페이지에 필수:
@@ -116,7 +112,7 @@ Assets / Output Layer → 채널 자산 원본 + publish artifact
 title: "페이지 제목"
 created: "YYYY-MM-DD"
 updated: "YYYY-MM-DD"
-type: entity | concept | source | topic | project | synthesis
+type: entity | concept | source | topic | project
 sources: []
 tags: []
 status: draft | active | archived
@@ -255,14 +251,13 @@ Obsidian 호환 `[[wikilink]]` 사용:
 1. `wiki/index.md` 읽기
 2. 관련 페이지 식별 및 읽기
 3. 필요하면 `wiki/sources/`에 대응하는 `raw/{type}/` 원본까지 확인
-4. 비교/판단 질문이면 `wiki/syntheses/`도 우선 검토
-5. `[[citation]]` 포함하여 답변
-6. 답변을 위키 페이지로 저장할지 제안
+4. `[[citation]]` 포함하여 답변
+5. 답변을 위키 페이지로 저장할지 제안
 
 ### /wiki:file-answer — 답변을 위키 페이지로 저장
 
 1. 답변을 적절한 카테고리의 위키 페이지로 변환
-2. 비교/판단 결과는 `syntheses/`, 실행 계획은 `projects/` 우선 검토
+2. 실행 계획이나 운영 변경이면 `projects/` 우선 검토
 3. frontmatter 추가
 4. 크로스 레퍼런스 설정
 5. `wiki/index.md` 업데이트
@@ -276,7 +271,7 @@ Obsidian 호환 `[[wikilink]]` 사용:
 2. 고아 페이지 (어디서도 링크되지 않음)
 3. `index.md`에 누락된 페이지
 4. `index.md`에 있지만 실제로 없는 페이지
-5. frontmatter 누락 또는 불완전 (`synthesis` 포함)
+5. frontmatter 누락 또는 불완전
 6. `updated` 날짜가 실제 수정일과 불일치
 7. `## 관련 페이지` 섹션 누락
 8. `published: true`인데 `slug`/`description` 없는 페이지

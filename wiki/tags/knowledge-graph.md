@@ -7,6 +7,7 @@
 | [[concepts/context-graph]] |  | concept | active |
 | [[concepts/knowledge-graph-completion]] |  | concept | active |
 | [[concepts/knowledge-graph]] |  | concept | active |
+| [[entities/graphify]] |  | entity | active |
 | [[sources/2026-04-13-arxiv-2406-11160-context-graph]] |  | source | active |
 | [[sources/2026-04-13-context-graph-vs-knowledge-graph]] |  | source | active |
 | [[sources/2026-04-13-medium-modelmind-context-graphs]] |  | source | active |

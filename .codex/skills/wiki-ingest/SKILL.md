@@ -30,5 +30,5 @@ Use this skill when the task is to turn raw source material into durable wiki kn
 ## Rules
 
 - Never rewrite the original file in `raw/`.
-- If the material is mostly comparison, synthesis, or judgment, consider `wiki/syntheses/`.
+- If the material is mostly comparison or judgment, consider expanding an existing `wiki/topics/` page or creating a new one.
 - If the source came from Web Clipper and is still ambiguous, classify it before ingesting.

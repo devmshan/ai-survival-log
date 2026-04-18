@@ -22,7 +22,7 @@ class Page:
 
     path: Path          # wiki/ 기준 상대 경로 (예: Path("concepts/ai.md"))
     title: str
-    type: str           # entity | concept | source | topic | project | synthesis
+    type: str           # entity | concept | source | topic | project
     status: str         # draft | active | archived
     tags: list[str]
     description: str
@@ -73,14 +73,13 @@ def extract_image_paths(content: str) -> list[str]:
     return re.findall(r'!\[[^\]]*\]\(([^)]+)\)', content)
 
 
-_TYPE_ORDER = ["entity", "concept", "source", "topic", "project", "synthesis"]
+_TYPE_ORDER = ["entity", "concept", "source", "topic", "project"]
 _TYPE_LABELS = {
     "entity": "Entities",
     "concept": "Concepts",
     "source": "Sources",
     "topic": "Topics",
     "project": "Projects",
-    "synthesis": "Syntheses",
 }
 
 

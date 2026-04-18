@@ -12,8 +12,7 @@ Use this skill when the user asks a knowledge question grounded in this reposito
 1. Start with `wiki/index.md`.
 2. Read the most relevant pages in `wiki/`.
 3. If needed, follow `wiki/sources/` to the corresponding `raw/{type}` source.
-4. For comparison or judgment questions, check `wiki/syntheses/` early.
-5. Answer with explicit page citations such as `[[concepts/...]]` or file links when useful.
+4. Answer with explicit page citations such as `[[concepts/...]]` or file links when useful.
 
 ## Rules
 

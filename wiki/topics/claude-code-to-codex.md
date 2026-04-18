@@ -285,3 +285,4 @@ Claude Code만 쓰던 프로젝트에 Codex를 넣는다는 건 새 LLM 하나�
 - [[sources/2026-04-15-ai-frontier-ep86]]
 - [[projects/blog-ai-study-site]]
 - [[topics/ai-era-survival]]
+- [[topics/claude-plan-codex-validate]]
