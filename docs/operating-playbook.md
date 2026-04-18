@@ -13,6 +13,7 @@ Core flow:
 
 Current structure-migration planning is tracked in `wiki/projects/repo-structure-refactor.md`.
 Future RAG/vector DB work is deferred and tracked in `wiki/projects/wiki-rag-expansion-roadmap.md`.
+`graphify` is not a current operating dependency for this repository; if a graph layer is added later, it should be derived from `wiki/` rather than drive the structure of `wiki/`.
 
 ## Operating Model
 
@@ -21,6 +22,7 @@ Future RAG/vector DB work is deferred and tracked in `wiki/projects/wiki-rag-exp
 - Treat `wiki/` as the default source of truth
 - Allow downstream refinements, but keep them compatible with the upstream publishing contract
 - Keep the wiki human-first and Obsidian-friendly; do not optimize file structure for future RAG ahead of need
+- Do not reshape the repository around Graphify or any other graph DB tool before a derived-layer need is proven
 - Use the default loop for non-trivial work:
   1. Plan
   2. Implement
