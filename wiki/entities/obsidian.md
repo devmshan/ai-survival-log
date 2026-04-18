@@ -1,7 +1,7 @@
 ---
 title: "Obsidian"
 created: "2026-04-12"
-updated: "2026-04-12"
+updated: "2026-04-18"
 type: entity
 sources: []
 tags: [obsidian, note-taking, knowledge-management, tool]
@@ -48,7 +48,12 @@ description: ""
 - **Tag Wrangler**: 태그 일괄 관리
 - **Graph Analysis**: 노트 간 연결 분석
 
+## Web Clipper
+
+Obsidian 공식 브라우저 확장 프로그램. 웹 페이지를 마크다운으로 클리핑해 Vault에 직접 저장한다. → [[entities/obsidian-web-clipper]] 참조
+
 ## 관련 페이지
 
 - [[concepts/llm-wiki-pattern]]
+- [[entities/obsidian-web-clipper]]
 - [[projects/blog-ai-study-site]]

@@ -6,8 +6,65 @@ title: "Wiki Log"
 
 ## 2026-04-18
 
-### 16:20 — edit: 구조 변경 계획과 RAG 보류 원칙 문서화
+### 22:00 — ingest: raw 불변 규칙 강화와 Codex wiki skill 5종 추가
+- **source:** [[sources/2026-04-18-raw-immutability-codex-skills]]
 - **created:**
+  - [[sources/2026-04-18-raw-immutability-codex-skills]] — raw 불변 원칙 강화 + Codex skill 추가 세션 요약
+- **updated:**
+  - `raw/AGENTS.md`, `raw/CLAUDE.md`, `.claude/commands/wiki/ingest.md` — 불변 규칙 표현 강화
+  - `.codex/skills/wiki-ingest/`, `.codex/skills/wiki-query-answer/`, `.codex/skills/wiki-file-answer/`, `.codex/skills/wiki-lint/`, `.codex/skills/wiki-publish/` — Codex용 wiki skill 5종 신규 추가
+- **summary:** `raw/` 불변 원칙을 "절대 직접 수정 금지, 요약/해설은 wiki/에서" 수준으로 강화. Claude command와 Codex skill을 병행 구조로 운용하는 원칙 정립. Codex용 wiki skill 5종 추가.
+
+### 21:00 — ingest: wiki 명령 surface와 운영 문서 정합성 보정
+- **source:** [[sources/2026-04-18-wiki-surface-alignment]]
+- **created:**
+  - [[sources/2026-04-18-wiki-surface-alignment]] — wiki 명령과 CLAUDE.md 재정렬 세션 요약
+- **updated:**
+  - `.claude/commands/wiki/query.md` — `raw/{type}` 원본 확인, `syntheses/` 우선 검토 추가
+  - `.claude/commands/wiki/file-answer.md` — `syntheses/` vs `projects/` 선택 기준 추가
+  - `.claude/commands/wiki/lint.md` — `synthesis` 타입, generated surface 제외 기준 추가
+  - `.claude/commands/wiki/publish.md` — `output/blog` 기본 경로, `assets/intake → assets/blog` 승격 원칙 추가
+  - `CLAUDE.md` — 커맨드 워크플로우와 publish 파이프라인 현재 구조 기준으로 재서술
+- **summary:** 구조 변경 후 wiki 명령 surface를 실제 운영 흐름에 맞게 재정렬. `syntheses/`의 핵심 저장소 지위와 이중 artifact 경계(`output/blog` vs `ai-survival-log-site/content/posts/`) 명확화.
+
+### 20:00 — ingest: Obsidian Web Clipper 설정 마무리와 첫 클리핑 확인
+- **source:** [[sources/2026-04-18-web-clipper-setup]]
+- **created:**
+  - [[sources/2026-04-18-web-clipper-setup]] — Web Clipper 설정 실사용 검증 세션 요약
+- **updated:**
+  - `assets/clipper-templates/*.json` — 번호 붙인 이름 체계(`01 Article Deep Research` 등)로 일괄 변경
+- **summary:** 템플릿 10종 등록 과정에서 전역 fallback 트리거 문제 발견·해결. 수동 선택 전용 템플릿 운용 원칙 정립. 첫 실제 클리핑 파일(Graphify 아티클)로 템플릿 유효성 확인, vault 경로 설정 문제 발견.
+
+### 18:00 — ingest: Web Clipper 템플릿 설계와 intake 구조 재정의
+- **source:** [[sources/2026-04-18-clipper-template-intake]]
+- **created:**
+  - [[sources/2026-04-18-clipper-template-intake]] — Web Clipper 템플릿 설계 세션 요약
+  - [[entities/obsidian-web-clipper]] — Obsidian Web Clipper 도구 엔티티
+  - [[concepts/assets-intake-pattern]] — 이중 intake 구조 (raw/type vs assets/intake) 개념
+- **updated:**
+  - [[entities/obsidian]] — Web Clipper 섹션 추가
+  - `assets/clipper-templates/` — 템플릿 10종 + README 신규 추가
+  - `assets/intake/reference-notes/`, `assets/intake/reference-images/`, `assets/intake/attachments/` 추가
+  - `README.md`, `docs/operating-playbook.md`, `.claude/commands/wiki/ingest.md` — Web Clipper 루틴 반영
+  - `.claude/commands/content/recommend-clipper-template.md`, `.codex/skills/recommend-clipper-template/` 추가
+- **summary:** Obsidian Web Clipper 템플릿 10종 설계. 텍스트 소스(`raw/{type}`)와 채널 미정 비텍스트 자산(`assets/intake/`)을 분리하는 이중 intake 구조 도입. URL 기반 추천 스킬을 Claude/Codex 양쪽에 추가.
+
+### 17:00 — ingest: Codex 폴더 구조 적용 실행
+- **source:** [[sources/2026-04-18-codex-folder-structure-execution]]
+- **created:**
+  - [[sources/2026-04-18-codex-folder-structure-execution]] — 폴더 구조 실행 세션 요약
+- **updated:**
+  - `sources/` → `raw/articles/`, `book/` → `raw/books/`, `docs/images/` → `assets/blog/`, `docs/webtoon/` → `assets/webtoon/` — 파일 이동 완료
+  - `wiki/syntheses/`, `assets/shared/`, `assets/youtube/`, `assets/instagram/`, `output/blog/` 등 신규 디렉토리 생성
+  - `scripts/wiki_lib.py`, `scripts/pr-summary.mjs` — 새 경계 반영
+  - `raw/AGENTS.md`, `assets/AGENTS.md`, `output/AGENTS.md` — 대칭 구조 추가
+- **summary:** 계획된 `raw/wiki/assets/output` 4계층 구조를 실제 저장소에 적용. 27개 테스트 통과, lint 오류 없음. CLAUDE.md/AGENTS.md 대칭 구조 완성.
+
+### 16:20 — edit: 구조 변경 계획과 RAG 보류 원칙 문서화
+- **source:** [[sources/2026-04-18-claude-plan-codex-validation]]
+- **created:**
+  - [[sources/2026-04-18-claude-plan-codex-validation]] — Claude 계획서 Codex 검증 세션 요약
+  - [[concepts/claude-codex-collaboration]] — Claude 계획 + Codex 검증/실행 협업 패턴
   - [[projects/wiki-rag-expansion-roadmap]] — human-first wiki를 유지한 채 추후 RAG/vector DB 확장을 다루는 예정 프로젝트
 - **updated:**
   - [[projects/repo-structure-refactor]] — `raw/wiki/assets/output` 경계, `wiki/syntheses/`, human-first wiki 원칙, downstream site 고려사항을 반영한 최종 세부 계획으로 확장
@@ -15,7 +72,7 @@ title: "Wiki Log"
   - `docs/publishing-contract.md`, `docs/operating-playbook.md`, `docs/content-seo-guide.md` — 구조 변경 중에도 downstream 계약이 유지된다는 점을 명시
   - `.claude/commands/wiki/file-answer.md`, `.claude/commands/wiki/publish.md` — `syntheses`와 publish artifact 계획 반영
   - [[wiki/index]] — 프로젝트 1개 추가, 총 72개 페이지
-- **summary:** 현재 구조 변경은 human-first markdown wiki를 강화하는 범위로 확정하고, 미래 RAG/vector DB 확장은 별도 예정 프로젝트로 분리해 문서화. `ai-survival-log-site` downstream 계약 유지 원칙도 함께 정리.
+- **summary:** Claude가 작성한 구조 변경 계획서를 Codex가 실제 저장소 상태·테스트·계약 문서와 교차 검증. `docs/images → raw/assets` 충돌 발견 후 `assets/` 채널별 구조로 해결. human-first wiki 원칙 합의, future RAG는 별도 예정 프로젝트로 분리.
 
 ### 14:00 — edit: 레포 폴더 구조 리팩토링 계획 문서화
 - **created:**
@@ -23,6 +80,7 @@ title: "Wiki Log"
 - **updated:**
   - [[wiki/index.md]] — projects 1개 추가, 총 71개 페이지
 - **summary:** sources/→raw/, wiki/syntheses/ 신규, output/ 멀티채널 구조화를 위한 리팩토링 계획을 프로젝트 페이지로 문서화. 구현 전 계획 단계.
+- **note:** 이 계획서는 이후 Codex 검증 세션([[sources/2026-04-18-claude-plan-codex-validation]])을 거쳐 최종 확정됨.
 
 ### 10:20 — file-answer: canonical URL 개념 설명 위키 저장
 - **created:**

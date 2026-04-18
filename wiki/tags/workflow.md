@@ -2,6 +2,7 @@
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
+| [[concepts/assets-intake-pattern]] |  | concept | active |
 | [[concepts/pr-summary]] |  | concept | active |
 | [[concepts/pull-request]] |  | concept | active |
 | [[entities/superpowers]] |  | entity | active |
