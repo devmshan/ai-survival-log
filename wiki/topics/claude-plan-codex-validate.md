@@ -1,5 +1,6 @@
 ---
-title: "Claude가 짜고 Codex가 깼다 — AI 두 개로 저장소 구조를 바꿔봤다"
+title: "Claude가 짜고 Codex가 깼다 — 저장소 구조 리팩토링"
+seoTitle: "Claude로 계획하고 Codex로 검증하는 저장소 구조 리팩토링"
 created: "2026-04-18"
 updated: "2026-04-18"
 type: topic
@@ -12,6 +13,9 @@ status: active
 published: true
 slug: "claude-plan-codex-validate"
 description: "Claude로 저장소 구조 변경 계획서를 썼다. Codex가 실제 저장소를 뒤져서 문제를 두 개 찾아냈다. 계획을 다시 짜고, 실행했다. 그 과정에서 나온 패턴."
+series: "Claude Code × Codex 실전기"
+seriesSlug: "claude-codex-ops"
+seriesOrder: 2
 ---
 
 # Claude가 짜고 Codex가 깼다 — AI 두 개로 저장소 구조를 바꿔봤다
