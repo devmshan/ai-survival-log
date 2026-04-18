@@ -20,6 +20,23 @@ description: "소스 자료를 읽고 위키 페이지를 생성/갱신합니다
 - 인라인 텍스트인 경우: 적절한 `raw/{type}/` 폴더에 저장합니다
 - `raw/`의 파일은 **불변** — 한 번 저장하면 수정하지 않습니다
 
+Obsidian Web Clipper를 쓸 때는 `assets/clipper-templates/`의 템플릿을 우선 사용합니다:
+
+- 아티클: `articles/article-deep-research.json` 또는 `articles/article-quick-capture.json`
+- 영상: `videos/video-transcript-notes.json`
+- 팟캐스트: `podcasts/podcast-episode-notes.json`
+- 책: `books/book-chapter-notes.json` 또는 `books/book-quote-capture.json`
+- 저널/대화 기록: `journals/journal-insight-capture.json` 또는 `journals/conversation-backup.json`
+- 이미지/첨부파일 참조: `other-assets/asset-reference-note.json`
+- 애매한 자료: `generic/generic-source-capture.json`
+
+클리퍼 템플릿은 다음 기준을 따릅니다:
+
+- 텍스트 소스는 가능한 한 `raw/{type}/`로 바로 저장
+- 자산 참조 노트는 `assets/intake/reference-notes/`로 저장
+- 채널이 미정인 이미지/첨부파일은 `assets/intake/`에 머물고, 채널 결정 후에만 `assets/blog/` 등으로 이동
+- 본문에 `Why This Matters`, `Summary Seed`, `Extraction Priorities`, `Recommended Harness` 같은 힌트 섹션을 남겨 `/wiki:ingest`가 후속 분석 방향을 빠르게 잡을 수 있게 함
+
 ### 2단계: 소스 분석
 
 소스 자료에서 다음을 추출합니다:

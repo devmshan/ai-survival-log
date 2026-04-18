@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Journal Insight Capture",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Type:** journal\\n- **Ingest Target:** raw/journals\\n- **Recommended Harness:** /wiki:ingest or /wiki:file-answer\\n\\n## Situation\\n\\n- What triggered this insight?\\n\\n## Insight\\n\\n-\\n-\\n-\\n\\n## Questions\\n\\n-\\n-\\n-\\n\\n## Raw Material\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "journal",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/journals",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest or /wiki:file-answer",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "journal, insight, note, raw-source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/journals"
+}

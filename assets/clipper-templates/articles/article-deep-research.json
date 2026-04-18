@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Article Deep Research",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **URL:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** article\\n- **Ingest Target:** raw/articles\\n- **Recommended Harness:** /wiki:ingest\\n\\n## Why This Matters\\n\\n- Add why this source is worth ingesting.\\n- Note the problem, claim, or concept you want the wiki to retain.\\n\\n## Summary Seed\\n\\n- Write 3 to 5 bullets before or after clipping if useful.\\n\\n## Extraction Priorities\\n\\n- Key entities:\\n- Key concepts:\\n- Claims worth verifying:\\n- Related wiki topics:\\n\\n## Raw Clip\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "article",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/articles",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "web-clipping, article, research-seed",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/articles"
+}

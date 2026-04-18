@@ -40,6 +40,30 @@ Flow:
 
 Use this when the goal is knowledge accumulation rather than publishing.
 
+### 1A. Capture With Obsidian Web Clipper
+
+Start in Obsidian Web Clipper, but capture with this repository's structure in mind.
+
+Use templates from `assets/clipper-templates/`.
+
+Default template choices:
+1. Articles or technical posts: `articles/article-deep-research.json` or `articles/article-quick-capture.json`
+2. YouTube, lectures, interviews: `videos/video-transcript-notes.json`
+3. Podcasts: `podcasts/podcast-episode-notes.json`
+4. Book chapters or excerpts: `books/book-chapter-notes.json` or `books/book-quote-capture.json`
+5. Personal insight or conversation logs: `journals/journal-insight-capture.json` or `journals/conversation-backup.json`
+6. Images or attachments worth reusing later: `other-assets/asset-reference-note.json`
+7. Unclear classification: `generic/generic-source-capture.json`
+
+Capture rules:
+1. Prefer storing ingestable text sources directly into `raw/{type}/`
+2. Use `assets/intake/reference-notes/` when the captured item is primarily an asset reference, not a text source
+3. Keep the clipper note's scaffold sections intact so `/wiki:ingest` can quickly identify summary seeds, entities, concepts, and follow-up questions
+4. After capture, classify any generic note before treating it as a durable raw source
+5. Do not put newly collected assets into `assets/blog/`, `assets/youtube/`, `assets/instagram/`, or `assets/webtoon/` until the output channel is actually decided
+
+Use this when you want fast intake from the web without breaking the repo's source-of-truth boundary.
+
 ### 2. Publish A Wiki Topic As A Blog Post
 
 Start in `ai-survival-log`.
@@ -129,6 +153,7 @@ Then decide:
 - what publishing candidate is becoming ready
 
 If new material exists, preserve it in `raw/{type}/` and run `/wiki:ingest`.
+If you are clipping from the web, use a template from `assets/clipper-templates/` first so the note lands in the right intake lane.
 If you want to think through existing accumulated knowledge, use `/wiki:query`.
 If the resulting answer is worth keeping, use `/wiki:file-answer`.
 

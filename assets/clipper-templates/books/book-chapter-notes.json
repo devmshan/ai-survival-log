@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Book Chapter Notes",
+  "behavior": "create",
+  "noteContentFormat": "# {{title}}\\n\\n- **Captured:** {{date}}\\n- **Source:** {{url}}\\n- **Author:** {{author}}\\n- **Published:** {{published}}\\n- **Type:** book\\n- **Ingest Target:** raw/books\\n- **Recommended Harness:** /wiki:ingest -> /content:book-study-blog\\n\\n## Reading Context\\n\\n- Book title:\\n- Chapter or section:\\n- Why this matters:\\n\\n## Study Questions\\n\\n-\\n-\\n-\\n\\n## Key Points\\n\\n-\\n-\\n-\\n\\n## Raw Notes\\n\\n{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author|split:\", \"|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "captured",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "source_type",
+      "value": "book",
+      "type": "text"
+    },
+    {
+      "name": "ingest_target",
+      "value": "raw/books",
+      "type": "text"
+    },
+    {
+      "name": "recommended_harness",
+      "value": "/wiki:ingest -> /content:book-study-blog",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "book-note, study-note, chapter, raw-source",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{date}}-{{title}}",
+  "path": "raw/books"
+}
