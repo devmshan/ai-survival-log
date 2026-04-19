@@ -4,6 +4,33 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-19
+
+### ingest: CMDS System Files 설계 사례 심층 분석
+- **source:** `raw/articles/2026-04-19T163318+0900-johnfkoo951cmds-system-files CMDS System Files - Brutalism Style Documentation Hub.md`
+- **created:**
+  - [[sources/2026-04-19-cmds-system-files]] — GitHub 실제 소스(CLAUDE.md, AGENTS.md, frontmatter-standard.md) 열람 후 적용 가능 패턴 3개 정리
+- **updated:**
+  - `wiki/index.md` — 페이지 수 88로 갱신
+- **summary:** `johnfkoo951/cmds-system-files` v4.2 GitHub 소스 직접 확인. 적용 후보 3개를 추렸고, 이 중 Essential 섹션은 즉시 도입, description 규칙은 한국어 authoring 흐름에 맞게 제한적으로 흡수, STATIC/DYNAMIC 주석은 보류하기로 판단.
+
+### edit: CMDS 사례 기준으로 핵심 규칙만 선택 적용
+- **updated:**
+  - `CLAUDE.md` — `Essential (Post-Compact)` 섹션 추가, description 규칙 구체화
+  - `AGENTS.md` — 핵심 경계 규칙용 `Essential (Post-Compact)` 섹션 추가
+  - `.codex/AGENTS.md` — Codex용 대칭 `Essential (Post-Compact)` 섹션 추가
+  - `docs/content-seo-guide.md` — description이 "무엇이 들어 있고 언제 유용한지" 드러나도록 기준 강화
+  - [[sources/2026-04-19-cmds-system-files]] — 즉시 적용 / 제한 적용 / 보류 판단을 명시
+- **summary:** 외부 PKM 시스템 설계를 그대로 복제하지 않고, 현재 저장소에 실효성이 높은 규칙만 선별 적용. Essential 섹션은 주요 agent surface에 대칭 추가했고, description 규칙은 한국어 SEO 흐름과 양립하도록 조정했으며, STATIC/DYNAMIC 주석은 보류.
+
+### file-answer: Post-Compact Essential 패턴을 개념 페이지로 저장
+- **created:**
+  - [[concepts/post-compact-essential-section]] — 긴 agent guide에서 핵심 규칙만 상단에 재선언하는 문서 패턴
+- **updated:**
+  - [[concepts/llm-wiki-pattern]] — 운영 문서 패턴 섹션 추가
+  - [[concepts/claude-codex-collaboration]] — 대칭적 핵심 경계 배치 패턴 링크 추가
+- **summary:** 이번 대화에서 나온 결론을 source note 수준에 머무르게 하지 않고, 긴 상위 규칙 문서에서 핵심만 남기는 `Essential (Post-Compact)` 패턴을 reusable concept로 분리 저장.
+
 ## 2026-04-18
 
 ### file-answer: Wiki 카테고리 설계 결정 페이지 저장

@@ -1,11 +1,11 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-18"
+updated: "2026-04-19"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-18 | 총 87개 페이지
+> 마지막 업데이트: 2026-04-19 | 총 89개 페이지
 
 ## Entities
 
@@ -53,6 +53,7 @@ updated: "2026-04-18"
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
 | [[concepts/load-balancer]] |  | system-design, load-balancer, scalability, high-availability, distributed-systems | active |
 | [[concepts/message-queue]] |  | system-design, message-queue, async, decoupling, distributed-systems | active |
+| [[concepts/post-compact-essential-section]] | 긴 agent guide 문서에서 컨텍스트 압축 후에도 남아야 할 핵심 규칙만 별도 블록으로 재선언하는 패턴. CLAUDE.md, AGENTS.md, Codex guide 같은 상위 규칙 문서에 적용한다. | documentation, agent-guide, claude, codex, context-management | active |
 | [[concepts/pr-summary]] |  | pull-request, automation, code-review, workflow, github | active |
 | [[concepts/pull-request]] |  | git, pull-request, code-review, workflow, collaboration, github | active |
 | [[concepts/rag]] |  | rag, llm, vector-db, embedding, ai-architecture | active |
@@ -89,6 +90,7 @@ updated: "2026-04-18"
 | [[sources/2026-04-18-raw-immutability-codex-skills]] |  | raw-layer, immutability, codex, wiki-skill, claude-command | active |
 | [[sources/2026-04-18-web-clipper-setup]] |  | obsidian-web-clipper, clipper-templates, setup, first-clip, trigger | active |
 | [[sources/2026-04-18-wiki-surface-alignment]] |  | wiki, commands, operating-docs, syntheses, output-blog, assets-intake | active |
+| [[sources/2026-04-19-cmds-system-files]] | Source analysis of CMDS System Files by Yohan Koo (CMDSPACE). Documents architecture patterns applicable to ai-survival-log wiki system, including Essential section, STATIC/DYNAMIC annotation, and LLM-readable description fields. | pkm, obsidian, claude-code, ai-agent, knowledge-management, system-design | active |
 
 ## Topics
 

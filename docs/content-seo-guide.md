@@ -159,18 +159,21 @@ This field is the HTML `<title>` override used by the downstream site for search
 - required for publishable pages
 - should act as a concise summary of what the page explains
 - should be concrete enough to work as the downstream card summary and search snippet basis
+- should make it clear what the page contains and when it is useful to reference
 
 Good descriptions usually include:
 
 - the main topic
 - what the reader will learn
 - enough specificity to distinguish the page from nearby topics
+- a concrete cue about the practical question, situation, or use case this page helps with
 
 Avoid descriptions that:
 
 - are only poetic or emotional
 - describe motivation without summarizing the actual content
 - are too generic to help downstream presentation
+- could fit dozens of nearby posts without change
 
 ---
 

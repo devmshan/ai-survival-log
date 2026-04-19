@@ -1,5 +1,15 @@
 # Codex Local Operating Guide
 
+## Essential (Post-Compact)
+
+> 컨텍스트 압축 후에도 유지할 핵심 규칙:
+> 1. 기본 흐름은 `raw -> wiki -> output/blog -> ai-survival-log-site/content/posts` 이다.
+> 2. `raw/`는 불변 원본 계층이고, 요약과 해설은 `wiki/`에서 한다.
+> 3. `wiki/`가 source of truth다. `output/`은 재생성 가능한 artifact 계층이다.
+> 4. `published: true` 페이지는 안정적인 `slug`와 구체적인 `description`을 유지해야 한다.
+> 5. publishable 페이지는 `docs/content-seo-guide.md`를 따른다.
+> 6. 위키는 human-first, Obsidian-friendly 구조를 유지하고 future RAG는 파생 계층으로 다룬다.
+
 ## Project Role
 
 This repository is the upstream wiki authoring source for the AI Survival Log publishing workflow.

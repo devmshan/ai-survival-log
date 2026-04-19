@@ -2,6 +2,17 @@
 
 @AGENTS.md
 
+## Essential (Post-Compact)
+
+> 컨텍스트 압축 후에도 반드시 유지해야 할 핵심 규칙:
+> 1. 저장소 기본 흐름은 `raw -> wiki -> output/blog -> ai-survival-log-site/content/posts` 이다.
+> 2. `raw/`는 불변 원본 계층이다. 요약, 해설, 태깅, 재작성은 `wiki/`에서 한다.
+> 3. 모든 위키 페이지는 `title`, `created`, `updated`, `type`, `sources`, `tags`, `status`, `published`, `slug`, `description` frontmatter를 유지한다.
+> 4. `published: true` 페이지는 `slug`와 `description`이 반드시 채워져 있어야 한다.
+> 5. publishable 페이지는 `docs/content-seo-guide.md`를 따라 제목, description, 도입부를 구체적으로 쓴다.
+> 6. publishable 페이지의 이미지는 upstream `assets/blog/`, downstream `ai-survival-log-site/public/images/{slug-or-series}/` 경로 규칙을 지킨다.
+> 7. 위키는 human-first, markdown-first, Obsidian-friendly 구조를 유지하고, future RAG는 파생 계층으로 다룬다.
+
 ## Operating Model
 
 - 이 저장소는 `ai-survival-log-site`의 상위 authoring/source-of-truth 저장소다.
@@ -130,6 +141,7 @@ description: ""
 - `published`: `true`이면 `/wiki:publish`로 블로그 포스트 변환 대상
 - `slug`: `published: true`일 때 필수 — 블로그 URL 경로
 - `description`: `published: true`일 때 필수 — 블로그 카드 요약
+- `description`: 가능하면 "무엇이 들어 있고 언제 참고할 페이지인지"가 드러나게 구체적으로 작성
 - `tags`: 소문자, 하이픈 구분 (예: `claude-code`, `ai-transformation`)
 - `sources`: 해당 페이지가 참조하는 소스 위키 페이지 `[[wikilink]]` 배열
 - 스크린샷/이미지를 포함한 publishable 페이지는 원본 자산을 `assets/blog/`에 보존

@@ -1,9 +1,9 @@
 ---
 title: "LLM Wiki 패턴"
 created: "2026-04-12"
-updated: "2026-04-12"
+updated: "2026-04-19"
 type: concept
-sources: []
+sources: ["[[sources/2026-04-19-cmds-system-files]]"]
 tags: [wiki, knowledge-management, llm, karpathy]
 status: active
 published: false
@@ -44,6 +44,11 @@ Andrej Karpathy가 제시한 지식 관리 패턴. RAG의 "쿼리 타임" 재발
 | `/file-answer` | 답변을 위키 페이지로 저장 (지식 순환) |
 | `/lint` | 고아 페이지, 깨진 링크, 모순 탐지 |
 
+## 운영 문서 패턴
+
+- 스키마 문서가 길어지면 `[[concepts/post-compact-essential-section]]` 같은 상단 핵심 규칙 블록을 두는 것이 유효하다.
+- 다만 위키 본체를 복잡한 메타데이터 체계로 밀어 넣기보다는, markdown-first 원칙을 유지한 채 필요한 규칙만 얇게 추가하는 편이 낫다.
+
 ## 스케일 고려사항
 
 - **50-200개 페이지:** 가장 효율적
@@ -61,4 +66,5 @@ Andrej Karpathy가 제시한 지식 관리 패턴. RAG의 "쿼리 타임" 재발
 - [[entities/obsidian]] — 위키 Vault 시각화 도구
 - [[topics/ai-era-survival]] — 위키를 활용한 지식 축적 전략
 - [[concepts/context-graph]] — 이 위키는 일종의 Context Graph (지식 + 맥락 + 출처)
+- [[concepts/post-compact-essential-section]] — 긴 상위 규칙 문서에서 핵심만 남기는 패턴
 - [[topics/wiki-markdown-vs-graph-db]] — 정형화/자동화 vs 마크다운 설계 판단
