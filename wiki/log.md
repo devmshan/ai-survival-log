@@ -4,7 +4,43 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-20
+
+### ingest: 대규모 시스템 설계 기초 4장 — 처리율 제한 장치의 설계
+- **source:** `raw/books/스크린샷 2026-04-20 오전 10.17.14~43.png` (13개 이미지)
+- **created:**
+  - [[sources/2026-04-20-system-design-interview-ch4]] — 4장 소스 요약 (Rate Limiter 배치 위치, 5가지 알고리즘, 분산 환경 설계)
+  - [[concepts/rate-limiter]] — 처리율 제한 장치 개념 (알고리즘 5종 비교, Redis 구현, 분산 환경 경쟁 조건)
+  - [[topics/system-design-interview-04]] — 4장 블로그 토픽 (published: true)
+- **updated:**
+  - [[projects/study-system-design-interview]] — 4장 완료 표시, 개념 페이지 링크 추가
+  - `wiki/index.md` — 총 99개 페이지로 갱신
+- **summary:** Alex Xu 책 4장 이미지 13장 분석. 토큰 버킷/누출 버킷/고정 윈도 카운터/이동 윈도 로그/이동 윈도 카운터 5가지 알고리즘, Redis 기반 구현, HTTP 429 응답 처리, 분산 환경 경쟁 조건·동기화 문제를 concepts 1개와 topic 1개로 정리. Phase 2 시작 (4장 완료).
+
 ## 2026-04-19
+
+### ingest: 대규모 시스템 설계 기초 2장 — 개략적인 규모 추정
+- **source:** `raw/books/스크린샷 2026-04-15 오후 1.40.07~17.png` (3개 이미지)
+- **created:**
+  - [[sources/2026-04-15-system-design-interview-ch2]] — 2장 소스 요약 (2의 제곱수, 응답지연, 가용성, 트위터 예제)
+  - [[concepts/back-of-envelope-estimation]] — 개략적 추정 개념 (단위감각, QPS/저장소 공식, 실전 팁)
+  - [[concepts/availability]] — 가용성 개념 (나인, SLA, SPOF, 장애 격리)
+  - [[topics/system-design-interview-02]] — 2장 블로그 토픽 (published: true)
+- **updated:**
+  - [[projects/study-system-design-interview]] — 2장 완료 표시, 개념 페이지 링크 추가
+  - `wiki/index.md` — 총 93개 페이지로 갱신
+- **summary:** Alex Xu 책 2장 캡처 이미지 3장 분석. 2의 제곱수/응답지연/가용성 수치 + 트위터 QPS·저장소 추정 예제를 concepts 2개와 topic 1개로 정리. 블로그 포스트 바로 발행 가능 상태(published: true).
+
+### ingest: 대규모 시스템 설계 기초 3장 — 시스템 설계 면접 공략법
+- **source:** `raw/books/스크린샷 2026-04-19 오후 5.13.11~38.png` (6개 이미지)
+- **created:**
+  - [[sources/2026-04-19-system-design-interview-ch3]] — 3장 소스 요약 (4단계 프레임워크, 뉴스 피드 예제, 체크리스트)
+  - [[concepts/system-design-interview-framework]] — 면접 4단계 프레임워크 개념 (시간 배분, 해야/말아야 할 것)
+  - [[topics/system-design-interview-03]] — 3장 블로그 토픽 (published: true)
+- **updated:**
+  - [[projects/study-system-design-interview]] — 3장 완료 표시, 개념 페이지 링크 추가
+  - `wiki/index.md` — 총 96개 페이지로 갱신
+- **summary:** Alex Xu 책 3장 이미지 6장 분석. 4단계 프레임워크(문제이해→개략설계→상세설계→마무리), 시간 배분, 뉴스 피드 예제(팬아웃/피드 조회 흐름), 해야 할/말아야 할 체크리스트를 concepts 1개와 topic 1개로 정리. Phase 1 기초 3장 완료.
 
 ### ingest: CMDS System Files 설계 사례 심층 분석
 - **source:** `raw/articles/2026-04-19T163318+0900-johnfkoo951cmds-system-files CMDS System Files - Brutalism Style Documentation Hub.md`

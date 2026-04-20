@@ -1,7 +1,7 @@
 ---
 title: "시스템 설계 면접 스터디 플랜"
 created: "2026-04-14"
-updated: "2026-04-14"
+updated: "2026-04-20"
 type: project
 sources: ["[[sources/2026-04-14-system-design-interview-v1]]"]
 tags: ["system-design", "study", "backend", "distributed-systems", "interview"]
@@ -40,9 +40,9 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 | 챕터 | 상태 | 생성된 위키 페이지 |
 |------|------|-------------------|
 | 1장 | ✅ 완료 (2026-04-14) | vertical-vs-horizontal-scaling, load-balancer, db-replication, cache-strategies, cdn, stateless-architecture, message-queue, database-sharding |
-| 2장 | ⬜ 미시작 | - |
-| 3장 | ⬜ 미시작 | - |
-| 4장 | ⬜ 미시작 | - |
+| 2장 | ✅ 완료 (2026-04-15) | back-of-envelope-estimation, availability |
+| 3장 | ✅ 완료 (2026-04-19) | system-design-interview-framework |
+| 4장 | ✅ 완료 (2026-04-20) | [[concepts/rate-limiter]] |
 | 5장 | ⬜ 미시작 | - |
 | 6장 | ⬜ 미시작 | - |
 | 7장 | ⬜ 미시작 | - |
@@ -96,11 +96,11 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 2-1 | 2의 제곱수 — KB/MB/GB/TB/PB 단위 감각 | `concepts/back-of-envelope-estimation` | ⬜ |
-| 2-2 | 응답지연(Latency) 기준값 — L1 캐시~디스크~네트워크 숫자 암기 | `concepts/back-of-envelope-estimation` | ⬜ |
-| 2-3 | 가용성(Availability) 수치 — 99%, 99.9%, 99.999% 연간 다운타임 | `concepts/availability` | ⬜ |
-| 2-4 | QPS 추정 실습 — DAU → 초당 요청수 계산 공식 | `concepts/back-of-envelope-estimation` | ⬜ |
-| 2-5 | 저장소 추정 실습 — 트위터 예제로 5년치 저장소 계산 | `concepts/back-of-envelope-estimation` | ⬜ |
+| 2-1 | 2의 제곱수 — KB/MB/GB/TB/PB 단위 감각 | [[concepts/back-of-envelope-estimation]] | ✅ |
+| 2-2 | 응답지연(Latency) 기준값 — L1 캐시~디스크~네트워크 숫자 암기 | [[concepts/back-of-envelope-estimation]] | ✅ |
+| 2-3 | 가용성(Availability) 수치 — 99%, 99.9%, 99.999% 연간 다운타임 | [[concepts/availability]] | ✅ |
+| 2-4 | QPS 추정 실습 — DAU → 초당 요청수 계산 공식 | [[concepts/back-of-envelope-estimation]] | ✅ |
+| 2-5 | 저장소 추정 실습 — 트위터 예제로 5년치 저장소 계산 | [[concepts/back-of-envelope-estimation]] | ✅ |
 
 ---
 
@@ -110,12 +110,12 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 3-1 | 시스템 설계 면접의 특성 — 왜 정답이 없는가 | `concepts/system-design-interview-framework` | ⬜ |
-| 3-2 | Step 1: 문제 이해 및 설계 범위 확정 — 올바른 질문하기 | `concepts/system-design-interview-framework` | ⬜ |
-| 3-3 | Step 2: 개략적 설계안 제시 — 화이트보드 스케치, 핵심 API | `concepts/system-design-interview-framework` | ⬜ |
-| 3-4 | Step 3: 상세 설계 — 병목 찾기, 우선순위 결정 | `concepts/system-design-interview-framework` | ⬜ |
-| 3-5 | Step 4: 마무리 — 병목 지적, 운영 이슈, 미래 확장 논의 | `concepts/system-design-interview-framework` | ⬜ |
-| 3-6 | 해야 할 것 / 하지 말아야 할 것 체크리스트 | `concepts/system-design-interview-framework` | ⬜ |
+| 3-1 | 시스템 설계 면접의 특성 — 왜 정답이 없는가 | [[concepts/system-design-interview-framework]] | ✅ |
+| 3-2 | Step 1: 문제 이해 및 설계 범위 확정 — 올바른 질문하기 | [[concepts/system-design-interview-framework]] | ✅ |
+| 3-3 | Step 2: 개략적 설계안 제시 — 화이트보드 스케치, 핵심 API | [[concepts/system-design-interview-framework]] | ✅ |
+| 3-4 | Step 3: 상세 설계 — 병목 찾기, 우선순위 결정 | [[concepts/system-design-interview-framework]] | ✅ |
+| 3-5 | Step 4: 마무리 — 병목 지적, 운영 이슈, 미래 확장 논의 | [[concepts/system-design-interview-framework]] | ✅ |
+| 3-6 | 해야 할 것 / 하지 말아야 할 것 체크리스트 | [[concepts/system-design-interview-framework]] | ✅ |
 
 ---
 
@@ -129,14 +129,14 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 4-1 | Rate Limiter가 필요한 이유 — DoS, 비용, 서버 과부하 | `concepts/rate-limiter` | ⬜ |
-| 4-2 | 배치 위치 — 클라이언트 / 서버 사이드 / 미들웨어(API Gateway) | `concepts/rate-limiter` | ⬜ |
-| 4-3 | 알고리즘 1: 토큰 버킷 (Token Bucket) | `concepts/rate-limiter` | ⬜ |
-| 4-4 | 알고리즘 2: 누출 버킷 (Leaky Bucket) | `concepts/rate-limiter` | ⬜ |
-| 4-5 | 알고리즘 3: 고정 윈도우 카운터 (Fixed Window Counter) | `concepts/rate-limiter` | ⬜ |
-| 4-6 | 알고리즘 4: 이동 윈도우 로그 (Sliding Window Log) | `concepts/rate-limiter` | ⬜ |
-| 4-7 | 알고리즘 5: 이동 윈도우 카운터 (Sliding Window Counter) | `concepts/rate-limiter` | ⬜ |
-| 4-8 | 상세 설계 — Redis 활용, 분산 환경 경쟁 조건, HTTP 헤더 응답 | `concepts/rate-limiter` | ⬜ |
+| 4-1 | Rate Limiter가 필요한 이유 — DoS, 비용, 서버 과부하 | [[concepts/rate-limiter]] | ✅ |
+| 4-2 | 배치 위치 — 클라이언트 / 서버 사이드 / 미들웨어(API Gateway) | [[concepts/rate-limiter]] | ✅ |
+| 4-3 | 알고리즘 1: 토큰 버킷 (Token Bucket) | [[concepts/rate-limiter]] | ✅ |
+| 4-4 | 알고리즘 2: 누출 버킷 (Leaky Bucket) | [[concepts/rate-limiter]] | ✅ |
+| 4-5 | 알고리즘 3: 고정 윈도우 카운터 (Fixed Window Counter) | [[concepts/rate-limiter]] | ✅ |
+| 4-6 | 알고리즘 4: 이동 윈도우 로그 (Sliding Window Log) | [[concepts/rate-limiter]] | ✅ |
+| 4-7 | 알고리즘 5: 이동 윈도우 카운터 (Sliding Window Counter) | [[concepts/rate-limiter]] | ✅ |
+| 4-8 | 상세 설계 — Redis 활용, 분산 환경 경쟁 조건, HTTP 헤더 응답 | [[concepts/rate-limiter]] | ✅ |
 
 ---
 
