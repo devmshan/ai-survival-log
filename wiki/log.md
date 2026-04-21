@@ -4,7 +4,44 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-21
+
+### ingest: 대규모 시스템 설계 기초 6~9장
+- **source:** `raw/books/system-design-interview-ch6-01~13.png`, `ch7-01~05.png`, `ch8-01~07.png`, `ch9-01~12.png` (총 37개 이미지)
+- **created:**
+  - [[sources/2026-04-21-system-design-interview-ch6]] — 6장: 키-값 저장소 설계 (CAP, Quorum, 벡터 시계, 가십, SSTable)
+  - [[sources/2026-04-21-system-design-interview-ch7]] — 7장: 유일 ID 생성기 설계 (UUID, 티켓서버, 스노우플레이크)
+  - [[sources/2026-04-21-system-design-interview-ch8]] — 8장: URL 단축기 설계 (301/302, 해시, Base62)
+  - [[sources/2026-04-21-system-design-interview-ch9]] — 9장: 웹 크롤러 설계 (BFS, Frontier, 블룸 필터)
+  - [[concepts/key-value-store]] — 키-값 저장소 개념
+  - [[concepts/cap-theorem]] — CAP 정리 개념
+  - [[concepts/vector-clock]] — 벡터 시계 개념
+  - [[concepts/gossip-protocol]] — 가십 프로토콜 개념
+  - [[concepts/unique-id-generator]] — 분산 유일 ID 생성기 개념
+  - [[concepts/url-shortener]] — URL 단축기 개념
+  - [[concepts/web-crawler]] — 웹 크롤러 개념
+  - [[concepts/bloom-filter]] — 블룸 필터 개념
+  - [[topics/system-design-interview-06]] — 6장 스터디 토픽
+  - [[topics/system-design-interview-07]] — 7장 스터디 토픽
+  - [[topics/system-design-interview-08]] — 8장 스터디 토픽
+  - [[topics/system-design-interview-09]] — 9장 스터디 토픽
+- **updated:**
+  - [[projects/study-system-design-interview]] — 6~9장 완료 표시, 개념 페이지 링크 추가
+  - `wiki/index.md` — 총 118개 페이지로 갱신
+- **summary:** Alex Xu 책 6~9장 이미지 37장 분석. 6장은 CAP·Quorum·벡터시계·가십·SSTable+LSM+블룸필터까지 분산 KV 스토어 전 스택을 정리. 7장은 스노우플레이크 64비트 구조. 8장은 URL 단축기의 301/302·Base62 핵심 결정. 9장은 BFS 기반 크롤러·Frontier 3원칙(Politeness/Priority/Freshness)·블룸필터 중복제거를 정리. 개념 8개 + 토픽 4개 + 소스 4개 신규 생성.
+
 ## 2026-04-20
+
+### ingest: 대규모 시스템 설계 기초 5장 — 안정 해시 설계
+- **source:** `raw/books/스크린샷 2026-04-20 오후 10.56.42~55.png` (7개 이미지)
+- **created:**
+  - [[sources/2026-04-20-system-design-interview-ch5]] — 5장 소스 요약 (해시 재배치 문제, 해시 링, 가상 노드, 활용 사례)
+  - [[concepts/consistent-hashing]] — 안정 해시 개념 (해시 링 구조, 가상 노드, DynamoDB/Cassandra 활용 사례)
+  - [[topics/system-design-interview-05]] — 5장 블로그 토픽 (published: true)
+- **updated:**
+  - [[projects/study-system-design-interview]] — 5장 완료 표시, 개념 페이지 링크 추가
+  - `wiki/index.md` — 총 102개 페이지로 갱신
+- **summary:** Alex Xu 책 5장 이미지 7장 분석. 나머지 연산 해시 한계 → 해시 링으로 해결 → 불균등 문제를 가상 노드로 해결하는 흐름을 concepts 1개와 topic 1개로 정리. DynamoDB·Cassandra·Discord·Akamai·Maglev 활용 사례 포함. Phase 2 5장 완료.
 
 ### ingest: 대규모 시스템 설계 기초 4장 — 처리율 제한 장치의 설계
 - **source:** `raw/books/스크린샷 2026-04-20 오전 10.17.14~43.png` (13개 이미지)

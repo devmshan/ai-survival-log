@@ -1,7 +1,7 @@
 ---
 title: "시스템 설계 면접 스터디 플랜"
 created: "2026-04-14"
-updated: "2026-04-20"
+updated: "2026-04-21"
 type: project
 sources: ["[[sources/2026-04-14-system-design-interview-v1]]"]
 tags: ["system-design", "study", "backend", "distributed-systems", "interview"]
@@ -43,11 +43,11 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 | 2장 | ✅ 완료 (2026-04-15) | back-of-envelope-estimation, availability |
 | 3장 | ✅ 완료 (2026-04-19) | system-design-interview-framework |
 | 4장 | ✅ 완료 (2026-04-20) | [[concepts/rate-limiter]] |
-| 5장 | ⬜ 미시작 | - |
-| 6장 | ⬜ 미시작 | - |
-| 7장 | ⬜ 미시작 | - |
-| 8장 | ⬜ 미시작 | - |
-| 9장 | ⬜ 미시작 | - |
+| 5장 | ✅ 완료 (2026-04-20) | [[concepts/consistent-hashing]] |
+| 6장 | ✅ 완료 (2026-04-21) | [[concepts/key-value-store]], [[concepts/cap-theorem]], [[concepts/vector-clock]], [[concepts/gossip-protocol]], [[concepts/bloom-filter]] |
+| 7장 | ✅ 완료 (2026-04-21) | [[concepts/unique-id-generator]] |
+| 8장 | ✅ 완료 (2026-04-21) | [[concepts/url-shortener]] |
+| 9장 | ✅ 완료 (2026-04-21) | [[concepts/web-crawler]] |
 | 10장 | ⬜ 미시작 | - |
 | 11장 | ⬜ 미시작 | - |
 | 12장 | ⬜ 미시작 | - |
@@ -146,11 +146,11 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 5-1 | 해시 키 재배치 문제 — 나머지 연산 해시의 한계 | `concepts/consistent-hashing` | ⬜ |
-| 5-2 | 안정 해시 — 해시 링(Hash Ring) 구조 | `concepts/consistent-hashing` | ⬜ |
-| 5-3 | 기본 구현의 문제 — 불균등 분포, 키 쏠림 | `concepts/consistent-hashing` | ⬜ |
-| 5-4 | 가상 노드 (Virtual Nodes) — 균등 분포 해결 | `concepts/consistent-hashing` | ⬜ |
-| 5-5 | 활용 사례 — Amazon DynamoDB, Apache Cassandra, CDN | `concepts/consistent-hashing` | ⬜ |
+| 5-1 | 해시 키 재배치 문제 — 나머지 연산 해시의 한계 | [[concepts/consistent-hashing]] | ✅ |
+| 5-2 | 안정 해시 — 해시 링(Hash Ring) 구조 | [[concepts/consistent-hashing]] | ✅ |
+| 5-3 | 기본 구현의 문제 — 불균등 분포, 키 쏠림 | [[concepts/consistent-hashing]] | ✅ |
+| 5-4 | 가상 노드 (Virtual Nodes) — 균등 분포 해결 | [[concepts/consistent-hashing]] | ✅ |
+| 5-5 | 활용 사례 — Amazon DynamoDB, Apache Cassandra, CDN | [[concepts/consistent-hashing]] | ✅ |
 
 ---
 
@@ -160,16 +160,16 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 6-1 | CAP 정리 — 일관성/가용성/파티션 허용, 왜 셋 다 불가능한가 | `concepts/cap-theorem` | ⬜ |
-| 6-2 | 데이터 파티셔닝 — 안정 해시로 노드 분산 | `concepts/key-value-store` | ⬜ |
-| 6-3 | 데이터 다중화 — N개 서버에 복사본 저장 | `concepts/key-value-store` | ⬜ |
-| 6-4 | 일관성 모델 — 강한/약한/최종 일관성 트레이드오프 | `concepts/consistency-models` | ⬜ |
-| 6-5 | 쿼럼 합의 (Quorum Consensus) — N, W, R 설정의 의미 | `concepts/key-value-store` | ⬜ |
-| 6-6 | 일관성 불일치 해소 — 버저닝, 벡터 시계 | `concepts/key-value-store` | ⬜ |
-| 6-7 | 장애 감지 — 가십 프로토콜 (Gossip Protocol) | `concepts/key-value-store` | ⬜ |
-| 6-8 | 장애 처리 — 느슨한 정족수, 단서 후 인계 | `concepts/key-value-store` | ⬜ |
-| 6-9 | 영구 저장소 — LSM 트리, SSTable, 블룸 필터 | `concepts/key-value-store` | ⬜ |
-| 6-10 | 머클 트리 (Merkle Tree) — 반-엔트로피 수선 프로토콜 | `concepts/key-value-store` | ⬜ |
+| 6-1 | CAP 정리 — 일관성/가용성/파티션 허용, 왜 셋 다 불가능한가 | [[concepts/cap-theorem]] | ✅ |
+| 6-2 | 데이터 파티셔닝 — 안정 해시로 노드 분산 | [[concepts/key-value-store]] | ✅ |
+| 6-3 | 데이터 다중화 — N개 서버에 복사본 저장 | [[concepts/key-value-store]] | ✅ |
+| 6-4 | 일관성 모델 — 강한/약한/최종 일관성 트레이드오프 | [[concepts/cap-theorem]] | ✅ |
+| 6-5 | 쿼럼 합의 (Quorum Consensus) — N, W, R 설정의 의미 | [[concepts/key-value-store]] | ✅ |
+| 6-6 | 일관성 불일치 해소 — 버저닝, 벡터 시계 | [[concepts/vector-clock]] | ✅ |
+| 6-7 | 장애 감지 — 가십 프로토콜 (Gossip Protocol) | [[concepts/gossip-protocol]] | ✅ |
+| 6-8 | 장애 처리 — 느슨한 정족수, 단서 후 인계 | [[concepts/key-value-store]] | ✅ |
+| 6-9 | 영구 저장소 — LSM 트리, SSTable, 블룸 필터 | [[concepts/bloom-filter]] | ✅ |
+| 6-10 | 머클 트리 (Merkle Tree) — 반-엔트로피 수선 프로토콜 | [[concepts/key-value-store]] | ✅ |
 
 ---
 
@@ -179,11 +179,11 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 7-1 | 요구사항 — 유일성, 숫자만, 64비트, 시간순 정렬, 초당 10,000개 | `concepts/distributed-id-generator` | ⬜ |
-| 7-2 | 접근법 1: 다중 마스터 복제 — auto_increment 한계 | `concepts/distributed-id-generator` | ⬜ |
-| 7-3 | 접근법 2: UUID — 128비트, 독립 생성, 정렬 불가 문제 | `concepts/distributed-id-generator` | ⬜ |
-| 7-4 | 접근법 3: 티켓 서버 — Flickr 방식, SPOF 문제 | `concepts/distributed-id-generator` | ⬜ |
-| 7-5 | 접근법 4: 트위터 스노플레이크 — 64비트 구조 (타임스탬프/데이터센터/머신/시퀀스) | `concepts/distributed-id-generator` | ⬜ |
+| 7-1 | 요구사항 — 유일성, 숫자만, 64비트, 시간순 정렬, 초당 10,000개 | [[concepts/unique-id-generator]] | ✅ |
+| 7-2 | 접근법 1: 다중 마스터 복제 — auto_increment 한계 | [[concepts/unique-id-generator]] | ✅ |
+| 7-3 | 접근법 2: UUID — 128비트, 독립 생성, 정렬 불가 문제 | [[concepts/unique-id-generator]] | ✅ |
+| 7-4 | 접근법 3: 티켓 서버 — Flickr 방식, SPOF 문제 | [[concepts/unique-id-generator]] | ✅ |
+| 7-5 | 접근법 4: 트위터 스노플레이크 — 64비트 구조 (타임스탬프/데이터센터/머신/시퀀스) | [[concepts/unique-id-generator]] | ✅ |
 
 ---
 
@@ -195,21 +195,21 @@ Claude: 개념 설명 (트레이드오프 포함) + 빠진 부분 역질문
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 8-1 | API 설계 — POST (단축), GET (리다이렉션) | `concepts/url-shortener` | ⬜ |
-| 8-2 | URL 리다이렉션 — 301(영구) vs 302(임시) 트레이드오프 | `concepts/url-shortener` | ⬜ |
-| 8-3 | 해시 함수 — CRC32/MD5/SHA-1, 충돌 해소 전략 | `concepts/url-shortener` | ⬜ |
-| 8-4 | Base62 인코딩 — 62진법으로 짧은 URL 생성 | `concepts/url-shortener` | ⬜ |
-| 8-5 | 캐싱 전략 — 조회 빈도 높은 URL 캐싱, 블룸 필터 | `concepts/url-shortener` | ⬜ |
+| 8-1 | API 설계 — POST (단축), GET (리다이렉션) | [[concepts/url-shortener]] | ✅ |
+| 8-2 | URL 리다이렉션 — 301(영구) vs 302(임시) 트레이드오프 | [[concepts/url-shortener]] | ✅ |
+| 8-3 | 해시 함수 — CRC32/MD5/SHA-1, 충돌 해소 전략 | [[concepts/url-shortener]] | ✅ |
+| 8-4 | Base62 인코딩 — 62진법으로 짧은 URL 생성 | [[concepts/url-shortener]] | ✅ |
+| 8-5 | 캐싱 전략 — 조회 빈도 높은 URL 캐싱, 블룸 필터 | [[concepts/url-shortener]] | ✅ |
 
 ### 9장 — 웹 크롤러
 
 | 단계 | 다룰 개념 | 위키 페이지 | 상태 |
 |------|-----------|-------------|------|
-| 9-1 | 구성 요소 — URL Frontier, HTML Downloader, Content Parser | `concepts/web-crawler` | ⬜ |
-| 9-2 | BFS vs DFS — 왜 크롤러는 BFS를 쓰는가 | `concepts/web-crawler` | ⬜ |
-| 9-3 | 예의 바른 크롤러 — Robots.txt, 크롤 딜레이, 도메인별 우선순위 | `concepts/web-crawler` | ⬜ |
-| 9-4 | 중복 제거 — 이미 수집한 URL·콘텐츠 판별 (블룸 필터) | `concepts/web-crawler` | ⬜ |
-| 9-5 | 성능 최적화 — 분산 크롤링, DNS 캐싱, locality | `concepts/web-crawler` | ⬜ |
+| 9-1 | 구성 요소 — URL Frontier, HTML Downloader, Content Parser | [[concepts/web-crawler]] | ✅ |
+| 9-2 | BFS vs DFS — 왜 크롤러는 BFS를 쓰는가 | [[concepts/web-crawler]] | ✅ |
+| 9-3 | 예의 바른 크롤러 — Robots.txt, 크롤 딜레이, 도메인별 우선순위 | [[concepts/web-crawler]] | ✅ |
+| 9-4 | 중복 제거 — 이미 수집한 URL·콘텐츠 판별 (블룸 필터) | [[concepts/bloom-filter]] | ✅ |
+| 9-5 | 성능 최적화 — 분산 크롤링, DNS 캐싱, locality | [[concepts/web-crawler]] | ✅ |
 
 ### 10장 — 알림 시스템
 

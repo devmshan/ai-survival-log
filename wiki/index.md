@@ -1,11 +1,11 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-20"
+updated: "2026-04-21"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-20 | 총 99개 페이지
+> 마지막 업데이트: 2026-04-21 | 총 118개 페이지
 
 ## Entities
 
@@ -37,19 +37,24 @@ updated: "2026-04-20"
 | [[concepts/ax-ai-transformation]] |  | ai, strategy, business | active |
 | [[concepts/back-of-envelope-estimation]] |  | system-design, estimation, back-of-envelope, qps, capacity-planning | active |
 | [[concepts/bio-token]] |  | bio-token, cognitive-load, human, ai-era | active |
+| [[concepts/bloom-filter]] |  | system-design, bloom-filter, probabilistic, distributed-systems, cache | active |
 | [[concepts/cache-strategies]] |  | system-design, cache, performance, redis, distributed-systems | active |
 | [[concepts/canonical-url]] |  | seo, publishing, blog, nextjs | active |
+| [[concepts/cap-theorem]] |  | system-design, cap-theorem, distributed-systems, consistency, availability | active |
 | [[concepts/cdn]] |  | system-design, cdn, performance, static-content, distributed-systems | active |
 | [[concepts/cgr3]] |  | cgr3, context-graph, llm, knowledge-graph, reasoning, rag | active |
 | [[concepts/claude-codex-collaboration]] |  | claude, codex, collaboration, planning, validation, ai-agent | active |
 | [[concepts/code-value-convergence]] |  | software, ai, future, code-value | active |
+| [[concepts/consistent-hashing]] |  | system-design, consistent-hashing, hash-ring, virtual-nodes, distributed-systems, partitioning | active |
 | [[concepts/context-graph-extraction]] |  | context-graph, extraction, sentence-bert, knowledge-graph, construction | active |
 | [[concepts/context-graph]] |  | context-graph, knowledge-graph, ai, data-governance, rag, llm, cgr3 | active |
 | [[concepts/database-sharding]] |  | system-design, database, sharding, scalability, distributed-systems | active |
 | [[concepts/db-replication]] |  | system-design, database, replication, high-availability, distributed-systems | active |
 | [[concepts/embedding]] |  | embedding, vector, llm, rag, machine-learning | active |
 | [[concepts/es-module-mjs]] |  | javascript, es-module, commonjs, nodejs, module-system | active |
+| [[concepts/gossip-protocol]] |  | system-design, gossip-protocol, distributed-systems, failure-detection, membership | active |
 | [[concepts/instant-app]] |  | software, ai, future, instant-app, startup | active |
+| [[concepts/key-value-store]] |  | system-design, key-value-store, nosql, distributed-systems, cache | active |
 | [[concepts/knowledge-graph-completion]] |  | knowledge-graph, kgc, link-prediction, embedding, ai | active |
 | [[concepts/knowledge-graph]] |  | knowledge-graph, graph-database, semantic-web, ai, ontology | active |
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
@@ -70,7 +75,11 @@ updated: "2026-04-20"
 | [[concepts/system-design-interview-framework]] |  | system-design, interview, framework, 4-step, process | active |
 | [[concepts/tacit-knowledge]] |  | ai, knowledge, tacit-knowledge, human-skills | active |
 | [[concepts/tool-evaluation-methodology]] |  | tool-evaluation, methodology, decision-making, knowledge-management | active |
+| [[concepts/unique-id-generator]] |  | system-design, unique-id, snowflake, distributed-systems, uuid | active |
+| [[concepts/url-shortener]] |  | system-design, url-shortener, hash, base62, redirect, backend | active |
+| [[concepts/vector-clock]] |  | system-design, vector-clock, distributed-systems, consistency, conflict-resolution | active |
 | [[concepts/vertical-vs-horizontal-scaling]] |  | system-design, scalability, scale-up, scale-out, distributed-systems | active |
+| [[concepts/web-crawler]] |  | system-design, web-crawler, bfs, distributed-systems, search-engine, backend | active |
 
 ## Sources
 
@@ -98,6 +107,11 @@ updated: "2026-04-20"
 | [[sources/2026-04-19-cmds-system-files]] | Source analysis of CMDS System Files by Yohan Koo (CMDSPACE). Documents architecture patterns applicable to ai-survival-log wiki system, including Essential section, STATIC/DYNAMIC annotation, and LLM-readable description fields. | pkm, obsidian, claude-code, ai-agent, knowledge-management, system-design | active |
 | [[sources/2026-04-19-system-design-interview-ch3]] |  | system-design, interview, framework, 4-step, book | active |
 | [[sources/2026-04-20-system-design-interview-ch4]] |  | system-design, rate-limiter, token-bucket, leaky-bucket, distributed-systems, backend, book | active |
+| [[sources/2026-04-20-system-design-interview-ch5]] |  | system-design, consistent-hashing, hash-ring, virtual-nodes, distributed-systems, book | active |
+| [[sources/2026-04-21-system-design-interview-ch6]] |  | system-design, key-value-store, cap-theorem, distributed-systems, book | active |
+| [[sources/2026-04-21-system-design-interview-ch7]] |  | system-design, unique-id, snowflake, distributed-systems, book | active |
+| [[sources/2026-04-21-system-design-interview-ch8]] |  | system-design, url-shortener, hash, base62, redirect, book | active |
+| [[sources/2026-04-21-system-design-interview-ch9]] |  | system-design, web-crawler, bfs, bloom-filter, distributed-systems, book | active |
 
 ## Topics
 
@@ -114,6 +128,11 @@ updated: "2026-04-20"
 | [[topics/system-design-interview-02]] | QPS, 저장소, 가용성 — 면접에서 10초 만에 규모를 추정하는 감각을 키우는 2장 스터디 기록 | system-design, estimation, back-of-envelope, availability, qps, study, backend | active |
 | [[topics/system-design-interview-03]] | 정답이 없는 면접을 어떻게 풀 것인가 — 4단계 프레임워크로 시스템 설계 면접을 체계적으로 공략하는 3장 스터디 기록 | system-design, interview, framework, 4-step, process, study, backend | active |
 | [[topics/system-design-interview-04]] | 처리율 제한 장치를 5가지 알고리즘으로 설계하는 방법. 토큰 버킷부터 이동 윈도 카운터까지, 분산 환경의 경쟁 조건 해결까지 — 4장 스터디 기록. | system-design, rate-limiter, token-bucket, distributed-systems, study, backend, interview | active |
+| [[topics/system-design-interview-05]] | 단순 나머지 해시의 한계에서 시작해, 해시 링과 가상 노드로 분산 시스템의 키 재배치를 최소화하는 안정 해시를 5장 스터디 기록으로 정리한다. | system-design, consistent-hashing, hash-ring, virtual-nodes, distributed-systems, study, backend, interview | active |
+| [[topics/system-design-interview-06]] |  | system-design, key-value-store, cap-theorem, distributed-systems, study, backend, interview | active |
+| [[topics/system-design-interview-07]] |  | system-design, unique-id, snowflake, distributed-systems, study, backend, interview | active |
+| [[topics/system-design-interview-08]] |  | system-design, url-shortener, hash, base62, redirect, study, backend, interview | active |
+| [[topics/system-design-interview-09]] |  | system-design, web-crawler, bfs, bloom-filter, distributed-systems, study, backend, interview | active |
 | [[topics/wiki-markdown-vs-graph-db]] |  | wiki, llm, markdown, knowledge-management, context-graph, design-decision | active |
 
 ## Projects
