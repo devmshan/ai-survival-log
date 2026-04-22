@@ -13,6 +13,19 @@ Targets:
 
 This document is about authoring quality for search visibility, not runtime metadata implementation.
 
+## Scope Boundary
+
+This guide applies to publishable text-first pages that flow into blog-style outputs.
+
+It does not automatically define writing rules for:
+
+- YouTube scripts
+- webtoon storyboards
+- presentation decks
+- non-blog social assets
+
+Those lanes may reuse principles from this guide, but they need their own lane-specific contract once they become official workflows.
+
 ---
 
 ## Why This Exists
@@ -30,6 +43,30 @@ They need to be applied at the upstream authoring stage so the publish pipeline 
 - Brand tone can remain, but search-oriented pages should not rely on abstract or purely emotional titles alone.
 - Publishable pages should connect to other pages so the downstream site can support topic-cluster navigation.
 - Not every page needs to be aggressively search-driven, but any page expected to attract search traffic should follow these rules by default.
+
+## Enforcement Levels
+
+Treat this guide as an operating rule, not optional writing advice.
+
+### `warn`
+
+- title, intro, or summary could be clearer for search intent
+- the post has thin related linking but still provides at least one useful continuation path
+- the page is readable but the narrative hook delays the main topic more than ideal
+
+### `block`
+
+- `published: true` page has no usable `description`
+- the page hides the core topic behind a tone-first title and provides no `seoTitle` where one is required
+- the first 1 to 3 paragraphs fail to surface the practical subject
+- required internal post links use the wrong slug format
+- the post omits the required `## 함께 읽으면 좋은 글` section
+
+### `escalate`
+
+- changing the meaning of `title`, `seoTitle`, or `description` across the publish contract
+- intentionally diverging from downstream SEO writing guidance
+- changing section or linking rules in a way that affects existing publishable pages
 
 ---
 
@@ -129,6 +166,8 @@ This field is the HTML `<title>` override used by the downstream site for search
 | Personal record tone ("~해봤다") | Depends — add if the concept is buried |
 | Already concept-first and specific | No |
 
+`block` the page when the title is tone-first, the concept is not recoverable in the first scan, and `seoTitle` is still omitted.
+
 #### Series posts vs standalone posts
 
 - **Series post:** focus seoTitle on the episode-specific concept; the series name provides shared context
@@ -175,6 +214,11 @@ Avoid descriptions that:
 - are too generic to help downstream presentation
 - could fit dozens of nearby posts without change
 
+Use `seoDescription` or a stronger rewrite when the base `description` cannot carry both:
+
+- the practical subject
+- the user-facing reason to read the page
+
 ---
 
 ## Introduction Rules
@@ -195,6 +239,8 @@ Avoid:
 
 - long narrative buildup before the topic appears
 - technical pages where the main subject appears too late
+
+`block` hybrid or search-oriented pages when the opening remains readable but still delays the actual subject beyond the first 3 paragraphs.
 
 ---
 
@@ -242,6 +288,8 @@ The site auto-generates a "관련 글" card section using this scoring model:
 
 Implication for authoring: posts with unique or isolated tags will produce no automatic related posts. Tag design directly affects whether the "관련 글" section appears. When writing a post whose tags do not overlap with existing posts, add the manual "함께 읽으면 좋은 글" section to compensate.
 
+Do not downgrade this requirement to a suggestion. For published posts, absence of the manual section is a `block`, not a style preference.
+
 ---
 
 ## Topic Cluster Rules
@@ -284,6 +332,14 @@ If a publishable page uses screenshots or diagrams:
 - preserve a downstream-served copy in `ai-survival-log-site/public/images/{slug-or-series}/`
 - use stable, publish-facing markdown image paths
 - prefer images that clarify the topic, not decorative images only
+- when no image is available, the page may still publish, but treat this as `warn` when the post is intended for strong sharing or search-entry traffic
+
+Common edge cases:
+
+- screenshot exists upstream but not in downstream-served location
+- image path uses non-ASCII or unstable naming
+- decorative image exists but does not clarify the topic
+- the image is referenced in markdown but missing from the publish destination
 
 Downstream-served paths and publish-facing markdown paths should remain stable even as upstream asset organization evolves.
 
@@ -393,6 +449,17 @@ Before publishing or preparing a page for `/wiki:publish`, confirm:
 - [ ] series suitability has been considered when applicable
 - [ ] image handling follows the publish asset rules when screenshots are used
 
+## Edge Cases
+
+Review these cases explicitly instead of treating them as incidental:
+
+- tone-first title with no `seoTitle`
+- `description` that sounds reflective but does not summarize the subject
+- isolated tags that remove all automatic related-post coverage
+- series entry that does not explain both the local scope and sequence position
+- post rewrite that changes visible framing but leaves stale related links
+- technical evaluation that reports failure without explaining the mechanism
+
 Run `/content:review-blog-draft` to verify these items before publishing.
 
 ---
@@ -420,8 +487,8 @@ The downstream site repository also carries related SEO writing and runtime guid
 These rules should stay aligned with:
 
 - `ai-survival-log-site/docs/content-seo-guide.md`
-- `ai-survival-log-site/docs/content-contract.md`
-- `ai-survival-log-site/docs/automation/seo-operations.md`
+- `ai-survival-log-site/docs/operating/content-contract.md`
+- `ai-survival-log-site/docs/operating/seo-operations.md`
 
 Do not let upstream authoring guidance drift from downstream SEO presentation rules.
 

@@ -27,6 +27,16 @@
 - 미래의 RAG/vector DB는 위키를 소비하는 파생 계층으로 다루며, 현재 구조를 선제적으로 RAG 중심으로 바꾸지 않는다.
 - 현재 구조 변경 계획은 `wiki/projects/repo-structure-refactor.md`, 미래 RAG 확장은 `wiki/projects/wiki-rag-expansion-roadmap.md`에서 관리한다.
 
+## Detailed References
+
+- 아키텍처와 계층 경계: [ARCHITECTURE.md](/Users/ms/workspace/claude/ai-survival-log/ARCHITECTURE.md)
+- 운영 절차와 검증 루프: [docs/operating/operations.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/operations.md)
+- lane 확장 규칙: [docs/operating/channel-lanes.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/channel-lanes.md)
+- publish 계약: [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md)
+- 장기 결정: [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md), [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md), [docs/adr/0003-harness-layering-for-upstream-repo.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0003-harness-layering-for-upstream-repo.md), [docs/adr/0004-new-channels-remain-derived-from-the-wiki.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0004-new-channels-remain-derived-from-the-wiki.md)
+
+이 파일은 위키 스키마, frontmatter, wikilink, command surface 같은 Claude 작업면 규칙을 우선 다룬다. 구조 경계와 운영 규칙의 원문은 위 문서들을 우선한다.
+
 ### Local Command Surface
 
 - `/journals:backup` — 현재 대화를 `raw/journals/`에 백업 파일로 저장
@@ -48,7 +58,7 @@
 - **언어:** 한국어 (기술 용어는 영문 유지)
 - **목적:** 모든 분야의 지식 축적 아카이브 + 블로그 퍼블리싱
 
-## 아키텍처 (4 Layers)
+## 위키 관점 아키텍처 (4 Layers)
 
 ```
 Human → 소스 큐레이션, 탐험 방향 설정, 질문
@@ -82,9 +92,9 @@ Assets / Output Layer → 채널 자산 원본 + publish artifact
 - `output/blog/`는 재생성 가능한 publish artifact
 - 최종 downstream 계약은 `ai-survival-log-site/content/posts/`
 
-### Layer 4: `CLAUDE.md` (이 파일) — 스키마 + 운영 규칙
+### Layer 4: `CLAUDE.md` (이 파일) — 스키마 + Claude 작업면 규칙
 
-- 위키 구조, 규칙, 워크플로우 정의
+- 위키 구조, 스키마, Claude command surface 정의
 - Claude가 위키를 어떻게 관리해야 하는지 지시
 
 ## 페이지 타입
@@ -302,7 +312,7 @@ Obsidian 호환 `[[wikilink]]` 사용:
 
 **변환 규칙:**
 
-- `[[wikilink]]`에 대응하는 published 페이지가 있으면 → 블로그 내부 링크 (`/posts/slug`)
+- `[[wikilink]]`에 대응하는 published 페이지가 있으면 → 블로그 내부 링크 (`/posts/YYYY-MM-DD-slug`)
 - 없으면 → 일반 텍스트 (링크 제거)
 - Mermaid 코드블록은 보존
 - 이미지는 upstream 원본(`assets/blog/`)과 downstream served copy(`ai-survival-log-site/public/images/{slug-or-series}/`)를 함께 유지

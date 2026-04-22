@@ -1,0 +1,1761 @@
+{
+  "source": "wiki/",
+  "totalPages": 122,
+  "countsByType": {
+    "concept": 53,
+    "entity": 13,
+    "project": 11,
+    "source": 28,
+    "topic": 17
+  },
+  "entries": [
+    {
+      "path": "concepts/agentic-workflow.md",
+      "title": "Agentic Workflow",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "agentic-workflow",
+        "claude-code",
+        "automation",
+        "harness"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/ai-capability-overhang.md",
+      "title": "AI Capability Overhang",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "capability",
+        "developer"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/ai-unbundling.md",
+      "title": "AI Unbundling (번들 해체 이론)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "unbundling",
+        "industry",
+        "strategy"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/assets-intake-pattern.md",
+      "title": "Assets Intake Pattern",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "assets",
+        "intake",
+        "raw-layer",
+        "knowledge-capture",
+        "workflow",
+        "wiki"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/availability.md",
+      "title": "가용성 (Availability)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "availability",
+        "sla",
+        "high-availability",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/ax-ai-transformation.md",
+      "title": "AX (AI Transformation)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "strategy",
+        "business"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/back-of-envelope-estimation.md",
+      "title": "개략적인 규모 추정 (Back-of-the-Envelope Estimation)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "estimation",
+        "back-of-envelope",
+        "qps",
+        "capacity-planning"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/bio-token.md",
+      "title": "바이오 토큰",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "bio-token",
+        "cognitive-load",
+        "human",
+        "ai-era"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/bloom-filter.md",
+      "title": "블룸 필터 (Bloom Filter)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "bloom-filter",
+        "probabilistic",
+        "distributed-systems",
+        "cache"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/cache-strategies.md",
+      "title": "캐시 전략",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "cache",
+        "performance",
+        "redis",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/canonical-url.md",
+      "title": "Canonical URL",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "seo",
+        "publishing",
+        "blog",
+        "nextjs"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/cap-theorem.md",
+      "title": "CAP 정리 (CAP Theorem)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "cap-theorem",
+        "distributed-systems",
+        "consistency",
+        "availability"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/cdn.md",
+      "title": "CDN (콘텐츠 전송 네트워크)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "cdn",
+        "performance",
+        "static-content",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/cgr3.md",
+      "title": "CGR³ (Context Graph Reasoning)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "cgr3",
+        "context-graph",
+        "llm",
+        "knowledge-graph",
+        "reasoning",
+        "rag"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/claude-codex-collaboration.md",
+      "title": "Claude-Codex 협업 패턴",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "claude",
+        "codex",
+        "collaboration",
+        "planning",
+        "validation",
+        "ai-agent"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/code-value-convergence.md",
+      "title": "코드 가치 0 수렴론",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "software",
+        "ai",
+        "future",
+        "code-value"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/consistent-hashing.md",
+      "title": "안정 해시 (Consistent Hashing)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "consistent-hashing",
+        "hash-ring",
+        "virtual-nodes",
+        "distributed-systems",
+        "partitioning"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/context-graph-extraction.md",
+      "title": "Context Graph Extraction (구축 단계)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "extraction",
+        "sentence-bert",
+        "knowledge-graph",
+        "construction"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/context-graph.md",
+      "title": "Context Graph",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "knowledge-graph",
+        "ai",
+        "data-governance",
+        "rag",
+        "llm",
+        "cgr3"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/database-sharding.md",
+      "title": "데이터베이스 샤딩 (Database Sharding)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "database",
+        "sharding",
+        "scalability",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/db-replication.md",
+      "title": "데이터베이스 다중화 (DB Replication)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "database",
+        "replication",
+        "high-availability",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/embedding.md",
+      "title": "임베딩 (Embedding)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "embedding",
+        "vector",
+        "llm",
+        "rag",
+        "machine-learning"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/engineering-guardrails.md",
+      "title": "Engineering Guardrails",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "engineering-guardrails",
+        "tdd",
+        "security",
+        "code-quality",
+        "claude-code",
+        "agents"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/es-module-mjs.md",
+      "title": "ES Module과 .mjs 파일",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "javascript",
+        "es-module",
+        "commonjs",
+        "nodejs",
+        "module-system"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/gossip-protocol.md",
+      "title": "가십 프로토콜 (Gossip Protocol)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "gossip-protocol",
+        "distributed-systems",
+        "failure-detection",
+        "membership"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/instant-app.md",
+      "title": "인스턴트 앱",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "software",
+        "ai",
+        "future",
+        "instant-app",
+        "startup"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/key-value-store.md",
+      "title": "키-값 저장소 (Key-Value Store)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "key-value-store",
+        "nosql",
+        "distributed-systems",
+        "cache"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/knowledge-graph-completion.md",
+      "title": "Knowledge Graph Completion (KGC)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "knowledge-graph",
+        "kgc",
+        "link-prediction",
+        "embedding",
+        "ai"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/knowledge-graph.md",
+      "title": "Knowledge Graph",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "knowledge-graph",
+        "graph-database",
+        "semantic-web",
+        "ai",
+        "ontology"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/llm-wiki-pattern.md",
+      "title": "LLM Wiki 패턴",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "wiki",
+        "knowledge-management",
+        "llm",
+        "karpathy"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/load-balancer.md",
+      "title": "로드밸런서",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "load-balancer",
+        "scalability",
+        "high-availability",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/message-queue.md",
+      "title": "메시지 큐 (Message Queue)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "message-queue",
+        "async",
+        "decoupling",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/post-compact-essential-section.md",
+      "title": "Post-Compact Essential 섹션",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "documentation",
+        "agent-guide",
+        "claude",
+        "codex",
+        "context-management"
+      ],
+      "description": "긴 agent guide 문서에서 컨텍스트 압축 후에도 남아야 할 핵심 규칙만 별도 블록으로 재선언하는 패턴. CLAUDE.md, AGENTS.md, Codex guide 같은 상위 규칙 문서에 적용한다."
+    },
+    {
+      "path": "concepts/pr-summary.md",
+      "title": "PR Summary",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "pull-request",
+        "automation",
+        "code-review",
+        "workflow",
+        "github"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/pull-request.md",
+      "title": "Pull Request",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "git",
+        "pull-request",
+        "code-review",
+        "workflow",
+        "collaboration",
+        "github"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/rag.md",
+      "title": "RAG (Retrieval-Augmented Generation)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "rag",
+        "llm",
+        "vector-db",
+        "embedding",
+        "ai-architecture"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/ralph-loop.md",
+      "title": "Ralph Loop (랄프 루프)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "self-improvement",
+        "loop",
+        "methodology"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/rate-limiter.md",
+      "title": "처리율 제한 장치 (Rate Limiter)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "rate-limiter",
+        "token-bucket",
+        "leaky-bucket",
+        "distributed-systems",
+        "api-gateway",
+        "backend"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/red-queen-effect.md",
+      "title": "붉은 여왕 효과 (Red Queen Effect)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "competition",
+        "survival",
+        "evolution"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/rlvr.md",
+      "title": "RLVR (Reinforcement Learning by Verifiable Rewards)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "rlvr",
+        "machine-learning",
+        "ai-capability"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/saml.md",
+      "title": "SAML 프로토콜",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "auth",
+        "sso",
+        "session",
+        "security"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/shebang.md",
+      "title": "Shebang (#!)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "shell",
+        "script",
+        "unix",
+        "interpreter",
+        "cli"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/startup-watermill.md",
+      "title": "스타트업 물레방아론",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "startup",
+        "strategy",
+        "watermill",
+        "ai-era"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/stateless-architecture.md",
+      "title": "무상태 아키텍처 (Stateless Architecture)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "stateless",
+        "scalability",
+        "web-tier",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/system-design-interview-framework.md",
+      "title": "시스템 설계 면접 4단계 프레임워크",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "interview",
+        "framework",
+        "4-step",
+        "process"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/tacit-knowledge.md",
+      "title": "암묵지 (Tacit Knowledge)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "ai",
+        "knowledge",
+        "tacit-knowledge",
+        "human-skills"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/tool-evaluation-methodology.md",
+      "title": "도구 평가 방법론",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "tool-evaluation",
+        "methodology",
+        "decision-making",
+        "knowledge-management"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/unique-id-generator.md",
+      "title": "분산 유일 ID 생성기 (Distributed Unique ID Generator)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "unique-id",
+        "snowflake",
+        "distributed-systems",
+        "uuid"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/url-shortener.md",
+      "title": "URL 단축기 (URL Shortener)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "url-shortener",
+        "hash",
+        "base62",
+        "redirect",
+        "backend"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/vector-clock.md",
+      "title": "벡터 시계 (Vector Clock)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "vector-clock",
+        "distributed-systems",
+        "consistency",
+        "conflict-resolution"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/vertical-vs-horizontal-scaling.md",
+      "title": "수직적 규모 확장 vs 수평적 규모 확장",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "scalability",
+        "scale-up",
+        "scale-out",
+        "distributed-systems"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/web-crawler.md",
+      "title": "웹 크롤러 (Web Crawler)",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "web-crawler",
+        "bfs",
+        "distributed-systems",
+        "search-engine",
+        "backend"
+      ],
+      "description": ""
+    },
+    {
+      "path": "concepts/wiki-automation.md",
+      "title": "Wiki 자동화 패턴",
+      "type": "concept",
+      "status": "active",
+      "tags": [
+        "wiki-automation",
+        "hooks",
+        "claude-code",
+        "state-management",
+        "python",
+        "wiki"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/ai-frontier.md",
+      "title": "AI Frontier",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "youtube",
+        "podcast",
+        "ai",
+        "korea"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/backend-ai.md",
+      "title": "Backend.AI",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "mlops",
+        "ai-infrastructure",
+        "lablup",
+        "open-source"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/claude-code.md",
+      "title": "Claude Code",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "claude-code",
+        "ai-tool",
+        "anthropic"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/devsurvivallog.md",
+      "title": "devsurvivallog (dev.survival.log)",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "blog",
+        "devsurvivallog",
+        "ai",
+        "personal"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/ecc.md",
+      "title": "Everything Claude Code (ECC)",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "claude-code",
+        "plugin",
+        "ai-agent"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/graphify.md",
+      "title": "Graphify",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "graphify",
+        "knowledge-graph",
+        "tool",
+        "llm",
+        "markdown",
+        "multi-modal"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/gunseung.md",
+      "title": "건승 (Gunseung)",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "건승",
+        "cat",
+        "character",
+        "cheese-tabby",
+        "mascot"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/lablup.md",
+      "title": "Lablup",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "mlops",
+        "ai-infrastructure",
+        "startup",
+        "korea"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/minsung.md",
+      "title": "민성 (Minsung)",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "minsung",
+        "character",
+        "persona",
+        "devsurvivallog",
+        "instagram"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/obsidian-web-clipper.md",
+      "title": "Obsidian Web Clipper",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "obsidian",
+        "web-clipper",
+        "knowledge-capture",
+        "raw-layer",
+        "templates"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/obsidian.md",
+      "title": "Obsidian",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "obsidian",
+        "note-taking",
+        "knowledge-management",
+        "tool"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/shin-junggyu.md",
+      "title": "신정규",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "lablup",
+        "entrepreneur",
+        "agentic-workflow",
+        "korea"
+      ],
+      "description": ""
+    },
+    {
+      "path": "entities/superpowers.md",
+      "title": "Superpowers",
+      "type": "entity",
+      "status": "active",
+      "tags": [
+        "claude-code",
+        "plugin",
+        "workflow"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/blog-ai-study-site.md",
+      "title": "블로그 & AI 학습 사이트",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "blog",
+        "nextjs",
+        "project"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/blog-post-coding-with-gunseung.md",
+      "title": "AI한테 내 인스타 분석 맡겼더니 캐릭터가 나왔다",
+      "type": "project",
+      "status": "draft",
+      "tags": [
+        "devsurvivallog",
+        "blog",
+        "minsung",
+        "gunseung",
+        "ai-webtoon",
+        "character-design",
+        "context-graph",
+        "draft"
+      ],
+      "description": "AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도."
+    },
+    {
+      "path": "projects/character-intro-draft.md",
+      "title": "캐릭터 프로필 초안 — 민성 & 건승",
+      "type": "project",
+      "status": "draft",
+      "tags": [
+        "character",
+        "draft",
+        "instagram",
+        "devsurvivallog",
+        "minsung",
+        "건승"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/cross-repo-ai-automation-lab.md",
+      "title": "Cross-Repo AI 자동화 실습",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "automation",
+        "workflow",
+        "project",
+        "developer",
+        "wiki"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/harness-layering-and-json-derived-state.md",
+      "title": "Harness 세분화와 JSON 파생 상태 설계",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "project",
+        "harness",
+        "repository",
+        "structure",
+        "refactor",
+        "json",
+        "state-management",
+        "codex",
+        "claude"
+      ],
+      "description": "ai-survival-log와 ai-survival-log-site의 Harness를 세분화하고, Markdown source-of-truth를 유지하면서 JSON 파생 상태를 어디에 둘지 정리한 설계 초안."
+    },
+    {
+      "path": "projects/instagram-post-coding-with-gunseung.md",
+      "title": "인스타 포스트 — AI가 본 나 (캐릭터 제작 과정)",
+      "type": "project",
+      "status": "draft",
+      "tags": [
+        "devsurvivallog",
+        "instagram",
+        "minsung",
+        "gunseung",
+        "character-design",
+        "draft"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/repo-structure-refactor.md",
+      "title": "레포 폴더 구조 리팩토링",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "project",
+        "repository",
+        "structure",
+        "refactor",
+        "wiki",
+        "raw",
+        "output"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/site-seo-foundation-and-content-rewrite.md",
+      "title": "Site SEO Foundation and Content Rewrite",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "seo",
+        "blog",
+        "project",
+        "nextjs",
+        "publishing",
+        "search-console",
+        "content"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/study-system-design-interview.md",
+      "title": "시스템 설계 면접 스터디 플랜",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "study",
+        "backend",
+        "distributed-systems",
+        "interview"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/wiki-category-design-decision.md",
+      "title": "Wiki 카테고리 설계 결정 — syntheses 폐기",
+      "type": "project",
+      "status": "active",
+      "tags": [
+        "wiki",
+        "project",
+        "structure",
+        "category-design",
+        "syntheses",
+        "decision"
+      ],
+      "description": ""
+    },
+    {
+      "path": "projects/wiki-rag-expansion-roadmap.md",
+      "title": "Wiki RAG 확장 로드맵",
+      "type": "project",
+      "status": "draft",
+      "tags": [
+        "project",
+        "wiki",
+        "rag",
+        "vector-db",
+        "roadmap"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-09-ecc-complete-guide.md",
+      "title": "ECC 완전 가이드 — 소스 요약",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "ecc",
+        "claude-code",
+        "ai-tool",
+        "plugin"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-10-why-ai-survival-log.md",
+      "title": "요트 경주에 뒤늦게 올라탄 개발자의 항해일지 — 소스 요약",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "ai",
+        "ax",
+        "devsurvivallog",
+        "blog-origin"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-11-devsurvivallog-philosophy.md",
+      "title": "dev.survival.log 철학과 다짐 — 소스 요약",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "devsurvivallog",
+        "philosophy",
+        "growth"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-12-ai-unbundle-myself.md",
+      "title": "AI가 먹고 있다, 나를 해체한다 — 소스 요약",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "rlvr",
+        "ai-unbundling",
+        "ralph-loop",
+        "red-queen-effect",
+        "philosophy"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-13-ai-webtoon-workflow.md",
+      "title": "AI 웹툰 제작 워크플로우 탐색",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "ai-webtoon",
+        "character-design",
+        "midjourney",
+        "chatgpt",
+        "devsurvivallog",
+        "instagram",
+        "workflow"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-13-arxiv-2406-11160-context-graph.md",
+      "title": "Context Graph 논문 (arXiv:2406.11160)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "knowledge-graph",
+        "cgr3",
+        "llm",
+        "paper",
+        "ai",
+        "rag"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-13-context-graph-vs-knowledge-graph.md",
+      "title": "Context Graph vs Knowledge Graph (Atlan)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "knowledge-graph",
+        "ai",
+        "data-governance",
+        "rag"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-13-medium-modelmind-context-graphs.md",
+      "title": "What Are Context Graphs? (Medium/ModelMind)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "knowledge-graph",
+        "ai",
+        "explainer"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-13-velog-context-graph-review.md",
+      "title": "Context Graph 논문 리뷰 (velog@cathx618)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "context-graph",
+        "knowledge-graph",
+        "paper-review",
+        "cgr3",
+        "korean"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-14-system-design-interview-v1.md",
+      "title": "가상 면접 사례로 배우는 대규모 시스템 설계 기초 (Volume 1)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "backend",
+        "distributed-systems",
+        "interview",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-15-ai-frontier-ep86.md",
+      "title": "AI Frontier EP86: 진짜 내 일을 위한 Agentic Workflow",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "agentic-workflow",
+        "claude-code",
+        "lablup",
+        "backend-ai",
+        "vibe-coding",
+        "harness",
+        "startup",
+        "ai-era",
+        "automation",
+        "cognitive-load"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-15-system-design-interview-ch2.md",
+      "title": "대규모 시스템 설계 기초 2장 — 개략적인 규모 추정",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "back-of-envelope",
+        "estimation",
+        "availability",
+        "qps",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-claude-plan-codex-validation.md",
+      "title": "Claude 계획서 검증과 구조 변경 계획 재설계 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "repo-structure",
+        "claude-codex",
+        "validation",
+        "raw-layer",
+        "assets",
+        "wiki"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-clipper-template-intake.md",
+      "title": "Web Clipper 템플릿 설계와 intake 구조 재정의 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "obsidian-web-clipper",
+        "clipper-templates",
+        "assets-intake",
+        "wiki-ingest",
+        "raw-layer"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-codex-folder-structure-execution.md",
+      "title": "Codex 폴더 구조 실행 적용 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "repo-structure",
+        "codex",
+        "refactor",
+        "migration",
+        "wiki",
+        "synthesis"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-graphify-evaluation.md",
+      "title": "Graphify 평가와 RAG 방향 재정리 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "graphify",
+        "wiki",
+        "knowledge-management",
+        "rag",
+        "graph-database",
+        "tool-evaluation"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-raw-immutability-codex-skills.md",
+      "title": "raw 불변 규칙 강화와 Codex용 wiki skill 추가 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "raw-layer",
+        "immutability",
+        "codex",
+        "wiki-skill",
+        "claude-command"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-web-clipper-setup.md",
+      "title": "Obsidian Web Clipper 설정 마무리와 첫 클리핑 확인 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "obsidian-web-clipper",
+        "clipper-templates",
+        "setup",
+        "first-clip",
+        "trigger"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-18-wiki-surface-alignment.md",
+      "title": "Wiki 명령 surface와 운영 문서 정합성 보정 세션",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "wiki",
+        "commands",
+        "operating-docs",
+        "syntheses",
+        "output-blog",
+        "assets-intake"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-19-cmds-system-files.md",
+      "title": "CMDS System Files (johnfkoo951/cmds-system-files)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "pkm",
+        "obsidian",
+        "claude-code",
+        "ai-agent",
+        "knowledge-management",
+        "system-design"
+      ],
+      "description": "Source analysis of CMDS System Files by Yohan Koo (CMDSPACE). Documents architecture patterns applicable to ai-survival-log wiki system, including Essential section, STATIC/DYNAMIC annotation, and LLM-readable description fields."
+    },
+    {
+      "path": "sources/2026-04-19-system-design-interview-ch3.md",
+      "title": "대규모 시스템 설계 기초 3장 — 시스템 설계 면접 공략법",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "interview",
+        "framework",
+        "4-step",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-20-system-design-interview-ch4.md",
+      "title": "가상 면접 사례로 배우는 대규모 시스템 설계 기초 — 4장: 처리율 제한 장치의 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "rate-limiter",
+        "token-bucket",
+        "leaky-bucket",
+        "distributed-systems",
+        "backend",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-20-system-design-interview-ch5.md",
+      "title": "대규모 시스템 설계 기초 5장 — 안정 해시 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "consistent-hashing",
+        "hash-ring",
+        "virtual-nodes",
+        "distributed-systems",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-21-system-design-interview-ch6.md",
+      "title": "대규모 시스템 설계 기초 — 6장: 키-값 저장소 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "key-value-store",
+        "cap-theorem",
+        "distributed-systems",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-21-system-design-interview-ch7.md",
+      "title": "대규모 시스템 설계 기초 — 7장: 분산 시스템을 위한 유일 ID 생성기 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "unique-id",
+        "snowflake",
+        "distributed-systems",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-21-system-design-interview-ch8.md",
+      "title": "대규모 시스템 설계 기초 — 8장: URL 단축기 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "url-shortener",
+        "hash",
+        "base62",
+        "redirect",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-21-system-design-interview-ch9.md",
+      "title": "대규모 시스템 설계 기초 — 9장: 웹 크롤러 설계",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "web-crawler",
+        "bfs",
+        "bloom-filter",
+        "distributed-systems",
+        "book"
+      ],
+      "description": ""
+    },
+    {
+      "path": "sources/2026-04-22-project-state-management-analysis.md",
+      "title": "프로젝트 상태 관리 및 TDD 규칙 분석 (2026-04-22)",
+      "type": "source",
+      "status": "active",
+      "tags": [
+        "wiki-automation",
+        "state-management",
+        "tdd",
+        "claude-code",
+        "hooks",
+        "engineering-guardrails"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/ai-era-survival.md",
+      "title": "AI 시대 생존 전략",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "ai",
+        "survival",
+        "developer",
+        "career"
+      ],
+      "description": "AI 시대를 살아남기 위한 개발자의 전략과 실전 기록"
+    },
+    {
+      "path": "topics/ai-webtoon-creation.md",
+      "title": "AI 웹툰 제작",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "ai-webtoon",
+        "instagram",
+        "character-design",
+        "devsurvivallog",
+        "midjourney",
+        "workflow"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/claude-code-to-codex.md",
+      "title": "Claude Code만 쓰던 프로젝트에 Codex를 넣어봤다",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "claude-code",
+        "codex",
+        "agentic-workflow",
+        "harness",
+        "workflow",
+        "llm-ops"
+      ],
+      "description": "Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정."
+    },
+    {
+      "path": "topics/claude-plan-codex-validate.md",
+      "title": "Claude가 짜고 Codex가 깼다 — 저장소 구조 리팩토링",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "claude-code",
+        "codex",
+        "collaboration",
+        "repo-structure",
+        "validation",
+        "planning"
+      ],
+      "description": "Claude로 저장소 구조 변경 계획서를 썼다. Codex가 실제 저장소를 뒤져서 문제를 두 개 찾아냈다. 계획을 다시 짜고, 실행했다. 그 과정에서 나온 패턴."
+    },
+    {
+      "path": "topics/developer-automation-lab-01-pr-summary.md",
+      "title": "개발자 자동화 실습 01 — PR summary를 직접 만들고 실제 PR에서 확인했다",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "automation",
+        "pull-request",
+        "workflow",
+        "github",
+        "code-review",
+        "developer",
+        "study"
+      ],
+      "description": "PR summary가 무엇인지 이해하는 데서 시작해, 규칙 기반 자동화를 직접 실습하고 실제 GitHub PR 댓글까지 확인한 기록."
+    },
+    {
+      "path": "topics/graphify-evaluation.md",
+      "title": "Graphify는 마크다운도 된다 — 그래도 안 쓴 이유",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "graphify",
+        "wiki",
+        "knowledge-management",
+        "markdown",
+        "tool-evaluation",
+        "obsidian-web-clipper"
+      ],
+      "description": "Graphify를 잘못된 명령으로 테스트해서 틀린 결론을 냈다. 다시 확인했더니 마크다운도 처리된다. 그래도 지금 이 위키에는 안 쓴다 — 이유는 '못 해서'가 아니라 '지금은 필요 없어서'."
+    },
+    {
+      "path": "topics/how-llm-works.md",
+      "title": "도서관과 교수님의 뇌 — LLM이 실제로 작동하는 방식",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "llm",
+        "embedding",
+        "rag",
+        "vector-db",
+        "ai-architecture",
+        "knowledge-graph"
+      ],
+      "description": "파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다."
+    },
+    {
+      "path": "topics/system-design-interview-01.md",
+      "title": "대규모 시스템 설계 스터디 01 — 1명에서 수백만 명까지",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "scalability",
+        "distributed-systems",
+        "study",
+        "backend"
+      ],
+      "description": "서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리"
+    },
+    {
+      "path": "topics/system-design-interview-02.md",
+      "title": "대규모 시스템 설계 스터디 02 — 개략적인 규모 추정",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "estimation",
+        "back-of-envelope",
+        "availability",
+        "qps",
+        "study",
+        "backend"
+      ],
+      "description": "QPS, 저장소, 가용성 — 면접에서 10초 만에 규모를 추정하는 감각을 키우는 2장 스터디 기록"
+    },
+    {
+      "path": "topics/system-design-interview-03.md",
+      "title": "대규모 시스템 설계 스터디 03 — 면접 공략법",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "interview",
+        "framework",
+        "4-step",
+        "process",
+        "study",
+        "backend"
+      ],
+      "description": "정답이 없는 면접을 어떻게 풀 것인가 — 4단계 프레임워크로 시스템 설계 면접을 체계적으로 공략하는 3장 스터디 기록"
+    },
+    {
+      "path": "topics/system-design-interview-04.md",
+      "title": "처리율 제한 장치 — 5가지 알고리즘으로 API 남용을 막는 법",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "rate-limiter",
+        "token-bucket",
+        "distributed-systems",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": "처리율 제한 장치를 5가지 알고리즘으로 설계하는 방법. 토큰 버킷부터 이동 윈도 카운터까지, 분산 환경의 경쟁 조건 해결까지 — 4장 스터디 기록."
+    },
+    {
+      "path": "topics/system-design-interview-05.md",
+      "title": "안정 해시 — 서버 추가/삭제해도 키 재배치를 최소화하는 방법",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "consistent-hashing",
+        "hash-ring",
+        "virtual-nodes",
+        "distributed-systems",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": "단순 나머지 해시의 한계에서 시작해, 해시 링과 가상 노드로 분산 시스템의 키 재배치를 최소화하는 안정 해시를 5장 스터디 기록으로 정리한다."
+    },
+    {
+      "path": "topics/system-design-interview-06.md",
+      "title": "시스템 설계 면접 6장 — 키-값 저장소 설계",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "key-value-store",
+        "cap-theorem",
+        "distributed-systems",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/system-design-interview-07.md",
+      "title": "시스템 설계 면접 7장 — 분산 시스템을 위한 유일 ID 생성기 설계",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "unique-id",
+        "snowflake",
+        "distributed-systems",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/system-design-interview-08.md",
+      "title": "시스템 설계 면접 8장 — URL 단축기 설계",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "url-shortener",
+        "hash",
+        "base62",
+        "redirect",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/system-design-interview-09.md",
+      "title": "시스템 설계 면접 9장 — 웹 크롤러 설계",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "system-design",
+        "web-crawler",
+        "bfs",
+        "bloom-filter",
+        "distributed-systems",
+        "study",
+        "backend",
+        "interview"
+      ],
+      "description": ""
+    },
+    {
+      "path": "topics/wiki-markdown-vs-graph-db.md",
+      "title": "Wiki 정형화/자동화 vs 마크다운: LLM에 맞는 방식",
+      "type": "topic",
+      "status": "active",
+      "tags": [
+        "wiki",
+        "llm",
+        "markdown",
+        "knowledge-management",
+        "context-graph",
+        "design-decision"
+      ],
+      "description": ""
+    }
+  ]
+}

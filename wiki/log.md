@@ -6,6 +6,14 @@ title: "Wiki Log"
 
 ## 2026-04-22
 
+### plan: Harness 세분화와 JSON 파생 상태 설계 초안
+- **source:** 사용자 요청 기반 cross-repo 구조 설계
+- **created:**
+  - [[projects/harness-layering-and-json-derived-state]] — `ai-survival-log`/`ai-survival-log-site` Harness 문서 분리 구조와 JSON 파생 상태 경로 설계
+- **updated:**
+  - `wiki/index.md` — 신규 project 페이지 반영 예정
+- **summary:** `AGENTS.md` 과부하를 줄이기 위한 Harness 계층 분리안과, Markdown source-of-truth를 유지하면서 lint/publish/contract 결과를 JSON 파생 상태로 분리하는 초안을 정리. upstream는 `AGENTS.md + ARCHITECTURE.md + OPERATIONS.md + docs/adr/`, site는 `AGENTS.md + ARCHITECTURE.md + UI_GUIDE.md + docs/adr/` 조합을 권장하고, 상태 JSON은 source-of-truth가 아닌 재생성 가능한 artifact로 한정했다.
+
 ### ingest: 프로젝트 상태 관리 및 Engineering Guardrails 분석
 - **source:** `raw/journals/2026-04-22-project-state-management-analysis.md`, `.codex/AGENTS.md` (Engineering Guardrails 섹션 추가)
 - **created:**

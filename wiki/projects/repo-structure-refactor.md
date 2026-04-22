@@ -225,5 +225,6 @@ wiki/
 - [[projects/blog-ai-study-site]]
 - [[projects/wiki-rag-expansion-roadmap]]
 - [[projects/wiki-category-design-decision]]
+- [[projects/harness-layering-and-json-derived-state]]
 - [[concepts/llm-wiki-pattern]]
 - [[sources/2026-04-19-cmds-system-files]] — 외부 PKM 시스템 설계 사례 (Essential 섹션, STATIC/DYNAMIC 패턴)

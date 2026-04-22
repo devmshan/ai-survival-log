@@ -55,6 +55,15 @@ Recommended capture flow:
 - input: published blog post
 - output: Instagram carousel assets generated from the site-facing article structure
 
+### Future Lanes
+
+Potential lanes such as YouTube, webtoon, and presentation materials should follow the same boundary model:
+
+- canonical planning stays in `wiki/`
+- source assets live in `assets/{channel}/`
+- generated artifacts live in `output/{channel}/`
+- lane adoption requires an explicit contract or PRD before it becomes an official workflow
+
 ## Publishing Contract
 
 The upstream contract lives in [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md:1).

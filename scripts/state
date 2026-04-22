@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+import argparse
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from state_lib import export_agent_surface_summary, export_publish_manifest, export_wiki_index
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="derived state export")
+    sub = parser.add_subparsers(dest="cmd")
+
+    export_parser = sub.add_parser("export", help="export stable derived state")
+    export_parser.add_argument(
+        "--only",
+        choices=["all", "wiki-index", "publish-manifest", "agent-surface-summary"],
+        default="all",
+    )
+
+    args = parser.parse_args()
+
+    if args.cmd != "export":
+        parser.print_help()
+        return 1
+
+    written: list[Path] = []
+    if args.only in {"all", "wiki-index"}:
+        written.append(export_wiki_index())
+    if args.only in {"all", "publish-manifest"}:
+        written.append(export_publish_manifest())
+    if args.only in {"all", "agent-surface-summary"}:
+        written.append(export_agent_surface_summary())
+
+    for path in written:
+        print(f"✓ state export: {path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
