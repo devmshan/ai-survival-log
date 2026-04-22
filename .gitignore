@@ -3,6 +3,7 @@ raw/
 .claude/plans/
 .claude/settings.local.json
 .worktrees/
+.vscode/
 __pycache__/
 *.pyc
 wiki/.obsidian/
