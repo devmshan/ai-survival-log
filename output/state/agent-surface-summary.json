@@ -1,0 +1,38 @@
+{
+  "source": "repository-surface",
+  "requiredFiles": [
+    {
+      "path": "README.md",
+      "exists": true
+    },
+    {
+      "path": "AGENTS.md",
+      "exists": true
+    },
+    {
+      "path": "CLAUDE.md",
+      "exists": true
+    },
+    {
+      "path": ".codex/AGENTS.md",
+      "exists": true
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "exists": true
+    },
+    {
+      "path": "docs/operating/operations.md",
+      "exists": true
+    },
+    {
+      "path": "docs/publishing-contract.md",
+      "exists": true
+    },
+    {
+      "path": "docs/content-seo-guide.md",
+      "exists": true
+    }
+  ],
+  "allRequiredPresent": true
+}

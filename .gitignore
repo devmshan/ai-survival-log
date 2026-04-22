@@ -9,3 +9,8 @@ wiki/.obsidian/
 .obsidian/
 .playwright-mcp/
 book/
+output/state/*
+!output/state/.gitkeep
+!output/state/wiki-index.json
+!output/state/publish-manifest.json
+!output/state/agent-surface-summary.json

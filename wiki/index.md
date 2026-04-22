@@ -5,7 +5,7 @@ updated: "2026-04-22"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-22 | 총 121개 페이지
+> 마지막 업데이트: 2026-04-22 | 총 122개 페이지
 
 ## Entities
 
@@ -146,6 +146,7 @@ updated: "2026-04-22"
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |
 | [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
 | [[projects/cross-repo-ai-automation-lab]] |  | automation, workflow, project, developer, wiki | active |
+| [[projects/harness-layering-and-json-derived-state]] | ai-survival-log와 ai-survival-log-site의 Harness를 세분화하고, Markdown source-of-truth를 유지하면서 JSON 파생 상태를 어디에 둘지 정리한 설계 초안. | project, harness, repository, structure, refactor, json, state-management, codex, claude | active |
 | [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |
 | [[projects/repo-structure-refactor]] |  | project, repository, structure, refactor, wiki, raw, output | active |
 | [[projects/site-seo-foundation-and-content-rewrite]] |  | seo, blog, project, nextjs, publishing, search-console, content | active |

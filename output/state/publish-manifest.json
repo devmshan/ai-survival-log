@@ -1,0 +1,125 @@
+{
+  "source": "wiki/",
+  "totalPublishedPages": 9,
+  "totalInvalidPublishedPages": 1,
+  "entries": [
+    {
+      "wikiPath": "wiki/topics/claude-code-to-codex.md",
+      "title": "Claude Code만 쓰던 프로젝트에 Codex를 넣어봤다",
+      "slug": "claude-code-to-codex",
+      "datePrefix": "2026-04-15",
+      "outputPath": "output/blog/2026-04-15-claude-code-to-codex.mdx",
+      "series": "Claude Code × Codex 실전기",
+      "seriesSlug": "claude-codex-ops",
+      "seriesOrder": 1,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/claude-plan-codex-validate.md",
+      "title": "Claude가 짜고 Codex가 깼다 — 저장소 구조 리팩토링",
+      "slug": "claude-plan-codex-validate",
+      "datePrefix": "2026-04-18",
+      "outputPath": "output/blog/2026-04-18-claude-plan-codex-validate.mdx",
+      "series": "Claude Code × Codex 실전기",
+      "seriesSlug": "claude-codex-ops",
+      "seriesOrder": 2,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/developer-automation-lab-01-pr-summary.md",
+      "title": "개발자 자동화 실습 01 — PR summary를 직접 만들고 실제 PR에서 확인했다",
+      "slug": "developer-automation-lab-01-pr-summary",
+      "datePrefix": "2026-04-17",
+      "outputPath": "output/blog/2026-04-17-developer-automation-lab-01-pr-summary.mdx",
+      "series": "개발자 자동화 실습",
+      "seriesSlug": "developer-automation-lab",
+      "seriesOrder": 1,
+      "images": [
+        "/images/developer-automation-lab/pr-summary-comment-top.png",
+        "/images/developer-automation-lab/pr-summary-comment-bottom.png"
+      ]
+    },
+    {
+      "wikiPath": "wiki/topics/graphify-evaluation.md",
+      "title": "Graphify는 마크다운도 된다 — 그래도 안 쓴 이유",
+      "slug": "graphify-evaluation",
+      "datePrefix": "2026-04-18",
+      "outputPath": "output/blog/2026-04-18-graphify-evaluation.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/how-llm-works.md",
+      "title": "도서관과 교수님의 뇌 — LLM이 실제로 작동하는 방식",
+      "slug": "how-llm-works",
+      "datePrefix": "2026-04-14",
+      "outputPath": "output/blog/2026-04-14-how-llm-works.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/system-design-interview-01.md",
+      "title": "대규모 시스템 설계 스터디 01 — 1명에서 수백만 명까지",
+      "slug": "system-design-interview-01",
+      "datePrefix": "2026-04-14",
+      "outputPath": "output/blog/2026-04-14-system-design-interview-01.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/system-design-interview-02.md",
+      "title": "대규모 시스템 설계 스터디 02 — 개략적인 규모 추정",
+      "slug": "system-design-interview-02",
+      "datePrefix": "2026-04-15",
+      "outputPath": "output/blog/2026-04-15-system-design-interview-02.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/system-design-interview-03.md",
+      "title": "대규모 시스템 설계 스터디 03 — 면접 공략법",
+      "slug": "system-design-interview-03",
+      "datePrefix": "2026-04-19",
+      "outputPath": "output/blog/2026-04-19-system-design-interview-03.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    },
+    {
+      "wikiPath": "wiki/topics/system-design-interview-05.md",
+      "title": "안정 해시 — 서버 추가/삭제해도 키 재배치를 최소화하는 방법",
+      "slug": "system-design-interview-05",
+      "datePrefix": "2026-04-20",
+      "outputPath": "output/blog/2026-04-20-system-design-interview-05.mdx",
+      "series": null,
+      "seriesSlug": null,
+      "seriesOrder": null,
+      "images": []
+    }
+  ],
+  "invalidEntries": [
+    {
+      "wikiPath": "wiki/topics/system-design-interview-04.md",
+      "title": "처리율 제한 장치 — 5가지 알고리즘으로 API 남용을 막는 법",
+      "slug": "system-design-interview-04",
+      "datePrefix": "2026-04-20",
+      "outputPath": "output/blog/2026-04-20-system-design-interview-04.mdx",
+      "series": "가상 면접 사례로 배우는 대규모 시스템 설계 기초",
+      "seriesSlug": null,
+      "seriesOrder": 4,
+      "images": [],
+      "errors": [
+        "seriesSlug 누락: topics/system-design-interview-04.md"
+      ]
+    }
+  ]
+}

@@ -29,6 +29,26 @@ Use this default loop for non-trivial changes:
 2. Implement
 3. Verify
 
+## Rule Precedence
+
+When documents overlap, follow this order:
+
+1. `AGENTS.md`
+2. `ARCHITECTURE.md`
+3. `docs/operating/*`
+4. domain-specific contract docs such as `docs/publishing-contract.md` and `docs/content-seo-guide.md`
+5. `docs/adr/*`
+
+`CLAUDE.md` and `.codex/AGENTS.md` are adapter surfaces. They should not silently override shared repository rules.
+
+## Rule Strength
+
+Interpret rules with these levels:
+
+- `MUST`: required contract, safety, and verification rules
+- `SHOULD`: default operating behavior unless there is a documented reason not to follow it
+- `MAY`: optional enrichment or convenience guidance
+
 ## Publishing Compatibility
 
 When authoring or rewriting publishable pages, follow `docs/content-seo-guide.md` so blog-writing and series-writing decisions already reflect search priorities before publish.
@@ -49,10 +69,21 @@ When a publishable page embeds screenshots or other images, preserve:
 
 ## Wiki Principles
 
+`MUST`
+
 - keep the wiki human-first and markdown-first
 - preserve Obsidian-friendly structure and direct readability
-- do not preemptively reshape the wiki around future RAG needs
 - treat future RAG/vector DB work as a derived layer, not the source-of-truth structure
+
+`SHOULD`
+
+- avoid introducing machine-first structure into authoring pages
+- keep publishable writing aligned with `docs/content-seo-guide.md`
+
+`MUST NOT`
+
+- preemptively reshape the wiki around future RAG needs
+- let derived JSON or downstream artifacts become the authoring source of truth
 
 ## Selective Adoption
 
@@ -65,6 +96,23 @@ Adopt only the useful operating principles from ECC and superpowers:
 
 Do not introduce large agent catalogs, heavy MCP assumptions, or unnecessary multi-agent workflows just because the upstream harnesses support them.
 
+## Verification Policy
+
+`MUST`
+
+- verify the changed scope before completion
+- run the checks required by [docs/operating/validation-matrix.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/validation-matrix.md)
+- block completion when source-of-truth, publishing contract, or state schema rules fail
+
+`SHOULD`
+
+- prefer test-first for regression-prone code paths such as `scripts/`, parsers, and publish logic
+- review generated state diffs when tracked `output/state/*.json` files change
+
+`MAY`
+
+- add extra spot checks when a change spans both upstream and downstream contracts
+
 ## Documentation Consistency
 
 Keep the project role and publishing boundary consistent across:
@@ -73,3 +121,19 @@ Keep the project role and publishing boundary consistent across:
 - `.claude/*`
 - `.codex/*`
 - downstream-facing contract docs
+
+## Detailed References
+
+Use these documents as the authoritative detailed references instead of expanding this file:
+
+- [ARCHITECTURE.md](/Users/ms/workspace/claude/ai-survival-log/ARCHITECTURE.md) — repository boundaries, layer model, publish and state policy
+- [docs/operating/operations.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/operations.md) — operating loop, verification flow, state export responsibility
+- [docs/operating/validation-matrix.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/validation-matrix.md) — change-type-to-required-check map
+- [docs/operating/channel-lanes.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/channel-lanes.md) — multi-channel lane rules and expansion checklist
+- [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md) — upstream to downstream publishing contract
+- [docs/content-seo-guide.md](/Users/ms/workspace/claude/ai-survival-log/docs/content-seo-guide.md) — publishable writing and SEO rules
+- [docs/templates/prd.md](/Users/ms/workspace/claude/ai-survival-log/docs/templates/prd.md) — feature-level PRD template for contract-sensitive work
+- [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md) — canonical markdown decision
+- [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md) — JSON derived-state policy
+- [docs/adr/0003-harness-layering-for-upstream-repo.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0003-harness-layering-for-upstream-repo.md) — harness layering decision
+- [docs/adr/0004-new-channels-remain-derived-from-the-wiki.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0004-new-channels-remain-derived-from-the-wiki.md) — multi-channel expansion boundary
