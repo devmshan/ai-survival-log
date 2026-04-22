@@ -1,11 +1,11 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-21"
+updated: "2026-04-22"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-21 | 총 118개 페이지
+> 마지막 업데이트: 2026-04-22 | 총 121개 페이지
 
 ## Entities
 
@@ -51,6 +51,7 @@ updated: "2026-04-21"
 | [[concepts/database-sharding]] |  | system-design, database, sharding, scalability, distributed-systems | active |
 | [[concepts/db-replication]] |  | system-design, database, replication, high-availability, distributed-systems | active |
 | [[concepts/embedding]] |  | embedding, vector, llm, rag, machine-learning | active |
+| [[concepts/engineering-guardrails]] |  | engineering-guardrails, tdd, security, code-quality, claude-code, agents | active |
 | [[concepts/es-module-mjs]] |  | javascript, es-module, commonjs, nodejs, module-system | active |
 | [[concepts/gossip-protocol]] |  | system-design, gossip-protocol, distributed-systems, failure-detection, membership | active |
 | [[concepts/instant-app]] |  | software, ai, future, instant-app, startup | active |
@@ -80,6 +81,7 @@ updated: "2026-04-21"
 | [[concepts/vector-clock]] |  | system-design, vector-clock, distributed-systems, consistency, conflict-resolution | active |
 | [[concepts/vertical-vs-horizontal-scaling]] |  | system-design, scalability, scale-up, scale-out, distributed-systems | active |
 | [[concepts/web-crawler]] |  | system-design, web-crawler, bfs, distributed-systems, search-engine, backend | active |
+| [[concepts/wiki-automation]] |  | wiki-automation, hooks, claude-code, state-management, python, wiki | active |
 
 ## Sources
 
@@ -112,6 +114,7 @@ updated: "2026-04-21"
 | [[sources/2026-04-21-system-design-interview-ch7]] |  | system-design, unique-id, snowflake, distributed-systems, book | active |
 | [[sources/2026-04-21-system-design-interview-ch8]] |  | system-design, url-shortener, hash, base62, redirect, book | active |
 | [[sources/2026-04-21-system-design-interview-ch9]] |  | system-design, web-crawler, bfs, bloom-filter, distributed-systems, book | active |
+| [[sources/2026-04-22-project-state-management-analysis]] |  | wiki-automation, state-management, tdd, claude-code, hooks, engineering-guardrails | active |
 
 ## Topics
 

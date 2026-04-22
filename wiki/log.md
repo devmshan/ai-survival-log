@@ -4,6 +4,19 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-22
+
+### ingest: 프로젝트 상태 관리 및 Engineering Guardrails 분석
+- **source:** `raw/journals/2026-04-22-project-state-management-analysis.md`, `.codex/AGENTS.md` (Engineering Guardrails 섹션 추가)
+- **created:**
+  - [[sources/2026-04-22-project-state-management-analysis]] — 상태 관리 구조·TDD 규칙 현황 분석 요약
+  - [[concepts/wiki-automation]] — Claude Code 훅 + wiki_lib.py 자동화 패턴
+  - [[concepts/engineering-guardrails]] — TDD 적용 범위·보안·코드 품질 가드레일
+- **updated:**
+  - [[concepts/llm-wiki-pattern]] — wiki-automation 역링크 추가
+  - `wiki/index.md` — 신규 페이지 3개 반영
+- **summary:** 프로젝트 상태 관리(hooks, markdown 기반, 자동 커밋 없음)와 TDD 적용 범위(자동화 스크립트만)를 위키에 문서화. Engineering Guardrails 개념 페이지 신규 생성.
+
 ## 2026-04-21
 
 ### ingest: 대규모 시스템 설계 기초 6~9장

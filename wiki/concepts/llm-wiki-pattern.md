@@ -68,3 +68,4 @@ Andrej Karpathy가 제시한 지식 관리 패턴. RAG의 "쿼리 타임" 재발
 - [[concepts/context-graph]] — 이 위키는 일종의 Context Graph (지식 + 맥락 + 출처)
 - [[concepts/post-compact-essential-section]] — 긴 상위 규칙 문서에서 핵심만 남기는 패턴
 - [[topics/wiki-markdown-vs-graph-db]] — 정형화/자동화 vs 마크다운 설계 판단
+- [[concepts/wiki-automation]] — 이 패턴을 구현하는 hooks + 자동화 스크립트 상세

@@ -4,6 +4,7 @@
 |--------|------|------|------|
 | [[concepts/assets-intake-pattern]] |  | concept | active |
 | [[concepts/llm-wiki-pattern]] |  | concept | active |
+| [[concepts/wiki-automation]] |  | concept | active |
 | [[projects/cross-repo-ai-automation-lab]] |  | project | active |
 | [[projects/repo-structure-refactor]] |  | project | active |
 | [[projects/wiki-category-design-decision]] |  | project | active |
