@@ -1,7 +1,7 @@
 ---
 title: "Cross-Repo AI 자동화 실습"
 created: "2026-04-16"
-updated: "2026-04-16"
+updated: "2026-04-22"
 type: project
 sources: []
 tags: [automation, workflow, project, developer, wiki]
@@ -34,8 +34,10 @@ description: ""
 ### 진행 예정
 
 - `2. Jira 이슈 구현 계획 초안 생성기`
+- `3. 배포 체크리스트 자동 수행 에이전트`
 
 현재는 구현을 잠시 멈추고, PR summary 실습 결과를 다시 공부하는 단계다.
+다음 단계 착수 전에 각 항목의 입력 형식, 출력 형식, 검증 계획을 먼저 고정한다.
 
 ## 이번 실습의 핵심 학습
 
@@ -82,6 +84,15 @@ description: ""
 - 변경 파일 후보/테스트 계획/확인 질문 생성
 
 을 다루게 된다.
+
+바로 이어서 검토할 항목은 `3. 배포 체크리스트 자동 수행 에이전트`다.
+
+이 단계에서는:
+- upstream publish contract 체크
+- downstream lint/test/build gate
+- 실패 리포트 형식
+
+을 함께 정의해야 한다.
 
 ## 관련 페이지
 
