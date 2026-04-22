@@ -29,6 +29,17 @@ Use this default loop for non-trivial changes:
 2. Implement
 3. Verify
 
+## Planning Rules
+
+For non-trivial structural, contract, or workflow changes:
+
+- start with document-first exploration of the relevant architecture, operating, ADR, and contract docs
+- discuss or escalate changes that require a real technical or product decision instead of guessing silently
+- keep implementation plans scoped so each step changes one layer, module, or contract surface at a time
+- make each written step self-contained: include the files to read, the goal, the constraints, and the validation commands
+- write acceptance criteria as executable commands or explicit verification procedures, not abstract success statements
+- write prohibitions concretely in `do not X because Y` form when a plan needs guardrails
+
 ## Rule Precedence
 
 When documents overlap, follow this order:
@@ -133,6 +144,7 @@ Use these documents as the authoritative detailed references instead of expandin
 - [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md) — upstream to downstream publishing contract
 - [docs/content-seo-guide.md](/Users/ms/workspace/claude/ai-survival-log/docs/content-seo-guide.md) — publishable writing and SEO rules
 - [docs/templates/prd.md](/Users/ms/workspace/claude/ai-survival-log/docs/templates/prd.md) — feature-level PRD template for contract-sensitive work
+- [docs/references/harness-framework-reference.md](/Users/ms/workspace/claude/ai-survival-log/docs/references/harness-framework-reference.md) — reference workflow ideas adapted selectively, not a runtime contract
 - [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md) — canonical markdown decision
 - [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md) — JSON derived-state policy
 - [docs/adr/0003-harness-layering-for-upstream-repo.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0003-harness-layering-for-upstream-repo.md) — harness layering decision
