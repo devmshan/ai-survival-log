@@ -33,6 +33,7 @@
 - 운영 절차와 검증 루프: [docs/operating/operations.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/operations.md)
 - lane 확장 규칙: [docs/operating/channel-lanes.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/channel-lanes.md)
 - publish 계약: [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md)
+- 블로그 초안 2축 리뷰: [docs/blog-draft-review-rules.md](/Users/ms/workspace/claude/ai-survival-log/docs/blog-draft-review-rules.md)
 - 장기 결정: [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md), [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md), [docs/adr/0003-harness-layering-for-upstream-repo.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0003-harness-layering-for-upstream-repo.md), [docs/adr/0004-new-channels-remain-derived-from-the-wiki.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0004-new-channels-remain-derived-from-the-wiki.md)
 
 이 파일은 위키 스키마, frontmatter, wikilink, command surface 같은 Claude 작업면 규칙을 우선 다룬다. 구조 경계와 운영 규칙의 원문은 위 문서들을 우선한다.

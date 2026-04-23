@@ -3,7 +3,11 @@
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
 | [[projects/study-system-design-interview]] |  | project | active |
+| [[sources/2026-04-23-anthropic-gpu-shortage-and-ai-terms]] |  | source | active |
+| [[sources/2026-04-24-aar-claude-design-attention-business]] |  | source | active |
 | [[topics/developer-automation-lab-01-pr-summary]] | PR summary가 무엇인지 이해하는 데서 시작해, 규칙 기반 자동화를 직접 실습하고 실제 GitHub PR 댓글까지 확인한 기록. | topic | active |
+| [[topics/professors-brain-02-relearning-llm]] | Claude 구독비 문제로 Anthropic 방향성을 파악하다가 Mythos 10T 루머를 만났고, 그 질문 하나가 tokenizer, LM head, KV cache까지 이어졌다. 공부하게 된 계기와 LLM 내부 파이프라인을 서사로 따라간 기록. | topic | active |
+| [[topics/professors-brain-03-closing-the-loop]] | Claude Design이 프론트엔드 피드백 루프를 닫은 것처럼, AI for Science는 데이터-해석-설계-적용 루프를 닫는다. 두 사례에서 공통 구조를 읽는 기록. | topic | active |
 | [[topics/system-design-interview-01]] | 서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리 | topic | active |
 | [[topics/system-design-interview-02]] | QPS, 저장소, 가용성 — 면접에서 10초 만에 규모를 추정하는 감각을 키우는 2장 스터디 기록 | topic | active |
 | [[topics/system-design-interview-03]] | 정답이 없는 면접을 어떻게 풀 것인가 — 4단계 프레임워크로 시스템 설계 면접을 체계적으로 공략하는 3장 스터디 기록 | topic | active |

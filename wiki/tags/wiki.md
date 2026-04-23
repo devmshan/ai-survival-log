@@ -6,6 +6,7 @@
 | [[concepts/llm-wiki-pattern]] |  | concept | active |
 | [[concepts/wiki-automation]] |  | concept | active |
 | [[projects/cross-repo-ai-automation-lab]] |  | project | active |
+| [[projects/managed-agent-harness-draft]] | ai-survival-log와 ai-survival-log-site의 단일 에이전트 협업 흐름을 역할 기반 managed agent harness로 확장할 때의 최소 설계 초안. | project | draft |
 | [[projects/repo-structure-refactor]] |  | project | active |
 | [[projects/wiki-category-design-decision]] |  | project | active |
 | [[projects/wiki-rag-expansion-roadmap]] |  | project | draft |

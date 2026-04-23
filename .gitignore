@@ -14,3 +14,4 @@ output/state/*
 !output/state/wiki-index.json
 !output/state/publish-manifest.json
 !output/state/agent-surface-summary.json
+.vscode

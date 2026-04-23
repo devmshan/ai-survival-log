@@ -132,6 +132,7 @@ Use these documents as the authoritative detailed references instead of expandin
 - [docs/operating/channel-lanes.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/channel-lanes.md) — multi-channel lane rules and expansion checklist
 - [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md) — upstream to downstream publishing contract
 - [docs/content-seo-guide.md](/Users/ms/workspace/claude/ai-survival-log/docs/content-seo-guide.md) — publishable writing and SEO rules
+- [docs/blog-draft-review-rules.md](/Users/ms/workspace/claude/ai-survival-log/docs/blog-draft-review-rules.md) — blog draft Axis A (source fidelity) and Axis B (writing craft) 2-axis review rules
 - [docs/templates/prd.md](/Users/ms/workspace/claude/ai-survival-log/docs/templates/prd.md) — feature-level PRD template for contract-sensitive work
 - [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md) — canonical markdown decision
 - [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md) — JSON derived-state policy

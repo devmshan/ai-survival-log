@@ -93,6 +93,7 @@ Use these shared documents for detailed rules instead of expanding this file:
 - [docs/operating/channel-lanes.md](/Users/ms/workspace/claude/ai-survival-log/docs/operating/channel-lanes.md) — channel-lane expansion rules
 - [docs/publishing-contract.md](/Users/ms/workspace/claude/ai-survival-log/docs/publishing-contract.md) — downstream publishing contract
 - [docs/content-seo-guide.md](/Users/ms/workspace/claude/ai-survival-log/docs/content-seo-guide.md) — publishable content rules
+- [docs/blog-draft-review-rules.md](/Users/ms/workspace/claude/ai-survival-log/docs/blog-draft-review-rules.md) — blog draft Axis A (source fidelity) and Axis B (writing craft) 2-axis review rules
 - [docs/adr/0001-markdown-source-of-truth.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0001-markdown-source-of-truth.md)
 - [docs/adr/0002-json-derived-state-only.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0002-json-derived-state-only.md)
 - [docs/adr/0003-harness-layering-for-upstream-repo.md](/Users/ms/workspace/claude/ai-survival-log/docs/adr/0003-harness-layering-for-upstream-repo.md)

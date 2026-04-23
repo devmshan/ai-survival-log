@@ -4,6 +4,76 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-24
+
+### ingest: 2026-04-23 저널 + EP 94 아티클 흡수
+- **source:**
+  - raw/journals/2026-04-23-claude-codex-choice-and-anthropic-direction.md
+  - raw/articles/2026-04-23T160522+0900-EP 94 Anthropic과 낮게 열린 과실들.md
+- **created:**
+  - [[entities/codex]], [[entities/anthropic]]
+  - [[concepts/opus-4-7]], [[concepts/mythos]], [[concepts/adaptive-thinking]]
+  - [[sources/2026-04-23-claude-codex-choice-and-anthropic-direction]]
+  - [[sources/2026-04-23-ep94-anthropic-low-hanging-fruits]]
+- **updated:** [[topics/claude-code-to-codex]], [[topics/claude-plan-codex-validate]] (Codex wikilink 추가)
+- **summary:** Claude/Codex 구독 선택 저널과 AI Frontier EP 94 팟캐스트를 흡수. Anthropic·Codex 엔티티 신설, Opus 4.7·Mythos·Adaptive Thinking 개념 페이지 신설.
+
+### publish: 4편 downstream 동기화
+- **output:** ai-survival-log-site/content/posts/
+- **published:**
+  - [[topics/professors-brain-02-relearning-llm]] → 2026-04-24-professors-brain-02-relearning-llm.mdx
+  - [[topics/professors-brain-03-closing-the-loop]] → 2026-04-24-professors-brain-03-closing-the-loop.mdx
+  - [[topics/agent-harness-notes-01-dual-domain]] → 2026-04-24-agent-harness-notes-01-dual-domain.mdx
+  - [[topics/learning-my-own-taste-on-frontier]] → 2026-04-24-learning-my-own-taste-on-frontier.mdx
+- **summary:** Axis A/B 2축 리뷰 및 편집 완료 후 4편 ai-survival-log-site로 동기화. 도서관과 교수님의 뇌 시리즈(02·03편)와 Agent Harness Notes 01, 독립 에세이 1편.
+
+### ingest: 프론티어를 따라가며 내 취향을 학습시키는 일 초안 작성
+- **source:** raw/journals/2026-04-24-managed-agent-harness-and-dual-domain-planning-conversation-backup-part2.md
+- **created:** [[topics/learning-my-own-taste-on-frontier]]
+- **output:** output/blog/2026-04-24-learning-my-own-taste-on-frontier.mdx
+- **summary:** capability overhang 시대의 두 갈래 도망길 비교에서 attention business와 취향 → 나의 LM head 은유로 이어지는 자기 해석 에세이 초안 완성. 독립 에세이(시리즈 없음).
+
+### ingest: Agent Harness Notes 01 초안 작성
+- **source:** raw/journals/2026-04-24-managed-agent-harness-and-dual-domain-planning-conversation-backup.md
+- **created:** [[topics/agent-harness-notes-01-dual-domain]]
+- **output:** output/blog/2026-04-24-agent-harness-notes-01-dual-domain.mdx
+- **summary:** Scaling Managed Agents → brain-hand decoupling → 개인/회사 이중 도메인 → role/lane is shared, data/surface is isolated 결론까지 판단 흐름을 서사로 정리한 Agent Harness Notes 시리즈 1편 완성.
+
+### ingest: 도서관과 교수님의 뇌 03 초안 작성
+- **source:** raw/journals/2026-04-24-managed-agent-harness-and-dual-domain-planning-conversation-backup-part2.md
+- **created:** [[topics/professors-brain-03-closing-the-loop]]
+- **output:** output/blog/2026-04-24-professors-brain-03-closing-the-loop.mdx
+- **summary:** Claude Design과 AI for Science를 "루프를 닫는다"는 공통 구조로 묶은 03편 초안 완성.
+
+### ingest: 도서관과 교수님의 뇌 02 초안 작성
+- **source:** raw/journals/2026-04-23-anthropic-gpu-shortage-and-ai-terms-conversation-backup.md (part2 포함), raw/journals/2026-04-23-claude-codex-choice-and-anthropic-direction.md
+- **created:** [[topics/professors-brain-02-relearning-llm]]
+- **output:** output/blog/2026-04-24-professors-brain-02-relearning-llm.mdx
+- **summary:** Claude 구독비 문제로 Anthropic 방향성을 파악하다 Mythos 10T 루머에서 tokenizer → LM head → KV cache까지 내려간 학습 서사 초안 완성.
+
+### edit: raw/journals 파일 이동
+- **updated:** `2026-04-23` (루트) → `raw/journals/2026-04-23-claude-codex-choice-and-anthropic-direction.md`
+
+### edit: 도서관과 교수님의 뇌 01편 — series 메타 역소급
+- **updated:**
+  - [[topics/how-llm-works]] — `series`, `seriesSlug: professors-brain`, `seriesOrder: 1` 추가. 본문 변경 없음.
+
+### edit: workspace 폴더 구조 검수 및 보안 경계 정책 고정
+- **source:** 사용자 검수 요청 — `workspace-folder-structure-review-sheet.md` 기준 5개 포인트 검토
+- **created:**
+  - [[projects/workspace-security-boundary]] — 4축 보안 경계 정책 (file system, git identity, credentials, harness context)
+- **updated:**
+  - [[projects/dual-domain-agent-operating-model]] — 폴더 이름 확정(`company-wiki`, `shared-agent-harness`), positive/negative list 추가, 이주 계획 footnote 추가
+  - [[projects/workspace-folder-structure-review-sheet]] — 이름 변경 반영
+- **summary:** 최상위 폴더 5개 구조 검수 결과 조건부 통과. `company-work-wiki`→`company-wiki`, `shared-engineering-harness`→`shared-agent-harness`로 이름 확정. 4축 보안 경계 정책 신규 고정. 다음 단계로 각 폴더 내부 구조 설계 진행 가능.
+
+### edit: 작업계획 상태 정리 및 다음 단계 확정
+- **source:** 사용자 요청 — 오늘까지의 설계/검수 작업을 계획 문서에 반영하고 내일 이어갈 다음 단계 정리
+- **updated:**
+  - [[projects/workspace-folder-structure-review-sheet]] — 검수 완료 상태, 확정된 폴더 이름, 다음 단계 우선순위 추가
+  - [[projects/dual-domain-agent-operating-model]] — 현재 진행 상태와 완료/다음/보류 항목 추가
+- **summary:** 오늘까지 완료된 설계/검수 작업을 계획 문서에 반영. 내일 우선순위는 `shared-agent-harness` 내부 구조 설계, 그 다음 `company-wiki` 내부 구조 설계로 정리.
+
 ## 2026-04-22
 
 ### plan: Harness 세분화와 JSON 파생 상태 설계 초안
@@ -250,14 +320,14 @@ title: "Wiki Log"
   - `AGENTS.md`, `.codex/AGENTS.md`, `README.md`, `CLAUDE.md` — 구조 변경 계획과 future-RAG-separate-project 원칙을 참조하도록 갱신
   - `docs/publishing-contract.md`, `docs/operating-playbook.md`, `docs/content-seo-guide.md` — 구조 변경 중에도 downstream 계약이 유지된다는 점을 명시
   - `.claude/commands/wiki/file-answer.md`, `.claude/commands/wiki/publish.md` — `syntheses`와 publish artifact 계획 반영
-  - [[wiki/index]] — 프로젝트 1개 추가, 총 72개 페이지
+  - wiki/index.md — 프로젝트 1개 추가, 총 72개 페이지
 - **summary:** Claude가 작성한 구조 변경 계획서를 Codex가 실제 저장소 상태·테스트·계약 문서와 교차 검증. `docs/images → raw/assets` 충돌 발견 후 `assets/` 채널별 구조로 해결. human-first wiki 원칙 합의, future RAG는 별도 예정 프로젝트로 분리.
 
 ### 14:00 — edit: 레포 폴더 구조 리팩토링 계획 문서화
 - **created:**
   - [[projects/repo-structure-refactor]] — raw/ 타입별 분류, wiki/syntheses/ 추가, output/ 멀티채널 구조화 계획
 - **updated:**
-  - [[wiki/index.md]] — projects 1개 추가, 총 71개 페이지
+  - wiki/index.md — projects 1개 추가, 총 71개 페이지
 - **summary:** sources/→raw/, wiki/syntheses/ 신규, output/ 멀티채널 구조화를 위한 리팩토링 계획을 프로젝트 페이지로 문서화. 구현 전 계획 단계.
 - **note:** 이 계획서는 이후 Codex 검증 세션([[sources/2026-04-18-claude-plan-codex-validation]])을 거쳐 최종 확정됨.
 
@@ -266,7 +336,7 @@ title: "Wiki Log"
   - [[concepts/canonical-url]] — 대표 URL 지정, 중복 URL 완화, 블로그 SEO 맥락 정리
 - **updated:**
   - [[projects/site-seo-foundation-and-content-rewrite]] — canonical 개념 링크 추가
-  - [[wiki/index.md]] — concepts 1개 추가, 총 70개 페이지
+  - wiki/index.md — concepts 1개 추가, 총 70개 페이지
 - **summary:** SEO 대화 중 나온 canonical 개념을 별도 concept 페이지로 저장. 대표 URL 의미, 중복 URL 완화 역할, 이 프로젝트의 site SEO 정비와의 연결을 함께 정리.
 
 ### 01:30 — file-answer: site SEO foundation + 전체 포스트 리라이트 작업 위키 저장
@@ -274,7 +344,7 @@ title: "Wiki Log"
   - [[projects/site-seo-foundation-and-content-rewrite]] — 기술 SEO, 콘텐츠 SEO 가이드, Search Console 제출, 전체 포스트 리라이트를 한 번에 정리한 프로젝트 페이지
 - **updated:**
   - [[projects/blog-ai-study-site]] — site 현재 구현/운영 상태, 기술 SEO/리라이트 반영
-  - [[wiki/index.md]] — 프로젝트 1개 추가, 총 69개 페이지
+  - wiki/index.md — 프로젝트 1개 추가, 총 69개 페이지
 - **summary:** `ai-survival-log-site`에서 진행한 SEO 기반 정비, `content/posts` 전체 1차 리라이트, content SEO writing guide 도입, Search Console 도메인 인증 및 sitemap 제출, 초기 색인 요청까지의 흐름을 upstream wiki에 durable context로 정리.
 
 ## 2026-04-17
@@ -285,7 +355,7 @@ title: "Wiki Log"
 - **updated:**
   - [[concepts/pr-summary]] — 시리즈 글 역링크 추가
   - [[projects/cross-repo-ai-automation-lab]] — 관련 토픽 링크 추가
-  - [[wiki/index.md]] — topic 1개 추가 예정
+  - wiki/index.md — topic 1개 추가 예정
 - **summary:** 오늘의 PR summary 학습 흐름과 실제 GitHub PR 코멘트 실습, LLM 확장 보류 판단까지 한 편의 발행용 글로 정리. `개발자 자동화 실습` 시리즈의 1편으로 작성.
 
 ### 16:30 — file-answer: PR summary 개념 설명 위키 저장
@@ -293,7 +363,7 @@ title: "Wiki Log"
   - [[concepts/pr-summary]] — PR summary의 목적, 동작 방식, 역할별 활용 정리
 - **updated:**
   - [[concepts/pull-request]] — PR summary 관련 페이지 링크 추가
-  - [[wiki/index.md]] — concepts 1개 추가, 총 67개 페이지
+  - wiki/index.md — concepts 1개 추가, 총 67개 페이지
 - **summary:** 대화에서 정리한 PR summary 설명을 concepts/pr-summary.md로 저장. PR 자동 코멘트의 목적, PR 작성 전 로컬 사전 점검, 작성자/리뷰어/maintainer 관점을 함께 정리.
 
 ### 14:00 — file-answer: .mjs 파일과 Shebang 개념 위키 저장
@@ -301,7 +371,7 @@ title: "Wiki Log"
   - [[concepts/es-module-mjs]] — ES Module, .mjs 파일 형식, CommonJS vs ESM 비교
   - [[concepts/shebang]] — #! 문자열, 인터프리터 지시, /usr/bin/env 패턴
 - **updated:**
-  - [[wiki/index.md]] — concepts 2개 추가, 총 66개 페이지
+  - wiki/index.md — concepts 2개 추가, 총 66개 페이지
 - **summary:** 대화에서 생성된 .mjs 파일과 shebang 설명을 각각 wiki/concepts/에 저장. 두 페이지 간 상호 크로스 레퍼런스 추가.
 
 ### 10:00 — file-answer: Pull Request 개념 설명 위키 저장
@@ -309,7 +379,7 @@ title: "Wiki Log"
   - [[concepts/pull-request]] — PR 개념, 흐름, 리뷰 방식, CI 연동, PR summary 자동화 연결
 - **updated:**
   - [[projects/cross-repo-ai-automation-lab]] — pull-request 역링크 추가
-  - [[wiki/index.md]] — concepts 1개 추가, 총 64개 페이지
+  - wiki/index.md — concepts 1개 추가, 총 64개 페이지
 - **summary:** 대화에서 생성된 PR 설명 답변을 wiki/concepts/pull-request.md로 저장. PR 기본 흐름, 리뷰 유형, CI/CD 연동, PR summary 자동화와의 연결까지 포함.
 
 ## 2026-04-16
@@ -320,13 +390,13 @@ title: "Wiki Log"
   - [[projects/cross-repo-ai-automation-lab]] — cross-repo AI 자동화 실습 프로젝트 페이지
 - **updated:**
   - [[projects/blog-ai-study-site]] — cross-repo 자동화 실습 프로젝트 링크 추가
-  - [[wiki/index.md]] — 프로젝트 1개 추가, 총 62개 페이지
+  - wiki/index.md — 프로젝트 1개 추가, 총 62개 페이지
 - **summary:** PR summary 실습 결과를 공부용 문서로 재정리하고, 두 저장소 역할 차이와 축소 적용 개념을 포함한 학습 경로를 wiki project 페이지로 등록. 다음 단계인 Jira issue plan draft는 진행 예정 상태로 유지.
 
 ### 10:45 — edit: AI-Native 개발자 메모를 내부 참고자료로 재분류
 - **updated:**
   - `docs/2026-04-16-ai-native-developer-study-reference.md` — 공부 계획 전 참고자료로 재정리
-  - [[wiki/index.md]] — 잘못 추가한 위키 항목 제거
+  - wiki/index.md — 잘못 추가한 위키 항목 제거
 - **summary:** 해당 메모는 블로그/위키 발행 후보가 아니라 공부 계획 수립 전 참고자료 성격이므로 `docs/` 문서로 이동하고, 위키 토픽/소스 반영분은 제거.
 
 ## 2026-04-15
@@ -393,7 +463,7 @@ title: "Wiki Log"
   - [[concepts/database-sharding]] — 샤딩 키, 재샤딩/핫스팟/조인 문제
 - **updated:**
   - [[projects/study-system-design-interview]] — 1장 ✅ 완료, 상세 단계 업데이트
-  - [[wiki/index.md]] — 총 49개 페이지
+  - wiki/index.md — 총 49개 페이지
 - **summary:** 책 1장 스크린샷 전체 인제스트. 단일 서버 → 백만 사용자 아키텍처 진화 과정에서 등장하는 핵심 컴포넌트 8개 개념 페이지 생성.
 
 ### 스터디중 — publish: LLM 작동 방식 블로그 포스트
@@ -409,7 +479,7 @@ title: "Wiki Log"
   - [[concepts/embedding]] — 임베딩 3가지 맥락 (추론/학습/VectorDB)
   - [[concepts/rag]] — RAG 개념, 할루시네이션 감소 + 최신성 확보
 - **updated:**
-  - [[wiki/index.md]] — 총 39개 페이지
+  - wiki/index.md — 총 39개 페이지
 - **summary:** 1장 JSON 구조 설명 중 자연스럽게 LLM 내부 구조(파라미터/임베딩/RAG)로 확장. 대학교 도서관 비유로 RAG 개념 체화.
 
 ### 00:00 — ingest: 시스템 설계 면접 스터디 플랜 수립
@@ -417,7 +487,7 @@ title: "Wiki Log"
 - **created:**
   - [[projects/study-system-design-interview]] — 시스템 설계 면접 스터디 플랜 (4 Phase, 15챕터)
 - **updated:**
-  - [[wiki/index.md]] — 총 37개 페이지
+  - wiki/index.md — 총 37개 페이지
 - **summary:** "가상 면접 사례로 배우는 대규모 시스템 설계 기초" 스터디 시작. 질문→설명→위키 저장 방식으로 진행. 4개 Phase로 챕터 구성, 핵심 키워드 사전 정리.
 
 ## 2026-04-13
@@ -428,7 +498,7 @@ title: "Wiki Log"
   - [[sources/2026-04-13-ai-webtoon-workflow]] — AI 웹툰 도구 탐색 및 프롬프트 작성 세션
   - [[topics/ai-webtoon-creation]] — AI 인스타툰 제작 워크플로우 토픽
 - **updated:**
-  - [[wiki/index.md]] — 총 34개 페이지
+  - wiki/index.md — 총 34개 페이지
 - **summary:** fal.ai 대안 탐색으로 시작. marigold.in.bloom·darongtoon·_intotheblu 3개 계정 분석. AI 웹툰 핵심 과제(캐릭터 일관성) 정리. 민성+건승 캐릭터 시트 2종 확보. ChatGPT·Midjourney Niji 6용 프롬프트 완성.
 
 ### 17:10 — file-answer: 캐릭터 프로필 초안 저장
@@ -436,7 +506,7 @@ title: "Wiki Log"
 - **created:**
   - [[projects/character-intro-draft]] — devsurvivallog 콘텐츠용 캐릭터 소개 초안
 - **updated:**
-  - [[wiki/index.md]] — 총 32개 페이지
+  - wiki/index.md — 총 32개 페이지
 - **summary:** 민성·건승 캐릭터 프로필 초안을 별도 프로젝트 파일로 저장. 향후 인스타그램/블로그 포스팅 초안으로 활용 예정.
 
 ### 17:00 — file-answer: 민성 & 건승 캐릭터 프로필
@@ -445,7 +515,7 @@ title: "Wiki Log"
   - [[entities/minsung]] — devsurvivallog 운영자 캐릭터 프로필
   - [[entities/gunseung]] — 민성의 치즈 태비 고양이 캐릭터 프로필
 - **updated:**
-  - [[wiki/index.md]] — 총 31개 페이지
+  - wiki/index.md — 총 31개 페이지
 - **summary:** @_intotheblu 인스타그램 포스트 분석 후 민성(Minsung) 캐릭터와 고양이 건승(치즈 태비) 프로필 저장. 외형·성격·목소리 스타일·세계관 포함.
 
 ## 2026-04-13
@@ -456,7 +526,7 @@ title: "Wiki Log"
   - [[topics/wiki-markdown-vs-graph-db]] — LLM에 맞는 위키 설계 판단
 - **updated:**
   - [[concepts/llm-wiki-pattern]] — 역링크 추가
-  - [[wiki/index.md]] — 총 32개 페이지
+  - wiki/index.md — 총 32개 페이지
 - **summary:** "정형화/자동화 vs 마크다운" 설계 질문에 대한 답변 저장. 마크다운이 LLM 네이티브 포맷이며, Claude + 마크다운이 이미 Context Graph 자동화를 대체한다는 판단 기록.
 
 ### 15:30 — file-answer: Context Graph Extraction 작업
@@ -465,7 +535,7 @@ title: "Wiki Log"
   - [[concepts/context-graph-extraction]] — CG 구축 전처리 단계 개념
 - **updated:**
   - [[concepts/cgr3]] — extraction 역링크 추가
-  - [[wiki/index.md]] — 총 31개 페이지
+  - wiki/index.md — 총 31개 페이지
 - **summary:** "Extraction 작업이란?" 질문 답변을 저장. 기존 삼중항 KG에서 Sentence-BERT로 Wikipedia 맥락 문장을 추출하여 (h,r,t)→(h,r,t,rc)로 변환하는 CG 구축 단계 정리.
 
 ### 15:00 — ingest: Context Graph 멀티소스 (velog + arXiv + Medium × 2)
@@ -483,7 +553,7 @@ title: "Wiki Log"
 - **updated:**
   - [[concepts/context-graph]] — 논문 기반 학술 정의, CGR³ 링크, 출처 확장
   - [[concepts/knowledge-graph]] — KGC/CGR³ 역링크 추가
-  - [[wiki/index.md]] — 6개 신규 페이지 추가, 총 30개
+  - wiki/index.md — 6개 신규 페이지 추가, 총 30개
 - **summary:** arXiv 논문(Xu et al. 2024)의 Context Graph/CGR³ 개념 인제스트. triple (h,r,t) → (h,r,t,rc) 확장, KGC에서 최대 +66% Hits@1, KGQA에서 +43.6% 달성. 참조된 velog 리뷰와 Medium 글도 함께 수집.
 
 ### 14:00 — ingest: Context Graph vs Knowledge Graph (Atlan)
@@ -494,7 +564,7 @@ title: "Wiki Log"
   - [[concepts/knowledge-graph]] — Knowledge Graph 개념 페이지
 - **updated:**
   - [[concepts/llm-wiki-pattern]] — context-graph 역링크 추가
-  - [[wiki/index.md]] — 3개 신규 페이지 추가, 총 24개 페이지
+  - wiki/index.md — 3개 신규 페이지 추가, 총 24개 페이지
 - **summary:** Atlan 아티클에서 Context Graph(Knowledge Graph + 운영 메타데이터)와 Knowledge Graph의 차이를 인제스트. AI 할루시네이션 40% 감소, 의사결정 추적, 시간적 맥락 등 핵심 개념 정리.
 
 ### 00:00 — file-answer: 암묵지 (Tacit Knowledge)
@@ -504,7 +574,7 @@ title: "Wiki Log"
 - **updated:**
   - [[concepts/rlvr]] — tacit-knowledge 역링크 추가
   - [[topics/ai-era-survival]] — tacit-knowledge 역링크 추가
-  - [[wiki/index.md]] — tacit-knowledge 추가, 총 21개 페이지
+  - wiki/index.md — tacit-knowledge 추가, 총 21개 페이지
 - **summary:** "AI 시대 암묵지란?"에 대한 답변을 concepts/tacit-knowledge.md로 저장. RLVR과의 관계, 암묵지의 4가지 유형 정리.
 
 ## 2026-04-12
@@ -514,7 +584,7 @@ title: "Wiki Log"
 - **created:**
   - [[entities/obsidian]] — Obsidian 엔티티 (다크모드 설정 팁 포함)
 - **updated:**
-  - [[wiki/index.md]] — obsidian 엔티티 추가, 총 20개 페이지
+  - wiki/index.md — obsidian 엔티티 추가, 총 20개 페이지
 - **summary:** Obsidian 다크모드 켜는 3가지 방법(설정 메뉴, 하단 아이콘, 명령 팔레트)을 인제스트. Obsidian 엔티티 페이지 신규 생성.
 
 ### 17:45 — ingest: ai-survival-log-site 블로그 포스트 4편
@@ -532,7 +602,7 @@ title: "Wiki Log"
   - [[concepts/ralph-loop]] — Ralph Loop (diversification → selection → amplification)
 - **updated:**
   - [[topics/ai-era-survival]] — RLVR, Unbundling, Ralph Loop 섹션 추가
-  - [[wiki/index.md]] — 9개 신규 페이지 반영, 총 19개 페이지
+  - wiki/index.md — 9개 신규 페이지 반영, 총 19개 페이지
 - **summary:** ai-survival-log-site의 블로그 포스트 4편을 인제스트. 소스 요약 4개, 신규 엔티티 1개, 신규 개념 4개 생성. 총 9개 페이지 추가.
 
 ### 15:00 — init: 위키 초기화

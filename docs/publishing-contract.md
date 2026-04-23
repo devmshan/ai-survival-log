@@ -27,6 +27,8 @@ They should also preserve:
 - stable tags suitable for site filtering
 - valid related-page structure while in the wiki
 
+Blog-oriented topic pages must pass the Axis A (source fidelity) and Axis B (writing craft) 2-axis review defined in `docs/blog-draft-review-rules.md` before `/wiki:publish` is run.
+
 If a publishable page contains screenshots or other inline images, it should also preserve:
 - an upstream source copy under `assets/blog/`
 - a downstream-served copy under `ai-survival-log-site/public/images/{slug-or-series}/`

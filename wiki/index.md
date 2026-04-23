@@ -1,19 +1,21 @@
 ---
 title: "Wiki Index"
-updated: "2026-04-22"
+updated: "2026-04-24"
 ---
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-22 | 총 122개 페이지
+> 마지막 업데이트: 2026-04-24 | 총 143개 페이지
 
 ## Entities
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
 | [[entities/ai-frontier]] |  | youtube, podcast, ai, korea | active |
+| [[entities/anthropic]] |  | anthropic, ai-company, claude, llm | active |
 | [[entities/backend-ai]] |  | mlops, ai-infrastructure, lablup, open-source | active |
 | [[entities/claude-code]] |  | claude-code, ai-tool, anthropic | active |
+| [[entities/codex]] |  | codex, openai, ai-coding-agent, claude | active |
 | [[entities/devsurvivallog]] |  | blog, devsurvivallog, ai, personal | active |
 | [[entities/ecc]] |  | claude-code, plugin, ai-agent | active |
 | [[entities/graphify]] |  | graphify, knowledge-graph, tool, llm, markdown, multi-modal | active |
@@ -29,6 +31,7 @@ updated: "2026-04-22"
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[concepts/adaptive-thinking]] |  | adaptive-thinking, anthropic, opus-4-7, llm, reasoning | active |
 | [[concepts/agentic-workflow]] |  | agentic-workflow, claude-code, automation, harness | active |
 | [[concepts/ai-capability-overhang]] |  | ai, capability, developer | active |
 | [[concepts/ai-unbundling]] |  | ai, unbundling, industry, strategy | active |
@@ -61,6 +64,8 @@ updated: "2026-04-22"
 | [[concepts/llm-wiki-pattern]] |  | wiki, knowledge-management, llm, karpathy | active |
 | [[concepts/load-balancer]] |  | system-design, load-balancer, scalability, high-availability, distributed-systems | active |
 | [[concepts/message-queue]] |  | system-design, message-queue, async, decoupling, distributed-systems | active |
+| [[concepts/mythos]] |  | mythos, anthropic, llm, ai-safety, compute | active |
+| [[concepts/opus-4-7]] |  | opus-4-7, anthropic, llm, adaptive-thinking, tokenizer | active |
 | [[concepts/post-compact-essential-section]] | 긴 agent guide 문서에서 컨텍스트 압축 후에도 남아야 할 핵심 규칙만 별도 블록으로 재선언하는 패턴. CLAUDE.md, AGENTS.md, Codex guide 같은 상위 규칙 문서에 적용한다. | documentation, agent-guide, claude, codex, context-management | active |
 | [[concepts/pr-summary]] |  | pull-request, automation, code-review, workflow, github | active |
 | [[concepts/pull-request]] |  | git, pull-request, code-review, workflow, collaboration, github | active |
@@ -115,11 +120,16 @@ updated: "2026-04-22"
 | [[sources/2026-04-21-system-design-interview-ch8]] |  | system-design, url-shortener, hash, base62, redirect, book | active |
 | [[sources/2026-04-21-system-design-interview-ch9]] |  | system-design, web-crawler, bfs, bloom-filter, distributed-systems, book | active |
 | [[sources/2026-04-22-project-state-management-analysis]] |  | wiki-automation, state-management, tdd, claude-code, hooks, engineering-guardrails | active |
+| [[sources/2026-04-23-anthropic-gpu-shortage-and-ai-terms]] |  | llm, anthropic, gpu, tokenizer, kv-cache, lm-head, study | active |
+| [[sources/2026-04-23-claude-codex-choice-and-anthropic-direction]] |  | claude-code, codex, anthropic, opus-4-7, mythos, adaptive-thinking, gpu, journal | active |
+| [[sources/2026-04-23-ep94-anthropic-low-hanging-fruits]] |  | anthropic, ai-frontier, opus-4-7, mythos, adaptive-thinking, claude-design, managed-agents, capability-overhang, podcast | active |
+| [[sources/2026-04-24-aar-claude-design-attention-business]] |  | managed-agents, claude-design, ai-for-science, attention-business, dual-domain, agent-harness, study | active |
 
 ## Topics
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[topics/agent-harness-notes-01-dual-domain]] | Scaling Managed Agents를 공부하다가 agent 수가 아니라 brain과 hand, 개인과 회사 도메인을 먼저 분리해야 한다는 결론에 도달한 설계 기록. role/lane is shared, data/surface is isolated가 나온 맥락. | agent-harness, managed-agents, dual-domain, workspace-structure, security-boundary, claude, operations | active |
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/claude-code-to-codex]] | Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정. | claude-code, codex, agentic-workflow, harness, workflow, llm-ops | active |
@@ -127,6 +137,9 @@ updated: "2026-04-22"
 | [[topics/developer-automation-lab-01-pr-summary]] | PR summary가 무엇인지 이해하는 데서 시작해, 규칙 기반 자동화를 직접 실습하고 실제 GitHub PR 댓글까지 확인한 기록. | automation, pull-request, workflow, github, code-review, developer, study | active |
 | [[topics/graphify-evaluation]] | Graphify를 잘못된 명령으로 테스트해서 틀린 결론을 냈다. 다시 확인했더니 마크다운도 처리된다. 그래도 지금 이 위키에는 안 쓴다 — 이유는 '못 해서'가 아니라 '지금은 필요 없어서'. | graphify, wiki, knowledge-management, markdown, tool-evaluation, obsidian-web-clipper | active |
 | [[topics/how-llm-works]] | 파라미터, 임베딩, RAG, Vector DB, 지식그래프까지 — LLM이 어떻게 작동하는지를 도서관 비유로 쉽게 풀어낸다. | llm, embedding, rag, vector-db, ai-architecture, knowledge-graph | active |
+| [[topics/learning-my-own-taste-on-frontier]] | 프론티어 모델을 따라가는 감각이 흔들릴 때 남는 두 갈래 도망길을 정리하고, 그 비교 끝에 attention business 시대에는 취향과 선택의 누적이 결국 나의 LM head가 되어 나의 출력이 된다는 자기 해석을 남긴 에세이. | capability-overhang, attention-business, frontier, taste, lm-head, personal-strategy, essay | active |
+| [[topics/professors-brain-02-relearning-llm]] | Claude 구독비 문제로 Anthropic 방향성을 파악하다가 Mythos 10T 루머를 만났고, 그 질문 하나가 tokenizer, LM head, KV cache까지 이어졌다. 공부하게 된 계기와 LLM 내부 파이프라인을 서사로 따라간 기록. | llm, tokenizer, kv-cache, lm-head, anthropic, study, ai-architecture | active |
+| [[topics/professors-brain-03-closing-the-loop]] | Claude Design이 프론트엔드 피드백 루프를 닫은 것처럼, AI for Science는 데이터-해석-설계-적용 루프를 닫는다. 두 사례에서 공통 구조를 읽는 기록. | llm, claude-design, ai-for-science, feedback-loop, personalized-medicine, anthropic, study | active |
 | [[topics/system-design-interview-01]] | 서버 1대에서 수백만 사용자까지 — 아키텍처가 어떻게 진화하는지 1장 핵심 정리 | system-design, scalability, distributed-systems, study, backend | active |
 | [[topics/system-design-interview-02]] | QPS, 저장소, 가용성 — 면접에서 10초 만에 규모를 추정하는 감각을 키우는 2장 스터디 기록 | system-design, estimation, back-of-envelope, availability, qps, study, backend | active |
 | [[topics/system-design-interview-03]] | 정답이 없는 면접을 어떻게 풀 것인가 — 4단계 프레임워크로 시스템 설계 면접을 체계적으로 공략하는 3장 스터디 기록 | system-design, interview, framework, 4-step, process, study, backend | active |
@@ -142,14 +155,22 @@ updated: "2026-04-22"
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[projects/assistant-ops-lane-execution-draft]] | 일정관리, 할 일 보고, 회의 follow-up을 다루는 Assistant Ops Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project, assistant, workflow, ops, calendar, gmail, sheets, harness | draft |
 | [[projects/blog-ai-study-site]] |  | blog, nextjs, project | active |
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |
 | [[projects/character-intro-draft]] |  | character, draft, instagram, devsurvivallog, minsung, 건승 | draft |
 | [[projects/cross-repo-ai-automation-lab]] |  | automation, workflow, project, developer, wiki | active |
+| [[projects/dual-domain-agent-operating-model]] | 개인 일상업무와 회사업무를 분리하되, 공용 lane/agent와 도메인 전용 data/surface를 구분해 운영하는 구조 초안. | project, harness, operations, personal, company, security, agents | active |
+| [[projects/executive-assistant-harness-business-idea]] | 개인용·업무용 agent를 통합 제어하는 하네스 경험을 바탕으로, 중견기업 경영진에게 제공할 전용 비서 agent 서비스 아이디어 초안. | project, business-idea, assistant, executive, harness, workflow, b2b, ai | draft |
 | [[projects/harness-layering-and-json-derived-state]] | ai-survival-log와 ai-survival-log-site의 Harness를 세분화하고, Markdown source-of-truth를 유지하면서 JSON 파생 상태를 어디에 둘지 정리한 설계 초안. | project, harness, repository, structure, refactor, json, state-management, codex, claude | active |
+| [[projects/immediate-agent-operating-structure]] | 지금부터 바로 운영할 수 있도록 공용 lane/agent와 도메인 전용 surface를 기준으로 정리한 즉시 운영 구조. | project, harness, workflow, agents, operations, planning, engineering, assistant | active |
 | [[projects/instagram-post-coding-with-gunseung]] |  | devsurvivallog, instagram, minsung, gunseung, character-design, draft | draft |
+| [[projects/managed-agent-harness-draft]] | ai-survival-log와 ai-survival-log-site의 단일 에이전트 협업 흐름을 역할 기반 managed agent harness로 확장할 때의 최소 설계 초안. | project, harness, workflow, agents, automation, wiki, codex, claude | draft |
+| [[projects/planning-lane-execution-draft]] | 기획, 디렉팅, PT 구조, 실행 계획을 다루는 Planning Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project, planning, workflow, harness, agents, presentation, direction | draft |
 | [[projects/repo-structure-refactor]] |  | project, repository, structure, refactor, wiki, raw, output | active |
 | [[projects/site-seo-foundation-and-content-rewrite]] |  | seo, blog, project, nextjs, publishing, search-console, content | active |
 | [[projects/study-system-design-interview]] |  | system-design, study, backend, distributed-systems, interview | active |
 | [[projects/wiki-category-design-decision]] |  | wiki, project, structure, category-design, syntheses, decision | active |
 | [[projects/wiki-rag-expansion-roadmap]] |  | project, wiki, rag, vector-db, roadmap | draft |
+| [[projects/workspace-folder-structure-review-sheet]] | workspace 최상위 폴더 구조 초안을 검토할 때 확인해야 할 문서 목록과 핵심 판단 포인트를 한 장으로 정리한 시트. | project, review, workspace, folder-structure, harness, operations | draft |
+| [[projects/workspace-security-boundary]] | 개인/회사 이중 도메인 운영 시 file system, git identity, credentials, harness context 4축 보안 경계를 고정하는 정책 문서. | project, security, workspace, operations, harness, company, personal | active |

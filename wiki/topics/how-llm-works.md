@@ -1,10 +1,13 @@
 ---
 title: "도서관과 교수님의 뇌 — LLM이 실제로 작동하는 방식"
 created: "2026-04-14"
-updated: "2026-04-14"
+updated: "2026-04-24"
 type: topic
-sources: ["[[sources/2026-04-14-how-claude-thinks]]"]
+sources: []
 tags: ["llm", "embedding", "rag", "vector-db", "ai-architecture", "knowledge-graph"]
+series: "도서관과 교수님의 뇌"
+seriesSlug: "professors-brain"
+seriesOrder: 1
 status: active
 published: true
 slug: "how-llm-works"

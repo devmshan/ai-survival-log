@@ -1,7 +1,7 @@
 ---
 title: "Cross-Repo AI 자동화 실습"
 created: "2026-04-16"
-updated: "2026-04-22"
+updated: "2026-04-23"
 type: project
 sources: []
 tags: [automation, workflow, project, developer, wiki]
@@ -35,6 +35,8 @@ description: ""
 
 - `2. Jira 이슈 구현 계획 초안 생성기`
 - `3. 배포 체크리스트 자동 수행 에이전트`
+- `4. Managed Agent Harness 역할 분리 시범 적용`
+- `5. Web Research / Assistant Lane 확장 설계`
 
 현재는 구현을 잠시 멈추고, PR summary 실습 결과를 다시 공부하는 단계다.
 다음 단계 착수 전에 각 항목의 입력 형식, 출력 형식, 검증 계획을 먼저 고정한다.
@@ -93,6 +95,35 @@ description: ""
 - 실패 리포트 형식
 
 을 함께 정의해야 한다.
+
+그다음 후보는 `4. Managed Agent Harness 역할 분리 시범 적용`이다.
+
+이 단계에서는:
+- intake / authoring / review / publish 역할 경계 정의
+- 단일 런타임 기반 역할 전환 방식 검토
+- validation gate를 workflow 순서에 연결
+- `raw -> wiki`, `wiki edit`, `wiki -> publish` 3개 흐름에 시범 적용
+
+관련 초안:
+- [[projects/managed-agent-harness-draft]]
+
+그다음 후보는 `5. Web Research / Assistant Lane 확장 설계`다.
+
+이 단계에서는:
+- 웹서핑 기반 자료수집 agent의 출처 규칙과 intake 연결
+- `ai-survival-log`와 `ai-survival-log-site`를 함께 다루는 역할 매핑
+- planning, authoring, engineering, publish를 lane 단위 workflow로 재정리
+- Gmail, Calendar, Sheets 연동은 read-first / suggest-first 원칙으로 별도 assistant lane 정의
+
+주의점:
+- 프로젝트마다 agent를 복제하기보다 공통 역할이 저장소별 surface를 다루게 유지
+- 외부 write 액션은 후속 단계로 미룸
+
+선행 분리안:
+- [[projects/immediate-agent-operating-structure]]
+- [[projects/dual-domain-agent-operating-model]]
+- [[projects/planning-lane-execution-draft]]
+- [[projects/assistant-ops-lane-execution-draft]]
 
 ## 관련 페이지
 

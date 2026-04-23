@@ -16,6 +16,7 @@
 | [[concepts/tacit-knowledge]] |  | concept | active |
 | [[entities/ai-frontier]] |  | entity | active |
 | [[entities/devsurvivallog]] |  | entity | active |
+| [[projects/executive-assistant-harness-business-idea]] | 개인용·업무용 agent를 통합 제어하는 하네스 경험을 바탕으로, 중견기업 경영진에게 제공할 전용 비서 agent 서비스 아이디어 초안. | project | draft |
 | [[sources/2026-04-10-why-ai-survival-log]] |  | source | active |
 | [[sources/2026-04-13-arxiv-2406-11160-context-graph]] |  | source | active |
 | [[sources/2026-04-13-context-graph-vs-knowledge-graph]] |  | source | active |

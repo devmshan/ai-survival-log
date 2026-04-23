@@ -3,7 +3,7 @@ title: "SAML 프로토콜"
 created: "2026-04-14"
 updated: "2026-04-14"
 type: concept
-sources: ["[[sources/2026-04-14-system-design-study-ch1-deep-dive]]"]
+sources: ["[[sources/2026-04-14-system-design-interview-v1]]"]
 tags: ["system-design", "auth", "sso", "session", "security"]
 status: active
 published: false
