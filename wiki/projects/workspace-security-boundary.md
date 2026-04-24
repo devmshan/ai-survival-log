@@ -39,6 +39,19 @@ description: "개인/회사 이중 도메인 운영 시 file system, git identit
 
 원칙: 도메인별로 다른 `user.email`을 사용한다.
 
+프로젝트 개시 전 필수:
+
+- `company-wiki`, `company-assistant-ops`는 실제 업무를 시작하기 전에 반드시 다음 3단계를 완료한다
+  1. `git init`
+  2. `~/.gitconfig` `includeIf` + `~/.gitconfig-company` 설정
+  3. `.git/hooks/pre-commit`에 `user.email` 검사와 secret scan 연결
+
+이 3단계가 끝나기 전에는:
+
+- 회사 데이터 authoring 시작 금지
+- 회사 저장소 commit 금지
+- 회사 assistant write workflow 시작 금지
+
 `~/.gitconfig`에 `includeIf` 패턴 적용:
 
 ```ini

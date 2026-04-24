@@ -74,6 +74,33 @@ title: "Wiki Log"
   - [[projects/dual-domain-agent-operating-model]] — 현재 진행 상태와 완료/다음/보류 항목 추가
 - **summary:** 오늘까지 완료된 설계/검수 작업을 계획 문서에 반영. 내일 우선순위는 `shared-agent-harness` 내부 구조 설계, 그 다음 `company-wiki` 내부 구조 설계로 정리.
 
+### edit: shared-agent-harness 내부 구조 설계 초안 작성
+- **source:** 사용자 요청 — `shared-agent-harness` 내부 구조 설계부터 진행
+- **created:**
+  - [[projects/shared-agent-harness-internal-structure]] — 공용 role/lane/skill/workflow 저장소의 루트 문서, roles/lanes/skills/commands/scripts/tests/examples 구조와 positive/negative list 정의
+- **updated:**
+  - [[projects/workspace-folder-structure-review-sheet]] — 현재 반영 항목으로 shared-agent-harness 내부 구조 문서 링크 추가
+  - [[projects/dual-domain-agent-operating-model]] — 다음 단계 반영 상태 링크 추가
+- **summary:** `shared-agent-harness`를 공용 role/lane/skill/workflow 저장소로 정의하고, 개인/회사 데이터 원본과 credential은 금지하는 내부 구조 초안을 고정. 다음 단계는 `company-wiki` 내부 구조 설계.
+
+### edit: 이중 agent 교차검증을 공용 품질 게이트로 반영
+- **source:** 사용자 요청 — 블로그 글 검수에 쓰던 2-agent cross-validation을 모든 검수와 구조 변경에도 적용
+- **updated:**
+  - [[projects/immediate-agent-operating-structure]] — Review and QA, Engineering workflow, 운영 원칙에 이중 검증 기본값 추가
+  - [[projects/shared-agent-harness-internal-structure]] — cross-validation policy, template, command, comparator 책임 추가
+  - [[projects/dual-domain-agent-operating-model]] — Review Lane 공통 규칙과 step 4 품질 게이트 반영
+  - `docs/operating/operations.md` — formal review gate의 2-agent cross-validation 권장 규칙 추가
+- **summary:** 블로그 글 교차검증 경험을 일반화해, 모든 공식 검수 게이트에서 `primary review + secondary review` 구조를 기본값으로 채택. 특히 Engineering Lane, 구조 변경, contract-sensitive 변경에 강제에 가까운 규칙으로 반영.
+
+### edit: 교차검증의 surface/path 다양성 규칙 추가
+- **source:** 사용자 요청 — 같은 모델 반복보다 서로 다른 surface 또는 review path를 써야 한다는 규칙 반영
+- **updated:**
+  - [[projects/shared-agent-harness-internal-structure]] — 같은 모델/같은 checklist 반복은 교차검증으로 보지 않는 규칙 추가
+  - [[projects/immediate-agent-operating-structure]] — 이중 검증 원칙에 서로 다른 surface/path 사용 조건 추가
+  - [[projects/dual-domain-agent-operating-model]] — Review Lane 공통 규칙 보강
+  - `docs/operating/operations.md` — formal review gate guidance 보강
+- **summary:** `2-agent cross-validation`을 형식적 반복 실행이 아니라, 가능하면 서로 다른 surface 또는 다른 review path를 통한 검수로 정의. 같은 모델과 같은 checklist 반복은 교차검증으로 인정하지 않도록 명시.
+
 ## 2026-04-22
 
 ### plan: Harness 세분화와 JSON 파생 상태 설계 초안
@@ -604,6 +631,288 @@ title: "Wiki Log"
   - [[topics/ai-era-survival]] — RLVR, Unbundling, Ralph Loop 섹션 추가
   - wiki/index.md — 9개 신규 페이지 반영, 총 19개 페이지
 - **summary:** ai-survival-log-site의 블로그 포스트 4편을 인제스트. 소스 요약 4개, 신규 엔티티 1개, 신규 개념 4개 생성. 총 9개 페이지 추가.
+
+## 2026-04-24
+
+### 23:55 — project: company-wiki 내부 구조 설계
+
+- **created:**
+  - [[projects/company-wiki-internal-structure]]
+- **updated:**
+  - [[projects/dual-domain-agent-operating-model]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `company-wiki`를 회사 도메인 authoring source로 고정하고, `meetings / projects / planning / reviews / testing` 중심의 내부 구조, page type, `company-assistant-ops` handoff 규칙, 2-agent cross-validation 적용 범위를 문서화.
+
+### 23:58 — project: company-assistant-ops 내부 구조 설계
+
+- **created:**
+  - [[projects/company-assistant-ops-internal-structure]]
+- **updated:**
+  - [[projects/assistant-ops-lane-execution-draft]]
+  - [[projects/dual-domain-agent-operating-model]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `company-assistant-ops`를 회사 도메인 외부 실행 surface로 고정하고, `actions / approvals / audit / adapters / state` 중심의 내부 구조, read/suggest/write 계층, approval/audit 원칙, `company-wiki` handoff 규칙을 문서화.
+
+### 23:59 — project: 회사 도메인 템플릿 세트 초안
+
+- **created:**
+  - [[projects/company-domain-template-set]]
+- **updated:**
+  - [[projects/company-wiki-internal-structure]]
+  - [[projects/company-assistant-ops-internal-structure]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `company-wiki`용 `meeting-note / cross-review-report / test-plan`과 `company-assistant-ops`용 `approval-record / execution-report / calendar-request` 등 핵심 템플릿 구조와 handoff 최소 필드를 한 문서로 고정.
+
+### 2026-04-24 23:59:30+09:00 — project: 회사 도메인 review/checklist 운영 규칙
+
+- **created:**
+  - [[projects/company-domain-review-checklist-operations]]
+- **updated:**
+  - [[projects/company-domain-template-set]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** 회사 도메인 공식 검수 게이트를 `문서성 변경 / 구조·정책 변경 / 실행·외부 시스템 변경`으로 나누고, primary/secondary review, checklist 묶음, severity(`warn/block/escalate`)와 anti-pattern을 운영 규칙으로 고정.
+
+### 2026-04-25 00:02:00+09:00 — project: 회사 Assistant dry-run / materialize / approval matrix
+
+- **created:**
+  - [[projects/company-assistant-dry-run-scenarios]]
+  - [[projects/company-domain-template-materialization-plan]]
+  - [[projects/company-assistant-approval-matrix]]
+- **updated:**
+  - [[projects/company-domain-review-checklist-operations]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** 회사 assistant workflow를 실제 실행 전 검증하기 위한 dry-run 시나리오 4개를 정의하고, 템플릿 materialize 순서와 Gmail/Calendar/Sheets 승인 레벨(Level 0~3) 세부안을 고정.
+
+### 2026-04-25 00:05:00+09:00 — project: bootstrap / migration 준비
+
+- **created:**
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/shared-agent-harness-migration-list]]
+- **updated:**
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** 실제 `company-wiki`, `company-assistant-ops`, `shared-agent-harness` 생성에 필요한 초기 파일 세트와 생성 순서를 bootstrap 계획으로 고정하고, `shared-agent-harness`로 옮길 공용 설계 문서 1차/2차 후보를 분리해 정리.
+
+### 2026-04-25 00:10:00+09:00 — bootstrap: 회사/공용 저장소 실제 생성
+
+- **created (workspace):**
+  - `~/workspace/claude/company-wiki`
+  - `~/workspace/claude/company-assistant-ops`
+  - `~/workspace/claude/shared-agent-harness`
+- **summary:** 세 저장소의 실제 폴더와 Phase 1 초기 파일 세트 생성 완료. 루트 문서, 핵심 템플릿, 공용 lane/role 문서까지 bootstrap했으며, `git init`, 회사 git identity 연결, credential/OAuth 연결은 의도적으로 보류.
+
+### 2026-04-25 00:18:00+09:00 — policy: 회사 프로젝트 개시 전 필수 게이트 고정
+
+- **updated:**
+  - [[projects/workspace-security-boundary]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `company-wiki`, `company-assistant-ops`는 실제 업무 시작 전 반드시 `git init -> includeIf 기반 회사 git identity -> pre-commit(user.email + secret scan)` 3단계를 완료해야 한다는 필수 게이트를 고정. 현재 상태는 `bootstrapped but not operational`.
+
+### 2026-04-25 00:15:00+09:00 — migration: shared-agent-harness 1차 시작
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/ARCHITECTURE.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/operations.md`
+  - `~/workspace/claude/shared-agent-harness/lanes/planning-lane.md`
+  - `~/workspace/claude/shared-agent-harness/roles/planning-agent.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness` placeholder 문서 중 `architecture / operations / planning-lane / planning-agent`를 공용 설계 요약으로 1차 이주 시작. source-of-truth는 여전히 현재 위키 문서에 남겨 두고, shared 저장소는 실행 가능한 공용 운영 레이어로 먼저 채우는 방식으로 진행.
+
+### 2026-04-25 00:22:00+09:00 — migration: shared-agent-harness review / engineering 확장
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/lanes/review-lane.md`
+  - `~/workspace/claude/shared-agent-harness/roles/review-agent.md`
+  - `~/workspace/claude/shared-agent-harness/lanes/engineering-lane.md`
+  - `~/workspace/claude/shared-agent-harness/roles/engineering-agent.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness` 1차 이주를 `review-lane / review-agent / engineering-lane / engineering-agent`까지 확장. 공식 검수 게이트, 교차검증 원칙, engineering 실행 경계가 shared 저장소 쪽에도 실제 파일로 반영됨.
+
+### 2026-04-25 00:26:00+09:00 — migration: shared-agent-harness research 확장
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/lanes/research-lane.md`
+  - `~/workspace/claude/shared-agent-harness/roles/research-agent.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness` 1차 이주를 `research-lane / research-agent`까지 확장. 웹서핑, 1차 출처 수집, 최신 정보 검증, planning/authoring handoff를 shared 정의로 옮기고 회사 도메인에서는 더 강한 source/security 제약을 둔다는 점을 명시.
+
+### 2026-04-25 00:31:00+09:00 — migration: shared-agent-harness cross-validation / templates / commands / skills 확장
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/docs/operating/cross-validation-policy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/templates/review-checklist.md`
+  - `~/workspace/claude/shared-agent-harness/docs/templates/cross-review-report.md`
+  - `~/workspace/claude/shared-agent-harness/docs/templates/assistant-action-report.md`
+  - `~/workspace/claude/shared-agent-harness/commands/planning/new-brief.md`
+  - `~/workspace/claude/shared-agent-harness/commands/review/run-cross-validation.md`
+  - `~/workspace/claude/shared-agent-harness/commands/engineering/execute-validated-task.md`
+  - `~/workspace/claude/shared-agent-harness/commands/research/collect-sources.md`
+  - `~/workspace/claude/shared-agent-harness/skills/planning/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/review/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/engineering/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/research/README.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness`의 공용 운영 레이어를 `cross-validation-policy`, review 템플릿, assistant action report 템플릿, planning/review/engineering/research command reference, skill reference 수준까지 확장. 이제 placeholder를 넘어 shared 운영 레퍼런스 저장소로 기능하기 시작함.
+
+### 2026-04-25 00:36:00+09:00 — migration: shared-agent-harness top-level / operating / ADR 보강
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/README.md`
+  - `~/workspace/claude/shared-agent-harness/AGENTS.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/domain-context-policy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/approval-matrix.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/validation-matrix.md`
+  - `~/workspace/claude/shared-agent-harness/docs/adr/0001-shared-harness-separates-rules-from-domain-data.md`
+  - `~/workspace/claude/shared-agent-harness/docs/adr/0002-cross-validation-prefers-surface-variance.md`
+  - `~/workspace/claude/shared-agent-harness/docs/adr/0003-domain-context-must-be-explicit.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness`의 상위 문서와 operating/ADR 레이어를 보강. 이제 shared 저장소가 역할/레이어 정의뿐 아니라 공용 경계 원칙, approval 개념, validation 기대치, ADR까지 갖춘 참조 저장소로 정리됨.
+
+### 2026-04-25 00:41:00+09:00 — migration: shared-agent-harness remaining shared principles 분리
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/docs/operating/adoption-strategy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/stop-conditions.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/workflow-gates.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - wiki/index.md
+- **summary:** `managed-agent-harness-draft`에 남아 있던 공용 원칙 중 `다중 persona, 단일 런타임으로 시작`, `강한 중단 조건`, `공용 workflow gate 흐름`을 shared 저장소 operating 문서로 분리. 이로써 1차 공용 원칙 이주는 사실상 닫힌 상태가 됨.
+
+### 2026-04-25 00:48:00+09:00 — review: shared-agent-harness 1차 설계 검토
+
+- **created:**
+  - [[projects/shared-harness-phase1-review-2026-04-25]]
+- **updated:**
+  - wiki/index.md
+- **summary:** `shared-agent-harness` 1차 이주와 company bootstrap 상태를 디렉터/기획자/엔지니어/검수자 관점으로 검토. 핵심 이슈는 `company-wiki`, `company-assistant-ops` 로컬 문서에 `not operational` 게이트가 빠진 점(`block`), 로컬 approval matrix 상세 부족(`warn`), shared command/skill이 아직 reference임이 충분히 표시되지 않은 점(`warn`).
+
+### 2026-04-25 01:02:00+09:00 — review: shared-agent-harness 합동 최종 검수 보강
+
+- **updated:**
+  - [[projects/shared-harness-phase1-review-2026-04-25]]
+  - wiki/index.md
+- **summary:** 기존 검토 문서를 `디렉터/기획자/엔지니어/검수자` 합동 회의 형식으로 보강. `usable with 1 blocking issue` 최종 판정, 단계별 회의 메모, 역할별 최종 의견, `shared-agent-harness usable / company repos bootstrapped but not operational` 상태 구분을 명시함.
+
+### 2026-04-25 01:10:00+09:00 — fix: company 로컬 저장소 운영 금지 게이트 반영
+
+- **updated (workspace):**
+  - `~/workspace/claude/company-wiki/README.md`
+  - `~/workspace/claude/company-wiki/AGENTS.md`
+  - `~/workspace/claude/company-assistant-ops/README.md`
+  - `~/workspace/claude/company-assistant-ops/AGENTS.md`
+- **updated (wiki):**
+  - [[projects/shared-harness-phase1-review-2026-04-25]]
+  - wiki/index.md
+- **summary:** 회사 로컬 저장소 문서에도 `bootstrapped but not operational` 게이트를 직접 반영. 이에 따라 합동 최종 검수 문서의 초기 `block` 이슈는 해소되었고, 남은 이슈는 로컬 approval matrix 상세화와 shared command/skill의 `reference-only` 표기 두 가지 `warn`으로 정리됨.
+
+### 2026-04-25 01:18:00+09:00 — fix: 남은 review warning 2건 수리
+
+- **updated (workspace):**
+  - `~/workspace/claude/company-assistant-ops/docs/operating/approval-matrix.md`
+  - `~/workspace/claude/shared-agent-harness/commands/planning/new-brief.md`
+  - `~/workspace/claude/shared-agent-harness/commands/review/run-cross-validation.md`
+  - `~/workspace/claude/shared-agent-harness/commands/engineering/execute-validated-task.md`
+  - `~/workspace/claude/shared-agent-harness/commands/research/collect-sources.md`
+  - `~/workspace/claude/shared-agent-harness/skills/planning/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/review/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/engineering/README.md`
+  - `~/workspace/claude/shared-agent-harness/skills/research/README.md`
+- **updated (wiki):**
+  - [[projects/shared-harness-phase1-review-2026-04-25]]
+  - wiki/index.md
+- **summary:** `company-assistant-ops` 로컬 approval matrix에 Gmail/Calendar/Sheets 액션별 레벨, block/escalate 조건을 추가하고, `shared-agent-harness` command/skill 문서에 `reference-only` 상태를 명시. 이에 따라 1차 합동 최종 검수의 남은 `warn` 2건도 수리되어 review를 닫을 수 있는 상태가 됨.
+
+### 2026-04-25 01:32:00+09:00 — phase: shared-agent-harness executable surface 1차 전환
+
+- **created (wiki):**
+  - [[projects/shared-agent-harness-executable-surface-phase1]]
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/README.md`
+  - `~/workspace/claude/shared-agent-harness/AGENTS.md`
+  - `~/workspace/claude/shared-agent-harness/ARCHITECTURE.md`
+  - `~/workspace/claude/shared-agent-harness/commands/planning/new-brief.md`
+  - `~/workspace/claude/shared-agent-harness/commands/review/run-cross-validation.md`
+  - `~/workspace/claude/shared-agent-harness/commands/research/collect-sources.md`
+  - `~/workspace/claude/shared-agent-harness/commands/engineering/execute-validated-task.md`
+  - `~/workspace/claude/shared-agent-harness/docs/templates/source-bundle.md`
+  - `~/workspace/claude/shared-agent-harness/docs/templates/execution-record.md`
+  - `~/workspace/claude/shared-agent-harness/scripts/harness.py`
+  - `~/workspace/claude/shared-agent-harness/tests/test_harness.py`
+  - `~/workspace/claude/shared-agent-harness/examples/smoke-planning-brief.md`
+  - `~/workspace/claude/shared-agent-harness/examples/smoke-cross-review.md`
+  - `~/workspace/claude/shared-agent-harness/examples/smoke-source-bundle.md`
+  - `~/workspace/claude/shared-agent-harness/examples/smoke-execution-record.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-internal-structure]]
+  - [[projects/shared-agent-harness-migration-list]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness`를 reference repository에서 최소 executable surface로 전환. 현재 실행 범위는 `scripts/harness.py`를 통한 planning brief, cross-review report, source bundle, execution record의 안전한 artifact 생성으로 제한되며, domain source-of-truth 수정과 외부 시스템 write는 여전히 열지 않음.
+
+### 2026-04-25 01:41:00+09:00 — gate: shared-agent-harness executable review gate 고정
+
+- **created (wiki):**
+  - [[projects/shared-agent-harness-executable-review-gate]]
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/docs/operating/executable-surface-gate.md`
+  - `~/workspace/claude/shared-agent-harness/examples/smoke-executable-gate-review.md`
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-executable-surface-phase1]]
+  - [[projects/shared-agent-harness-migration-list]]
+  - wiki/index.md
+- **summary:** `shared-agent-harness`의 executable surface 확장 전에 적용할 review gate를 shared repo와 upstream wiki 양쪽에 고정. 현재 허용 범위는 `safe artifact generation`으로 한정하고, domain write/credential/external action은 자동 `escalate` 대상으로 분류함.
+
+### 2026-04-25 01:49:00+09:00 — review: shared-agent-harness executable surface 코드 검토
+
+- **created (wiki):**
+  - [[projects/shared-harness-executable-surface-review-2026-04-25]]
+- **updated:**
+  - wiki/index.md
+- **summary:** executable surface 1차 전환 직후 `scripts/harness.py`와 테스트를 코드 기준으로 검토. 핵심 이슈는 `--output` 경로가 unrestricted라 shared harness가 여전히 domain repo를 직접 쓸 수 있다는 점(`block`), `--domain`이 기본값 `unspecified`인 점(`warn`), negative test 부재(`warn`)로 정리됨.
+
+### 2026-04-25 02:00:00+09:00 — fix: executable surface 경계 강제와 negative test 추가
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/scripts/harness.py`
+  - `~/workspace/claude/shared-agent-harness/tests/test_harness.py`
+  - `~/workspace/claude/shared-agent-harness/commands/planning/new-brief.md`
+  - `~/workspace/claude/shared-agent-harness/commands/review/run-cross-validation.md`
+  - `~/workspace/claude/shared-agent-harness/commands/research/collect-sources.md`
+  - `~/workspace/claude/shared-agent-harness/commands/engineering/execute-validated-task.md`
+- **updated (wiki):**
+  - [[projects/shared-harness-executable-surface-review-2026-04-25]]
+  - [[projects/shared-agent-harness-executable-surface-phase1]]
+  - wiki/index.md
+- **summary:** `scripts/harness.py`에 shared 내부 artifact 루트만 허용하는 output-path guard와 required domain validation을 추가하고, domain repo write 차단 / missing domain / invalid domain negative test를 보강. executable surface 1차 전환의 문서-구현 경계가 이제 기본적으로 일치하도록 정리됨.
 
 ### 15:00 — init: 위키 초기화
 

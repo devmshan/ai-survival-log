@@ -73,6 +73,9 @@ Before completion, review the changed scope for:
 - security mistakes
 - documentation inconsistency
 
+For formal review gates, prefer 2-agent cross-validation when the workflow supports it, especially for code, contract, structure, and security-sensitive changes.
+When possible, use different agent surfaces or different review paths rather than repeating the same model with the same checklist.
+
 ## Engineering Guardrails
 
 - check existing code, docs, and reusable tools before adding new implementation

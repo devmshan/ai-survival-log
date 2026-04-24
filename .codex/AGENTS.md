@@ -45,6 +45,7 @@ Use this default loop for non-trivial changes:
 
 - Check existing code, docs, and reusable libraries before introducing net-new implementation.
 - After changing code, review the changed scope for bugs, regressions, security issues, and contract drift before completion.
+- For formal review gates, use `2-agent cross-validation` when feasible; prefer different agent surfaces or different review paths over repeating the same model and checklist.
 - Use tests for code changes that can regress behavior. Prefer test-first for automation scripts, parsers, transformers, and publish/lint/sync logic.
 - Do not force TDD for wiki content, raw source intake, or metadata-only edits, but still run the relevant verification for the changed scope.
 - Preserve security basics: no hardcoded secrets, validate external input, and avoid error messages that leak sensitive data.

@@ -108,6 +108,7 @@ Do not introduce large agent catalogs, heavy MCP assumptions, or unnecessary mul
 
 - prefer test-first for regression-prone code paths such as `scripts/`, parsers, and publish logic
 - review generated state diffs when tracked `output/state/*.json` files change
+- use `2-agent cross-validation` for formal review gates when feasible, preferably with different agent surfaces or different review paths rather than repeating the same model and checklist
 
 `MAY`
 

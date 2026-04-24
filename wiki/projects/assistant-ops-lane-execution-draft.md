@@ -134,6 +134,10 @@ Assistant Ops Lane에서도 review가 필요하다.
 - meeting note -> action items 템플릿 정의
 - Sheets update preview 포맷 정의
 
+현재 반영:
+
+- [[projects/company-assistant-ops-internal-structure]]
+
 ## 관련 페이지
 
 - [[projects/dual-domain-agent-operating-model]]
