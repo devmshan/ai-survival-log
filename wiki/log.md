@@ -4,6 +4,77 @@ title: "Wiki Log"
 
 # Wiki Log
 
+## 2026-04-25
+
+### edit: ai-survival-log CLAUDE.md selective split
+- **updated:**
+  - `CLAUDE.md`
+  - [[projects/five-repo-harness-doc-structure-review-2026-04-25]]
+- **created:**
+  - `docs/reference/wiki-schema.md`
+  - `docs/reference/local-command-surface.md`
+- **summary:** `ai-survival-log/CLAUDE.md`에서 wiki schema와 local command surface를 분리해 reference 문서로 이동하고, `CLAUDE.md`는 adapter surface + 링크 허브로 축소. 5개 저장소 harness 문서 구조 리뷰의 마지막 경고도 수리.
+
+### review: 5개 저장소 harness 문서 구조
+- **created:** [[projects/five-repo-harness-doc-structure-review-2026-04-25]]
+- **summary:** `ai-survival-log`, `ai-survival-log-site`, `shared-agent-harness`, `company-wiki`, `company-assistant-ops`의 `AGENTS.md`, `CLAUDE.md`, 상위 운영 문서를 엔지니어 → 선임 엔지니어 → 검수자 순으로 검토. 결론은 전면 분리 대신 `ai-survival-log/CLAUDE.md`에만 선택적 분리 권고, 나머지 4개 저장소는 현재 구조 유지.
+
+### edit: detached workspace Phase 4 review warnings closed
+- **updated:**
+  - [[projects/detached-workspace-phase4-review-2026-04-25]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - [[projects/shared-agent-harness-internal-structure]]
+  - [[projects/company-wiki-internal-structure]]
+  - [[projects/company-assistant-ops-internal-structure]]
+- **summary:** `workspace-folder-structure-review-sheet`의 읽기 순서를 detached repo 우선으로 재정렬하고, 핵심 internal-structure 문서의 `Source Status`를 현재형으로 정리해 Phase 4 리뷰의 경고 2개를 수리. 최종 판정을 `Phase 4 approved`로 갱신.
+
+### review: detached workspace Phase 4
+- **created:** [[projects/detached-workspace-phase4-review-2026-04-25]]
+- **summary:** upstream 위키가 operational source가 아니라 history/rationale/meta planning 역할로 충분히 내려갔는지 planner/engineer/reviewer 합동 검토 후 director 판정까지 진행. `block` 없이 `warn` 2개 확인: `workspace-folder-structure-review-sheet`의 upstream-first 읽기 순서, 일부 internal-structure 문서의 과도기적 상태 표현. 최종 판정은 `Phase 4 conditionally approved`.
+
+### edit: detached workspace migration Phase 4 시작
+- **updated:**
+  - [[projects/dual-domain-agent-operating-model]]
+  - [[projects/workspace-folder-structure-review-sheet]]
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/shared-agent-harness-executable-surface-phase1]]
+  - [[projects/shared-agent-harness-executable-review-gate]]
+  - [[projects/workspace-security-boundary]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+- **summary:** upstream 위키의 핵심 구조/보안/이주/실행 문서에 `Source Status`를 추가해 detached repo를 현재 `operational source`로 우선 보도록 정리. `ai-survival-log/wiki/projects/`는 운영 설명서보다 history/rationale/meta planning 역할을 더 강하게 갖게 됨.
+
+### edit: detached company domain Phase 3 review warnings closed
+- **updated:**
+  - [[projects/detached-company-domain-phase3-review-2026-04-25]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+- **summary:** detached 회사 저장소 기준 리뷰에서 남았던 경고 2개를 수리. `company-assistant-ops`에 `failure-report` 템플릿을 추가하고, `company-wiki` 상위 문서에서 `docs/operating/*` 안내를 강화해 최종 판정을 `Phase 3 approved`로 갱신.
+
+### review: detached company domain Phase 3
+- **created:** [[projects/detached-company-domain-phase3-review-2026-04-25]]
+- **summary:** `company-wiki`와 `company-assistant-ops`만 기준으로 planner/engineer/reviewer 합동 검토 후 director 판정까지 진행. `block` 없이 `warn` 2개 확인: `failure-report` 템플릿 부재, `company-wiki` 상위 문서의 operating docs discoverability 부족. 최종 판정은 `Phase 3 conditionally approved`.
+
+### edit: detached workspace migration Phase 3 handoff/execution 정렬 보강
+- **updated:**
+  - [[projects/company-assistant-ops-internal-structure]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+- **summary:** `company-assistant-ops`의 `operations/audit/credential/handoff` 문서를 보강하고, `company-wiki` handoff policy와 meeting template, `company-assistant-ops` approval/execution template를 같은 필드 구조로 맞춤. 회사 저장소 두 개만 열어도 요청/응답/approval/audit 흐름을 더 직접 이해할 수 있게 정리.
+
+### edit: detached workspace migration Phase 3 시작
+- **updated:**
+  - [[projects/company-wiki-internal-structure]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+- **summary:** `company-wiki`에 `docs/operating/operations.md`, `source-boundary.md`, `review-policy.md`, `handoff-policy.md`를 추가하고, `company-wiki`와 `company-assistant-ops`의 `AGENTS.md`/`CLAUDE.md`를 detached operational source 기준으로 정렬. 회사 저장소만 열어도 authoring/execution 경계를 더 직접 이해할 수 있게 보강.
+
+### edit: detached workspace migration Phase 2 upstream source status 보강
+- **updated:**
+  - [[projects/managed-agent-harness-draft]]
+  - [[projects/immediate-agent-operating-structure]]
+  - [[projects/planning-lane-execution-draft]]
+  - [[projects/assistant-ops-lane-execution-draft]]
+- **summary:** upstream 초안 문서 4개에 `Source Status`를 추가하고, detached repo의 현재 `operational source` 문서로 우선 이동해야 한다는 경로를 명시. `ai-survival-log/wiki/projects/`는 설계 배경과 판단 순서를 보관하는 history source 역할을 더 강하게 표시.
+
 ## 2026-04-24
 
 ### ingest: 2026-04-23 저널 + EP 94 아티클 흡수
@@ -913,6 +984,86 @@ title: "Wiki Log"
   - [[projects/shared-agent-harness-executable-surface-phase1]]
   - wiki/index.md
 - **summary:** `scripts/harness.py`에 shared 내부 artifact 루트만 허용하는 output-path guard와 required domain validation을 추가하고, domain repo write 차단 / missing domain / invalid domain negative test를 보강. executable surface 1차 전환의 문서-구현 경계가 이제 기본적으로 일치하도록 정리됨.
+
+### 2026-04-25 02:18:00+09:00 — review/plan: detached workspace repo migration 재검토
+
+- **created (wiki):**
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-migration-list]]
+  - [[projects/company-domain-repo-bootstrap-plan]]
+  - wiki/index.md
+- **summary:** `company-wiki`, `company-assistant-ops`, `shared-agent-harness`만 다른 데스크탑으로 가져가도 운영 가능한 상태로 만들 수 있는지 디렉터/기획자/엔지니어/검수자 관점에서 재검토. 결론은 방향은 맞지만 `이전`보다 `운영 source 승격 + ai-survival-log의 히스토리 저장소화`가 정확하며, 실제 계획은 `source 등급 명시 -> shared 공용 원칙 승격 -> 회사 도메인 운영 원칙 승격 -> upstream 역할 축소`의 4단계로 정리됨.
+
+### 2026-04-25 02:29:00+09:00 — phase: source 등급 명시 시작
+
+- **updated (wiki):**
+  - [[projects/shared-agent-harness-internal-structure]]
+  - [[projects/company-wiki-internal-structure]]
+  - [[projects/company-assistant-ops-internal-structure]]
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+  - wiki/index.md
+- **summary:** `Phase 1` 시작. upstream 핵심 설계 문서들에 `Source Status`를 추가해, `shared-agent-harness`, `company-wiki`, `company-assistant-ops` 쪽으로 운영 source를 승격하고 현재 위키 문서는 `history retained here` 역할을 한다는 점을 명시함.
+
+### 2026-04-25 02:35:00+09:00 — phase: generated repo README에 source status 반영
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/README.md`
+  - `~/workspace/claude/company-wiki/README.md`
+  - `~/workspace/claude/company-assistant-ops/README.md`
+- **updated (wiki):**
+  - wiki/index.md
+- **summary:** 다른 데스크탑에서 세 저장소만 열어도 역할을 이해할 수 있도록 각 README 첫 화면에 `operational source`와 `history retained in ai-survival-log` 상태를 명시. 단, `company-wiki`와 `company-assistant-ops`는 여전히 `bootstrapped but not operational` 게이트를 함께 유지함.
+
+### 2026-04-25 02:42:00+09:00 — phase: architecture와 operating 문서까지 source status 확장
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/ARCHITECTURE.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/operations.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/domain-context-policy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/executable-surface-gate.md`
+  - `~/workspace/claude/company-wiki/ARCHITECTURE.md`
+  - `~/workspace/claude/company-assistant-ops/ARCHITECTURE.md`
+  - `~/workspace/claude/company-assistant-ops/docs/operating/operations.md`
+  - `~/workspace/claude/company-assistant-ops/docs/operating/approval-matrix.md`
+- **updated (wiki):**
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+  - wiki/index.md
+- **summary:** `Phase 1`을 README 수준에서 끝내지 않고 architecture와 핵심 operating 문서까지 확장. 이제 세 저장소의 첫 진입 문서와 주요 운영 문서에서 모두 `operational source`와 `history retained in ai-survival-log` 상태를 확인할 수 있게 됨.
+
+### 2026-04-25 02:53:00+09:00 — phase: shared-agent-harness 공용 원칙 승격 시작
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/README.md`
+  - `~/workspace/claude/shared-agent-harness/ARCHITECTURE.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/operations.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/cross-validation-policy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/adoption-strategy.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/stop-conditions.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/workflow-gates.md`
+  - `~/workspace/claude/shared-agent-harness/docs/operating/source-of-truth-map.md`
+- **updated (wiki):**
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+  - [[projects/shared-agent-harness-migration-list]]
+  - wiki/index.md
+- **summary:** `Phase 2` 시작. shared 저장소의 핵심 공용 운영 문서에서 `bootstrap source` 표현을 `history source`로 바꾸고, `docs/operating/source-of-truth-map.md`를 추가해 detached workspace 기준의 현재 운영 소유권을 명시함. 방향은 `ai-survival-log`를 비우는 것이 아니라 `shared-agent-harness`를 현재 공용 운영 source로 승격하고 upstream은 히스토리/배경 저장소로 후퇴시키는 쪽으로 고정됨.
+
+### 2026-04-25 03:01:00+09:00 — phase: shared lane/role 문서까지 detached operational source 승격
+
+- **updated (workspace):**
+  - `~/workspace/claude/shared-agent-harness/lanes/planning-lane.md`
+  - `~/workspace/claude/shared-agent-harness/lanes/research-lane.md`
+  - `~/workspace/claude/shared-agent-harness/lanes/engineering-lane.md`
+  - `~/workspace/claude/shared-agent-harness/lanes/review-lane.md`
+  - `~/workspace/claude/shared-agent-harness/roles/planning-agent.md`
+  - `~/workspace/claude/shared-agent-harness/roles/research-agent.md`
+  - `~/workspace/claude/shared-agent-harness/roles/engineering-agent.md`
+  - `~/workspace/claude/shared-agent-harness/roles/review-agent.md`
+- **updated (wiki):**
+  - [[projects/detached-workspace-repo-migration-review-and-plan]]
+  - [[projects/shared-agent-harness-migration-list]]
+  - wiki/index.md
+- **summary:** `Phase 2`를 README/architecture/operating에서 멈추지 않고 shared `lanes/*`, `roles/*`까지 확장. 각 lane/role 문서에 `Source Status`를 추가하고, 기존 `Reference Source`를 `History Source`로 바꿔 detached repo 기준 현재 공용 운영 판단을 이 저장소 문서만으로 할 수 있게 정리함.
 
 ### 15:00 — init: 위키 초기화
 

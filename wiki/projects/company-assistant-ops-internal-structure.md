@@ -15,6 +15,12 @@ description: "회사 Gmail, Calendar, Sheets와 follow-up 실행을 다루는 co
 
 이 문서는 `~/workspace/claude/company-assistant-ops`의 내부 구조를 정의한다.
 
+## Source Status
+
+- 현재 `company-assistant-ops` 저장소의 `README.md`, `AGENTS.md`, `ARCHITECTURE.md`, `docs/operating/*`, `docs/templates/*`가 회사 execution/approval/audit 규칙의 detached `operational source`다.
+- 이 문서는 설계 배경과 초기 구조 판단을 남기는 `history retained here` 문서다.
+- 즉 실제 assistant execution 규칙은 장기적으로 `company-assistant-ops` 저장소 안에서 확인 가능해야 하고, 여기서는 왜 그렇게 분리했는지를 추적한다.
+
 핵심 전제:
 
 - `company-assistant-ops`는 회사 도메인의 `execution surface`다

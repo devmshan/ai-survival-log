@@ -13,6 +13,12 @@ description: "기획, 디렉팅, PT 구조, 실행 계획을 다루는 Planning 
 
 # Planning Lane 실행안 초안
 
+## Source Status
+
+- 이 문서는 `Planning Lane` 설계 이유와 초기 분리 기준을 보관하는 `history retained here` 문서다.
+- 현재 `Planning Lane`의 detached `operational source`는 `shared-agent-harness/lanes/planning-lane.md`를 우선 기준으로 본다.
+- `Planning Agent`의 detached `operational source`는 `shared-agent-harness/roles/planning-agent.md`를 우선 기준으로 본다.
+
 `Planning Lane`은 기획, 디렉팅, PT 구조, 우선순위 정리, 실행 계획 수립을 담당한다. 초기에는 독립 `Planning Agent`를 두지 않고 기존 역할 안에서 운영하되, 일정 기준을 넘으면 별도 agent로 분리한다.
 
 ## 목적

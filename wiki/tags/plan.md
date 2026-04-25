@@ -1,6 +1,5 @@
-# Tag: repo
+# Tag: plan
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
-| [[projects/company-domain-repo-bootstrap-plan]] | company-wiki, company-assistant-ops, shared-agent-harness를 실제 생성할 때 어떤 초기 파일 세트와 폴더 구조를 만들지 정리한 bootstrap 계획. | project | active |
 | [[projects/detached-workspace-repo-migration-review-and-plan]] | ai-survival-log 바깥의 company-wiki, company-assistant-ops, shared-agent-harness만으로도 운영 가능한 구조로 옮길 수 있는지 역할별로 재검토하고 실제 이전 계획을 정리한 문서. | project | active |

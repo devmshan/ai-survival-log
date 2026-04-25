@@ -15,6 +15,12 @@ description: "회사 도메인 authoring source로 사용할 company-wiki 저장
 
 이 문서는 `~/workspace/claude/company-wiki`의 내부 구조를 정의한다.
 
+## Source Status
+
+- 현재 `company-wiki` 저장소의 `README.md`, `AGENTS.md`, `ARCHITECTURE.md`, `docs/operating/*`, `templates/*`가 회사 authoring 규칙의 detached `operational source`다.
+- 이 문서는 설계 배경과 초기 구조 판단을 남기는 `history retained here` 문서다.
+- 즉 실제 회사 도메인 authoring 규칙은 장기적으로 `company-wiki` 저장소 안에서 닫히게 만들고, 여기서는 그 판단의 배경을 유지한다.
+
 핵심 전제:
 
 - `company-wiki`는 회사 도메인의 `authoring source`다

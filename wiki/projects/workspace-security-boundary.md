@@ -13,6 +13,15 @@ description: "개인/회사 이중 도메인 운영 시 file system, git identit
 
 # Workspace 보안 경계 정책
 
+## Source Status
+
+- 이 문서는 detached workspace 분리 시점의 보안 경계 원칙과 필수 게이트를 남기는 `history retained here` 문서다.
+- 현재 detached `operational source`는 역할별로 나뉜다.
+  - 공용 경계/실행 규칙: `shared-agent-harness`
+  - 회사 authoring gate: `company-wiki`
+  - 회사 execution gate: `company-assistant-ops`
+- 따라서 이 문서는 보안 정책의 원문 rationale과 초기 강제 조건을 추적하는 문서로 읽고, 실제 운영 시에는 detached repo 내부 문서를 먼저 본다.
+
 이 문서는 `~/workspace/claude/` 이하 개인/회사 이중 도메인 운영 시 4축 보안 경계를 고정한다.
 
 핵심 원칙: **폴더 분리만으로 도메인 격리가 완성되지 않는다.** File system, Identity, Credentials, Harness context 4축이 모두 분리되어야 한다.

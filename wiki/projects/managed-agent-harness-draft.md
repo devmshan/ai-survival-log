@@ -13,6 +13,19 @@ description: "ai-survival-log와 ai-survival-log-site의 단일 에이전트 협
 
 # Managed Agent Harness 초안
 
+## Source Status
+
+- 이 문서는 `managed agent harness` 설계의 배경, 판단 순서, 초기 범위 설정을 보관하는 `history retained here` 문서다.
+- 현재 공용 운영 원칙의 detached `operational source`는 `shared-agent-harness` 저장소 문서를 우선 기준으로 본다.
+- 특히 다음 문서를 우선 참조한다.
+  - `shared-agent-harness/README.md`
+  - `shared-agent-harness/ARCHITECTURE.md`
+  - `shared-agent-harness/docs/operating/source-of-truth-map.md`
+  - `shared-agent-harness/docs/operating/operations.md`
+  - `shared-agent-harness/docs/operating/workflow-gates.md`
+  - `shared-agent-harness/docs/operating/adoption-strategy.md`
+  - `shared-agent-harness/docs/operating/stop-conditions.md`
+
 실제 즉시 운영 구조는 다음 문서를 우선 기준으로 본다.
 
 - [[projects/immediate-agent-operating-structure]]

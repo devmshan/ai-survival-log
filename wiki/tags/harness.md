@@ -5,8 +5,11 @@
 | [[concepts/agentic-workflow]] |  | concept | active |
 | [[projects/assistant-ops-lane-execution-draft]] | 일정관리, 할 일 보고, 회의 follow-up을 다루는 Assistant Ops Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project | draft |
 | [[projects/company-domain-repo-bootstrap-plan]] | company-wiki, company-assistant-ops, shared-agent-harness를 실제 생성할 때 어떤 초기 파일 세트와 폴더 구조를 만들지 정리한 bootstrap 계획. | project | active |
+| [[projects/detached-company-domain-phase3-review-2026-04-25]] | company-wiki와 company-assistant-ops만 기준으로 회사 도메인 운영 설명력이 충분한지 검토한 Phase 3 합동 리뷰 문서. | project | active |
+| [[projects/detached-workspace-repo-migration-review-and-plan]] | ai-survival-log 바깥의 company-wiki, company-assistant-ops, shared-agent-harness만으로도 운영 가능한 구조로 옮길 수 있는지 역할별로 재검토하고 실제 이전 계획을 정리한 문서. | project | active |
 | [[projects/dual-domain-agent-operating-model]] | 개인 일상업무와 회사업무를 분리하되, 공용 lane/agent와 도메인 전용 data/surface를 구분해 운영하는 구조 초안. | project | active |
 | [[projects/executive-assistant-harness-business-idea]] | 개인용·업무용 agent를 통합 제어하는 하네스 경험을 바탕으로, 중견기업 경영진에게 제공할 전용 비서 agent 서비스 아이디어 초안. | project | draft |
+| [[projects/five-repo-harness-doc-structure-review-2026-04-25]] | 5개 저장소의 AGENTS.md, CLAUDE.md, 상위 운영 문서가 과밀한지와 분리 필요성을 엔지니어, 선임 엔지니어, 검수자 관점에서 검토한 문서. | project | active |
 | [[projects/harness-layering-and-json-derived-state]] | ai-survival-log와 ai-survival-log-site의 Harness를 세분화하고, Markdown source-of-truth를 유지하면서 JSON 파생 상태를 어디에 둘지 정리한 설계 초안. | project | active |
 | [[projects/immediate-agent-operating-structure]] | 지금부터 바로 운영할 수 있도록 공용 lane/agent와 도메인 전용 surface를 기준으로 정리한 즉시 운영 구조. | project | active |
 | [[projects/managed-agent-harness-draft]] | ai-survival-log와 ai-survival-log-site의 단일 에이전트 협업 흐름을 역할 기반 managed agent harness로 확장할 때의 최소 설계 초안. | project | draft |

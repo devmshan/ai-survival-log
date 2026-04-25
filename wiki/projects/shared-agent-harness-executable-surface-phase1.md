@@ -13,6 +13,12 @@ description: "shared-agent-harness를 reference repository에서 최소 executab
 
 # shared-agent-harness executable surface 1차 전환
 
+## Source Status
+
+- 이 문서는 `shared-agent-harness` executable surface 1차 전환의 배경과 범위 판단을 남기는 `history retained here` 문서다.
+- 현재 executable behavior의 detached `operational source`는 `shared-agent-harness/scripts/harness.py`와 `shared-agent-harness` 내부 command/operating 문서를 우선 기준으로 본다.
+- 따라서 이 문서는 실행 범위가 왜 여기서 멈췄는지를 설명하는 migration note로 읽는다.
+
 이 문서는 `shared-agent-harness`를 reference repository에서 `최소 executable surface`로 올린 1차 전환 범위를 정리한다.
 
 핵심 판단:

@@ -13,6 +13,16 @@ description: "일정관리, 할 일 보고, 회의 follow-up을 다루는 Assist
 
 # Assistant Ops Lane 실행안 초안
 
+## Source Status
+
+- 이 문서는 `Assistant Ops Lane`의 초기 설계 이유와 단계별 도입 판단을 보관하는 `history retained here` 문서다.
+- 현재 회사 도메인 execution/approval/audit의 detached `operational source`는 `company-assistant-ops` 저장소 문서를 우선 기준으로 본다.
+- 특히 다음 문서를 우선 참조한다.
+  - `company-assistant-ops/README.md`
+  - `company-assistant-ops/ARCHITECTURE.md`
+  - `company-assistant-ops/docs/operating/operations.md`
+  - `company-assistant-ops/docs/operating/approval-matrix.md`
+
 `Assistant Ops Lane`은 Gmail, Google Calendar, Google Sheets, 회의 메모 같은 외부 운영 시스템을 다루는 lane이다. 현재 계획에서는 회사 도메인 전용 lane으로 본다. 이 lane은 저장소 작업과 권한 경계가 다르므로, planning이나 authoring보다 더 보수적으로 분리한다.
 
 ## 목적

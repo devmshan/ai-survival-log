@@ -13,6 +13,12 @@ description: "shared-agent-harness 저장소 생성 후 ai-survival-log/wiki/pro
 
 # shared-agent-harness 이주 대상 문서 목록
 
+## Source Status
+
+- 이 문서는 `shared-agent-harness` 승격 과정의 이주 메모와 진행 추적을 남기는 `history retained here` 문서다.
+- 현재 공용 detached `operational source`는 `shared-agent-harness` 저장소 자체를 우선 기준으로 본다.
+- 따라서 이 문서는 “무엇을 왜 옮겼는가”를 추적하는 migration ledger로 읽고, 현재 운영 규칙은 detached repo 문서를 기준으로 판단한다.
+
 이 문서는 `shared-agent-harness` 저장소 생성 후 현재 `ai-survival-log/wiki/projects/`에서 옮길 설계 문서 후보를 정리한다.
 
 핵심 원칙:
@@ -74,9 +80,9 @@ description: "shared-agent-harness 저장소 생성 후 ai-survival-log/wiki/pro
 
 메모:
 
-- 현재는 `placeholder -> shared summary` 수준의 1차 이주 시작 단계다
-- source-of-truth는 아직 이 위키 문서들에 남아 있다
-- 다만 `shared-agent-harness`는 이제 `safe artifact generation` 범위의 최소 executable surface를 가진다
+- 현재는 `placeholder -> shared summary` 단계를 넘어, 공용 운영 원칙의 detached operational source 승격 단계까지 반영됐다
+- `shared-agent-harness`는 이제 `safe artifact generation` 범위의 최소 executable surface를 가진다
+- 현재 공용 운영 판단은 `shared-agent-harness`의 `README`, `ARCHITECTURE`, 핵심 `docs/operating/*`, `lanes/*`, `roles/*`를 우선 기준으로 본다
 
 ## 2차 분리 검토 후보
 
@@ -128,6 +134,8 @@ description: "shared-agent-harness 저장소 생성 후 ai-survival-log/wiki/pro
 진행 상태 메모:
 
 - `1. executable surface review gate 문서화`는 완료
+- `Phase 2` shared 공용 원칙 승격은 진행 중
+- `README`, `ARCHITECTURE`, 핵심 `docs/operating/*`, `lanes/*`, `roles/*`는 detached operational source 승격 방향으로 반영 중
 
 ## 관련 페이지
 
@@ -135,5 +143,6 @@ description: "shared-agent-harness 저장소 생성 후 ai-survival-log/wiki/pro
 - [[projects/shared-agent-harness-internal-structure]]
 - [[projects/shared-agent-harness-executable-surface-phase1]]
 - [[projects/shared-agent-harness-executable-review-gate]]
+- [[projects/detached-workspace-repo-migration-review-and-plan]]
 - [[projects/dual-domain-agent-operating-model]]
 - [[projects/shared-harness-phase1-review-2026-04-25]]

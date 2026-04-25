@@ -10,6 +10,8 @@
 | [[projects/company-domain-template-materialization-plan]] | company-wiki와 company-assistant-ops 저장소를 실제 생성할 때 어떤 템플릿을 어떤 순서로 파일로 materialize할지 정리한 계획 문서. | project | active |
 | [[projects/company-domain-template-set]] | company-wiki와 company-assistant-ops에서 바로 사용할 수 있도록 회의록, 검수, 테스트, 승인, 실행 보고 템플릿의 필드와 구조를 정의한 초안. | project | active |
 | [[projects/company-wiki-internal-structure]] | 회사 도메인 authoring source로 사용할 company-wiki 저장소의 내부 구조, page type, lane handoff, 검수 규칙을 정의한 문서. | project | active |
+| [[projects/detached-company-domain-phase3-review-2026-04-25]] | company-wiki와 company-assistant-ops만 기준으로 회사 도메인 운영 설명력이 충분한지 검토한 Phase 3 합동 리뷰 문서. | project | active |
+| [[projects/detached-workspace-repo-migration-review-and-plan]] | ai-survival-log 바깥의 company-wiki, company-assistant-ops, shared-agent-harness만으로도 운영 가능한 구조로 옮길 수 있는지 역할별로 재검토하고 실제 이전 계획을 정리한 문서. | project | active |
 | [[projects/dual-domain-agent-operating-model]] | 개인 일상업무와 회사업무를 분리하되, 공용 lane/agent와 도메인 전용 data/surface를 구분해 운영하는 구조 초안. | project | active |
 | [[projects/shared-harness-phase1-review-2026-04-25]] | shared-agent-harness 1차 설계와 company 도메인 bootstrap 상태를 디렉터, 기획자, 엔지니어, 검수자 합동 회의 형태로 최종 검수한 기록. | project | active |
 | [[projects/workspace-security-boundary]] | 개인/회사 이중 도메인 운영 시 file system, git identity, credentials, harness context 4축 보안 경계를 고정하는 정책 문서. | project | active |

@@ -13,6 +13,15 @@ description: "개인 일상업무와 회사업무를 분리하되, 공용 lane/a
 
 # 개인/회사 이중 도메인 Agent 운영 모델
 
+## Source Status
+
+- 이 문서는 개인/회사 이중 도메인 분리 원칙의 배경과 판단 순서를 보관하는 `history retained here` 문서다.
+- 현재 detached `operational source`는 역할별로 나뉜다.
+  - 공용 role/lane/rule: `shared-agent-harness`
+  - 회사 authoring rule: `company-wiki`
+  - 회사 execution/approval/audit rule: `company-assistant-ops`
+- 즉 이 문서는 구조가 왜 이렇게 나왔는지 설명하는 메타 계획 문서로 읽고, 실제 운영 규칙은 각 detached 저장소 문서를 우선 기준으로 본다.
+
 이 문서는 업무를 `개인 일상업무`와 `회사업무` 두 도메인으로 분리하고, 어떤 프로젝트와 agent가 공용인지 전용인지 고정한다.
 
 핵심 전제:

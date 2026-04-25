@@ -15,6 +15,12 @@ description: "개인/회사 도메인에서 공용으로 재사용할 role, lane
 
 이 문서는 `~/workspace/claude/shared-agent-harness`의 내부 구조를 정의한다.
 
+## Source Status
+
+- 현재 `shared-agent-harness` 저장소의 `README.md`, `AGENTS.md`, `ARCHITECTURE.md`, `docs/operating/*`, `lanes/*`, `roles/*`가 공용 운영 원칙의 detached `operational source`다.
+- 이 문서는 설계 배경, 초기 판단, 이주 맥락을 보관하는 `history retained here` 문서다.
+- 즉 앞으로 실제 운영 규칙 확인은 가능하면 `shared-agent-harness` 저장소 문서를 우선하고, 이 문서는 왜 그런 구조가 되었는지 추적하는 데 쓴다.
+
 핵심 전제:
 
 - 이 저장소는 `공용 role/lane/skill/workflow`를 담는다

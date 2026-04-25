@@ -4,6 +4,7 @@
 |--------|------|------|------|
 | [[concepts/engineering-guardrails]] |  | concept | active |
 | [[projects/dual-domain-agent-operating-model]] | 개인 일상업무와 회사업무를 분리하되, 공용 lane/agent와 도메인 전용 data/surface를 구분해 운영하는 구조 초안. | project | active |
+| [[projects/five-repo-harness-doc-structure-review-2026-04-25]] | 5개 저장소의 AGENTS.md, CLAUDE.md, 상위 운영 문서가 과밀한지와 분리 필요성을 엔지니어, 선임 엔지니어, 검수자 관점에서 검토한 문서. | project | active |
 | [[projects/immediate-agent-operating-structure]] | 지금부터 바로 운영할 수 있도록 공용 lane/agent와 도메인 전용 surface를 기준으로 정리한 즉시 운영 구조. | project | active |
 | [[projects/managed-agent-harness-draft]] | ai-survival-log와 ai-survival-log-site의 단일 에이전트 협업 흐름을 역할 기반 managed agent harness로 확장할 때의 최소 설계 초안. | project | draft |
 | [[projects/planning-lane-execution-draft]] | 기획, 디렉팅, PT 구조, 실행 계획을 다루는 Planning Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project | draft |
