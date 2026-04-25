@@ -129,7 +129,7 @@ updated: "2026-04-25"
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
-| [[topics/agent-harness-notes-01-dual-domain]] | Scaling Managed Agents를 공부하다가 agent 수가 아니라 brain과 hand, 개인과 회사 도메인을 먼저 분리해야 한다는 결론에 도달한 설계 기록. role/lane is shared, data/surface is isolated가 나온 맥락. | agent-harness, managed-agents, dual-domain, workspace-structure, security-boundary, claude, operations | active |
+| [[topics/agent-harness-notes-01-dual-domain]] | Scaling Managed Agents를 공부하다가 agent 수보다 경계와 계약이 먼저라는 결론에 도달한 설계 기록. 개인/회사 이중 도메인 분리와 shared-agent-harness가 나온 맥락을 정리한다. | agent-harness, managed-agents, dual-domain, workspace-structure, security-boundary, claude, operations | active |
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/claude-code-to-codex]] | Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정. | claude-code, codex, agentic-workflow, harness, workflow, llm-ops | active |
