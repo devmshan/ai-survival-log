@@ -2,6 +2,7 @@
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
+| [[projects/agent-harness-notes-series-handoff]] | Agent Harness Notes 01/02의 현재 상태와 다음 작업을 한 곳에서 이어받기 위한 작업 인계 문서. | project | active |
 | [[projects/company-domain-review-checklist-operations]] | company-wiki와 company-assistant-ops에서 공식 검수 게이트를 어떻게 운영할지, primary/secondary review, checklist, severity 규칙을 정의한 문서. | project | active |
 | [[projects/company-wiki-internal-structure]] | 회사 도메인 authoring source로 사용할 company-wiki 저장소의 내부 구조, page type, lane handoff, 검수 규칙을 정의한 문서. | project | active |
 | [[projects/detached-company-domain-phase3-review-2026-04-25]] | company-wiki와 company-assistant-ops만 기준으로 회사 도메인 운영 설명력이 충분한지 검토한 Phase 3 합동 리뷰 문서. | project | active |
@@ -14,3 +15,4 @@
 | [[projects/workspace-folder-structure-review-sheet]] | workspace 최상위 폴더 구조 초안을 검토할 때 확인해야 할 문서 목록과 핵심 판단 포인트를 한 장으로 정리한 시트. | project | draft |
 | [[projects/workspace-security-boundary]] | 개인/회사 이중 도메인 운영 시 file system, git identity, credentials, harness context 4축 보안 경계를 고정하는 정책 문서. | project | active |
 | [[topics/agent-harness-notes-01-dual-domain]] | Scaling Managed Agents를 공부하다가 agent 수보다 경계와 계약이 먼저라는 결론에 도달한 설계 기록. 개인/회사 이중 도메인 분리와 shared-agent-harness가 나온 맥락을 정리한다. | topic | active |
+| [[topics/agent-harness-notes-02-detached-workspace]] | 개인 도메인과 회사 도메인을 실제로 분리하면서 왜 5개 저장소 구조(ai-survival-log, ai-survival-log-site, company-wiki, company-assistant-ops, shared-agent-harness)로 갔는지, 폴더 분리 이후 operational source와 history source를 나눠 참조 방향을 고정한 과정을 정리한다. | topic | active |

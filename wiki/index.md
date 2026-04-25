@@ -5,7 +5,7 @@ updated: "2026-04-25"
 
 # Wiki Index
 
-> 마지막 업데이트: 2026-04-25 | 총 161개 페이지
+> 마지막 업데이트: 2026-04-25 | 총 163개 페이지
 
 ## Entities
 
@@ -130,6 +130,7 @@ updated: "2026-04-25"
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
 | [[topics/agent-harness-notes-01-dual-domain]] | Scaling Managed Agents를 공부하다가 agent 수보다 경계와 계약이 먼저라는 결론에 도달한 설계 기록. 개인/회사 이중 도메인 분리와 shared-agent-harness가 나온 맥락을 정리한다. | agent-harness, managed-agents, dual-domain, workspace-structure, security-boundary, claude, operations | active |
+| [[topics/agent-harness-notes-02-detached-workspace]] | 개인 도메인과 회사 도메인을 실제로 분리하면서 왜 5개 저장소 구조(ai-survival-log, ai-survival-log-site, company-wiki, company-assistant-ops, shared-agent-harness)로 갔는지, 폴더 분리 이후 operational source와 history source를 나눠 참조 방향을 고정한 과정을 정리한다. | agent-harness, shared-agent-harness, detached-workspace, company-wiki, company-assistant-ops, operations, workspace-structure | active |
 | [[topics/ai-era-survival]] | AI 시대를 살아남기 위한 개발자의 전략과 실전 기록 | ai, survival, developer, career | active |
 | [[topics/ai-webtoon-creation]] |  | ai-webtoon, instagram, character-design, devsurvivallog, midjourney, workflow | active |
 | [[topics/claude-code-to-codex]] | Claude Code만으로 굴리던 프로젝트에 Codex를 넣으면서, 도구 비교가 아니라 운영 모델 자체를 다시 설계하게 된 과정. | claude-code, codex, agentic-workflow, harness, workflow, llm-ops | active |
@@ -155,6 +156,7 @@ updated: "2026-04-25"
 
 | 페이지 | 설명 | 태그 | 상태 |
 |--------|------|------|------|
+| [[projects/agent-harness-notes-series-handoff]] | Agent Harness Notes 01/02의 현재 상태와 다음 작업을 한 곳에서 이어받기 위한 작업 인계 문서. | project, agent-harness, writing, series, handoff, continuation, operations | active |
 | [[projects/assistant-ops-lane-execution-draft]] | 일정관리, 할 일 보고, 회의 follow-up을 다루는 Assistant Ops Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project, assistant, workflow, ops, calendar, gmail, sheets, harness | draft |
 | [[projects/blog-ai-study-site]] |  | blog, nextjs, project | active |
 | [[projects/blog-post-coding-with-gunseung]] | AI가 내 인스타 포스트 10개를 분석하고 캐릭터 페르소나를 뽑아냈다. 나를 해체하는 첫 번째 시도. | devsurvivallog, blog, minsung, gunseung, ai-webtoon, character-design, context-graph, draft | draft |

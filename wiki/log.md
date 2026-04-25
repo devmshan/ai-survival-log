@@ -6,6 +6,13 @@ title: "Wiki Log"
 
 ## 2026-04-25
 
+### edit: agent-harness-notes-02 polish + handoff 갱신
+- **updated:**
+  - [[topics/agent-harness-notes-02-detached-workspace]]
+  - `output/blog/2026-04-25-agent-harness-notes-02-detached-workspace.mdx`
+  - [[projects/agent-harness-notes-series-handoff]]
+- **summary:** 02편 frontmatter description 압축, 섹션 3 anchor 톤 다운, 섹션 5 중첩 bullet 단순화, 섹션 6 review gate 도입 전환 매끄럽게, 마지막 섹션 01편 중복 리스트 한 문장으로 압축, 03 예고 단락을 Bounded Context 방향으로 교체. handoff 문서에 03 방향 확정 기록.
+
 ### edit: ai-survival-log CLAUDE.md selective split
 - **updated:**
   - `CLAUDE.md`

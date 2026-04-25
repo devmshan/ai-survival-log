@@ -167,6 +167,7 @@ workspace를 실제로 나누면서 또 하나의 착각이 깨졌다.
 
 ## 관련 페이지
 
+- [[topics/agent-harness-notes-02-detached-workspace]] — 왜 shared-agent-harness를 떼고, 5개 프로젝트 구조로 갔는가
 - [[projects/managed-agent-harness-draft]] — 하네스 설계 출발점
 - [[projects/dual-domain-agent-operating-model]] — 개인/회사 이중 도메인 운영 원칙
 - [[projects/immediate-agent-operating-structure]] — 즉시 운영 구조 전환 문서

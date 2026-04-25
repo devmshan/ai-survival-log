@@ -2,6 +2,7 @@
 
 | 페이지 | 설명 | 타입 | 상태 |
 |--------|------|------|------|
+| [[projects/agent-harness-notes-series-handoff]] | Agent Harness Notes 01/02의 현재 상태와 다음 작업을 한 곳에서 이어받기 위한 작업 인계 문서. | project | active |
 | [[projects/assistant-ops-lane-execution-draft]] | 일정관리, 할 일 보고, 회의 follow-up을 다루는 Assistant Ops Lane의 실행 흐름과 독립 agent 분리 기준을 정리한 초안. | project | draft |
 | [[projects/blog-ai-study-site]] |  | project | active |
 | [[projects/company-assistant-approval-matrix]] | company-assistant-ops에서 Gmail, Calendar, Sheets 작업에 어떤 승인 레벨을 적용할지 정리한 세부안. | project | active |
